@@ -6,12 +6,12 @@ void dw0(
     const float bias   [O_CHANNEL_DW0],
     float       ofmap  [O_CHANNEL_DW0][O_SIZE_DW0][O_SIZE_DW0]
 ) {
-    for (int c = 0; c < I_CHANNEL_DW0; c++) {
-        for (int oh = 0; oh < O_SIZE_DW0; oh++) {
-            for (int ow = 0; ow < O_SIZE_DW0; ow++) {
+    DW0_C: for (int c = 0; c < I_CHANNEL_DW0; c++) {
+        DW0_OH: for (int oh = 0; oh < O_SIZE_DW0; oh++) {
+            DW0_OW: for (int ow = 0; ow < O_SIZE_DW0; ow++) {
                 float acc = bias[c];
-                for (int kh = 0; kh < K_SIZE_DW0; kh++) {
-                    for (int kw = 0; kw < K_SIZE_DW0; kw++) {
+                DW0_KH: for (int kh = 0; kh < K_SIZE_DW0; kh++) {
+                    DW0_KW: for (int kw = 0; kw < K_SIZE_DW0; kw++) {
                         int ih = oh * STRIDE_DW0 + kh - 1;
                         int iw = ow * STRIDE_DW0 + kw - 1;
                         if (ih >= 0 && ih < I_SIZE_DW0 && iw >= 0 && iw < I_SIZE_DW0) {
@@ -31,12 +31,12 @@ void dw1(
     const float bias   [O_CHANNEL_DW1],
     float       ofmap  [O_CHANNEL_DW1][O_SIZE_DW1][O_SIZE_DW1]
 ) {
-    for (int c = 0; c < I_CHANNEL_DW1; c++) {
-        for (int oh = 0; oh < O_SIZE_DW1; oh++) {
-            for (int ow = 0; ow < O_SIZE_DW1; ow++) {
+    DW1_C: for (int c = 0; c < I_CHANNEL_DW1; c++) {
+        DW1_OH: for (int oh = 0; oh < O_SIZE_DW1; oh++) {
+            DW1_OW: for (int ow = 0; ow < O_SIZE_DW1; ow++) {
                 float acc = bias[c];
-                for (int kh = 0; kh < K_SIZE_DW1; kh++) {
-                    for (int kw = 0; kw < K_SIZE_DW1; kw++) {
+                DW1_KH: for (int kh = 0; kh < K_SIZE_DW1; kh++) {
+                    DW1_KW: for (int kw = 0; kw < K_SIZE_DW1; kw++) {
                         int ih = oh * STRIDE_DW1 + kh - 1;
                         int iw = ow * STRIDE_DW1 + kw - 1;
                         if (ih >= 0 && ih < I_SIZE_DW1 && iw >= 0 && iw < I_SIZE_DW1) {
@@ -56,12 +56,12 @@ void dw2(
     const float bias   [O_CHANNEL_DW2],
     float       ofmap  [O_CHANNEL_DW2][O_SIZE_DW2][O_SIZE_DW2]
 ) {
-    for (int c = 0; c < I_CHANNEL_DW2; c++) {
-        for (int oh = 0; oh < O_SIZE_DW2; oh++) {
-            for (int ow = 0; ow < O_SIZE_DW2; ow++) {
+    DW2_C: for (int c = 0; c < I_CHANNEL_DW2; c++) {
+        DW2_OH: for (int oh = 0; oh < O_SIZE_DW2; oh++) {
+            DW2_OW: for (int ow = 0; ow < O_SIZE_DW2; ow++) {
                 float acc = bias[c];
-                for (int kh = 0; kh < K_SIZE_DW2; kh++) {
-                    for (int kw = 0; kw < K_SIZE_DW2; kw++) {
+                DW2_KH: for (int kh = 0; kh < K_SIZE_DW2; kh++) {
+                    DW2_KW: for (int kw = 0; kw < K_SIZE_DW2; kw++) {
                         int ih = oh * STRIDE_DW2 + kh - 1;
                         int iw = ow * STRIDE_DW2 + kw - 1;
                         if (ih >= 0 && ih < I_SIZE_DW2 && iw >= 0 && iw < I_SIZE_DW2) {
@@ -81,12 +81,12 @@ void dw3(
     const float bias   [O_CHANNEL_DW3],
     float       ofmap  [O_CHANNEL_DW3][O_SIZE_DW3][O_SIZE_DW3]
 ) {
-    for (int c = 0; c < I_CHANNEL_DW3; c++) {
-        for (int oh = 0; oh < O_SIZE_DW3; oh++) {
-            for (int ow = 0; ow < O_SIZE_DW3; ow++) {
+    DW3_C: for (int c = 0; c < I_CHANNEL_DW3; c++) {
+        DW3_OH: for (int oh = 0; oh < O_SIZE_DW3; oh++) {
+            DW3_OW: for (int ow = 0; ow < O_SIZE_DW3; ow++) {
                 float acc = bias[c];
-                for (int kh = 0; kh < K_SIZE_DW3; kh++) {
-                    for (int kw = 0; kw < K_SIZE_DW3; kw++) {
+                DW3_KH: for (int kh = 0; kh < K_SIZE_DW3; kh++) {
+                    DW3_KW: for (int kw = 0; kw < K_SIZE_DW3; kw++) {
                         int ih = oh * STRIDE_DW3 + kh - 1;
                         int iw = ow * STRIDE_DW3 + kw - 1;
                         if (ih >= 0 && ih < I_SIZE_DW3 && iw >= 0 && iw < I_SIZE_DW3) {
