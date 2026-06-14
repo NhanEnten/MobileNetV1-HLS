@@ -31,7 +31,7 @@
 //   Blk2: H=W=4,  IC=64,  OC=128
 //   Blk3: H=W=2,  IC=128, OC=256
 // ============================================================
-#include "pointwise.h"
+#include "mobilenet_v1.hpp"
 
 void pointwise_conv(
     data_t   *input,

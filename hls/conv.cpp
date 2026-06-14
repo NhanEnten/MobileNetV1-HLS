@@ -29,7 +29,7 @@
 //   PIPELINE II=1 on inner-most loop
 //   ARRAY_PARTITION cyclic on weight buffer
 // ============================================================
-#include "conv.h"
+#include "mobilenet_v1.hpp"
 
 void conv_layer(
     data_t   input   [IN_H * IN_W * IN_C],

@@ -18,6 +18,6 @@
 // All BN logic is inlined at the compute site to enable HLS
 // PIPELINE and DATAFLOW optimizations without an extra IP call.
 // ============================================================
-#include "batchnorm.h"
+#include "mobilenet_v1.hpp"
 // bn_apply and bn_relu are defined as inline functions in batchnorm.h
 // No additional implementation needed.

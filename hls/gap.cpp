@@ -15,7 +15,7 @@
 //
 // No BN, no activation after GAP (directly into FC).
 // ============================================================
-#include "gap.h"
+#include "mobilenet_v1.hpp"
 
 void global_avg_pool(
     data_t *input,

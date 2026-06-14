@@ -30,7 +30,7 @@
 //   - Inner FC_IN loop PIPELINE'd II=1
 //   - Both loops UNROLL-able in Phase 3 (only 10 output neurons)
 // ============================================================
-#include "fc.h"
+#include "mobilenet_v1.hpp"
 
 void fc_layer(
     data_t   input    [FC_IN],

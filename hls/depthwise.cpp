@@ -31,7 +31,7 @@
 //   Blk2:  8×8×64   → 4×4×64
 //   Blk3:  4×4×128  → 2×2×128
 // ============================================================
-#include "depthwise.h"
+#include "mobilenet_v1.hpp"
 
 void depthwise_conv(
     data_t   *input,
