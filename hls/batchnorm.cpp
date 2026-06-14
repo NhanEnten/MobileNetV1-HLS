@@ -1,23 +1,131 @@
-// ============================================================
-// File    : batchnorm.cpp
-// Project : MobileNetV1 FPGA Accelerator
-//
-// ── NOTE: batchnorm.cpp is NOT a standalone HLS IP ───────────
-// Batch Normalization is pre-fused offline by the teammate's
-// import_params.py script (Phase 1). The exported params.h
-// already contains:
-//   conv_1_scale[16], conv_1_shift[16]
-//   features_N_bn1_scale[C], features_N_bn1_shift[C]
-//   features_N_bn2_scale[C], features_N_bn2_shift[C]
-//
-// The inline utilities in batchnorm.h (bn_apply, bn_relu) are
-// used directly inside conv.cpp, depthwise.cpp, pointwise.cpp.
-//
-// This file is intentionally minimal — it exists only to
-// satisfy the original project file structure requirement.
-// All BN logic is inlined at the compute site to enable HLS
-// PIPELINE and DATAFLOW optimizations without an extra IP call.
-// ============================================================
 #include "mobilenet_v1.hpp"
-// bn_apply and bn_relu are defined as inline functions in batchnorm.h
-// No additional implementation needed.
+
+float relu(float x) {
+    return x > 0.0f ? x : 0.0f;
+}
+
+void batchnorm_conv0(
+    float       fmap [CONV0_CHANNEL_BN][O_SIZE_CONV0][O_SIZE_CONV0],
+    const float scale[CONV0_CHANNEL_BN],
+    const float shift[CONV0_CHANNEL_BN]
+) {
+    for (int c = 0; c < CONV0_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_CONV0; h++) {
+            for (int w = 0; w < O_SIZE_CONV0; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
+
+void batchnorm_dw0(
+    float       fmap [DW0_CHANNEL_BN][O_SIZE_DW0][O_SIZE_DW0],
+    const float scale[DW0_CHANNEL_BN],
+    const float shift[DW0_CHANNEL_BN]
+) {
+    for (int c = 0; c < DW0_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_DW0; h++) {
+            for (int w = 0; w < O_SIZE_DW0; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
+
+void batchnorm_pw0(
+    float       fmap [PW0_CHANNEL_BN][O_SIZE_PW0][O_SIZE_PW0],
+    const float scale[PW0_CHANNEL_BN],
+    const float shift[PW0_CHANNEL_BN]
+) {
+    for (int c = 0; c < PW0_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_PW0; h++) {
+            for (int w = 0; w < O_SIZE_PW0; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
+
+void batchnorm_dw1(
+    float       fmap [DW1_CHANNEL_BN][O_SIZE_DW1][O_SIZE_DW1],
+    const float scale[DW1_CHANNEL_BN],
+    const float shift[DW1_CHANNEL_BN]
+) {
+    for (int c = 0; c < DW1_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_DW1; h++) {
+            for (int w = 0; w < O_SIZE_DW1; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
+
+void batchnorm_pw1(
+    float       fmap [PW1_CHANNEL_BN][O_SIZE_PW1][O_SIZE_PW1],
+    const float scale[PW1_CHANNEL_BN],
+    const float shift[PW1_CHANNEL_BN]
+) {
+    for (int c = 0; c < PW1_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_PW1; h++) {
+            for (int w = 0; w < O_SIZE_PW1; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
+
+void batchnorm_dw2(
+    float       fmap [DW2_CHANNEL_BN][O_SIZE_DW2][O_SIZE_DW2],
+    const float scale[DW2_CHANNEL_BN],
+    const float shift[DW2_CHANNEL_BN]
+) {
+    for (int c = 0; c < DW2_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_DW2; h++) {
+            for (int w = 0; w < O_SIZE_DW2; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
+
+void batchnorm_pw2(
+    float       fmap [PW2_CHANNEL_BN][O_SIZE_PW2][O_SIZE_PW2],
+    const float scale[PW2_CHANNEL_BN],
+    const float shift[PW2_CHANNEL_BN]
+) {
+    for (int c = 0; c < PW2_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_PW2; h++) {
+            for (int w = 0; w < O_SIZE_PW2; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
+
+void batchnorm_dw3(
+    float       fmap [DW3_CHANNEL_BN][O_SIZE_DW3][O_SIZE_DW3],
+    const float scale[DW3_CHANNEL_BN],
+    const float shift[DW3_CHANNEL_BN]
+) {
+    for (int c = 0; c < DW3_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_DW3; h++) {
+            for (int w = 0; w < O_SIZE_DW3; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
+
+void batchnorm_pw3(
+    float       fmap [PW3_CHANNEL_BN][O_SIZE_PW3][O_SIZE_PW3],
+    const float scale[PW3_CHANNEL_BN],
+    const float shift[PW3_CHANNEL_BN]
+) {
+    for (int c = 0; c < PW3_CHANNEL_BN; c++) {
+        for (int h = 0; h < O_SIZE_PW3; h++) {
+            for (int w = 0; w < O_SIZE_PW3; w++) {
+                fmap[c][h][w] = relu(fmap[c][h][w] * scale[c] + shift[c]);
+            }
+        }
+    }
+}
