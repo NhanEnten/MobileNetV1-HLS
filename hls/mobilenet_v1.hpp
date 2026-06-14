@@ -2,7 +2,7 @@
 #define MOBILENET_V1_HPP
 
 #include <hls_math.h>
-
+#include "params.hpp"
 // ========== DEFINE CONSTANT ==========
 // --- CONV0 ---
 // Input : 32x32x3
@@ -141,73 +141,111 @@
 void conv0(
     const float ifmap  [I_CHANNEL_CONV0][I_SIZE_CONV0][I_SIZE_CONV0],
     const float weights[O_CHANNEL_CONV0][I_CHANNEL_CONV0][K_SIZE_CONV0][K_SIZE_CONV0],
-    const float bias   [O_CHANNEL_CONV0],
     float       ofmap  [O_CHANNEL_CONV0][O_SIZE_CONV0][O_SIZE_CONV0]
 );
  
+void batchnorm_conv0(
+    float       fmap [CONV0_CHANNEL_BN][O_SIZE_CONV0][O_SIZE_CONV0],
+    const float scale[CONV0_CHANNEL_BN],
+    const float shift[CONV0_CHANNEL_BN]
+);
 
 void dw0(
     const float ifmap  [I_CHANNEL_DW0][I_SIZE_DW0][I_SIZE_DW0],
     const float weights[O_CHANNEL_DW0][K_SIZE_DW0][K_SIZE_DW0],
-    const float bias   [O_CHANNEL_DW0],
     float       ofmap  [O_CHANNEL_DW0][O_SIZE_DW0][O_SIZE_DW0]
 );
  
+void batchnorm_dw0(
+    float       fmap [DW0_CHANNEL_BN][O_SIZE_DW0][O_SIZE_DW0],
+    const float scale[DW0_CHANNEL_BN],
+    const float shift[DW0_CHANNEL_BN]
+);
 
 void pw0(
     const float ifmap  [I_CHANNEL_PW0][I_SIZE_PW0][I_SIZE_PW0],
     const float weights[O_CHANNEL_PW0][I_CHANNEL_PW0],
-    const float bias   [O_CHANNEL_PW0],
     float       ofmap  [O_CHANNEL_PW0][O_SIZE_PW0][O_SIZE_PW0]
 );
  
-
+void batchnorm_pw0(
+    float       fmap [PW0_CHANNEL_BN][O_SIZE_PW0][O_SIZE_PW0],
+    const float scale[PW0_CHANNEL_BN],
+    const float shift[PW0_CHANNEL_BN]
+);
+ 
+ 
 void dw1(
     const float ifmap  [I_CHANNEL_DW1][I_SIZE_DW1][I_SIZE_DW1],
     const float weights[O_CHANNEL_DW1][K_SIZE_DW1][K_SIZE_DW1],
-    const float bias   [O_CHANNEL_DW1],
     float       ofmap  [O_CHANNEL_DW1][O_SIZE_DW1][O_SIZE_DW1]
+);
+
+void batchnorm_dw1(
+    float       fmap [DW1_CHANNEL_BN][O_SIZE_DW1][O_SIZE_DW1],
+    const float scale[DW1_CHANNEL_BN],
+    const float shift[DW1_CHANNEL_BN]
 );
 
 void pw1(
     const float ifmap  [I_CHANNEL_PW1][I_SIZE_PW1][I_SIZE_PW1],
     const float weights[O_CHANNEL_PW1][I_CHANNEL_PW1],
-    const float bias   [O_CHANNEL_PW1],
     float       ofmap  [O_CHANNEL_PW1][O_SIZE_PW1][O_SIZE_PW1]
 );
  
+void batchnorm_pw1(
+    float       fmap [PW1_CHANNEL_BN][O_SIZE_PW1][O_SIZE_PW1],
+    const float scale[PW1_CHANNEL_BN],
+    const float shift[PW1_CHANNEL_BN]
+);
 
 void dw2(
     const float ifmap  [I_CHANNEL_DW2][I_SIZE_DW2][I_SIZE_DW2],
     const float weights[O_CHANNEL_DW2][K_SIZE_DW2][K_SIZE_DW2],
-    const float bias   [O_CHANNEL_DW2],
     float       ofmap  [O_CHANNEL_DW2][O_SIZE_DW2][O_SIZE_DW2]
 );
  
+void batchnorm_dw2(
+    float       fmap [DW2_CHANNEL_BN][O_SIZE_DW2][O_SIZE_DW2],
+    const float scale[DW2_CHANNEL_BN],
+    const float shift[DW2_CHANNEL_BN]
+);
 
 void pw2(
     const float ifmap  [I_CHANNEL_PW2][I_SIZE_PW2][I_SIZE_PW2],
     const float weights[O_CHANNEL_PW2][I_CHANNEL_PW2],
-    const float bias   [O_CHANNEL_PW2],
     float       ofmap  [O_CHANNEL_PW2][O_SIZE_PW2][O_SIZE_PW2]
 );
  
+void batchnorm_pw2(
+    float       fmap [PW2_CHANNEL_BN][O_SIZE_PW2][O_SIZE_PW2],
+    const float scale[PW2_CHANNEL_BN],
+    const float shift[PW2_CHANNEL_BN]
+);
 
 void dw3(
     const float ifmap  [I_CHANNEL_DW3][I_SIZE_DW3][I_SIZE_DW3],
     const float weights[O_CHANNEL_DW3][K_SIZE_DW3][K_SIZE_DW3],
-    const float bias   [O_CHANNEL_DW3],
     float       ofmap  [O_CHANNEL_DW3][O_SIZE_DW3][O_SIZE_DW3]
 );
- 
+
+void batchnorm_dw3(
+    float       fmap [DW3_CHANNEL_BN][O_SIZE_DW3][O_SIZE_DW3],
+    const float scale[DW3_CHANNEL_BN],
+    const float shift[DW3_CHANNEL_BN]
+);
 
 void pw3(
     const float ifmap  [I_CHANNEL_PW3][I_SIZE_PW3][I_SIZE_PW3],
     const float weights[O_CHANNEL_PW3][I_CHANNEL_PW3],
-    const float bias   [O_CHANNEL_PW3],
     float       ofmap  [O_CHANNEL_PW3][O_SIZE_PW3][O_SIZE_PW3]
 );
  
+void batchnorm_pw3(
+    float       fmap [PW3_CHANNEL_BN][O_SIZE_PW3][O_SIZE_PW3],
+    const float scale[PW3_CHANNEL_BN],
+    const float shift[PW3_CHANNEL_BN]
+);
  
 // --------------------------------------------------
 // BATCH NORM (pre-computed scale & shift)
@@ -219,60 +257,6 @@ void pw3(
 //   Runtime (in-place, then ReLU):
 //     fmap[c][h][w] = ReLU( fmap[c][h][w] * scale[c] + shift[c] )
 // --------------------------------------------------
-void batchnorm_conv0(
-    float       fmap [CONV0_CHANNEL_BN][O_SIZE_CONV0][O_SIZE_CONV0],
-    const float scale[CONV0_CHANNEL_BN],
-    const float shift[CONV0_CHANNEL_BN]
-);
- 
-void batchnorm_dw0(
-    float       fmap [DW0_CHANNEL_BN][O_SIZE_DW0][O_SIZE_DW0],
-    const float scale[DW0_CHANNEL_BN],
-    const float shift[DW0_CHANNEL_BN]
-);
- 
-void batchnorm_pw0(
-    float       fmap [PW0_CHANNEL_BN][O_SIZE_PW0][O_SIZE_PW0],
-    const float scale[PW0_CHANNEL_BN],
-    const float shift[PW0_CHANNEL_BN]
-);
- 
-void batchnorm_dw1(
-    float       fmap [DW1_CHANNEL_BN][O_SIZE_DW1][O_SIZE_DW1],
-    const float scale[DW1_CHANNEL_BN],
-    const float shift[DW1_CHANNEL_BN]
-);
- 
-void batchnorm_pw1(
-    float       fmap [PW1_CHANNEL_BN][O_SIZE_PW1][O_SIZE_PW1],
-    const float scale[PW1_CHANNEL_BN],
-    const float shift[PW1_CHANNEL_BN]
-);
- 
-void batchnorm_dw2(
-    float       fmap [DW2_CHANNEL_BN][O_SIZE_DW2][O_SIZE_DW2],
-    const float scale[DW2_CHANNEL_BN],
-    const float shift[DW2_CHANNEL_BN]
-);
- 
-void batchnorm_pw2(
-    float       fmap [PW2_CHANNEL_BN][O_SIZE_PW2][O_SIZE_PW2],
-    const float scale[PW2_CHANNEL_BN],
-    const float shift[PW2_CHANNEL_BN]
-);
- 
-void batchnorm_dw3(
-    float       fmap [DW3_CHANNEL_BN][O_SIZE_DW3][O_SIZE_DW3],
-    const float scale[DW3_CHANNEL_BN],
-    const float shift[DW3_CHANNEL_BN]
-);
- 
-void batchnorm_pw3(
-    float       fmap [PW3_CHANNEL_BN][O_SIZE_PW3][O_SIZE_PW3],
-    const float scale[PW3_CHANNEL_BN],
-    const float shift[PW3_CHANNEL_BN]
-);
- 
 
 float relu(float x);
  
@@ -285,7 +269,7 @@ void global_avg_pool(
  
 void fc(
     const float ifmap  [I_SIZE_FC],
-    const float weights[O_SIZE_FC][I_SIZE_FC],
+    const float weights[I_SIZE_FC][O_SIZE_FC],
     const float bias   [O_SIZE_FC],
     float       ofmap  [O_SIZE_FC]
 );
