@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mobilenet_v1.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_mobilenet_v1_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1//AESL_inst_mobilenet_v1_activity">
+         <obj_property name="label">AESL_inst_mobilenet_v1_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_mobilenet_v1_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_mobilenet_v1_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1//AESL_inst_mobilenet_v1_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1//AESL_inst_mobilenet_v1_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1//AESL_inst_mobilenet_v1_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_conv0_fu_1568/grp_conv0_fu_1568_activity">
+            <obj_property name="label">grp_conv0_fu_1568_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_conv0_fu_1568_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_conv0_fu_1568_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_conv0_fu_1568/grp_conv0_fu_1568_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_conv0_fu_1568/grp_conv0_fu_1568_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_conv0_fu_1568/grp_conv0_fu_1568_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_conv0_fu_1658/grp_batchnorm_conv0_fu_1658_activity">
+            <obj_property name="label">grp_batchnorm_conv0_fu_1658_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_batchnorm_conv0_fu_1658_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_batchnorm_conv0_fu_1658_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_conv0_fu_1658/grp_batchnorm_conv0_fu_1658_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_conv0_fu_1658/grp_batchnorm_conv0_fu_1658_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_conv0_fu_1658/grp_batchnorm_conv0_fu_1658_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw0_fu_1790/grp_dw0_fu_1790_activity">
+            <obj_property name="label">grp_dw0_fu_1790_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_dw0_fu_1790_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dw0_fu_1790_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw0_fu_1790/grp_dw0_fu_1790_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw0_fu_1790/grp_dw0_fu_1790_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw0_fu_1790/grp_dw0_fu_1790_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw0_fu_1916/grp_pw0_fu_1916_activity">
+            <obj_property name="label">grp_pw0_fu_1916_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_pw0_fu_1916_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pw0_fu_1916_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw0_fu_1916/grp_pw0_fu_1916_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw0_fu_1916/grp_pw0_fu_1916_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw0_fu_1916/grp_pw0_fu_1916_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_pw0_fu_1942/grp_batchnorm_pw0_fu_1942_activity">
+            <obj_property name="label">grp_batchnorm_pw0_fu_1942_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_batchnorm_pw0_fu_1942_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_batchnorm_pw0_fu_1942_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_pw0_fu_1942/grp_batchnorm_pw0_fu_1942_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_pw0_fu_1942/grp_batchnorm_pw0_fu_1942_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_pw0_fu_1942/grp_batchnorm_pw0_fu_1942_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw1_fu_2010/grp_dw1_fu_2010_activity">
+            <obj_property name="label">grp_dw1_fu_2010_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_dw1_fu_2010_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dw1_fu_2010_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw1_fu_2010/grp_dw1_fu_2010_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw1_fu_2010/grp_dw1_fu_2010_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw1_fu_2010/grp_dw1_fu_2010_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw1_fu_2116/grp_pw1_fu_2116_activity">
+            <obj_property name="label">grp_pw1_fu_2116_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_pw1_fu_2116_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pw1_fu_2116_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw1_fu_2116/grp_pw1_fu_2116_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw1_fu_2116/grp_pw1_fu_2116_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw1_fu_2116/grp_pw1_fu_2116_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw2_fu_2184/grp_dw2_fu_2184_activity">
+            <obj_property name="label">grp_dw2_fu_2184_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_dw2_fu_2184_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dw2_fu_2184_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw2_fu_2184/grp_dw2_fu_2184_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw2_fu_2184/grp_dw2_fu_2184_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw2_fu_2184/grp_dw2_fu_2184_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw2_fu_2250/grp_pw2_fu_2250_activity">
+            <obj_property name="label">grp_pw2_fu_2250_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_pw2_fu_2250_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pw2_fu_2250_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw2_fu_2250/grp_pw2_fu_2250_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw2_fu_2250/grp_pw2_fu_2250_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw2_fu_2250/grp_pw2_fu_2250_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw3_fu_2294/grp_dw3_fu_2294_activity">
+            <obj_property name="label">grp_dw3_fu_2294_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_dw3_fu_2294_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dw3_fu_2294_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw3_fu_2294/grp_dw3_fu_2294_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw3_fu_2294/grp_dw3_fu_2294_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw3_fu_2294/grp_dw3_fu_2294_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw3_fu_2342/grp_pw3_fu_2342_activity">
+            <obj_property name="label">grp_pw3_fu_2342_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_pw3_fu_2342_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pw3_fu_2342_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw3_fu_2342/grp_pw3_fu_2342_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw3_fu_2342/grp_pw3_fu_2342_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw3_fu_2342/grp_pw3_fu_2342_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_fu_2369_activity">
+            <obj_property name="label">grp_fc_fu_2369_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_fc_fu_2369_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_fc_fu_2369_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_fu_2369_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_fu_2369_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_fu_2369_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/grp_fc_Pipeline_FC_BIAS_fu_114_activity">
+               <obj_property name="label">grp_fc_Pipeline_FC_BIAS_fu_114_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_fc_Pipeline_FC_BIAS_fu_114_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_fc_Pipeline_FC_BIAS_fu_114_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/grp_fc_Pipeline_FC_BIAS_fu_114_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/grp_fc_Pipeline_FC_BIAS_fu_114_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/grp_fc_Pipeline_FC_BIAS_fu_114_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/grp_fc_Pipeline_FC_IC_fu_130_activity">
+               <obj_property name="label">grp_fc_Pipeline_FC_IC_fu_130_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_fc_Pipeline_FC_IC_fu_130_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_fc_Pipeline_FC_IC_fu_130_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/grp_fc_Pipeline_FC_IC_fu_130_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/grp_fc_Pipeline_FC_IC_fu_130_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/grp_fc_Pipeline_FC_IC_fu_130_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/grp_fc_Pipeline_FC_OUTPUT_fu_176_activity">
+               <obj_property name="label">grp_fc_Pipeline_FC_OUTPUT_fu_176_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_fc_Pipeline_FC_OUTPUT_fu_176_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_fc_Pipeline_FC_OUTPUT_fu_176_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/grp_fc_Pipeline_FC_OUTPUT_fu_176_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/grp_fc_Pipeline_FC_OUTPUT_fu_176_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/grp_fc_Pipeline_FC_OUTPUT_fu_176_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity">
+            <obj_property name="label">grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1//AESL_inst_mobilenet_v1_activity">
+      <obj_property name="ElementShortName">AESL_inst_mobilenet_v1_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_mobilenet_v1_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_mobilenet_v1_group">
+      <obj_property name="label">AESL_inst_mobilenet_v1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_conv0_fu_1568/grp_conv0_fu_1568_activity">
+         <obj_property name="ElementShortName">grp_conv0_fu_1568_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_conv0_fu_1568_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_conv0_fu_1658/grp_batchnorm_conv0_fu_1658_activity">
+         <obj_property name="ElementShortName">grp_batchnorm_conv0_fu_1658_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_batchnorm_conv0_fu_1658_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw0_fu_1790/grp_dw0_fu_1790_activity">
+         <obj_property name="ElementShortName">grp_dw0_fu_1790_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_dw0_fu_1790_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw0_fu_1916/grp_pw0_fu_1916_activity">
+         <obj_property name="ElementShortName">grp_pw0_fu_1916_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_pw0_fu_1916_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_pw0_fu_1942/grp_batchnorm_pw0_fu_1942_activity">
+         <obj_property name="ElementShortName">grp_batchnorm_pw0_fu_1942_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_batchnorm_pw0_fu_1942_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw1_fu_2010/grp_dw1_fu_2010_activity">
+         <obj_property name="ElementShortName">grp_dw1_fu_2010_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_dw1_fu_2010_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw1_fu_2116/grp_pw1_fu_2116_activity">
+         <obj_property name="ElementShortName">grp_pw1_fu_2116_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_pw1_fu_2116_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw2_fu_2184/grp_dw2_fu_2184_activity">
+         <obj_property name="ElementShortName">grp_dw2_fu_2184_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_dw2_fu_2184_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw2_fu_2250/grp_pw2_fu_2250_activity">
+         <obj_property name="ElementShortName">grp_pw2_fu_2250_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_pw2_fu_2250_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw3_fu_2294/grp_dw3_fu_2294_activity">
+         <obj_property name="ElementShortName">grp_dw3_fu_2294_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_dw3_fu_2294_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw3_fu_2342/grp_pw3_fu_2342_activity">
+         <obj_property name="ElementShortName">grp_pw3_fu_2342_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_pw3_fu_2342_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_fu_2369_activity">
+         <obj_property name="ElementShortName">grp_fc_fu_2369_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_fc_fu_2369_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_mobilenet_v1_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_conv0_fu_1568_group">
+         <obj_property name="label">grp_conv0_fu_1568</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_conv0_fu_1568_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_conv0_fu_1568/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_conv0_fu_1568/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_conv0_fu_1568/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_batchnorm_conv0_fu_1658_group">
+         <obj_property name="label">grp_batchnorm_conv0_fu_1658</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_batchnorm_conv0_fu_1658_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_conv0_fu_1658/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_conv0_fu_1658/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_conv0_fu_1658/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_dw0_fu_1790_group">
+         <obj_property name="label">grp_dw0_fu_1790</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dw0_fu_1790_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw0_fu_1790/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw0_fu_1790/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw0_fu_1790/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_pw0_fu_1916_group">
+         <obj_property name="label">grp_pw0_fu_1916</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_pw0_fu_1916_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw0_fu_1916/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw0_fu_1916/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw0_fu_1916/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_batchnorm_pw0_fu_1942_group">
+         <obj_property name="label">grp_batchnorm_pw0_fu_1942</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_batchnorm_pw0_fu_1942_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_pw0_fu_1942/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_pw0_fu_1942/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_batchnorm_pw0_fu_1942/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_dw1_fu_2010_group">
+         <obj_property name="label">grp_dw1_fu_2010</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dw1_fu_2010_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw1_fu_2010/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw1_fu_2010/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw1_fu_2010/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_pw1_fu_2116_group">
+         <obj_property name="label">grp_pw1_fu_2116</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_pw1_fu_2116_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw1_fu_2116/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw1_fu_2116/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw1_fu_2116/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_dw2_fu_2184_group">
+         <obj_property name="label">grp_dw2_fu_2184</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dw2_fu_2184_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw2_fu_2184/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw2_fu_2184/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw2_fu_2184/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_pw2_fu_2250_group">
+         <obj_property name="label">grp_pw2_fu_2250</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_pw2_fu_2250_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw2_fu_2250/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw2_fu_2250/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw2_fu_2250/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_dw3_fu_2294_group">
+         <obj_property name="label">grp_dw3_fu_2294</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dw3_fu_2294_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw3_fu_2294/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw3_fu_2294/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_dw3_fu_2294/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_pw3_fu_2342_group">
+         <obj_property name="label">grp_pw3_fu_2342</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_pw3_fu_2342_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw3_fu_2342/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw3_fu_2342/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_pw3_fu_2342/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_GAP_C_fu_2362</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_GAP_C_fu_2362_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_fc_fu_2369_group">
+         <obj_property name="label">grp_fc_fu_2369</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/grp_fc_Pipeline_FC_BIAS_fu_114_activity">
+            <obj_property name="ElementShortName">grp_fc_Pipeline_FC_BIAS_fu_114_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_fc_Pipeline_FC_BIAS_fu_114_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/grp_fc_Pipeline_FC_IC_fu_130_activity">
+            <obj_property name="ElementShortName">grp_fc_Pipeline_FC_IC_fu_130_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_fc_Pipeline_FC_IC_fu_130_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/grp_fc_Pipeline_FC_OUTPUT_fu_176_activity">
+            <obj_property name="ElementShortName">grp_fc_Pipeline_FC_OUTPUT_fu_176_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_fc_Pipeline_FC_OUTPUT_fu_176_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_fc_fu_2369_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_fc_Pipeline_FC_BIAS_fu_114_group">
+            <obj_property name="label">grp_fc_Pipeline_FC_BIAS_fu_114</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_fc_Pipeline_FC_BIAS_fu_114_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_fc_Pipeline_FC_IC_fu_130_group">
+            <obj_property name="label">grp_fc_Pipeline_FC_IC_fu_130</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_fc_Pipeline_FC_IC_fu_130_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_fc_Pipeline_FC_OUTPUT_fu_176_group">
+            <obj_property name="label">grp_fc_Pipeline_FC_OUTPUT_fu_176</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_fc_Pipeline_FC_OUTPUT_fu_176_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_group">
+         <obj_property name="label">grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_top/AESL_inst_mobilenet_v1/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

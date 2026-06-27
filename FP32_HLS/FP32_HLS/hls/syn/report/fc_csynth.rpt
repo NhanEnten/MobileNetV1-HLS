@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'fc'
+================================================================
+* Date:           Sat Jun 27 09:58:21 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        FP32_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.157 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1576|     1576|  15.760 us|  15.760 us|  1576|  1576|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------+-----------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+        |                                  |                       |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+        |             Instance             |         Module        |   min   |   max   |    min    |    max    | min | max |        Type       |
+        +----------------------------------+-----------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+        |grp_fc_Pipeline_FC_BIAS_fu_114    |fc_Pipeline_FC_BIAS    |       12|       12|   0.120 us|   0.120 us|    0|    0|  loop pipeline stp|
+        |grp_fc_Pipeline_FC_IC_fu_130      |fc_Pipeline_FC_IC      |     1547|     1547|  15.470 us|  15.470 us|    0|    0|  loop pipeline stp|
+        |grp_fc_Pipeline_FC_OUTPUT_fu_176  |fc_Pipeline_FC_OUTPUT  |       12|       12|   0.120 us|   0.120 us|    0|    0|  loop pipeline stp|
+        +----------------------------------+-----------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       -|       -|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |       10|    -|    1447|     488|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       0|      65|    -|
+|Register         |        -|    -|       9|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |       10|    0|    1456|     553|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+-----------------------+---------+----+------+-----+-----+
+    |             Instance             |         Module        | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +----------------------------------+-----------------------+---------+----+------+-----+-----+
+    |grp_fc_Pipeline_FC_BIAS_fu_114    |fc_Pipeline_FC_BIAS    |        0|   0|   363|   55|    0|
+    |grp_fc_Pipeline_FC_IC_fu_130      |fc_Pipeline_FC_IC      |       10|   0|  1078|  353|    0|
+    |grp_fc_Pipeline_FC_OUTPUT_fu_176  |fc_Pipeline_FC_OUTPUT  |        0|   0|     6|   80|    0|
+    +----------------------------------+-----------------------+---------+----+------+-----+-----+
+    |Total                             |                       |       10|   0|  1447|  488|    0|
+    +----------------------------------+-----------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +---------------+----+-----------+-----+-----------+
+    |      Name     | LUT| Input Size| Bits| Total Bits|
+    +---------------+----+-----------+-----+-----------+
+    |ap_NS_fsm      |  29|          7|    1|          7|
+    |grp_fu_452_ce  |   9|          2|    1|          2|
+    |grp_fu_456_ce  |   9|          2|    1|          2|
+    |grp_fu_460_ce  |   9|          2|    1|          2|
+    |grp_fu_464_ce  |   9|          2|    1|          2|
+    +---------------+----+-----------+-----+-----------+
+    |Total          |  65|         15|    5|         15|
+    +---------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------+---+----+-----+-----------+
+    |                      Name                     | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                      |  6|   0|    6|          0|
+    |grp_fc_Pipeline_FC_BIAS_fu_114_ap_start_reg    |  1|   0|    1|          0|
+    |grp_fc_Pipeline_FC_IC_fu_130_ap_start_reg      |  1|   0|    1|          0|
+    |grp_fc_Pipeline_FC_OUTPUT_fu_176_ap_start_reg  |  1|   0|    1|          0|
+    +-----------------------------------------------+---+----+-----+-----------+
+    |Total                                          |  9|   0|    9|          0|
+    +-----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|            fc|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|            fc|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|            fc|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|            fc|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|            fc|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2467_p_din0    |  out|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2467_p_din1    |  out|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2467_p_opcode  |  out|    2|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2467_p_dout0   |   in|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2467_p_ce      |  out|    1|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2471_p_din0    |  out|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2471_p_din1    |  out|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2471_p_opcode  |  out|    2|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2471_p_dout0   |   in|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2471_p_ce      |  out|    1|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2523_p_din0    |  out|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2523_p_din1    |  out|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2523_p_dout0   |   in|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2523_p_ce      |  out|    1|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2527_p_din0    |  out|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2527_p_din1    |  out|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2527_p_dout0   |   in|   32|  ap_ctrl_hs|            fc|  return value|
+|grp_fu_2527_p_ce      |  out|    1|  ap_ctrl_hs|            fc|  return value|
+|ifmap_address0        |  out|    8|   ap_memory|         ifmap|         array|
+|ifmap_ce0             |  out|    1|   ap_memory|         ifmap|         array|
+|ifmap_q0              |   in|   32|   ap_memory|         ifmap|         array|
+|ofmap_address0        |  out|    4|   ap_memory|         ofmap|         array|
+|ofmap_ce0             |  out|    1|   ap_memory|         ofmap|         array|
+|ofmap_we0             |  out|    1|   ap_memory|         ofmap|         array|
+|ofmap_d0              |  out|   32|   ap_memory|         ofmap|         array|
++----------------------+-----+-----+------------+--------------+--------------+
+

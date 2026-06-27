@@ -1,0 +1,544 @@
+{
+    "1": {
+        "name": "pw2",
+        "file": "..\/FP32-Model\/pointwise.cpp",
+        "fileloc": "54",
+        "instructions": "1039",
+        "total_instructions": "1039",
+        "calls": "",
+        "basicblocks": "9",
+        "memory_accesses": "334",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "64",
+            "L": "261"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "dw0",
+        "file": "..\/FP32-Model\/depthwise.cpp",
+        "fileloc": "4",
+        "instructions": "751",
+        "total_instructions": "751",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "308",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "9",
+            "L": "293"
+        },
+        "stores": {
+            "L": "11"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "batchnorm_pw0",
+        "file": "..\/FP32-Model\/batchnorm.cpp",
+        "fileloc": "46",
+        "instructions": "354",
+        "total_instructions": "354",
+        "calls": "",
+        "basicblocks": "8",
+        "memory_accesses": "70",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "19"
+        },
+        "stores": {
+            "L": "54"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "52",
+        "instructions": "84",
+        "total_instructions": "84",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "13",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "dw3",
+        "file": "..\/FP32-Model\/depthwise.cpp",
+        "fileloc": "91",
+        "instructions": "159",
+        "total_instructions": "159",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "36",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "9",
+            "L": "21"
+        },
+        "stores": {
+            "L": "11"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "fc",
+        "file": "fc.cpp",
+        "fileloc": "3",
+        "instructions": "44",
+        "total_instructions": "264",
+        "calls": "8 19 20",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "20"
+        }
+    },
+    "0": {
+        "name": "mobilenet_v1",
+        "file": "mobilenet_v1.cpp",
+        "fileloc": "4",
+        "instructions": "463",
+        "total_instructions": "9128",
+        "calls": "18 15 24 2 4 22 3 10 23 21 25 13 16 1 14 5 12 7 9 11 6 17",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2"
+    },
+    "7": {
+        "name": "pw3",
+        "file": "..\/FP32-Model\/pointwise.cpp",
+        "fileloc": "79",
+        "instructions": "1476",
+        "total_instructions": "1476",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "395",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "128",
+            "L": "261"
+        },
+        "stores": {
+            "L": "11"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "fc_Pipeline_FC_BIAS",
+        "file": "..\/FP32-Model\/fc.cpp",
+        "fileloc": "9",
+        "instructions": "67",
+        "total_instructions": "67",
+        "calls": "",
+        "basicblocks": "15",
+        "memory_accesses": "13",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "1",
+            "L": "11"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "73",
+        "instructions": "67",
+        "total_instructions": "67",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "10",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "dw1",
+        "file": "..\/FP32-Model\/depthwise.cpp",
+        "fileloc": "33",
+        "instructions": "486",
+        "total_instructions": "486",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "171",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "9",
+            "L": "149"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "mobilenet_v1_Pipeline_GAP_C",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "75",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "7",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "70",
+        "instructions": "80",
+        "total_instructions": "80",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "12",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "dw2",
+        "file": "..\/FP32-Model\/depthwise.cpp",
+        "fileloc": "62",
+        "instructions": "329",
+        "total_instructions": "329",
+        "calls": "",
+        "basicblocks": "9",
+        "memory_accesses": "95",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "9",
+            "L": "77"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "67",
+        "instructions": "124",
+        "total_instructions": "124",
+        "calls": "",
+        "basicblocks": "9",
+        "memory_accesses": "26",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "15": {
+        "name": "conv0",
+        "file": "..\/FP32-Model\/conv.cpp",
+        "fileloc": "4",
+        "instructions": "984",
+        "total_instructions": "984",
+        "calls": "",
+        "basicblocks": "37",
+        "memory_accesses": "312",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "27",
+            "L": "248"
+        },
+        "stores": {
+            "L": "42"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "64",
+        "instructions": "118",
+        "total_instructions": "118",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "18",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "17": {
+        "name": "mobilenet_v1_Pipeline_VITIS_LOOP_23_1",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "77",
+        "instructions": "23",
+        "total_instructions": "23",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "18": {
+        "name": "mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "46",
+        "instructions": "161",
+        "total_instructions": "161",
+        "calls": "",
+        "basicblocks": "39",
+        "memory_accesses": "29",
+        "control_depth": "4",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "28"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "19": {
+        "name": "fc_Pipeline_FC_IC",
+        "file": "..\/FP32-Model\/fc.cpp",
+        "fileloc": "9",
+        "instructions": "126",
+        "total_instructions": "126",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "33",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "10",
+            "L": "22"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "20": {
+        "name": "fc_Pipeline_FC_OUTPUT",
+        "file": "..\/FP32-Model\/fc.cpp",
+        "fileloc": "25",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "3",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "21": {
+        "name": "pw1",
+        "file": "..\/FP32-Model\/pointwise.cpp",
+        "fileloc": "28",
+        "instructions": "834",
+        "total_instructions": "834",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "306",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "32",
+            "L": "261"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "22": {
+        "name": "pw0",
+        "file": "..\/FP32-Model\/pointwise.cpp",
+        "fileloc": "4",
+        "instructions": "249",
+        "total_instructions": "249",
+        "calls": "",
+        "basicblocks": "21",
+        "memory_accesses": "58",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "16",
+            "L": "21"
+        },
+        "stores": {
+            "L": "26"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "23": {
+        "name": "mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "58",
+        "instructions": "194",
+        "total_instructions": "194",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "30",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "24": {
+        "name": "batchnorm_conv0",
+        "file": "..\/FP32-Model\/batchnorm.cpp",
+        "fileloc": "8",
+        "instructions": "655",
+        "total_instructions": "655",
+        "calls": "",
+        "basicblocks": "8",
+        "memory_accesses": "134",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "35"
+        },
+        "stores": {
+            "L": "102"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "25": {
+        "name": "mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H",
+        "file": "..\/FP32-Model\/mobilenet_v1.cpp",
+        "fileloc": "61",
+        "instructions": "200",
+        "total_instructions": "200",
+        "calls": "",
+        "basicblocks": "8",
+        "memory_accesses": "38",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "30"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

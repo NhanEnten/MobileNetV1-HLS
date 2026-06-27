@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vitis HLS Report for 'fc_Pipeline_FC_BIAS'
+================================================================
+* Date:           Sat Jun 27 09:58:21 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        FP32_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.593 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |       12|       12|  0.120 us|  0.120 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- FC_BIAS  |       10|       10|         2|          1|          1|    10|       yes|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      14|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        0|    -|      32|       5|    -|
+|Multiplexer      |        -|    -|       0|      36|    -|
+|Register         |        -|    -|     331|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|     363|      55|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------+-----------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |   Memory  |                  Module                 | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------+-----------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |fc_bias_U  |fc_Pipeline_FC_BIAS_fc_bias_ROM_AUTO_1R  |        0|  32|   5|    0|    10|   32|     1|          320|
+    +-----------+-----------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total      |                                         |        0|  32|   5|    0|    10|   32|     1|          320|
+    +-----------+-----------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln13_fu_205_p2   |         +|   0|  0|   6|           4|           1|
+    |icmp_ln13_fu_199_p2  |      icmp|   0|  0|   6|           4|           4|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  14|           9|           7|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_oc_2    |   9|          2|    4|          8|
+    |oc_fu_64                 |   9|          2|    4|          8|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   10|         20|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+----+----+-----+-----------+
+    |              Name              | FF | LUT| Bits| Const Bits|
+    +--------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                       |   1|   0|    1|          0|
+    |ap_done_reg                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1         |   1|   0|    1|          0|
+    |arrayidx19_1_promoted5_fu_72    |  32|   0|   32|          0|
+    |arrayidx19_2_promoted7_fu_76    |  32|   0|   32|          0|
+    |arrayidx19_3_promoted9_fu_80    |  32|   0|   32|          0|
+    |arrayidx19_4_promoted11_fu_84   |  32|   0|   32|          0|
+    |arrayidx19_5_promoted13_fu_88   |  32|   0|   32|          0|
+    |arrayidx19_6_promoted15_fu_92   |  32|   0|   32|          0|
+    |arrayidx19_7_promoted17_fu_96   |  32|   0|   32|          0|
+    |arrayidx19_8_promoted19_fu_100  |  32|   0|   32|          0|
+    |arrayidx19_9_promoted21_fu_104  |  32|   0|   32|          0|
+    |arrayidx19_promoted3_fu_68      |  32|   0|   32|          0|
+    |oc_2_reg_400                    |   4|   0|    4|          0|
+    |oc_fu_64                        |   4|   0|    4|          0|
+    +--------------------------------+----+----+-----+-----------+
+    |Total                           | 331|   0|  331|          0|
+    +--------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|              RTL Ports             | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                              |   in|    1|  ap_ctrl_hs|          fc_Pipeline_FC_BIAS|  return value|
+|ap_rst                              |   in|    1|  ap_ctrl_hs|          fc_Pipeline_FC_BIAS|  return value|
+|ap_start                            |   in|    1|  ap_ctrl_hs|          fc_Pipeline_FC_BIAS|  return value|
+|ap_done                             |  out|    1|  ap_ctrl_hs|          fc_Pipeline_FC_BIAS|  return value|
+|ap_idle                             |  out|    1|  ap_ctrl_hs|          fc_Pipeline_FC_BIAS|  return value|
+|ap_ready                            |  out|    1|  ap_ctrl_hs|          fc_Pipeline_FC_BIAS|  return value|
+|arrayidx19_9_promoted21_out         |  out|   32|      ap_vld|  arrayidx19_9_promoted21_out|       pointer|
+|arrayidx19_9_promoted21_out_ap_vld  |  out|    1|      ap_vld|  arrayidx19_9_promoted21_out|       pointer|
+|arrayidx19_8_promoted19_out         |  out|   32|      ap_vld|  arrayidx19_8_promoted19_out|       pointer|
+|arrayidx19_8_promoted19_out_ap_vld  |  out|    1|      ap_vld|  arrayidx19_8_promoted19_out|       pointer|
+|arrayidx19_7_promoted17_out         |  out|   32|      ap_vld|  arrayidx19_7_promoted17_out|       pointer|
+|arrayidx19_7_promoted17_out_ap_vld  |  out|    1|      ap_vld|  arrayidx19_7_promoted17_out|       pointer|
+|arrayidx19_6_promoted15_out         |  out|   32|      ap_vld|  arrayidx19_6_promoted15_out|       pointer|
+|arrayidx19_6_promoted15_out_ap_vld  |  out|    1|      ap_vld|  arrayidx19_6_promoted15_out|       pointer|
+|arrayidx19_5_promoted13_out         |  out|   32|      ap_vld|  arrayidx19_5_promoted13_out|       pointer|
+|arrayidx19_5_promoted13_out_ap_vld  |  out|    1|      ap_vld|  arrayidx19_5_promoted13_out|       pointer|
+|arrayidx19_4_promoted11_out         |  out|   32|      ap_vld|  arrayidx19_4_promoted11_out|       pointer|
+|arrayidx19_4_promoted11_out_ap_vld  |  out|    1|      ap_vld|  arrayidx19_4_promoted11_out|       pointer|
+|arrayidx19_3_promoted9_out          |  out|   32|      ap_vld|   arrayidx19_3_promoted9_out|       pointer|
+|arrayidx19_3_promoted9_out_ap_vld   |  out|    1|      ap_vld|   arrayidx19_3_promoted9_out|       pointer|
+|arrayidx19_2_promoted7_out          |  out|   32|      ap_vld|   arrayidx19_2_promoted7_out|       pointer|
+|arrayidx19_2_promoted7_out_ap_vld   |  out|    1|      ap_vld|   arrayidx19_2_promoted7_out|       pointer|
+|arrayidx19_1_promoted5_out          |  out|   32|      ap_vld|   arrayidx19_1_promoted5_out|       pointer|
+|arrayidx19_1_promoted5_out_ap_vld   |  out|    1|      ap_vld|   arrayidx19_1_promoted5_out|       pointer|
+|arrayidx19_promoted3_out            |  out|   32|      ap_vld|     arrayidx19_promoted3_out|       pointer|
+|arrayidx19_promoted3_out_ap_vld     |  out|    1|      ap_vld|     arrayidx19_promoted3_out|       pointer|
++------------------------------------+-----+-----+------------+-----------------------------+--------------+
+

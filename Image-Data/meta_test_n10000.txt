@@ -1,0 +1,25 @@
+# CIFAR-10 binary export metadata
+split=test
+start_index=0
+num_images=10000
+image_shape=(10000, 3, 32, 32)
+image_dtype=float32
+image_layout=[img][channel][row][col] row-major little-endian
+image_size_bytes=122880000
+normalize_mean=(0.4914, 0.4822, 0.4465)
+normalize_std=(0.2023, 0.1994, 0.201)
+label_shape=(10000,)
+label_dtype=uint8
+label_size_bytes=10000
+classes=['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+
+# C/HLS loading example:
+# float images[10000][3][32][32];
+# FILE *fp = fopen("images_test_n10000.bin", "rb");
+# fread(images, sizeof(float), 10000*3*32*32, fp);
+# fclose(fp);
+#
+# uint8_t labels[10000];
+# FILE *lp = fopen("labels_test_n10000.bin", "rb");
+# fread(labels, sizeof(uint8_t), 10000, lp);
+# fclose(lp);

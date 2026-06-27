@@ -1,0 +1,87 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">,  1587, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,  4247, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,  3667, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,  3239, user inline pragmas are applied</column>
+            <column name="">(4) simplification,  3245, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,  5602, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,  3315, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate,  3315, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  3315, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  3341, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,  3339, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  3314, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 16988, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  9214, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,  9220, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  9240, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="mobilenet_v1" col1="mobilenet_v1.cpp:4" col2="1587" col3="3245" col4="3341" col5="9214" col6="9240">
+                    <row id="1" col0="load_input" col1="transfer.cpp:4" col2="42" col3="" col4="" col5="" col6=""/>
+                    <row id="10" col0="conv0" col1="conv.cpp:3" col2="103" col3="264" col4="216" col5="957" col6="967"/>
+                    <row id="2" col0="batchnorm_conv0" col1="batchnorm.cpp:7" col2="59" col3="271" col4="269" col5="597" col6="604">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="22" col0="dw0" col1="depthwise.cpp:3" col2="89" col3="112" col4="112" col5="889" col6="809"/>
+                    <row id="21" col0="batchnorm_dw0" col1="batchnorm.cpp:26" col2="59" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="17" col0="pw0" col1="pointwise.cpp:3" col2="63" col3="114" col4="114" col5="211" col6="221"/>
+                    <row id="8" col0="batchnorm_pw0" col1="batchnorm.cpp:45" col2="59" col3="143" col4="141" col5="309" col6="316">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="13" col0="dw1" col1="depthwise.cpp:32" col2="89" col3="112" col4="112" col5="554" col6="522"/>
+                    <row id="3" col0="batchnorm_dw1" col1="batchnorm.cpp:65" col2="59" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="23" col0="pw1" col1="pointwise.cpp:27" col2="63" col3="210" col4="210" col5="739" col6="749"/>
+                    <row id="5" col0="batchnorm_pw1" col1="batchnorm.cpp:85" col2="59" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="15" col0="dw2" col1="depthwise.cpp:61" col2="89" col3="112" col4="112" col5="338" col6="330"/>
+                    <row id="19" col0="batchnorm_dw2" col1="batchnorm.cpp:105" col2="59" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="6" col0="pw2" col1="pointwise.cpp:53" col2="63" col3="402" col4="402" col5="875" col6="885"/>
+                    <row id="11" col0="batchnorm_pw2" col1="batchnorm.cpp:125" col2="59" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="4" col0="dw3" col1="depthwise.cpp:90" col2="89" col3="112" col4="112" col5="163" col6="164"/>
+                    <row id="14" col0="batchnorm_dw3" col1="batchnorm.cpp:145" col2="59" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="20" col0="pw3" col1="pointwise.cpp:78" col2="63" col3="786" col4="786" col5="1170" col6="1180"/>
+                    <row id="16" col0="batchnorm_pw3" col1="batchnorm.cpp:165" col2="59" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="relu" col1="batchnorm.cpp:3" col2="6" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="18" col0="global_avg_pool" col1="gap.cpp:3" col2="42" col3="" col4="" col5="" col6=""/>
+                    <row id="7" col0="fc" col1="fc.cpp:3" col2="70" col3="108" col4="125" col5="105" col6="117"/>
+                    <row id="9" col0="store_output" col1="transfer.cpp:19" col2="16" col3="" col4="" col5="" col6=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>

@@ -1,0 +1,49 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline fc/FC_BIAS
+set_directive_pipeline fc/FC_OUTPUT
+set_directive_pipeline mobilenet_v1/GAP_C
+# Inferred from performance & pipeline pragmas/directives
+set_directive_array_partition mobilenet_v1/ofmap_conv0 -dim=3 -type=complete ofmap_conv0
+set_directive_loop_flatten batchnorm_conv0/BN_CONV0_C
+set_directive_loop_flatten mobilenet_v1/BN_DW0_H
+set_directive_loop_flatten mobilenet_v1/BN_DW0_C
+set_directive_array_partition mobilenet_v1/ofmap_pw0 -dim=3 -type=complete ofmap_pw0
+set_directive_array_partition mobilenet_v1/ifmap_dw1 -dim=3 -type=complete ifmap_dw1
+set_directive_loop_flatten batchnorm_pw0/BN_PW0_C
+set_directive_array_partition mobilenet_v1/ofmap_dw1 -dim=3 -type=complete ofmap_dw1
+set_directive_array_partition mobilenet_v1/ifmap_pw1_0 -dim=3 -type=complete ifmap_pw1_0
+set_directive_loop_flatten mobilenet_v1/BN_DW1_C
+set_directive_array_partition mobilenet_v1/ofmap_pw1 -dim=3 -type=complete ofmap_pw1
+set_directive_loop_flatten mobilenet_v1/BN_PW1_C
+set_directive_array_partition mobilenet_v1/ofmap_dw2 -dim=3 -type=complete ofmap_dw2
+set_directive_array_partition mobilenet_v1/ifmap_pw2_0 -dim=3 -type=complete ifmap_pw2_0
+set_directive_loop_flatten mobilenet_v1/BN_DW2_C
+set_directive_array_partition mobilenet_v1/ofmap_pw2 -dim=3 -type=complete ofmap_pw2
+set_directive_array_partition mobilenet_v1/ifmap_dw3 -dim=3 -type=complete ifmap_dw3
+set_directive_loop_flatten mobilenet_v1/BN_PW2_C
+set_directive_array_partition mobilenet_v1/ifmap_pw3_0 -dim=3 -type=complete ifmap_pw3_0
+set_directive_loop_flatten mobilenet_v1/BN_DW3_C
+set_directive_loop_flatten mobilenet_v1/BN_PW3_C
+set_directive_array_partition mobilenet_v1/in_buf_0 -dim=3 -type=cyclic -factor=3 in_buf_0
+set_directive_loop_flatten conv0/CONV0_OH
+set_directive_loop_flatten conv0/CONV0_OC
+set_directive_array_partition mobilenet_v1/ifmap_dw0 -dim=3 -type=complete ifmap_dw0
+set_directive_loop_flatten dw0/DW0_OH
+set_directive_loop_flatten dw0/DW0_C
+set_directive_loop_flatten dw1/DW1_OH
+set_directive_loop_flatten dw1/DW1_C
+set_directive_array_partition mobilenet_v1/ifmap_dw2 -dim=3 -type=complete ifmap_dw2
+set_directive_loop_flatten dw2/DW2_OH
+set_directive_loop_flatten dw2/DW2_C
+set_directive_loop_flatten dw3/DW3_OH
+set_directive_loop_flatten dw3/DW3_C
+set_directive_loop_flatten pw0/PW0_OH
+set_directive_loop_flatten pw0/PW0_OC
+set_directive_loop_flatten pw1/PW1_OH
+set_directive_loop_flatten pw1/PW1_OC
+set_directive_loop_flatten pw2/PW2_OH
+set_directive_loop_flatten pw2/PW2_OC
+set_directive_loop_flatten pw3/PW3_OH
+set_directive_loop_flatten pw3/PW3_OC
+set_directive_loop_flatten mobilenet_v1/LOAD_INH
+set_directive_loop_flatten mobilenet_v1/LOAD_INC

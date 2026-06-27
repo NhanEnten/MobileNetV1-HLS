@@ -1,0 +1,253 @@
+<ENTRY>
+{
+ "thisFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/QAT_HLS.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jun 27 11:06:01 2026",
+ "timestampMillis": "1782533161443",
+ "buildStep": {
+  "cmdId": "60b43e54-90c6-42a1-a542-682f0db9680a",
+  "name": "v++",
+  "logFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/logs/QAT_HLS.steps.log",
+  "commandLine": "/home/nhanenten/2025.2/Vitis/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/hls_config.cfg --work_dir QAT_HLS ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/hls_config.cfg",
+   "--work_dir",
+   "QAT_HLS"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/hls_config.cfg",
+    "content": "part=xc7z045ffg900-2\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.file=../QAT-Model/transfer.cpp\nsyn.file=../QAT-Model/pointwise.cpp\nsyn.file=../QAT-Model/params_qat.hpp\nsyn.file=../QAT-Model/mobilenet_v1_qat.hpp\nsyn.file=../QAT-Model/mobilenet_v1_qat.cpp\nsyn.file=../QAT-Model/gap.cpp\nsyn.file=../QAT-Model/fc.cpp\nsyn.file=../QAT-Model/depthwise.cpp\nsyn.file=../QAT-Model/conv.cpp\ntb.file=../QAT-Model/tb_mobilenetv1.cpp\ntb.file=../QAT-Model/labels1.dat\ntb.file=../QAT-Model/images1.dat\ntb.file=../QAT-Model/labels10.dat\ntb.file=../QAT-Model/images10.dat\nsyn.top=mobilenet_v1_qat"
+   }
+  ],
+  "cwd": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 11:06:01 2026",
+ "timestampMillis": "1782533161443",
+ "status": {
+  "cmdId": "60b43e54-90c6-42a1-a542-682f0db9680a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jun 27 11:06:03 2026",
+ "timestampMillis": "1782533163377",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "mobilenet_v1_qat",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/transfer.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/pointwise.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/params_qat.hpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/mobilenet_v1_qat.hpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/mobilenet_v1_qat.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/gap.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/fc.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/depthwise.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT-Model/conv.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun 27 11:06:03 2026",
+ "timestampMillis": "1782533163378",
+ "buildStep": {
+  "cmdId": "44898259-806c-44ca-9832-53e6188e9e63",
+  "name": "",
+  "logFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 11:06:03 2026",
+ "timestampMillis": "1782533163378",
+ "status": {
+  "cmdId": "44898259-806c-44ca-9832-53e6188e9e63",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:06:03 2026",
+ "timestampMillis": "1782533163378",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:06:03 2026",
+ "timestampMillis": "1782533163379",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:06:03 2026",
+ "timestampMillis": "1782533163379",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:08:39 2026",
+ "timestampMillis": "1782533319340",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:08:39 2026",
+ "timestampMillis": "1782533319341",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:08:39 2026",
+ "timestampMillis": "1782533319341",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 11:08:39 2026",
+ "timestampMillis": "1782533319341",
+ "status": {
+  "cmdId": "44898259-806c-44ca-9832-53e6188e9e63",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 11:08:39 2026",
+ "timestampMillis": "1782533319533",
+ "status": {
+  "cmdId": "60b43e54-90c6-42a1-a542-682f0db9680a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:08:39 2026",
+ "timestampMillis": "1782533319555",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/reports/v++_compile_QAT_HLS_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:08:39 2026",
+ "timestampMillis": "1782533319556",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/QAT_HLS/QAT_HLS/reports/.db/v++_compile_QAT_HLS_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

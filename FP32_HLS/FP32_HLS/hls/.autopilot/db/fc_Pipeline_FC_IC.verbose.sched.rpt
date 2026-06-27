@@ -1,0 +1,444 @@
+
+
+================================================================
+== Vitis HLS Report for 'fc_Pipeline_FC_IC'
+================================================================
+* Date:           Sat Jun 27 09:58:14 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        FP32_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.329 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+    |   min   |   max   |    min    |    max    | min | max |        Type       |
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |     1547|     1547|  15.470 us|  15.470 us|    0|    0|  loop pipeline stp|
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- FC_IC   |     1545|     1545|        16|          6|          1|   256|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 6, depth = 16
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 1
+  Pipeline-0 : II = 6, D = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.06>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%add8 = alloca i32 1"   --->   Operation 19 'alloca' 'add8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%add_19 = alloca i32 1"   --->   Operation 20 'alloca' 'add_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%add_210 = alloca i32 1"   --->   Operation 21 'alloca' 'add_210' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%add_311 = alloca i32 1"   --->   Operation 22 'alloca' 'add_311' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%add_412 = alloca i32 1"   --->   Operation 23 'alloca' 'add_412' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%add_513 = alloca i32 1"   --->   Operation 24 'alloca' 'add_513' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%add_614 = alloca i32 1"   --->   Operation 25 'alloca' 'add_614' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%add_715 = alloca i32 1"   --->   Operation 26 'alloca' 'add_715' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%add_816 = alloca i32 1"   --->   Operation 27 'alloca' 'add_816' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%add_917 = alloca i32 1"   --->   Operation 28 'alloca' 'add_917' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%ic = alloca i32 1" [../FP32-Model/fc.cpp:17]   --->   Operation 29 'alloca' 'ic' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%arrayidx19_promoted3_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_promoted3_reload"   --->   Operation 30 'read' 'arrayidx19_promoted3_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%arrayidx19_1_promoted5_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_1_promoted5_reload"   --->   Operation 31 'read' 'arrayidx19_1_promoted5_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%arrayidx19_2_promoted7_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_2_promoted7_reload"   --->   Operation 32 'read' 'arrayidx19_2_promoted7_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%arrayidx19_3_promoted9_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_3_promoted9_reload"   --->   Operation 33 'read' 'arrayidx19_3_promoted9_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%arrayidx19_4_promoted11_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_4_promoted11_reload"   --->   Operation 34 'read' 'arrayidx19_4_promoted11_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%arrayidx19_5_promoted13_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_5_promoted13_reload"   --->   Operation 35 'read' 'arrayidx19_5_promoted13_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%arrayidx19_6_promoted15_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_6_promoted15_reload"   --->   Operation 36 'read' 'arrayidx19_6_promoted15_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%arrayidx19_7_promoted17_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_7_promoted17_reload"   --->   Operation 37 'read' 'arrayidx19_7_promoted17_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%arrayidx19_8_promoted19_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_8_promoted19_reload"   --->   Operation 38 'read' 'arrayidx19_8_promoted19_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%arrayidx19_9_promoted21_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %arrayidx19_9_promoted21_reload"   --->   Operation 39 'read' 'arrayidx19_9_promoted21_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (1.29ns)   --->   "%store_ln17 = store i9 0, i9 %ic" [../FP32-Model/fc.cpp:17]   --->   Operation 40 'store' 'store_ln17' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 41 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_9_promoted21_reload_read, i32 %add_917"   --->   Operation 41 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 42 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_8_promoted19_reload_read, i32 %add_816"   --->   Operation 42 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 43 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_7_promoted17_reload_read, i32 %add_715"   --->   Operation 43 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 44 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_6_promoted15_reload_read, i32 %add_614"   --->   Operation 44 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 45 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_5_promoted13_reload_read, i32 %add_513"   --->   Operation 45 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 46 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_4_promoted11_reload_read, i32 %add_412"   --->   Operation 46 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 47 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_3_promoted9_reload_read, i32 %add_311"   --->   Operation 47 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 48 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_2_promoted7_reload_read, i32 %add_210"   --->   Operation 48 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 49 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_1_promoted5_reload_read, i32 %add_19"   --->   Operation 49 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 50 [1/1] (1.29ns)   --->   "%store_ln0 = store i32 %arrayidx19_promoted3_reload_read, i32 %add8"   --->   Operation 50 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln0 = br void %FC_OC"   --->   Operation 51 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%ic_1 = load i9 %ic" [../FP32-Model/fc.cpp:17]   --->   Operation 52 'load' 'ic_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (1.36ns)   --->   "%icmp_ln17 = icmp_eq  i9 %ic_1, i9 256" [../FP32-Model/fc.cpp:17]   --->   Operation 53 'icmp' 'icmp_ln17' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (1.36ns)   --->   "%add_ln17 = add i9 %ic_1, i9 1" [../FP32-Model/fc.cpp:17]   --->   Operation 54 'add' 'add_ln17' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln17 = br i1 %icmp_ln17, void %FC_OC.split, void %for.inc35.preheader.exitStub" [../FP32-Model/fc.cpp:17]   --->   Operation 55 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln17 = zext i9 %ic_1" [../FP32-Model/fc.cpp:17]   --->   Operation 56 'zext' 'zext_ln17' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%ifmap_addr = getelementptr i32 %ifmap, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 57 'getelementptr' 'ifmap_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 58 [2/2] (2.77ns)   --->   "%ifmap_load = load i8 %ifmap_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 58 'load' 'ifmap_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_0_addr = getelementptr i32 %p_ZL9fc_weight_0, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 59 'getelementptr' 'p_ZL9fc_weight_0_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 60 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_0_load = load i8 %p_ZL9fc_weight_0_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 60 'load' 'p_ZL9fc_weight_0_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_1_addr = getelementptr i32 %p_ZL9fc_weight_1, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 61 'getelementptr' 'p_ZL9fc_weight_1_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 62 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_1_load = load i8 %p_ZL9fc_weight_1_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 62 'load' 'p_ZL9fc_weight_1_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_2_addr = getelementptr i32 %p_ZL9fc_weight_2, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 63 'getelementptr' 'p_ZL9fc_weight_2_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 64 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_2_load = load i8 %p_ZL9fc_weight_2_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 64 'load' 'p_ZL9fc_weight_2_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_3_addr = getelementptr i32 %p_ZL9fc_weight_3, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 65 'getelementptr' 'p_ZL9fc_weight_3_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 66 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_3_load = load i8 %p_ZL9fc_weight_3_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 66 'load' 'p_ZL9fc_weight_3_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_4_addr = getelementptr i32 %p_ZL9fc_weight_4, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 67 'getelementptr' 'p_ZL9fc_weight_4_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 68 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_4_load = load i8 %p_ZL9fc_weight_4_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 68 'load' 'p_ZL9fc_weight_4_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_5_addr = getelementptr i32 %p_ZL9fc_weight_5, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 69 'getelementptr' 'p_ZL9fc_weight_5_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 70 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_5_load = load i8 %p_ZL9fc_weight_5_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 70 'load' 'p_ZL9fc_weight_5_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_6_addr = getelementptr i32 %p_ZL9fc_weight_6, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 71 'getelementptr' 'p_ZL9fc_weight_6_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 72 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_6_load = load i8 %p_ZL9fc_weight_6_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 72 'load' 'p_ZL9fc_weight_6_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_7_addr = getelementptr i32 %p_ZL9fc_weight_7, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 73 'getelementptr' 'p_ZL9fc_weight_7_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 74 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_7_load = load i8 %p_ZL9fc_weight_7_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 74 'load' 'p_ZL9fc_weight_7_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_8_addr = getelementptr i32 %p_ZL9fc_weight_8, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 75 'getelementptr' 'p_ZL9fc_weight_8_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 76 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_8_load = load i8 %p_ZL9fc_weight_8_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 76 'load' 'p_ZL9fc_weight_8_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_ZL9fc_weight_9_addr = getelementptr i32 %p_ZL9fc_weight_9, i64 0, i64 %zext_ln17" [../FP32-Model/fc.cpp:21]   --->   Operation 77 'getelementptr' 'p_ZL9fc_weight_9_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 78 [2/2] (2.77ns)   --->   "%p_ZL9fc_weight_9_load = load i8 %p_ZL9fc_weight_9_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 78 'load' 'p_ZL9fc_weight_9_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_1 : Operation 79 [1/1] (1.29ns)   --->   "%store_ln17 = store i9 %add_ln17, i9 %ic" [../FP32-Model/fc.cpp:17]   --->   Operation 79 'store' 'store_ln17' <Predicate = (!icmp_ln17)> <Delay = 1.29>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 80 [1/2] ( I:2.77ns O:2.77ns )   --->   "%ifmap_load = load i8 %ifmap_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 80 'load' 'ifmap_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_2 : Operation 81 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_0_load = load i8 %p_ZL9fc_weight_0_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 81 'load' 'p_ZL9fc_weight_0_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 82 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_1_load = load i8 %p_ZL9fc_weight_1_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 82 'load' 'p_ZL9fc_weight_1_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 83 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_2_load = load i8 %p_ZL9fc_weight_2_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 83 'load' 'p_ZL9fc_weight_2_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 84 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_3_load = load i8 %p_ZL9fc_weight_3_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 84 'load' 'p_ZL9fc_weight_3_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 85 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_4_load = load i8 %p_ZL9fc_weight_4_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 85 'load' 'p_ZL9fc_weight_4_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 86 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_5_load = load i8 %p_ZL9fc_weight_5_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 86 'load' 'p_ZL9fc_weight_5_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 87 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_6_load = load i8 %p_ZL9fc_weight_6_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 87 'load' 'p_ZL9fc_weight_6_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 88 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_7_load = load i8 %p_ZL9fc_weight_7_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 88 'load' 'p_ZL9fc_weight_7_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 89 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_8_load = load i8 %p_ZL9fc_weight_8_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 89 'load' 'p_ZL9fc_weight_8_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+ST_2 : Operation 90 [1/2] ( I:2.77ns O:2.77ns )   --->   "%p_ZL9fc_weight_9_load = load i8 %p_ZL9fc_weight_9_addr" [../FP32-Model/fc.cpp:21]   --->   Operation 90 'load' 'p_ZL9fc_weight_9_load' <Predicate = (!icmp_ln17)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 94 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 256> <ROM>
+
+State 3 <SV = 2> <Delay = 4.72>
+ST_3 : Operation 91 [4/4] (4.72ns)   --->   "%mul = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_0_load" [../FP32-Model/fc.cpp:21]   --->   Operation 91 'fmul' 'mul' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [4/4] (4.72ns)   --->   "%mul_1 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_1_load" [../FP32-Model/fc.cpp:21]   --->   Operation 92 'fmul' 'mul_1' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 4.72>
+ST_4 : Operation 93 [3/4] (4.72ns)   --->   "%mul = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_0_load" [../FP32-Model/fc.cpp:21]   --->   Operation 93 'fmul' 'mul' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 94 [3/4] (4.72ns)   --->   "%mul_1 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_1_load" [../FP32-Model/fc.cpp:21]   --->   Operation 94 'fmul' 'mul_1' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 95 [4/4] (4.72ns)   --->   "%mul_2 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_2_load" [../FP32-Model/fc.cpp:21]   --->   Operation 95 'fmul' 'mul_2' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 96 [4/4] (4.72ns)   --->   "%mul_3 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_3_load" [../FP32-Model/fc.cpp:21]   --->   Operation 96 'fmul' 'mul_3' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 4.72>
+ST_5 : Operation 97 [2/4] (4.72ns)   --->   "%mul = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_0_load" [../FP32-Model/fc.cpp:21]   --->   Operation 97 'fmul' 'mul' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 98 [2/4] (4.72ns)   --->   "%mul_1 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_1_load" [../FP32-Model/fc.cpp:21]   --->   Operation 98 'fmul' 'mul_1' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 99 [3/4] (4.72ns)   --->   "%mul_2 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_2_load" [../FP32-Model/fc.cpp:21]   --->   Operation 99 'fmul' 'mul_2' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 100 [3/4] (4.72ns)   --->   "%mul_3 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_3_load" [../FP32-Model/fc.cpp:21]   --->   Operation 100 'fmul' 'mul_3' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 101 [4/4] (4.72ns)   --->   "%mul_4 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_4_load" [../FP32-Model/fc.cpp:21]   --->   Operation 101 'fmul' 'mul_4' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 102 [4/4] (4.72ns)   --->   "%mul_5 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_5_load" [../FP32-Model/fc.cpp:21]   --->   Operation 102 'fmul' 'mul_5' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.72>
+ST_6 : Operation 103 [1/4] (4.72ns)   --->   "%mul = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_0_load" [../FP32-Model/fc.cpp:21]   --->   Operation 103 'fmul' 'mul' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 104 [1/4] (4.72ns)   --->   "%mul_1 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_1_load" [../FP32-Model/fc.cpp:21]   --->   Operation 104 'fmul' 'mul_1' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 105 [2/4] (4.72ns)   --->   "%mul_2 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_2_load" [../FP32-Model/fc.cpp:21]   --->   Operation 105 'fmul' 'mul_2' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 106 [2/4] (4.72ns)   --->   "%mul_3 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_3_load" [../FP32-Model/fc.cpp:21]   --->   Operation 106 'fmul' 'mul_3' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 107 [3/4] (4.72ns)   --->   "%mul_4 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_4_load" [../FP32-Model/fc.cpp:21]   --->   Operation 107 'fmul' 'mul_4' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 108 [3/4] (4.72ns)   --->   "%mul_5 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_5_load" [../FP32-Model/fc.cpp:21]   --->   Operation 108 'fmul' 'mul_5' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 109 [4/4] (4.72ns)   --->   "%mul_6 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_6_load" [../FP32-Model/fc.cpp:21]   --->   Operation 109 'fmul' 'mul_6' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 110 [4/4] (4.72ns)   --->   "%mul_7 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_7_load" [../FP32-Model/fc.cpp:21]   --->   Operation 110 'fmul' 'mul_7' <Predicate = (!icmp_ln17)> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.32>
+ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%add8_load = load i32 %add8" [../FP32-Model/fc.cpp:21]   --->   Operation 111 'load' 'add8_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 112 [1/1] (0.00ns)   --->   "%add_19_load = load i32 %add_19" [../FP32-Model/fc.cpp:21]   --->   Operation 112 'load' 'add_19_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 113 [5/5] (6.32ns)   --->   "%acc = fadd i32 %add8_load, i32 %mul" [../FP32-Model/fc.cpp:21]   --->   Operation 113 'fadd' 'acc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 114 [5/5] (6.32ns)   --->   "%acc_237 = fadd i32 %add_19_load, i32 %mul_1" [../FP32-Model/fc.cpp:21]   --->   Operation 114 'fadd' 'acc_237' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 115 [1/4] (4.72ns)   --->   "%mul_2 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_2_load" [../FP32-Model/fc.cpp:21]   --->   Operation 115 'fmul' 'mul_2' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 116 [1/4] (4.72ns)   --->   "%mul_3 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_3_load" [../FP32-Model/fc.cpp:21]   --->   Operation 116 'fmul' 'mul_3' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 117 [2/4] (4.72ns)   --->   "%mul_4 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_4_load" [../FP32-Model/fc.cpp:21]   --->   Operation 117 'fmul' 'mul_4' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 118 [2/4] (4.72ns)   --->   "%mul_5 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_5_load" [../FP32-Model/fc.cpp:21]   --->   Operation 118 'fmul' 'mul_5' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 119 [3/4] (4.72ns)   --->   "%mul_6 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_6_load" [../FP32-Model/fc.cpp:21]   --->   Operation 119 'fmul' 'mul_6' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 120 [3/4] (4.72ns)   --->   "%mul_7 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_7_load" [../FP32-Model/fc.cpp:21]   --->   Operation 120 'fmul' 'mul_7' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 121 [4/4] (4.72ns)   --->   "%mul_8 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_8_load" [../FP32-Model/fc.cpp:21]   --->   Operation 121 'fmul' 'mul_8' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 122 [4/4] (4.72ns)   --->   "%mul_9 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_9_load" [../FP32-Model/fc.cpp:21]   --->   Operation 122 'fmul' 'mul_9' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.32>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%add_210_load = load i32 %add_210" [../FP32-Model/fc.cpp:21]   --->   Operation 123 'load' 'add_210_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%add_311_load = load i32 %add_311" [../FP32-Model/fc.cpp:21]   --->   Operation 124 'load' 'add_311_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 125 [4/5] (6.32ns)   --->   "%acc = fadd i32 %add8_load, i32 %mul" [../FP32-Model/fc.cpp:21]   --->   Operation 125 'fadd' 'acc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 126 [4/5] (6.32ns)   --->   "%acc_237 = fadd i32 %add_19_load, i32 %mul_1" [../FP32-Model/fc.cpp:21]   --->   Operation 126 'fadd' 'acc_237' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 127 [5/5] (6.32ns)   --->   "%acc_238 = fadd i32 %add_210_load, i32 %mul_2" [../FP32-Model/fc.cpp:21]   --->   Operation 127 'fadd' 'acc_238' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 128 [5/5] (6.32ns)   --->   "%acc_239 = fadd i32 %add_311_load, i32 %mul_3" [../FP32-Model/fc.cpp:21]   --->   Operation 128 'fadd' 'acc_239' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 129 [1/4] (4.72ns)   --->   "%mul_4 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_4_load" [../FP32-Model/fc.cpp:21]   --->   Operation 129 'fmul' 'mul_4' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 130 [1/4] (4.72ns)   --->   "%mul_5 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_5_load" [../FP32-Model/fc.cpp:21]   --->   Operation 130 'fmul' 'mul_5' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 131 [2/4] (4.72ns)   --->   "%mul_6 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_6_load" [../FP32-Model/fc.cpp:21]   --->   Operation 131 'fmul' 'mul_6' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 132 [2/4] (4.72ns)   --->   "%mul_7 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_7_load" [../FP32-Model/fc.cpp:21]   --->   Operation 132 'fmul' 'mul_7' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 133 [3/4] (4.72ns)   --->   "%mul_8 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_8_load" [../FP32-Model/fc.cpp:21]   --->   Operation 133 'fmul' 'mul_8' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 134 [3/4] (4.72ns)   --->   "%mul_9 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_9_load" [../FP32-Model/fc.cpp:21]   --->   Operation 134 'fmul' 'mul_9' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.32>
+ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%add_412_load = load i32 %add_412" [../FP32-Model/fc.cpp:21]   --->   Operation 135 'load' 'add_412_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%add_513_load = load i32 %add_513" [../FP32-Model/fc.cpp:21]   --->   Operation 136 'load' 'add_513_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 137 [3/5] (6.32ns)   --->   "%acc = fadd i32 %add8_load, i32 %mul" [../FP32-Model/fc.cpp:21]   --->   Operation 137 'fadd' 'acc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 138 [3/5] (6.32ns)   --->   "%acc_237 = fadd i32 %add_19_load, i32 %mul_1" [../FP32-Model/fc.cpp:21]   --->   Operation 138 'fadd' 'acc_237' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 139 [4/5] (6.32ns)   --->   "%acc_238 = fadd i32 %add_210_load, i32 %mul_2" [../FP32-Model/fc.cpp:21]   --->   Operation 139 'fadd' 'acc_238' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 140 [4/5] (6.32ns)   --->   "%acc_239 = fadd i32 %add_311_load, i32 %mul_3" [../FP32-Model/fc.cpp:21]   --->   Operation 140 'fadd' 'acc_239' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 141 [5/5] (6.32ns)   --->   "%acc_240 = fadd i32 %add_412_load, i32 %mul_4" [../FP32-Model/fc.cpp:21]   --->   Operation 141 'fadd' 'acc_240' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 142 [5/5] (6.32ns)   --->   "%acc_241 = fadd i32 %add_513_load, i32 %mul_5" [../FP32-Model/fc.cpp:21]   --->   Operation 142 'fadd' 'acc_241' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 143 [1/4] (4.72ns)   --->   "%mul_6 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_6_load" [../FP32-Model/fc.cpp:21]   --->   Operation 143 'fmul' 'mul_6' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 144 [1/4] (4.72ns)   --->   "%mul_7 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_7_load" [../FP32-Model/fc.cpp:21]   --->   Operation 144 'fmul' 'mul_7' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 145 [2/4] (4.72ns)   --->   "%mul_8 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_8_load" [../FP32-Model/fc.cpp:21]   --->   Operation 145 'fmul' 'mul_8' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 146 [2/4] (4.72ns)   --->   "%mul_9 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_9_load" [../FP32-Model/fc.cpp:21]   --->   Operation 146 'fmul' 'mul_9' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.32>
+ST_10 : Operation 147 [1/1] (0.00ns)   --->   "%add_614_load = load i32 %add_614" [../FP32-Model/fc.cpp:21]   --->   Operation 147 'load' 'add_614_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 148 [1/1] (0.00ns)   --->   "%add_715_load = load i32 %add_715" [../FP32-Model/fc.cpp:21]   --->   Operation 148 'load' 'add_715_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 149 [2/5] (6.32ns)   --->   "%acc = fadd i32 %add8_load, i32 %mul" [../FP32-Model/fc.cpp:21]   --->   Operation 149 'fadd' 'acc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 150 [2/5] (6.32ns)   --->   "%acc_237 = fadd i32 %add_19_load, i32 %mul_1" [../FP32-Model/fc.cpp:21]   --->   Operation 150 'fadd' 'acc_237' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 151 [3/5] (6.32ns)   --->   "%acc_238 = fadd i32 %add_210_load, i32 %mul_2" [../FP32-Model/fc.cpp:21]   --->   Operation 151 'fadd' 'acc_238' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 152 [3/5] (6.32ns)   --->   "%acc_239 = fadd i32 %add_311_load, i32 %mul_3" [../FP32-Model/fc.cpp:21]   --->   Operation 152 'fadd' 'acc_239' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 153 [4/5] (6.32ns)   --->   "%acc_240 = fadd i32 %add_412_load, i32 %mul_4" [../FP32-Model/fc.cpp:21]   --->   Operation 153 'fadd' 'acc_240' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 154 [4/5] (6.32ns)   --->   "%acc_241 = fadd i32 %add_513_load, i32 %mul_5" [../FP32-Model/fc.cpp:21]   --->   Operation 154 'fadd' 'acc_241' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 155 [5/5] (6.32ns)   --->   "%acc_242 = fadd i32 %add_614_load, i32 %mul_6" [../FP32-Model/fc.cpp:21]   --->   Operation 155 'fadd' 'acc_242' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 156 [5/5] (6.32ns)   --->   "%acc_243 = fadd i32 %add_715_load, i32 %mul_7" [../FP32-Model/fc.cpp:21]   --->   Operation 156 'fadd' 'acc_243' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 157 [1/4] (4.72ns)   --->   "%mul_8 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_8_load" [../FP32-Model/fc.cpp:21]   --->   Operation 157 'fmul' 'mul_8' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 158 [1/4] (4.72ns)   --->   "%mul_9 = fmul i32 %ifmap_load, i32 %p_ZL9fc_weight_9_load" [../FP32-Model/fc.cpp:21]   --->   Operation 158 'fmul' 'mul_9' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 205 [1/1] (0.00ns)   --->   "%add8_load_1 = load i32 %add8"   --->   Operation 205 'load' 'add8_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 206 [1/1] (0.00ns)   --->   "%add_19_load_1 = load i32 %add_19"   --->   Operation 206 'load' 'add_19_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 207 [1/1] (0.00ns)   --->   "%add_210_load_1 = load i32 %add_210"   --->   Operation 207 'load' 'add_210_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 208 [1/1] (0.00ns)   --->   "%add_311_load_1 = load i32 %add_311"   --->   Operation 208 'load' 'add_311_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 209 [1/1] (0.00ns)   --->   "%add_412_load_1 = load i32 %add_412"   --->   Operation 209 'load' 'add_412_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 210 [1/1] (0.00ns)   --->   "%add_513_load_1 = load i32 %add_513"   --->   Operation 210 'load' 'add_513_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 211 [1/1] (0.00ns)   --->   "%add_614_load_1 = load i32 %add_614"   --->   Operation 211 'load' 'add_614_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 212 [1/1] (0.00ns)   --->   "%add_715_load_1 = load i32 %add_715"   --->   Operation 212 'load' 'add_715_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 213 [1/1] (0.00ns)   --->   "%add_816_load_1 = load i32 %add_816"   --->   Operation 213 'load' 'add_816_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 214 [1/1] (0.00ns)   --->   "%add_917_load_1 = load i32 %add_917"   --->   Operation 214 'load' 'add_917_load_1' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 215 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_917_out, i32 %add_917_load_1"   --->   Operation 215 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 216 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_816_out, i32 %add_816_load_1"   --->   Operation 216 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 217 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_715_out, i32 %add_715_load_1"   --->   Operation 217 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 218 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_614_out, i32 %add_614_load_1"   --->   Operation 218 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 219 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_513_out, i32 %add_513_load_1"   --->   Operation 219 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 220 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_412_out, i32 %add_412_load_1"   --->   Operation 220 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 221 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_311_out, i32 %add_311_load_1"   --->   Operation 221 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 222 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_210_out, i32 %add_210_load_1"   --->   Operation 222 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 223 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add_19_out, i32 %add_19_load_1"   --->   Operation 223 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 224 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %add8_out, i32 %add8_load_1"   --->   Operation 224 'write' 'write_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_10 : Operation 225 [1/1] (1.29ns)   --->   "%ret_ln0 = ret"   --->   Operation 225 'ret' 'ret_ln0' <Predicate = (icmp_ln17)> <Delay = 1.29>
+
+State 11 <SV = 10> <Delay = 6.32>
+ST_11 : Operation 159 [1/1] (0.00ns)   --->   "%add_816_load = load i32 %add_816" [../FP32-Model/fc.cpp:21]   --->   Operation 159 'load' 'add_816_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 160 [1/1] (0.00ns)   --->   "%add_917_load = load i32 %add_917" [../FP32-Model/fc.cpp:21]   --->   Operation 160 'load' 'add_917_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 161 [1/5] (6.32ns)   --->   "%acc = fadd i32 %add8_load, i32 %mul" [../FP32-Model/fc.cpp:21]   --->   Operation 161 'fadd' 'acc' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 162 [1/5] (6.32ns)   --->   "%acc_237 = fadd i32 %add_19_load, i32 %mul_1" [../FP32-Model/fc.cpp:21]   --->   Operation 162 'fadd' 'acc_237' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 163 [2/5] (6.32ns)   --->   "%acc_238 = fadd i32 %add_210_load, i32 %mul_2" [../FP32-Model/fc.cpp:21]   --->   Operation 163 'fadd' 'acc_238' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 164 [2/5] (6.32ns)   --->   "%acc_239 = fadd i32 %add_311_load, i32 %mul_3" [../FP32-Model/fc.cpp:21]   --->   Operation 164 'fadd' 'acc_239' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 165 [3/5] (6.32ns)   --->   "%acc_240 = fadd i32 %add_412_load, i32 %mul_4" [../FP32-Model/fc.cpp:21]   --->   Operation 165 'fadd' 'acc_240' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 166 [3/5] (6.32ns)   --->   "%acc_241 = fadd i32 %add_513_load, i32 %mul_5" [../FP32-Model/fc.cpp:21]   --->   Operation 166 'fadd' 'acc_241' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 167 [4/5] (6.32ns)   --->   "%acc_242 = fadd i32 %add_614_load, i32 %mul_6" [../FP32-Model/fc.cpp:21]   --->   Operation 167 'fadd' 'acc_242' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 168 [4/5] (6.32ns)   --->   "%acc_243 = fadd i32 %add_715_load, i32 %mul_7" [../FP32-Model/fc.cpp:21]   --->   Operation 168 'fadd' 'acc_243' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 169 [5/5] (6.32ns)   --->   "%acc_244 = fadd i32 %add_816_load, i32 %mul_8" [../FP32-Model/fc.cpp:21]   --->   Operation 169 'fadd' 'acc_244' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 170 [5/5] (6.32ns)   --->   "%acc_245 = fadd i32 %add_917_load, i32 %mul_9" [../FP32-Model/fc.cpp:21]   --->   Operation 170 'fadd' 'acc_245' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.32>
+ST_12 : Operation 171 [1/5] (6.32ns)   --->   "%acc_238 = fadd i32 %add_210_load, i32 %mul_2" [../FP32-Model/fc.cpp:21]   --->   Operation 171 'fadd' 'acc_238' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 172 [1/5] (6.32ns)   --->   "%acc_239 = fadd i32 %add_311_load, i32 %mul_3" [../FP32-Model/fc.cpp:21]   --->   Operation 172 'fadd' 'acc_239' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 173 [2/5] (6.32ns)   --->   "%acc_240 = fadd i32 %add_412_load, i32 %mul_4" [../FP32-Model/fc.cpp:21]   --->   Operation 173 'fadd' 'acc_240' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 174 [2/5] (6.32ns)   --->   "%acc_241 = fadd i32 %add_513_load, i32 %mul_5" [../FP32-Model/fc.cpp:21]   --->   Operation 174 'fadd' 'acc_241' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 175 [3/5] (6.32ns)   --->   "%acc_242 = fadd i32 %add_614_load, i32 %mul_6" [../FP32-Model/fc.cpp:21]   --->   Operation 175 'fadd' 'acc_242' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 176 [3/5] (6.32ns)   --->   "%acc_243 = fadd i32 %add_715_load, i32 %mul_7" [../FP32-Model/fc.cpp:21]   --->   Operation 176 'fadd' 'acc_243' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 177 [4/5] (6.32ns)   --->   "%acc_244 = fadd i32 %add_816_load, i32 %mul_8" [../FP32-Model/fc.cpp:21]   --->   Operation 177 'fadd' 'acc_244' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 178 [4/5] (6.32ns)   --->   "%acc_245 = fadd i32 %add_917_load, i32 %mul_9" [../FP32-Model/fc.cpp:21]   --->   Operation 178 'fadd' 'acc_245' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 179 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_237, i32 %add_19" [../FP32-Model/fc.cpp:21]   --->   Operation 179 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+ST_12 : Operation 180 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc, i32 %add8" [../FP32-Model/fc.cpp:21]   --->   Operation 180 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+
+State 13 <SV = 12> <Delay = 6.32>
+ST_13 : Operation 181 [1/5] (6.32ns)   --->   "%acc_240 = fadd i32 %add_412_load, i32 %mul_4" [../FP32-Model/fc.cpp:21]   --->   Operation 181 'fadd' 'acc_240' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 182 [1/5] (6.32ns)   --->   "%acc_241 = fadd i32 %add_513_load, i32 %mul_5" [../FP32-Model/fc.cpp:21]   --->   Operation 182 'fadd' 'acc_241' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 183 [2/5] (6.32ns)   --->   "%acc_242 = fadd i32 %add_614_load, i32 %mul_6" [../FP32-Model/fc.cpp:21]   --->   Operation 183 'fadd' 'acc_242' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 184 [2/5] (6.32ns)   --->   "%acc_243 = fadd i32 %add_715_load, i32 %mul_7" [../FP32-Model/fc.cpp:21]   --->   Operation 184 'fadd' 'acc_243' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 185 [3/5] (6.32ns)   --->   "%acc_244 = fadd i32 %add_816_load, i32 %mul_8" [../FP32-Model/fc.cpp:21]   --->   Operation 185 'fadd' 'acc_244' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 186 [3/5] (6.32ns)   --->   "%acc_245 = fadd i32 %add_917_load, i32 %mul_9" [../FP32-Model/fc.cpp:21]   --->   Operation 186 'fadd' 'acc_245' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 187 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_239, i32 %add_311" [../FP32-Model/fc.cpp:21]   --->   Operation 187 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+ST_13 : Operation 188 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_238, i32 %add_210" [../FP32-Model/fc.cpp:21]   --->   Operation 188 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+
+State 14 <SV = 13> <Delay = 6.32>
+ST_14 : Operation 189 [1/5] (6.32ns)   --->   "%acc_242 = fadd i32 %add_614_load, i32 %mul_6" [../FP32-Model/fc.cpp:21]   --->   Operation 189 'fadd' 'acc_242' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 190 [1/5] (6.32ns)   --->   "%acc_243 = fadd i32 %add_715_load, i32 %mul_7" [../FP32-Model/fc.cpp:21]   --->   Operation 190 'fadd' 'acc_243' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 191 [2/5] (6.32ns)   --->   "%acc_244 = fadd i32 %add_816_load, i32 %mul_8" [../FP32-Model/fc.cpp:21]   --->   Operation 191 'fadd' 'acc_244' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 192 [2/5] (6.32ns)   --->   "%acc_245 = fadd i32 %add_917_load, i32 %mul_9" [../FP32-Model/fc.cpp:21]   --->   Operation 192 'fadd' 'acc_245' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 193 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_241, i32 %add_513" [../FP32-Model/fc.cpp:21]   --->   Operation 193 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+ST_14 : Operation 194 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_240, i32 %add_412" [../FP32-Model/fc.cpp:21]   --->   Operation 194 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+
+State 15 <SV = 14> <Delay = 6.32>
+ST_15 : Operation 195 [1/5] (6.32ns)   --->   "%acc_244 = fadd i32 %add_816_load, i32 %mul_8" [../FP32-Model/fc.cpp:21]   --->   Operation 195 'fadd' 'acc_244' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 196 [1/5] (6.32ns)   --->   "%acc_245 = fadd i32 %add_917_load, i32 %mul_9" [../FP32-Model/fc.cpp:21]   --->   Operation 196 'fadd' 'acc_245' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 197 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_243, i32 %add_715" [../FP32-Model/fc.cpp:21]   --->   Operation 197 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+ST_15 : Operation 198 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_242, i32 %add_614" [../FP32-Model/fc.cpp:21]   --->   Operation 198 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+
+State 16 <SV = 15> <Delay = 1.29>
+ST_16 : Operation 199 [1/1] (0.00ns)   --->   "%specpipeline_ln18 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, i32 4294967295, void @empty" [../FP32-Model/fc.cpp:18]   --->   Operation 199 'specpipeline' 'specpipeline_ln18' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 200 [1/1] (0.00ns)   --->   "%speclooptripcount_ln17 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 256, i64 256, i64 256" [../FP32-Model/fc.cpp:17]   --->   Operation 200 'speclooptripcount' 'speclooptripcount_ln17' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 201 [1/1] (0.00ns)   --->   "%specloopname_ln17 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [../FP32-Model/fc.cpp:17]   --->   Operation 201 'specloopname' 'specloopname_ln17' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 202 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_245, i32 %add_917" [../FP32-Model/fc.cpp:21]   --->   Operation 202 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+ST_16 : Operation 203 [1/1] (1.29ns)   --->   "%store_ln21 = store i32 %acc_244, i32 %add_816" [../FP32-Model/fc.cpp:21]   --->   Operation 203 'store' 'store_ln21' <Predicate = true> <Delay = 1.29>
+ST_16 : Operation 204 [1/1] (0.00ns)   --->   "%br_ln17 = br void %FC_OC" [../FP32-Model/fc.cpp:17]   --->   Operation 204 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 4.069ns
+The critical path consists of the following:
+	'store' operation ('store_ln17', ../FP32-Model/fc.cpp:17) of constant 0 9 bit on local variable 'ic', ../FP32-Model/fc.cpp:17 [53]  (1.298 ns)
+	'load' operation 9 bit ('ic', ../FP32-Model/fc.cpp:17) on local variable 'ic', ../FP32-Model/fc.cpp:17 [66]  (0.000 ns)
+	'getelementptr' operation 8 bit ('ifmap_addr', ../FP32-Model/fc.cpp:21) [85]  (0.000 ns)
+	'load' operation 32 bit ('ifmap_load', ../FP32-Model/fc.cpp:21) on array 'ifmap' [86]  (2.771 ns)
+
+ <State 2>: 2.771ns
+The critical path consists of the following:
+	'load' operation 32 bit ('ifmap_load', ../FP32-Model/fc.cpp:21) on array 'ifmap' [86]  (2.771 ns)
+
+ <State 3>: 4.729ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', ../FP32-Model/fc.cpp:21) [89]  (4.729 ns)
+
+ <State 4>: 4.729ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', ../FP32-Model/fc.cpp:21) [89]  (4.729 ns)
+
+ <State 5>: 4.729ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', ../FP32-Model/fc.cpp:21) [89]  (4.729 ns)
+
+ <State 6>: 4.729ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', ../FP32-Model/fc.cpp:21) [89]  (4.729 ns)
+
+ <State 7>: 6.329ns
+The critical path consists of the following:
+	'load' operation 32 bit ('add8_load', ../FP32-Model/fc.cpp:21) on local variable 'add8' [71]  (0.000 ns)
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [90]  (6.329 ns)
+
+ <State 8>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [90]  (6.329 ns)
+
+ <State 9>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [90]  (6.329 ns)
+
+ <State 10>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [90]  (6.329 ns)
+
+ <State 11>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [90]  (6.329 ns)
+
+ <State 12>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [98]  (6.329 ns)
+
+ <State 13>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [106]  (6.329 ns)
+
+ <State 14>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [114]  (6.329 ns)
+
+ <State 15>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acc', ../FP32-Model/fc.cpp:21) [122]  (6.329 ns)
+
+ <State 16>: 1.298ns
+The critical path consists of the following:
+	'store' operation ('store_ln21', ../FP32-Model/fc.cpp:21) of variable 'acc', ../FP32-Model/fc.cpp:21 32 bit on local variable 'add_917' [128]  (1.298 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

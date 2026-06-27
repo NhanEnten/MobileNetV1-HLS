@@ -1,0 +1,323 @@
+
+
+================================================================
+== Vitis HLS Report for 'mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H'
+================================================================
+* Date:           Sat Jun 27 09:58:12 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        FP32_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.329 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |      270|      270|  2.700 us|  2.700 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- BN_DW3_C_BN_DW3_H  |      268|      268|        14|          1|          1|   256|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 14
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 14, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.82>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%h = alloca i32 1" [../FP32-Model/batchnorm.cpp:156->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 17 'alloca' 'h' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%c = alloca i32 1" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 18 'alloca' 'c' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%indvar_flatten67 = alloca i32 1"   --->   Operation 19 'alloca' 'indvar_flatten67' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw3, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 20 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw3_1, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 21 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw3_2, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 22 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw3_3, i64 666, i64 22, i64 18446744073709551615, i1 0"   --->   Operation 23 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.29ns)   --->   "%store_ln0 = store i9 0, i9 %indvar_flatten67"   --->   Operation 24 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 25 [1/1] (1.29ns)   --->   "%store_ln155 = store i8 0, i8 %c" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 25 'store' 'store_ln155' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 26 [1/1] (1.29ns)   --->   "%store_ln156 = store i2 0, i2 %h" [../FP32-Model/batchnorm.cpp:156->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 26 'store' 'store_ln156' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln0 = br void %BN_DW3_W.i"   --->   Operation 27 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%indvar_flatten67_load = load i9 %indvar_flatten67" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 28 'load' 'indvar_flatten67_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (1.36ns)   --->   "%icmp_ln155 = icmp_eq  i9 %indvar_flatten67_load, i9 256" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 29 'icmp' 'icmp_ln155' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (1.36ns)   --->   "%add_ln155_1 = add i9 %indvar_flatten67_load, i9 1" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 30 'add' 'add_ln155_1' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln155 = br i1 %icmp_ln155, void %for.inc26.i163, void %_Z13batchnorm_dw3PA2_A2_fPKfS3_S1_.exit.exitStub" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 31 'br' 'br_ln155' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%h_load = load i2 %h" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 32 'load' 'h_load' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%c_load = load i8 %c" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 33 'load' 'c_load' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node and_ln155)   --->   "%trunc_ln155 = trunc i2 %h_load" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 34 'trunc' 'trunc_ln155' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (1.30ns)   --->   "%add_ln155 = add i8 %c_load, i8 1" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 35 'add' 'add_ln155' <Predicate = (!icmp_ln155)> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.63ns)   --->   "%icmp_ln156 = icmp_eq  i2 %h_load, i2 2" [../FP32-Model/batchnorm.cpp:156->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 36 'icmp' 'icmp_ln156' <Predicate = (!icmp_ln155)> <Delay = 0.63> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.63> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node and_ln155)   --->   "%xor_ln155 = xor i1 %icmp_ln156, i1 1" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 37 'xor' 'xor_ln155' <Predicate = (!icmp_ln155)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.80ns) (out node of the LUT)   --->   "%and_ln155 = and i1 %trunc_ln155, i1 %xor_ln155" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 38 'and' 'and_ln155' <Predicate = (!icmp_ln155)> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.44ns)   --->   "%select_ln155 = select i1 %icmp_ln156, i8 %add_ln155, i8 %c_load" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 39 'select' 'select_ln155' <Predicate = (!icmp_ln155)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%trunc_ln159 = trunc i8 %select_ln155" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 40 'trunc' 'trunc_ln159' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln155_1 = trunc i8 %select_ln155" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 41 'trunc' 'trunc_ln155_1' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%lshr_ln3 = partselect i6 @_ssdm_op_PartSelect.i6.i8.i32.i32, i8 %select_ln155, i32 1, i32 6" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 42 'partselect' 'lshr_ln3' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i1.i1, i7 %trunc_ln159, i1 %and_ln155, i1 0" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 43 'bitconcatenate' 'tmp' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln159 = zext i9 %tmp" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 44 'zext' 'zext_ln159' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%ofmap_dw3_addr = getelementptr i32 %ofmap_dw3, i64 0, i64 %zext_ln159" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 45 'getelementptr' 'ofmap_dw3_addr' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i1.i1, i7 %trunc_ln159, i1 %and_ln155, i1 1" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 46 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln159_1 = zext i9 %tmp_s" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 47 'zext' 'zext_ln159_1' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%ofmap_dw3_addr_1 = getelementptr i32 %ofmap_dw3, i64 0, i64 %zext_ln159_1" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 48 'getelementptr' 'ofmap_dw3_addr_1' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 49 [2/2] (2.77ns)   --->   "%ofmap_dw3_load = load i9 %ofmap_dw3_addr" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 49 'load' 'ofmap_dw3_load' <Predicate = (!icmp_ln155)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 50 [2/2] (2.77ns)   --->   "%ofmap_dw3_load_1 = load i9 %ofmap_dw3_addr_1" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 50 'load' 'ofmap_dw3_load_1' <Predicate = (!icmp_ln155)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln159 = br i1 %trunc_ln155_1, void %arrayidx224.1.i158253.case.0, void %arrayidx224.1.i158253.case.1" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 51 'br' 'br_ln159' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.81ns)   --->   "%select_ln156 = select i1 %and_ln155, i2 2, i2 1" [../FP32-Model/batchnorm.cpp:156->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 52 'select' 'select_ln156' <Predicate = (!icmp_ln155)> <Delay = 0.81> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (1.29ns)   --->   "%store_ln155 = store i9 %add_ln155_1, i9 %indvar_flatten67" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 53 'store' 'store_ln155' <Predicate = (!icmp_ln155)> <Delay = 1.29>
+ST_1 : Operation 54 [1/1] (1.29ns)   --->   "%store_ln155 = store i8 %select_ln155, i8 %c" [../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 54 'store' 'store_ln155' <Predicate = (!icmp_ln155)> <Delay = 1.29>
+ST_1 : Operation 55 [1/1] (1.29ns)   --->   "%store_ln156 = store i2 %select_ln156, i2 %h" [../FP32-Model/batchnorm.cpp:156->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 55 'store' 'store_ln156' <Predicate = (!icmp_ln155)> <Delay = 1.29>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%br_ln156 = br void %BN_DW3_W.i" [../FP32-Model/batchnorm.cpp:156->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 56 'br' 'br_ln156' <Predicate = (!icmp_ln155)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.14>
+ST_2 : Operation 57 [1/1] (3.14ns)   --->   "%tmp_101 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.128float.float.i7, i7 0, i32 0.876511, i7 1, i32 1.833, i7 2, i32 1.88986, i7 3, i32 1.45878, i7 4, i32 6.10828, i7 5, i32 1.36289, i7 6, i32 2.04806, i7 7, i32 1.32641, i7 8, i32 1.80924, i7 9, i32 1.83282, i7 10, i32 1.7116, i7 11, i32 1.00679, i7 12, i32 1.19628, i7 13, i32 1.15381, i7 14, i32 3.70118, i7 15, i32 1.92751, i7 16, i32 4.00644, i7 17, i32 1.84995, i7 18, i32 2.3122, i7 19, i32 2.02654, i7 20, i32 1.24887, i7 21, i32 1.65772, i7 22, i32 1.3605, i7 23, i32 2.35755, i7 24, i32 1.61948, i7 25, i32 2.66509, i7 26, i32 1.07945, i7 27, i32 2.52039, i7 28, i32 1.97249, i7 29, i32 1.72315, i7 30, i32 2.52023, i7 31, i32 2.61645, i7 32, i32 0.976598, i7 33, i32 1.43307, i7 34, i32 2.06672, i7 35, i32 1.87468, i7 36, i32 2.17421, i7 37, i32 2.35676, i7 38, i32 1.2831, i7 39, i32 1.89257, i7 40, i32 1.77442, i7 41, i32 1.11586, i7 42, i32 2.76645, i7 43, i32 1.69985, i7 44, i32 0.834221, i7 45, i32 2.68671, i7 46, i32 2.02365, i7 47, i32 1.83214, i7 48, i32 0.980699, i7 49, i32 2.23346, i7 50, i32 0.863676, i7 51, i32 2.31485, i7 52, i32 1.60577, i7 53, i32 1.30059, i7 54, i32 2.67482, i7 55, i32 2.90367, i7 56, i32 3.00678, i7 57, i32 3.00692, i7 58, i32 1.30866, i7 59, i32 1.83405, i7 60, i32 0.928752, i7 61, i32 2.32876, i7 62, i32 2.61815, i7 63, i32 2.21528, i7 64, i32 3.1011, i7 65, i32 2.22024, i7 66, i32 3.39073, i7 67, i32 1.20549, i7 68, i32 3.4588, i7 69, i32 3.006, i7 70, i32 4.11737, i7 71, i32 3.29736, i7 72, i32 2.26698, i7 73, i32 1.82123, i7 74, i32 1.34999, i7 75, i32 1.52928, i7 76, i32 1.17641, i7 77, i32 0.807046, i7 78, i32 2.00226, i7 79, i32 1.66765, i7 80, i32 1.34393, i7 81, i32 2.01992, i7 82, i32 3.63707, i7 83, i32 1.41385, i7 84, i32 2.04861, i7 85, i32 2.56475, i7 86, i32 2.52539, i7 87, i32 2.65345, i7 88, i32 2.05451, i7 89, i32 2.20474, i7 90, i32 2.32838, i7 91, i32 1.60338, i7 92, i32 0.852579, i7 93, i32 1.8758, i7 94, i32 1.55992, i7 95, i32 1.78359, i7 96, i32 2.27663, i7 97, i32 1.33526, i7 98, i32 3.12966, i7 99, i32 1.17438, i7 100, i32 1.63991, i7 101, i32 2.44136, i7 102, i32 3.86262, i7 103, i32 1.74647, i7 104, i32 3.60888, i7 105, i32 1.81934, i7 106, i32 2.65128, i7 107, i32 1.80302, i7 108, i32 1.26738, i7 109, i32 2.45788, i7 110, i32 0.816011, i7 111, i32 2.1431, i7 112, i32 1.69367, i7 113, i32 2.11696, i7 114, i32 2.76744, i7 115, i32 1.82255, i7 116, i32 1.06672, i7 117, i32 1.37975, i7 118, i32 2.86278, i7 119, i32 3.01928, i7 120, i32 2.23772, i7 121, i32 1.74853, i7 122, i32 2.86402, i7 123, i32 2.10329, i7 124, i32 2.50152, i7 125, i32 2.62717, i7 126, i32 1.67416, i7 127, i32 2.15372, i32 <undef>, i7 %trunc_ln159" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 57 'sparsemux' 'tmp_101' <Predicate = true> <Delay = 3.14> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 137 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/2] ( I:2.77ns O:2.77ns )   --->   "%ofmap_dw3_load = load i9 %ofmap_dw3_addr" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 58 'load' 'ofmap_dw3_load' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 59 [1/2] ( I:2.77ns O:2.77ns )   --->   "%ofmap_dw3_load_1 = load i9 %ofmap_dw3_addr_1" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 59 'load' 'ofmap_dw3_load_1' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+
+State 3 <SV = 2> <Delay = 4.72>
+ST_3 : Operation 60 [4/4] (4.72ns)   --->   "%mul_i5 = fmul i32 %ofmap_dw3_load, i32 %tmp_101" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 60 'fmul' 'mul_i5' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 61 [4/4] (4.72ns)   --->   "%mul_1_i4 = fmul i32 %ofmap_dw3_load_1, i32 %tmp_101" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 61 'fmul' 'mul_1_i4' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 4.72>
+ST_4 : Operation 62 [3/4] (4.72ns)   --->   "%mul_i5 = fmul i32 %ofmap_dw3_load, i32 %tmp_101" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 62 'fmul' 'mul_i5' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [3/4] (4.72ns)   --->   "%mul_1_i4 = fmul i32 %ofmap_dw3_load_1, i32 %tmp_101" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 63 'fmul' 'mul_1_i4' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 4.72>
+ST_5 : Operation 64 [2/4] (4.72ns)   --->   "%mul_i5 = fmul i32 %ofmap_dw3_load, i32 %tmp_101" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 64 'fmul' 'mul_i5' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 65 [2/4] (4.72ns)   --->   "%mul_1_i4 = fmul i32 %ofmap_dw3_load_1, i32 %tmp_101" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 65 'fmul' 'mul_1_i4' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.72>
+ST_6 : Operation 66 [1/1] (3.14ns)   --->   "%tmp_102 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.128float.float.i7, i7 0, i32 -0.910909, i7 1, i32 -1.63577, i7 2, i32 1.306, i7 3, i32 -0.69553, i7 4, i32 -1.63852, i7 5, i32 -1.18401, i7 6, i32 -0.514274, i7 7, i32 0.446722, i7 8, i32 2.35301, i7 9, i32 -0.629209, i7 10, i32 1.82987, i7 11, i32 -0.923916, i7 12, i32 -0.329174, i7 13, i32 -0.16251, i7 14, i32 -0.0534202, i7 15, i32 -0.402843, i7 16, i32 -0.438264, i7 17, i32 -0.977941, i7 18, i32 0.699743, i7 19, i32 0.896614, i7 20, i32 -1.05787, i7 21, i32 1.54035, i7 22, i32 1.81053, i7 23, i32 2.91268, i7 24, i32 -0.953872, i7 25, i32 -0.108773, i7 26, i32 1.62599, i7 27, i32 -1.15979, i7 28, i32 -0.38718, i7 29, i32 0.557799, i7 30, i32 1.50938, i7 31, i32 -0.11142, i7 32, i32 -0.0576326, i7 33, i32 0.241685, i7 34, i32 -1.26469, i7 35, i32 1.77974, i7 36, i32 -0.0564233, i7 37, i32 -0.39502, i7 38, i32 -0.973212, i7 39, i32 -0.339659, i7 40, i32 -1.71643, i7 41, i32 -1.26321, i7 42, i32 0.812051, i7 43, i32 0.883897, i7 44, i32 -0.596471, i7 45, i32 -0.595168, i7 46, i32 -0.481012, i7 47, i32 1.3233, i7 48, i32 -0.782783, i7 49, i32 -0.0169282, i7 50, i32 -1.19008, i7 51, i32 1.26547, i7 52, i32 0.543017, i7 53, i32 1.2362, i7 54, i32 2.3134, i7 55, i32 -0.688064, i7 56, i32 0.0842101, i7 57, i32 0.359544, i7 58, i32 1.68783, i7 59, i32 -2.13399, i7 60, i32 -0.991441, i7 61, i32 2.05149, i7 62, i32 0.192323, i7 63, i32 1.07173, i7 64, i32 -0.738377, i7 65, i32 2.82786, i7 66, i32 -0.174887, i7 67, i32 1.25285, i7 68, i32 1.16367, i7 69, i32 -0.135504, i7 70, i32 0.192926, i7 71, i32 0.577404, i7 72, i32 0.334133, i7 73, i32 0.74475, i7 74, i32 -0.387793, i7 75, i32 0.233689, i7 76, i32 -1.3062, i7 77, i32 0.624464, i7 78, i32 0.322973, i7 79, i32 0.172264, i7 80, i32 -1.2904, i7 81, i32 0.908064, i7 82, i32 0.420781, i7 83, i32 1.63132, i7 84, i32 0.0765105, i7 85, i32 -0.321719, i7 86, i32 -1.39886, i7 87, i32 0.951723, i7 88, i32 1.125, i7 89, i32 -0.644789, i7 90, i32 -0.780912, i7 91, i32 -1.43177, i7 92, i32 -0.416473, i7 93, i32 -0.17234, i7 94, i32 -1.31924, i7 95, i32 0.140334, i7 96, i32 0.461371, i7 97, i32 -1.37909, i7 98, i32 0.0847705, i7 99, i32 -0.609287, i7 100, i32 0.64493, i7 101, i32 -0.0219233, i7 102, i32 -0.150704, i7 103, i32 -0.215086, i7 104, i32 0.00683996, i7 105, i32 0.713345, i7 106, i32 2.61918, i7 107, i32 -0.142989, i7 108, i32 1.80133, i7 109, i32 0.280745, i7 110, i32 -0.200901, i7 111, i32 -1.89144, i7 112, i32 -0.0420724, i7 113, i32 -0.289702, i7 114, i32 0.803191, i7 115, i32 0.557081, i7 116, i32 -0.293411, i7 117, i32 -0.923853, i7 118, i32 -1.32956, i7 119, i32 -0.54976, i7 120, i32 -0.102718, i7 121, i32 -0.593864, i7 122, i32 0.389162, i7 123, i32 0.219752, i7 124, i32 1.01596, i7 125, i32 -1.24408, i7 126, i32 1.18933, i7 127, i32 0.197384, i32 <undef>, i7 %trunc_ln159" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 66 'sparsemux' 'tmp_102' <Predicate = true> <Delay = 3.14> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 137 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 3.14> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 67 [1/4] (4.72ns)   --->   "%mul_i5 = fmul i32 %ofmap_dw3_load, i32 %tmp_101" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 67 'fmul' 'mul_i5' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 68 [1/4] (4.72ns)   --->   "%mul_1_i4 = fmul i32 %ofmap_dw3_load_1, i32 %tmp_101" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 68 'fmul' 'mul_1_i4' <Predicate = true> <Delay = 4.72> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.72> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.32>
+ST_7 : Operation 69 [5/5] (6.32ns)   --->   "%x_assign_s = fadd i32 %mul_i5, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 69 'fadd' 'x_assign_s' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 70 [5/5] (6.32ns)   --->   "%x_assign_12 = fadd i32 %mul_1_i4, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 70 'fadd' 'x_assign_12' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.32>
+ST_8 : Operation 71 [4/5] (6.32ns)   --->   "%x_assign_s = fadd i32 %mul_i5, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 71 'fadd' 'x_assign_s' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 72 [4/5] (6.32ns)   --->   "%x_assign_12 = fadd i32 %mul_1_i4, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 72 'fadd' 'x_assign_12' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.32>
+ST_9 : Operation 73 [3/5] (6.32ns)   --->   "%x_assign_s = fadd i32 %mul_i5, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 73 'fadd' 'x_assign_s' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 74 [3/5] (6.32ns)   --->   "%x_assign_12 = fadd i32 %mul_1_i4, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 74 'fadd' 'x_assign_12' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.32>
+ST_10 : Operation 75 [2/5] (6.32ns)   --->   "%x_assign_s = fadd i32 %mul_i5, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 75 'fadd' 'x_assign_s' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 76 [2/5] (6.32ns)   --->   "%x_assign_12 = fadd i32 %mul_1_i4, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 76 'fadd' 'x_assign_12' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.32>
+ST_11 : Operation 77 [1/5] (6.32ns)   --->   "%x_assign_s = fadd i32 %mul_i5, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 77 'fadd' 'x_assign_s' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 78 [1/5] (6.32ns)   --->   "%x_assign_12 = fadd i32 %mul_1_i4, i32 %tmp_102" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 78 'fadd' 'x_assign_12' <Predicate = true> <Delay = 6.32> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 4.19>
+ST_12 : Operation 79 [2/2] (4.19ns)   --->   "%tmp_52 = fcmp_ogt  i32 %x_assign_s, i32 0" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 79 'fcmp' 'tmp_52' <Predicate = true> <Delay = 4.19> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 4.19> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 80 [2/2] (4.19ns)   --->   "%tmp_54 = fcmp_ogt  i32 %x_assign_12, i32 0" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 80 'fcmp' 'tmp_54' <Predicate = true> <Delay = 4.19> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 4.19> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 4.99>
+ST_13 : Operation 81 [1/1] (0.00ns)   --->   "%bitcast_ln4 = bitcast i32 %x_assign_s" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 81 'bitcast' 'bitcast_ln4' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_51 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln4, i32 23, i32 30" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 82 'partselect' 'tmp_51' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 83 [1/1] (0.00ns)   --->   "%trunc_ln4 = trunc i32 %bitcast_ln4" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 83 'trunc' 'trunc_ln4' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 84 [1/1] (1.30ns)   --->   "%icmp_ln4 = icmp_ne  i8 %tmp_51, i8 255" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 84 'icmp' 'icmp_ln4' <Predicate = true> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 85 [1/1] (1.66ns)   --->   "%icmp_ln4_26 = icmp_eq  i23 %trunc_ln4, i23 0" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 85 'icmp' 'icmp_ln4_26' <Predicate = true> <Delay = 1.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node select_ln4)   --->   "%or_ln4 = or i1 %icmp_ln4_26, i1 %icmp_ln4" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 86 'or' 'or_ln4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 87 [1/2] (4.19ns)   --->   "%tmp_52 = fcmp_ogt  i32 %x_assign_s, i32 0" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 87 'fcmp' 'tmp_52' <Predicate = true> <Delay = 4.19> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 4.19> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 88 [1/1] (0.00ns) (grouped into LUT with out node select_ln4)   --->   "%and_ln4 = and i1 %or_ln4, i1 %tmp_52" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 88 'and' 'and_ln4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 89 [1/1] (0.80ns) (out node of the LUT)   --->   "%select_ln4 = select i1 %and_ln4, i32 %x_assign_s, i32 0" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 89 'select' 'select_ln4' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 90 [1/1] (0.00ns)   --->   "%bitcast_ln4_12 = bitcast i32 %x_assign_12" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 90 'bitcast' 'bitcast_ln4_12' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_53 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln4_12, i32 23, i32 30" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 91 'partselect' 'tmp_53' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 92 [1/1] (0.00ns)   --->   "%trunc_ln4_12 = trunc i32 %bitcast_ln4_12" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 92 'trunc' 'trunc_ln4_12' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 93 [1/1] (1.30ns)   --->   "%icmp_ln4_27 = icmp_ne  i8 %tmp_53, i8 255" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 93 'icmp' 'icmp_ln4_27' <Predicate = true> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 94 [1/1] (1.66ns)   --->   "%icmp_ln4_28 = icmp_eq  i23 %trunc_ln4_12, i23 0" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 94 'icmp' 'icmp_ln4_28' <Predicate = true> <Delay = 1.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 95 [1/1] (0.00ns) (grouped into LUT with out node select_ln4_12)   --->   "%or_ln4_12 = or i1 %icmp_ln4_28, i1 %icmp_ln4_27" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 95 'or' 'or_ln4_12' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 96 [1/2] (4.19ns)   --->   "%tmp_54 = fcmp_ogt  i32 %x_assign_12, i32 0" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 96 'fcmp' 'tmp_54' <Predicate = true> <Delay = 4.19> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 4.19> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node select_ln4_12)   --->   "%and_ln4_12 = and i1 %or_ln4_12, i1 %tmp_54" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 97 'and' 'and_ln4_12' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 98 [1/1] (0.80ns) (out node of the LUT)   --->   "%select_ln4_12 = select i1 %and_ln4_12, i32 %x_assign_12, i32 0" [../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 98 'select' 'select_ln4_12' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 114 [1/1] (1.29ns)   --->   "%ret_ln0 = ret"   --->   Operation 114 'ret' 'ret_ln0' <Predicate = (icmp_ln155)> <Delay = 1.29>
+
+State 14 <SV = 13> <Delay = 2.77>
+ST_14 : Operation 99 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @BN_DW3_C_BN_DW3_H_str"   --->   Operation 99 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 100 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 256, i64 256, i64 256"   --->   Operation 100 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 101 [1/1] (0.00ns)   --->   "%add_ln159_1 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i6.i1, i6 %lshr_ln3, i1 %and_ln155" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 101 'bitconcatenate' 'add_ln159_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln159_2 = zext i7 %add_ln159_1" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 102 'zext' 'zext_ln159_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 103 [1/1] (0.00ns)   --->   "%ifmap_pw3_addr = getelementptr i32 %ifmap_pw3, i64 0, i64 %zext_ln159_2" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 103 'getelementptr' 'ifmap_pw3_addr' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 104 [1/1] (0.00ns)   --->   "%ifmap_pw3_1_addr = getelementptr i32 %ifmap_pw3_1, i64 0, i64 %zext_ln159_2" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 104 'getelementptr' 'ifmap_pw3_1_addr' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 105 [1/1] (0.00ns)   --->   "%ifmap_pw3_2_addr = getelementptr i32 %ifmap_pw3_2, i64 0, i64 %zext_ln159_2" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 105 'getelementptr' 'ifmap_pw3_2_addr' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 106 [1/1] (0.00ns)   --->   "%ifmap_pw3_3_addr = getelementptr i32 %ifmap_pw3_3, i64 0, i64 %zext_ln159_2" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 106 'getelementptr' 'ifmap_pw3_3_addr' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 107 [1/1] (0.00ns)   --->   "%specpipeline_ln157 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, i32 4294967295, void @empty" [../FP32-Model/batchnorm.cpp:157->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 107 'specpipeline' 'specpipeline_ln157' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 108 [1/1] ( I:2.77ns O:2.77ns )   --->   "%store_ln159 = store i32 %select_ln4, i7 %ifmap_pw3_addr" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 108 'store' 'store_ln159' <Predicate = (!trunc_ln155_1)> <Delay = 2.77> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_14 : Operation 109 [1/1] ( I:2.77ns O:2.77ns )   --->   "%store_ln159 = store i32 %select_ln4_12, i7 %ifmap_pw3_1_addr" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 109 'store' 'store_ln159' <Predicate = (!trunc_ln155_1)> <Delay = 2.77> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_14 : Operation 110 [1/1] (0.00ns)   --->   "%br_ln159 = br void %arrayidx224.1.i158253.exit" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 110 'br' 'br_ln159' <Predicate = (!trunc_ln155_1)> <Delay = 0.00>
+ST_14 : Operation 111 [1/1] ( I:2.77ns O:2.77ns )   --->   "%store_ln159 = store i32 %select_ln4, i7 %ifmap_pw3_2_addr" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 111 'store' 'store_ln159' <Predicate = (trunc_ln155_1)> <Delay = 2.77> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_14 : Operation 112 [1/1] ( I:2.77ns O:2.77ns )   --->   "%store_ln159 = store i32 %select_ln4_12, i7 %ifmap_pw3_3_addr" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 112 'store' 'store_ln159' <Predicate = (trunc_ln155_1)> <Delay = 2.77> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_14 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln159 = br void %arrayidx224.1.i158253.exit" [../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70]   --->   Operation 113 'br' 'br_ln159' <Predicate = (trunc_ln155_1)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.823ns
+The critical path consists of the following:
+	'store' operation ('store_ln155', ../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70) of constant 0 8 bit on local variable 'c', ../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70 [14]  (1.298 ns)
+	'load' operation 8 bit ('c_load', ../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70) on local variable 'c', ../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70 [24]  (0.000 ns)
+	'add' operation 8 bit ('add_ln155', ../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70) [26]  (1.306 ns)
+	'select' operation 8 bit ('select_ln155', ../FP32-Model/batchnorm.cpp:155->../FP32-Model/mobilenet_v1.cpp:70) [32]  (0.448 ns)
+	'getelementptr' operation 9 bit ('ofmap_dw3_addr', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [40]  (0.000 ns)
+	'load' operation 32 bit ('ofmap_dw3_load', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) on array 'ofmap_dw3' [51]  (2.771 ns)
+
+ <State 2>: 3.140ns
+The critical path consists of the following:
+	'sparsemux' operation 32 bit ('tmp_101', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [36]  (3.140 ns)
+
+ <State 3>: 4.729ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul_i5', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [52]  (4.729 ns)
+
+ <State 4>: 4.729ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul_i5', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [52]  (4.729 ns)
+
+ <State 5>: 4.729ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul_i5', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [52]  (4.729 ns)
+
+ <State 6>: 4.729ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul_i5', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [52]  (4.729 ns)
+
+ <State 7>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('x', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [53]  (6.329 ns)
+
+ <State 8>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('x', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [53]  (6.329 ns)
+
+ <State 9>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('x', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [53]  (6.329 ns)
+
+ <State 10>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('x', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [53]  (6.329 ns)
+
+ <State 11>: 6.329ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('x', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [53]  (6.329 ns)
+
+ <State 12>: 4.198ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_52', ../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [60]  (4.198 ns)
+
+ <State 13>: 4.998ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_52', ../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [60]  (4.198 ns)
+	'and' operation 1 bit ('and_ln4', ../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [61]  (0.000 ns)
+	'select' operation 32 bit ('select_ln4', ../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [62]  (0.800 ns)
+
+ <State 14>: 2.771ns
+The critical path consists of the following:
+	'getelementptr' operation 7 bit ('ifmap_pw3_addr', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) [46]  (0.000 ns)
+	'store' operation ('store_ln159', ../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70) of variable 'select_ln4', ../FP32-Model/batchnorm.cpp:4->../FP32-Model/batchnorm.cpp:159->../FP32-Model/mobilenet_v1.cpp:70 32 bit on array 'ifmap_pw3' [77]  (2.771 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,1411 @@
+<profile>
+<RunData>
+  <RUN_TYPE>impl</RUN_TYPE>
+  <VIVADO_VERSION>v.2025.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>8.840</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>8.840</CP_FINAL>
+  <CP_ROUTE>8.840</CP_ROUTE>
+  <CP_SYNTH>5.404</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>1.160</SLACK_FINAL>
+  <SLACK_ROUTE>1.160</SLACK_ROUTE>
+  <SLACK_SYNTH>4.596</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>0.000</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>1.160</WNS_FINAL>
+  <WNS_ROUTE>1.160</WNS_ROUTE>
+  <WNS_SYNTH>4.596</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>546</BRAM>
+    <CLB>0</CLB>
+    <DSP>194</DSP>
+    <FF>49933</FF>
+    <LATCH>0</LATCH>
+    <LUT>44654</LUT>
+    <SLICE>17346</SLICE>
+    <SRL>5941</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>1090</BRAM>
+    <CLB>0</CLB>
+    <DSP>900</DSP>
+    <FF>437200</FF>
+    <LUT>218600</LUT>
+    <SLICE>54650</SLICE>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="mobilenet_v1" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="384">CTRL_BUS_s_axi_U fadd_32ns_32ns_32_5_full_dsp_1_U1307 fadd_32ns_32ns_32_5_full_dsp_1_U1308 fadd_32ns_32ns_32_5_full_dsp_1_U1309 fadd_32ns_32ns_32_5_full_dsp_1_U1310 fadd_32ns_32ns_32_5_full_dsp_1_U1311 fadd_32ns_32ns_32_5_full_dsp_1_U1312 fadd_32ns_32ns_32_5_full_dsp_1_U1313 fadd_32ns_32ns_32_5_full_dsp_1_U1314 fadd_32ns_32ns_32_5_full_dsp_1_U1315 fadd_32ns_32ns_32_5_full_dsp_1_U1316 fadd_32ns_32ns_32_5_full_dsp_1_U1317 fadd_32ns_32ns_32_5_full_dsp_1_U1318 fadd_32ns_32ns_32_5_full_dsp_1_U1319 fadd_32ns_32ns_32_5_full_dsp_1_U1320 fadd_32ns_32ns_32_5_full_dsp_1_U1336 fadd_32ns_32ns_32_5_full_dsp_1_U1337 fcmp_32ns_32ns_1_2_no_dsp_1_U1340 fcmp_32ns_32ns_1_2_no_dsp_1_U1341 fcmp_32ns_32ns_1_2_no_dsp_1_U1342 fcmp_32ns_32ns_1_2_no_dsp_1_U1343 fcmp_32ns_32ns_1_2_no_dsp_1_U1344 fcmp_32ns_32ns_1_2_no_dsp_1_U1345 fcmp_32ns_32ns_1_2_no_dsp_1_U1346 fcmp_32ns_32ns_1_2_no_dsp_1_U1347 fcmp_32ns_32ns_1_2_no_dsp_1_U1348 fcmp_32ns_32ns_1_2_no_dsp_1_U1349 fcmp_32ns_32ns_1_2_no_dsp_1_U1350 fcmp_32ns_32ns_1_2_no_dsp_1_U1351 fcmp_32ns_32ns_1_2_no_dsp_1_U1352 fcmp_32ns_32ns_1_2_no_dsp_1_U1353 fcmp_32ns_32ns_1_2_no_dsp_1_U1354 fcmp_32ns_32ns_1_2_no_dsp_1_U1355 fmul_32ns_32ns_32_4_max_dsp_1_U1321 fmul_32ns_32ns_32_4_max_dsp_1_U1322 fmul_32ns_32ns_32_4_max_dsp_1_U1323 fmul_32ns_32ns_32_4_max_dsp_1_U1324 fmul_32ns_32ns_32_4_max_dsp_1_U1325 fmul_32ns_32ns_32_4_max_dsp_1_U1326 fmul_32ns_32ns_32_4_max_dsp_1_U1327 fmul_32ns_32ns_32_4_max_dsp_1_U1328 fmul_32ns_32ns_32_4_max_dsp_1_U1329 fmul_32ns_32ns_32_4_max_dsp_1_U1330 fmul_32ns_32ns_32_4_max_dsp_1_U1331 fmul_32ns_32ns_32_4_max_dsp_1_U1332 fmul_32ns_32ns_32_4_max_dsp_1_U1333 fmul_32ns_32ns_32_4_max_dsp_1_U1334 fmul_32ns_32ns_32_4_max_dsp_1_U1338 fmul_32ns_32ns_32_4_max_dsp_1_U1339 gmem_m_axi_U grp_batchnorm_conv0_fu_1658 grp_batchnorm_pw0_fu_1942 grp_conv0_fu_1568 grp_dw0_fu_1790 grp_dw1_fu_2010 grp_dw2_fu_2184 grp_dw3_fu_2294 grp_fc_fu_2369 grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909 grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088 grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234 grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333 grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148 grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270 grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355 grp_mobilenet_v1_Pipeline_GAP_C_fu_2362 grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543 grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397 grp_pw0_fu_1916 grp_pw1_fu_2116 grp_pw2_fu_2250 grp_pw3_fu_2342 ifmap_dw0_10_U ifmap_dw0_11_U ifmap_dw0_12_U ifmap_dw0_13_U ifmap_dw0_14_U ifmap_dw0_15_U ifmap_dw0_16_U ifmap_dw0_17_U ifmap_dw0_18_U ifmap_dw0_19_U ifmap_dw0_1_U ifmap_dw0_20_U ifmap_dw0_21_U ifmap_dw0_22_U ifmap_dw0_23_U ifmap_dw0_24_U ifmap_dw0_25_U ifmap_dw0_26_U ifmap_dw0_27_U ifmap_dw0_28_U ifmap_dw0_29_U ifmap_dw0_2_U ifmap_dw0_30_U ifmap_dw0_31_U ifmap_dw0_32_U ifmap_dw0_33_U ifmap_dw0_34_U ifmap_dw0_35_U ifmap_dw0_36_U ifmap_dw0_37_U ifmap_dw0_38_U ifmap_dw0_39_U ifmap_dw0_3_U ifmap_dw0_40_U ifmap_dw0_41_U ifmap_dw0_42_U ifmap_dw0_43_U ifmap_dw0_44_U ifmap_dw0_45_U ifmap_dw0_46_U ifmap_dw0_47_U ifmap_dw0_48_U ifmap_dw0_49_U ifmap_dw0_4_U ifmap_dw0_50_U ifmap_dw0_51_U ifmap_dw0_52_U ifmap_dw0_53_U ifmap_dw0_54_U ifmap_dw0_55_U ifmap_dw0_56_U ifmap_dw0_57_U ifmap_dw0_58_U ifmap_dw0_59_U ifmap_dw0_5_U ifmap_dw0_60_U ifmap_dw0_61_U ifmap_dw0_62_U ifmap_dw0_63_U ifmap_dw0_64_U ifmap_dw0_65_U ifmap_dw0_66_U ifmap_dw0_67_U ifmap_dw0_68_U ifmap_dw0_69_U ifmap_dw0_6_U ifmap_dw0_70_U ifmap_dw0_71_U ifmap_dw0_72_U ifmap_dw0_73_U ifmap_dw0_74_U ifmap_dw0_75_U ifmap_dw0_76_U ifmap_dw0_77_U ifmap_dw0_78_U ifmap_dw0_79_U ifmap_dw0_7_U ifmap_dw0_80_U ifmap_dw0_81_U ifmap_dw0_82_U ifmap_dw0_83_U ifmap_dw0_84_U ifmap_dw0_85_U ifmap_dw0_86_U ifmap_dw0_87_U ifmap_dw0_88_U ifmap_dw0_89_U ifmap_dw0_8_U ifmap_dw0_90_U ifmap_dw0_91_U ifmap_dw0_92_U ifmap_dw0_93_U ifmap_dw0_94_U ifmap_dw0_95_U ifmap_dw0_9_U ifmap_dw0_U ifmap_dw1_10_U ifmap_dw1_11_U ifmap_dw1_12_U ifmap_dw1_13_U ifmap_dw1_14_U ifmap_dw1_15_U ifmap_dw1_16_U ifmap_dw1_17_U ifmap_dw1_18_U ifmap_dw1_19_U ifmap_dw1_1_U ifmap_dw1_20_U ifmap_dw1_21_U ifmap_dw1_22_U ifmap_dw1_23_U ifmap_dw1_24_U ifmap_dw1_25_U ifmap_dw1_26_U ifmap_dw1_27_U ifmap_dw1_28_U ifmap_dw1_29_U ifmap_dw1_2_U ifmap_dw1_30_U ifmap_dw1_31_U ifmap_dw1_32_U ifmap_dw1_33_U ifmap_dw1_34_U ifmap_dw1_35_U ifmap_dw1_36_U ifmap_dw1_37_U ifmap_dw1_38_U ifmap_dw1_39_U ifmap_dw1_3_U ifmap_dw1_40_U ifmap_dw1_41_U ifmap_dw1_42_U ifmap_dw1_43_U ifmap_dw1_44_U ifmap_dw1_45_U ifmap_dw1_46_U ifmap_dw1_47_U ifmap_dw1_4_U ifmap_dw1_5_U ifmap_dw1_6_U ifmap_dw1_7_U ifmap_dw1_8_U ifmap_dw1_9_U ifmap_dw1_U ifmap_dw2_10_U ifmap_dw2_11_U ifmap_dw2_12_U ifmap_dw2_13_U ifmap_dw2_14_U ifmap_dw2_15_U ifmap_dw2_16_U ifmap_dw2_17_U ifmap_dw2_18_U ifmap_dw2_19_U ifmap_dw2_1_U ifmap_dw2_20_U ifmap_dw2_21_U ifmap_dw2_22_U ifmap_dw2_23_U ifmap_dw2_2_U ifmap_dw2_3_U ifmap_dw2_4_U ifmap_dw2_5_U ifmap_dw2_6_U ifmap_dw2_7_U ifmap_dw2_8_U ifmap_dw2_9_U ifmap_dw2_U ifmap_dw3_10_U ifmap_dw3_11_U ifmap_dw3_12_U ifmap_dw3_13_U ifmap_dw3_14_U ifmap_dw3_15_U ifmap_dw3_1_U ifmap_dw3_2_U ifmap_dw3_3_U ifmap_dw3_4_U ifmap_dw3_5_U ifmap_dw3_6_U ifmap_dw3_7_U ifmap_dw3_8_U ifmap_dw3_9_U ifmap_dw3_U ifmap_gap_2_U ifmap_gap_U ifmap_pw0_1_U ifmap_pw0_U ifmap_pw1_10_U ifmap_pw1_11_U ifmap_pw1_12_U ifmap_pw1_13_U ifmap_pw1_14_U ifmap_pw1_15_U ifmap_pw1_1_U ifmap_pw1_2_U ifmap_pw1_3_U ifmap_pw1_4_U ifmap_pw1_5_U ifmap_pw1_6_U ifmap_pw1_7_U ifmap_pw1_8_U ifmap_pw1_9_U ifmap_pw1_U ifmap_pw2_1_U ifmap_pw2_2_U ifmap_pw2_3_U ifmap_pw2_4_U ifmap_pw2_5_U ifmap_pw2_6_U ifmap_pw2_7_U ifmap_pw2_U ifmap_pw3_1_U ifmap_pw3_2_U ifmap_pw3_3_U ifmap_pw3_U in_buf_10_U in_buf_11_U in_buf_12_U in_buf_13_U in_buf_14_U in_buf_15_U in_buf_16_U in_buf_17_U in_buf_1_U in_buf_2_U in_buf_3_U in_buf_4_U in_buf_5_U in_buf_6_U in_buf_7_U in_buf_8_U in_buf_9_U in_buf_U mul_64ns_66ns_129_5_1_U1335 ofmap_conv0_10_U ofmap_conv0_11_U ofmap_conv0_12_U ofmap_conv0_13_U ofmap_conv0_14_U ofmap_conv0_15_U ofmap_conv0_16_U ofmap_conv0_17_U ofmap_conv0_18_U ofmap_conv0_19_U ofmap_conv0_1_U ofmap_conv0_20_U ofmap_conv0_21_U ofmap_conv0_22_U ofmap_conv0_23_U ofmap_conv0_24_U ofmap_conv0_25_U ofmap_conv0_26_U ofmap_conv0_27_U ofmap_conv0_28_U ofmap_conv0_29_U ofmap_conv0_2_U ofmap_conv0_30_U ofmap_conv0_31_U ofmap_conv0_3_U ofmap_conv0_4_U ofmap_conv0_5_U ofmap_conv0_6_U ofmap_conv0_7_U ofmap_conv0_8_U ofmap_conv0_9_U ofmap_conv0_U ofmap_dw0_U ofmap_dw1_1_U ofmap_dw1_2_U ofmap_dw1_3_U ofmap_dw1_4_U ofmap_dw1_5_U ofmap_dw1_6_U ofmap_dw1_7_U ofmap_dw1_U ofmap_dw2_1_U ofmap_dw2_2_U ofmap_dw2_3_U ofmap_dw2_U ofmap_dw3_U ofmap_gap_U ofmap_pw0_10_U ofmap_pw0_11_U ofmap_pw0_12_U ofmap_pw0_13_U ofmap_pw0_14_U ofmap_pw0_15_U ofmap_pw0_1_U ofmap_pw0_2_U ofmap_pw0_3_U ofmap_pw0_4_U ofmap_pw0_5_U ofmap_pw0_6_U ofmap_pw0_7_U ofmap_pw0_8_U ofmap_pw0_9_U ofmap_pw0_U ofmap_pw1_1_U ofmap_pw1_2_U ofmap_pw1_3_U ofmap_pw1_4_U ofmap_pw1_5_U ofmap_pw1_6_U ofmap_pw1_7_U ofmap_pw1_U ofmap_pw2_1_U ofmap_pw2_2_U ofmap_pw2_3_U ofmap_pw2_U ofmap_pw3_U out_buf_U</SubModules>
+    <Resources BRAM="546" DSP="194" FF="49933" LUT="44654" LUTRAM="32" LogicLUT="38681" RAMB18="358" RAMB36="94" SRL="5941"/>
+    <LocalResources FF="354" LUT="3" LogicLUT="2" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/CTRL_BUS_s_axi_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_CTRL_BUS_s_axi">
+    <Resources FF="181" LUT="169" LogicLUT="169"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1307" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="206" LUT="200" LogicLUT="200"/>
+    <LocalResources FF="97" LUT="28" LogicLUT="28"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1308" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="173" LUT="177" LogicLUT="177"/>
+    <LocalResources FF="64" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1309" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="205" LUT="336" LogicLUT="336"/>
+    <LocalResources FF="96" LUT="164" LogicLUT="164"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1310" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="206" LUT="305" LogicLUT="305"/>
+    <LocalResources FF="97" LUT="133" LogicLUT="133"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1311" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="205" LUT="190" LogicLUT="190"/>
+    <LocalResources FF="96" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1312" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="205" LUT="207" LogicLUT="207"/>
+    <LocalResources FF="96" LUT="35" LogicLUT="35"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1313" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="206" LUT="273" LogicLUT="273"/>
+    <LocalResources FF="97" LUT="101" LogicLUT="101"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1314" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="205" LUT="191" LogicLUT="191"/>
+    <LocalResources FF="96" LUT="19" LogicLUT="19"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1315" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="173" LUT="174" LogicLUT="174"/>
+    <LocalResources FF="64" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1316" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="173" LUT="172" LogicLUT="172"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1317" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="173" LUT="172" LogicLUT="172"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1318" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="173" LUT="172" LogicLUT="172"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1319" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="173" LUT="172" LogicLUT="172"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1320" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="173" LUT="172" LogicLUT="172"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1336" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="166" LUT="171" LogicLUT="171"/>
+    <LocalResources FF="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fadd_32ns_32ns_32_5_full_dsp_1_U1337" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="167" LUT="171" LogicLUT="171"/>
+    <LocalResources FF="61"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1340" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1341" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1342" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1343" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1344" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1345" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1346" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1347" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1348" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1349" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1350" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1351" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1352" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1353" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1354" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fcmp_32ns_32ns_1_2_no_dsp_1_U1355" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1321" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="143" LUT="94" LogicLUT="94"/>
+    <LocalResources FF="96" LUT="22" LogicLUT="22"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1322" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="144" LUT="98" LogicLUT="98"/>
+    <LocalResources FF="97" LUT="26" LogicLUT="26"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1323" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="111" LUT="75" LogicLUT="75"/>
+    <LocalResources FF="64" LUT="3" LogicLUT="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1324" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="110" LUT="76" LogicLUT="76"/>
+    <LocalResources FF="63" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1325" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="141" LUT="89" LogicLUT="89"/>
+    <LocalResources FF="94" LUT="19" LogicLUT="19"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1326" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="142" LUT="90" LogicLUT="90"/>
+    <LocalResources FF="95" LUT="19" LogicLUT="19"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1327" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="141" LUT="86" LogicLUT="86"/>
+    <LocalResources FF="94" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1328" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="110" LUT="75" LogicLUT="75"/>
+    <LocalResources FF="63" LUT="4" LogicLUT="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1329" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="110" LUT="73" LogicLUT="73"/>
+    <LocalResources FF="63" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1330" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="109" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="62"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1331" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="109" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="62"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1332" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="108" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="61"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1333" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="109" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="62"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1334" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="108" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="61"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1338" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="107" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/fmul_32ns_32ns_32_4_max_dsp_1_U1339" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="107" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem_m_axi_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_gmem_m_axi">
+    <Resources BRAM="1" FF="1858" LUT="1180" LogicLUT="1038" RAMB18="1" SRL="142"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_batchnorm_conv0">
+    <SubModules count="51">fadd_32ns_32ns_32_5_full_dsp_1_U194 fadd_32ns_32ns_32_5_full_dsp_1_U195 fadd_32ns_32ns_32_5_full_dsp_1_U196 fadd_32ns_32ns_32_5_full_dsp_1_U197 fadd_32ns_32ns_32_5_full_dsp_1_U198 fadd_32ns_32ns_32_5_full_dsp_1_U199 fadd_32ns_32ns_32_5_full_dsp_1_U200 fadd_32ns_32ns_32_5_full_dsp_1_U201 fadd_32ns_32ns_32_5_full_dsp_1_U202 fadd_32ns_32ns_32_5_full_dsp_1_U203 fadd_32ns_32ns_32_5_full_dsp_1_U204 fadd_32ns_32ns_32_5_full_dsp_1_U205 fadd_32ns_32ns_32_5_full_dsp_1_U206 fadd_32ns_32ns_32_5_full_dsp_1_U207 fadd_32ns_32ns_32_5_full_dsp_1_U208 fadd_32ns_32ns_32_5_full_dsp_1_U209 fcmp_32ns_32ns_1_2_no_dsp_1_U258 fcmp_32ns_32ns_1_2_no_dsp_1_U259 fcmp_32ns_32ns_1_2_no_dsp_1_U260 fcmp_32ns_32ns_1_2_no_dsp_1_U261 fcmp_32ns_32ns_1_2_no_dsp_1_U262 fcmp_32ns_32ns_1_2_no_dsp_1_U263 fcmp_32ns_32ns_1_2_no_dsp_1_U264 fcmp_32ns_32ns_1_2_no_dsp_1_U265 fcmp_32ns_32ns_1_2_no_dsp_1_U266 fcmp_32ns_32ns_1_2_no_dsp_1_U267 fcmp_32ns_32ns_1_2_no_dsp_1_U268 fcmp_32ns_32ns_1_2_no_dsp_1_U269 fcmp_32ns_32ns_1_2_no_dsp_1_U270 fcmp_32ns_32ns_1_2_no_dsp_1_U271 fcmp_32ns_32ns_1_2_no_dsp_1_U272 fcmp_32ns_32ns_1_2_no_dsp_1_U273 flow_control_loop_pipe_sequential_init_U fmul_32ns_32ns_32_4_max_dsp_1_U226 fmul_32ns_32ns_32_4_max_dsp_1_U227 fmul_32ns_32ns_32_4_max_dsp_1_U228 fmul_32ns_32ns_32_4_max_dsp_1_U229 fmul_32ns_32ns_32_4_max_dsp_1_U230 fmul_32ns_32ns_32_4_max_dsp_1_U231 fmul_32ns_32ns_32_4_max_dsp_1_U232 fmul_32ns_32ns_32_4_max_dsp_1_U233 fmul_32ns_32ns_32_4_max_dsp_1_U234 fmul_32ns_32ns_32_4_max_dsp_1_U235 fmul_32ns_32ns_32_4_max_dsp_1_U236 fmul_32ns_32ns_32_4_max_dsp_1_U237 fmul_32ns_32ns_32_4_max_dsp_1_U238 fmul_32ns_32ns_32_4_max_dsp_1_U239 fmul_32ns_32ns_32_4_max_dsp_1_U240 fmul_32ns_32ns_32_4_max_dsp_1_U241 mac_muladd_5ns_4ns_5ns_8_4_1_U278 urem_6ns_3ns_2_10_1_U275</SubModules>
+    <Resources DSP="81" FF="5893" LUT="4994" LogicLUT="4976" SRL="18"/>
+    <LocalResources DSP="1" FF="1719" LUT="749" LogicLUT="737" SRL="12"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U194" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="166" LUT="161" LogicLUT="161"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U195" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="166" LUT="161" LogicLUT="161"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U196" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="166" LUT="161" LogicLUT="161"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U197" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="166" LUT="162" LogicLUT="162"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U198" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="166" LUT="161" LogicLUT="161"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U199" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U200" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U201" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U202" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U203" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U204" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U205" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U206" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U207" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U208" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="161" LUT="161" LogicLUT="161"/>
+    <LocalResources FF="59"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fadd_32ns_32ns_32_5_full_dsp_1_U209" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1">
+    <Resources DSP="2" FF="134" LUT="161" LogicLUT="161"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U258" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U259" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U260" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U261" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U262" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U263" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U264" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U265" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U266" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U267" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U268" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U269" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U270" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U271" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U272" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fcmp_32ns_32ns_1_2_no_dsp_1_U273" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fcmp_32ns_32ns_1_2_no_dsp_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U226" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="111" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U227" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="111" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U228" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="111" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U229" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="111" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U230" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="111" LUT="70" LogicLUT="70"/>
+    <LocalResources FF="64"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U231" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="107" LUT="69" LogicLUT="69"/>
+    <LocalResources FF="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U232" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U233" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U234" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U235" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U236" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U237" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U238" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U239" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U240" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/fmul_32ns_32ns_32_4_max_dsp_1_U241" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1">
+    <Resources DSP="3" FF="79" LUT="69" LogicLUT="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/mac_muladd_5ns_4ns_5ns_8_4_1_U278" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_mac_muladd_5ns_4ns_5ns_8_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_conv0_fu_1658/urem_6ns_3ns_2_10_1_U275" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_conv0.v" ORIG_REF_NAME="mobilenet_v1_urem_6ns_3ns_2_10_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_pw0_fu_1942" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_batchnorm_pw0">
+    <SubModules count="3">flow_control_loop_pipe_sequential_init_U mul_5ns_7ns_11_1_1_U645 urem_5ns_3ns_2_9_1_U644</SubModules>
+    <Resources FF="1081" LUT="910" LogicLUT="895" SRL="15"/>
+    <LocalResources FF="1059" LUT="854" LogicLUT="842" SRL="12"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_pw0_fu_1942/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_pw0.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_pw0_fu_1942/mul_5ns_7ns_11_1_1_U645" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_pw0.v" ORIG_REF_NAME="mobilenet_v1_mul_5ns_7ns_11_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_batchnorm_pw0_fu_1942/urem_5ns_3ns_2_9_1_U644" DEPTH="2" FILE_NAME="mobilenet_v1_batchnorm_pw0.v" ORIG_REF_NAME="mobilenet_v1_urem_5ns_3ns_2_9_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_conv0">
+    <SubModules count="29">flow_control_loop_pipe_sequential_init_U mul_5ns_5ns_8_1_1_U90 mul_5ns_5ns_8_1_1_U92 mul_64ns_66ns_129_5_1_U58 mul_6ns_8ns_13_1_1_U89 mul_6ns_8ns_13_1_1_U91 mul_6ns_8ns_13_1_1_U93 mul_6ns_8ns_13_1_1_U94 mul_8s_5ns_8_1_1_U88 p_ZL13conv_0_weight_0_0_0_U p_ZL13conv_0_weight_0_0_1_U p_ZL13conv_0_weight_0_0_2_U p_ZL13conv_0_weight_0_1_0_U p_ZL13conv_0_weight_0_1_1_U p_ZL13conv_0_weight_0_1_2_U p_ZL13conv_0_weight_0_2_0_U p_ZL13conv_0_weight_0_2_1_U p_ZL13conv_0_weight_0_2_2_U p_ZL13conv_0_weight_1_0_0_U p_ZL13conv_0_weight_1_0_1_U p_ZL13conv_0_weight_1_0_2_U p_ZL13conv_0_weight_1_1_0_U p_ZL13conv_0_weight_1_1_1_U p_ZL13conv_0_weight_1_1_2_U p_ZL13conv_0_weight_1_2_0_U p_ZL13conv_0_weight_1_2_1_U p_ZL13conv_0_weight_1_2_2_U urem_6ns_3ns_2_10_1_U86 urem_6ns_3ns_2_10_1_U87</SubModules>
+    <Resources BRAM="27" DSP="17" FF="4233" LUT="5835" LogicLUT="4511" RAMB18="27" SRL="1324"/>
+    <LocalResources FF="4158" LUT="4515" LogicLUT="3203" SRL="1312"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/mul_5ns_5ns_8_1_1_U90" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_mul_5ns_5ns_8_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/mul_5ns_5ns_8_1_1_U92" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_mul_5ns_5ns_8_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/mul_64ns_66ns_129_5_1_U58" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_mul_64ns_66ns_129_5_1">
+    <Resources DSP="13" FF="25" LUT="89" LogicLUT="89"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/mul_6ns_8ns_13_1_1_U89" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_mul_6ns_8ns_13_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/mul_6ns_8ns_13_1_1_U91" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_mul_6ns_8ns_13_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/mul_6ns_8ns_13_1_1_U93" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_mul_6ns_8ns_13_1_1">
+    <Resources DSP="1" LUT="438" LogicLUT="438"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/mul_6ns_8ns_13_1_1_U94" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_mul_6ns_8ns_13_1_1">
+    <Resources DSP="1" LUT="265" LogicLUT="265"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/mul_8s_5ns_8_1_1_U88" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_mul_8s_5ns_8_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_0_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_0_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_0_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_0_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_0_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_0_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_1_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_1_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_1_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_1_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_1_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_1_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_2_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_2_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_2_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_2_1_ROM_2P_BRAM_1R">
+    <Resources BRAM="2" LUT="63" LogicLUT="63" RAMB18="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_0_2_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_0_2_2_ROM_2P_BRAM_1R">
+    <Resources BRAM="2" LUT="85" LogicLUT="85" RAMB18="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_0_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_0_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_0_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_0_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_0_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_0_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_1_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_1_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_1_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_1_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_1_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_1_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_2_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_2_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_2_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_2_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/p_ZL13conv_0_weight_1_2_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_conv0_p_ZL13conv_0_weight_1_2_2_ROM_2P_BRAM_1R">
+    <Resources BRAM="1" LUT="55" LogicLUT="55" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/urem_6ns_3ns_2_10_1_U86" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_urem_6ns_3ns_2_10_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv0_fu_1568/urem_6ns_3ns_2_10_1_U87" DEPTH="2" FILE_NAME="mobilenet_v1_conv0.v" ORIG_REF_NAME="mobilenet_v1_urem_6ns_3ns_2_10_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_dw0">
+    <SubModules count="14">flow_control_loop_pipe_sequential_init_U mul_5ns_5ns_8_1_1_U440 mul_5ns_7ns_11_1_1_U439 mul_5ns_7ns_11_1_1_U441 p_ZL26features_0_deepwise_weight_0_0_U p_ZL26features_0_deepwise_weight_0_1_U p_ZL26features_0_deepwise_weight_0_2_U p_ZL26features_0_deepwise_weight_1_0_U p_ZL26features_0_deepwise_weight_1_1_U p_ZL26features_0_deepwise_weight_1_2_U p_ZL26features_0_deepwise_weight_2_0_U p_ZL26features_0_deepwise_weight_2_1_U p_ZL26features_0_deepwise_weight_2_2_U urem_5ns_3ns_2_9_1_U438</SubModules>
+    <Resources BRAM="9" FF="709" LUT="2677" LogicLUT="2566" RAMB18="9" SRL="111"/>
+    <LocalResources FF="697" LUT="2527" LogicLUT="2419" SRL="108"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/mul_5ns_5ns_8_1_1_U440" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_mul_5ns_5ns_8_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/mul_5ns_7ns_11_1_1_U439" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_mul_5ns_7ns_11_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/mul_5ns_7ns_11_1_1_U441" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_mul_5ns_7ns_11_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_0_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_0_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_0_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_0_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_0_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_0_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_1_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_1_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_1_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_1_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_1_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_1_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_2_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_2_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_2_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_2_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/p_ZL26features_0_deepwise_weight_2_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_dw0_p_ZL26features_0_deepwise_weight_2_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw0_fu_1790/urem_5ns_3ns_2_9_1_U438" DEPTH="2" FILE_NAME="mobilenet_v1_dw0.v" ORIG_REF_NAME="mobilenet_v1_urem_5ns_3ns_2_9_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_dw1">
+    <SubModules count="13">flow_control_loop_pipe_sequential_init_U mul_4ns_6ns_9_1_1_U742 mul_4ns_6ns_9_1_1_U743 p_ZL26features_1_deepwise_weight_0_0_U p_ZL26features_1_deepwise_weight_0_1_U p_ZL26features_1_deepwise_weight_0_2_U p_ZL26features_1_deepwise_weight_1_0_U p_ZL26features_1_deepwise_weight_1_1_U p_ZL26features_1_deepwise_weight_1_2_U p_ZL26features_1_deepwise_weight_2_0_U p_ZL26features_1_deepwise_weight_2_1_U p_ZL26features_1_deepwise_weight_2_2_U urem_4ns_3ns_2_8_1_U741</SubModules>
+    <Resources BRAM="9" FF="1071" LUT="2489" LogicLUT="2172" RAMB18="9" SRL="317"/>
+    <LocalResources FF="1064" LUT="2263" LogicLUT="1949" SRL="314"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/mul_4ns_6ns_9_1_1_U742" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_mul_4ns_6ns_9_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/mul_4ns_6ns_9_1_1_U743" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_mul_4ns_6ns_9_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_0_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_0_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_0_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_0_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_0_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_0_2_ROM_2P_BRAM_1R">
+    <Resources BRAM="1" LUT="61" LogicLUT="61" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_1_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_1_0_ROM_2P_BRAM_1R">
+    <Resources BRAM="1" LUT="58" LogicLUT="58" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_1_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_1_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_1_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_1_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_2_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_2_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_2_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_2_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/p_ZL26features_1_deepwise_weight_2_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_dw1_p_ZL26features_1_deepwise_weight_2_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw1_fu_2010/urem_4ns_3ns_2_8_1_U741" DEPTH="2" FILE_NAME="mobilenet_v1_dw1.v" ORIG_REF_NAME="mobilenet_v1_urem_4ns_3ns_2_8_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_dw2">
+    <SubModules count="11">flow_control_loop_pipe_sequential_init_U p_ZL26features_2_deepwise_weight_0_0_U p_ZL26features_2_deepwise_weight_0_1_U p_ZL26features_2_deepwise_weight_0_2_U p_ZL26features_2_deepwise_weight_1_0_U p_ZL26features_2_deepwise_weight_1_1_U p_ZL26features_2_deepwise_weight_1_2_U p_ZL26features_2_deepwise_weight_2_0_U p_ZL26features_2_deepwise_weight_2_1_U p_ZL26features_2_deepwise_weight_2_2_U urem_3ns_3ns_2_7_1_U1003</SubModules>
+    <Resources BRAM="9" FF="637" LUT="1355" LogicLUT="1201" RAMB18="9" SRL="154"/>
+    <LocalResources FF="633" LUT="1211" LogicLUT="1059" SRL="152"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_0_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_0_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_0_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_0_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_0_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_0_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_1_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_1_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_1_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_1_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_1_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_1_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_2_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_2_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_2_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_2_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/p_ZL26features_2_deepwise_weight_2_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_dw2_p_ZL26features_2_deepwise_weight_2_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw2_fu_2184/urem_3ns_3ns_2_7_1_U1003" DEPTH="2" FILE_NAME="mobilenet_v1_dw2.v" ORIG_REF_NAME="mobilenet_v1_urem_3ns_3ns_2_7_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_dw3">
+    <SubModules count="10">flow_control_loop_pipe_sequential_init_U p_ZL26features_3_deepwise_weight_0_0_U p_ZL26features_3_deepwise_weight_0_1_U p_ZL26features_3_deepwise_weight_0_2_U p_ZL26features_3_deepwise_weight_1_0_U p_ZL26features_3_deepwise_weight_1_1_U p_ZL26features_3_deepwise_weight_1_2_U p_ZL26features_3_deepwise_weight_2_0_U p_ZL26features_3_deepwise_weight_2_1_U p_ZL26features_3_deepwise_weight_2_2_U</SubModules>
+    <Resources BRAM="9" FF="1034" LUT="1820" LogicLUT="1529" RAMB18="9" SRL="291"/>
+    <LocalResources FF="1032" LUT="1683" LogicLUT="1392" SRL="291"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_0_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_0_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_0_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_0_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_0_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_0_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_1_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_1_0_ROM_2P_BRAM_1R">
+    <Resources BRAM="1" LUT="53" LogicLUT="53" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_1_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_1_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_1_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_1_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_2_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_2_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_2_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_2_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_dw3_fu_2294/p_ZL26features_3_deepwise_weight_2_2_U" DEPTH="2" FILE_NAME="mobilenet_v1_dw3.v" ORIG_REF_NAME="mobilenet_v1_dw3_p_ZL26features_3_deepwise_weight_2_2_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_fc">
+    <SubModules count="3">grp_fc_Pipeline_FC_BIAS_fu_114 grp_fc_Pipeline_FC_IC_fu_130 grp_fc_Pipeline_FC_OUTPUT_fu_176</SubModules>
+    <Resources BRAM="10" FF="1071" LUT="803" LogicLUT="803" RAMB18="10"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114" DEPTH="2" FILE_NAME="mobilenet_v1_fc.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_BIAS">
+    <SubModules count="2">fc_bias_U flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="329" LUT="29" LogicLUT="29"/>
+    <LocalResources FF="299" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/fc_bias_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_BIAS.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_BIAS_fc_bias_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_BIAS_fu_114/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_BIAS.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130" DEPTH="2" FILE_NAME="mobilenet_v1_fc.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC">
+    <SubModules count="11">flow_control_loop_pipe_sequential_init_U p_ZL9fc_weight_0_U p_ZL9fc_weight_1_U p_ZL9fc_weight_2_U p_ZL9fc_weight_3_U p_ZL9fc_weight_4_U p_ZL9fc_weight_5_U p_ZL9fc_weight_6_U p_ZL9fc_weight_7_U p_ZL9fc_weight_8_U p_ZL9fc_weight_9_U</SubModules>
+    <Resources BRAM="10" FF="727" LUT="759" LogicLUT="759" RAMB18="10"/>
+    <LocalResources FF="725" LUT="374" LogicLUT="374"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="213" LogicLUT="213"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_0_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_0_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_1_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_1_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_2_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_2_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_3_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_3_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_4_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_4_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_5_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_5_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_6_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_6_ROM_AUTO_1R">
+    <Resources BRAM="1" LUT="56" LogicLUT="56" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_7_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_7_ROM_AUTO_1R">
+    <Resources BRAM="1" LUT="55" LogicLUT="55" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_8_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_8_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_IC_fu_130/p_ZL9fc_weight_9_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_IC.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_IC_p_ZL9fc_weight_9_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176" DEPTH="2" FILE_NAME="mobilenet_v1_fc.v" ORIG_REF_NAME="mobilenet_v1_fc_Pipeline_FC_OUTPUT">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_fc_fu_2369/grp_fc_Pipeline_FC_OUTPUT_fu_176/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="mobilenet_v1_fc_Pipeline_FC_OUTPUT.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="165" LUT="275" LogicLUT="260" SRL="15"/>
+    <LocalResources FF="163" LUT="271" LogicLUT="256" SRL="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="109" LUT="326" LogicLUT="315" SRL="11"/>
+    <LocalResources FF="107" LUT="310" LogicLUT="299" SRL="11"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="83" LUT="134" LogicLUT="123" SRL="11"/>
+    <LocalResources FF="81" LUT="120" LogicLUT="109" SRL="11"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="103" LUT="233" LogicLUT="221" SRL="12"/>
+    <LocalResources FF="101" LUT="210" LogicLUT="198" SRL="12"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H">
+    <SubModules count="3">flow_control_loop_pipe_sequential_init_U mul_4ns_6ns_9_1_1_U939 urem_4ns_3ns_2_8_1_U938</SubModules>
+    <Resources FF="362" LUT="470" LogicLUT="456" SRL="14"/>
+    <LocalResources FF="345" LUT="423" LogicLUT="411" SRL="12"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/mul_4ns_6ns_9_1_1_U939" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H.v" ORIG_REF_NAME="mobilenet_v1_mul_4ns_6ns_9_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148/urem_4ns_3ns_2_8_1_U938" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H.v" ORIG_REF_NAME="mobilenet_v1_urem_4ns_3ns_2_8_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="137" LUT="253" LogicLUT="241" SRL="12"/>
+    <LocalResources FF="135" LUT="226" LogicLUT="214" SRL="12"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources BRAM="2" FF="149" LUT="104" LogicLUT="93" RAMB18="2" SRL="11"/>
+    <LocalResources BRAM="2" FF="147" LUT="79" LogicLUT="68" RAMB18="2" SRL="11"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_GAP_C">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="127" LUT="132" LogicLUT="110" SRL="22"/>
+    <LocalResources FF="125" LUT="115" LogicLUT="93" SRL="22"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_GAP_C_fu_2362/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_GAP_C.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW">
+    <SubModules count="5">ama_addmuladd_4ns_5ns_4ns_5ns_8_4_1_U5 flow_control_loop_pipe_sequential_init_U mul_6ns_8ns_13_1_1_U1 urem_6ns_3ns_2_10_1_U2 urem_6ns_3ns_2_10_1_U4</SubModules>
+    <Resources DSP="3" FF="149" LUT="119" LogicLUT="99" SRL="20"/>
+    <LocalResources DSP="1" FF="99" LUT="28" LogicLUT="20" SRL="8"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/ama_addmuladd_4ns_5ns_4ns_5ns_8_4_1_U5" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW.v" ORIG_REF_NAME="mobilenet_v1_ama_addmuladd_4ns_5ns_4ns_5ns_8_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/mul_6ns_8ns_13_1_1_U1" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW.v" ORIG_REF_NAME="mobilenet_v1_mul_6ns_8ns_13_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/urem_6ns_3ns_2_10_1_U2" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW.v" ORIG_REF_NAME="mobilenet_v1_urem_6ns_3ns_2_10_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543/urem_6ns_3ns_2_10_1_U4" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW.v" ORIG_REF_NAME="mobilenet_v1_urem_6ns_3ns_2_10_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mobilenet_v1_Pipeline_VITIS_LOOP_23_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_mobilenet_v1_Pipeline_VITIS_LOOP_23_1.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw0_fu_1916" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_pw0">
+    <SubModules count="3">flow_control_loop_pipe_sequential_init_U p_ZL27features_0_pointwise_weight_0_U p_ZL27features_0_pointwise_weight_1_U</SubModules>
+    <Resources BRAM="4" FF="2721" LUT="1572" LogicLUT="1334" RAMB18="4" SRL="238"/>
+    <LocalResources FF="2719" LUT="1554" LogicLUT="1316" SRL="238"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw0_fu_1916/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw0.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw0_fu_1916/p_ZL27features_0_pointwise_weight_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw0.v" ORIG_REF_NAME="mobilenet_v1_pw0_p_ZL27features_0_pointwise_weight_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw0_fu_1916/p_ZL27features_0_pointwise_weight_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw0.v" ORIG_REF_NAME="mobilenet_v1_pw0_p_ZL27features_0_pointwise_weight_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw1_fu_2116" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_pw1">
+    <SubModules count="3">flow_control_loop_pipe_sequential_init_U p_ZL27features_1_pointwise_weight_0_U p_ZL27features_1_pointwise_weight_1_U</SubModules>
+    <Resources BRAM="4" FF="4874" LUT="3269" LogicLUT="2808" RAMB36="2" SRL="461"/>
+    <LocalResources FF="4872" LUT="3208" LogicLUT="2747" SRL="461"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw1_fu_2116/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw1.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="54" LogicLUT="54"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw1_fu_2116/p_ZL27features_1_pointwise_weight_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw1.v" ORIG_REF_NAME="mobilenet_v1_pw1_p_ZL27features_1_pointwise_weight_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw1_fu_2116/p_ZL27features_1_pointwise_weight_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw1.v" ORIG_REF_NAME="mobilenet_v1_pw1_p_ZL27features_1_pointwise_weight_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw2_fu_2250" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_pw2">
+    <SubModules count="3">flow_control_loop_pipe_sequential_init_U p_ZL27features_2_pointwise_weight_0_U p_ZL27features_2_pointwise_weight_1_U</SubModules>
+    <Resources BRAM="16" FF="6445" LUT="3565" LogicLUT="2641" RAMB36="8" SRL="924"/>
+    <LocalResources FF="6443" LUT="3503" LogicLUT="2579" SRL="924"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw2_fu_2250/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw2.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw2_fu_2250/p_ZL27features_2_pointwise_weight_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw2.v" ORIG_REF_NAME="mobilenet_v1_pw2_p_ZL27features_2_pointwise_weight_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw2_fu_2250/p_ZL27features_2_pointwise_weight_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw2.v" ORIG_REF_NAME="mobilenet_v1_pw2_p_ZL27features_2_pointwise_weight_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw3_fu_2342" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_pw3">
+    <SubModules count="3">flow_control_loop_pipe_sequential_init_U p_ZL27features_3_pointwise_weight_0_U p_ZL27features_3_pointwise_weight_1_U</SubModules>
+    <Resources BRAM="91" FF="10880" LUT="5779" LogicLUT="3960" RAMB18="3" RAMB36="44" SRL="1819"/>
+    <LocalResources FF="10878" LUT="5700" LogicLUT="3881" SRL="1819"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw3_fu_2342/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw3.v" ORIG_REF_NAME="mobilenet_v1_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw3_fu_2342/p_ZL27features_3_pointwise_weight_0_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw3.v" ORIG_REF_NAME="mobilenet_v1_pw3_p_ZL27features_3_pointwise_weight_0_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_pw3_fu_2342/p_ZL27features_3_pointwise_weight_1_U" DEPTH="2" FILE_NAME="mobilenet_v1_pw3.v" ORIG_REF_NAME="mobilenet_v1_pw3_p_ZL27features_3_pointwise_weight_1_ROM_2P_BRAM_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_10_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_11_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_12_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_13_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_14_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_15_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_16_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_17_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_18_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_19_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_20_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_21_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_22_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_23_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_24_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_25_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_26_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_27_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_28_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_29_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_30_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_31_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_32_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_33_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_34_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_35_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_36_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_37_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_38_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_39_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_40_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_41_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_42_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_43_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_44_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_45_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_46_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_47_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_48_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_49_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_50_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_51_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_52_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_53_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_54_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_55_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_56_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_57_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_58_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_59_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_60_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_61_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_62_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_63_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_64_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_65_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_66_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_67_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_68_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_69_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_70_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_71_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_72_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_73_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_74_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_75_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_76_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_77_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_78_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_79_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_80_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_81_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_82_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_83_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_84_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_85_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_86_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_87_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_88_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_89_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_8_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_90_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_91_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_92_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_93_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_94_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_95_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_9_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw0_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_10_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_11_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_12_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_13_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_14_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_15_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_16_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_17_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_18_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_19_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_20_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_21_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_22_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_23_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_24_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_25_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_26_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_27_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_28_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_29_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_30_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_31_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_32_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_33_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_34_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_35_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_36_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_37_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_38_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_39_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_40_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_41_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_42_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_43_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_44_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_45_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_46_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_47_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_8_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_9_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_10_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_11_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_12_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_13_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_14_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_15_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_16_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_17_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_18_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_19_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_20_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_21_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_22_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_23_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_8_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_9_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_10_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_11_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_12_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_13_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_14_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_15_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+    <Resources BRAM="1" LUT="83" LogicLUT="83" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_8_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_9_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_dw3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_gap_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_gap_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw0_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw0_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw0_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw0_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_10_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_11_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_12_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_13_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_14_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_15_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_8_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_9_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw2_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw2_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw2_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw2_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw2_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw2_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw2_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw3_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw3_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw3_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ifmap_pw3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ifmap_pw1_RAM_2P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_10_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_11_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_12_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_13_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_14_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_15_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_16_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_17_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_8_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_9_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/in_buf_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_in_buf_RAM_1P_BRAM_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/mul_64ns_66ns_129_5_1_U1335" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_mul_64ns_66ns_129_5_1">
+    <Resources DSP="13" FF="31" LUT="92" LogicLUT="92"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_10_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_11_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_12_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_13_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_14_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_15_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_16_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_17_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_18_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_19_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_20_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_21_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_22_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_23_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_24_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_25_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_26_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_27_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_28_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_29_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_30_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_31_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+    <Resources BRAM="1" LUT="64" LogicLUT="64" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_8_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_9_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_conv0_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw0_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw0_RAM_AUTO_1R1W">
+    <Resources BRAM="8" LUT="56" LogicLUT="56" RAMB36="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw1_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw1_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+    <Resources BRAM="1" LUT="60" LogicLUT="60" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw1_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw1_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw1_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw1_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw1_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw2_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw2_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw2_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_dw3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_gap_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_dw1_RAM_AUTO_1R1W">
+    <Resources BRAM="1" LUT="57" LogicLUT="57" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_10_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_11_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_12_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_13_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_14_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_15_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+    <Resources BRAM="1" LUT="51" LogicLUT="51" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_8_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+    <Resources BRAM="1" LUT="64" LogicLUT="64" RAMB18="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_9_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw0_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw1_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw1_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw1_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw1_4_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw1_5_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw1_6_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw1_7_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw2_1_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw2_2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw2_3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw2_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/ofmap_pw3_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_ofmap_pw3_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/out_buf_U" DEPTH="1" FILE_NAME="mobilenet_v1.v" ORIG_REF_NAME="mobilenet_v1_out_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="8.59583377838134766" DATAPATH_LOGIC_DELAY="0.22300000488758087" DATAPATH_NET_DELAY="8.37283325195312500" ENDPOINT_PIN="bd_0_i/hls_inst/inst/ofmap_conv0_27_U/ram_reg/DIBDI[12]" LOGIC_LEVELS="0" MAX_FANOUT="32" SLACK="1.15996098518371582" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/acc_327_reg_7167_reg[30]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/acc_327_reg_7167_reg[30]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="mobilenet_v1_conv0.v" LINE_NUMBER="6778"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ofmap_conv0_27_U/ram_reg" PRIMITIVE_TYPE="BMEM.bram.RAMB18E1" FILE_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W.v" LINE_NUMBER="34"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="8.52542018890380859" DATAPATH_LOGIC_DELAY="0.26600000262260437" DATAPATH_NET_DELAY="8.25942039489746094" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_pw1_fu_2116/mul_21_reg_5978_reg[20]/D" LOGIC_LEVELS="1" MAX_FANOUT="115" SLACK="1.39037406444549561" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_4_max_dsp_1_U1322/ce_r_reg/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_4_max_dsp_1_U1322/ce_r_reg" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1.v" LINE_NUMBER="51"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_4_max_dsp_1_U1322/mul42_s_reg_6895[20]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_pw1_fu_2116/mul_21_reg_5978_reg[20]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="mobilenet_v1_pw1.v" LINE_NUMBER="2028"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="8.43478202819824219" DATAPATH_LOGIC_DELAY="0.26600000262260437" DATAPATH_NET_DELAY="8.16878223419189453" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_pw1_fu_2116/mul_17_reg_5953_reg[20]/D" LOGIC_LEVELS="1" MAX_FANOUT="115" SLACK="1.48401296138763428" STARTPOINT_PIN="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_4_max_dsp_1_U1322/ce_r_reg/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_4_max_dsp_1_U1322/ce_r_reg" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1.v" LINE_NUMBER="51"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/fmul_32ns_32ns_32_4_max_dsp_1_U1322/mul42_s_reg_6895[20]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="mobilenet_v1_fmul_32ns_32ns_32_4_max_dsp_1.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_pw1_fu_2116/mul_17_reg_5953_reg[20]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="mobilenet_v1_pw1.v" LINE_NUMBER="2274"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="8.11385917663574219" DATAPATH_LOGIC_DELAY="0.27200001478195190" DATAPATH_NET_DELAY="7.84185886383056641" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/mul_reg_6890_reg[11]/CE" LOGIC_LEVELS="1" MAX_FANOUT="3435" SLACK="1.55293560028076172" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/ap_CS_fsm_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/ap_CS_fsm_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" FILE_NAME="mobilenet_v1_conv0.v" LINE_NUMBER="4453"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/mul_reg_6890[31]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="mobilenet_v1_conv0.v" LINE_NUMBER="4475"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/mul_reg_6890_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="mobilenet_v1_conv0.v" LINE_NUMBER="7752"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="8.19888401031494141" DATAPATH_LOGIC_DELAY="0.22300000488758087" DATAPATH_NET_DELAY="7.97588396072387695" ENDPOINT_PIN="bd_0_i/hls_inst/inst/ofmap_conv0_16_U/ram_reg/DIBDI[12]" LOGIC_LEVELS="0" MAX_FANOUT="32" SLACK="1.55691015720367432" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/acc_327_reg_7167_reg[30]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_conv0_fu_1568/acc_327_reg_7167_reg[30]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="mobilenet_v1_conv0.v" LINE_NUMBER="6778"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ofmap_conv0_16_U/ram_reg" PRIMITIVE_TYPE="BMEM.bram.RAMB18E1" FILE_NAME="mobilenet_v1_ofmap_conv0_RAM_AUTO_1R1W.v" LINE_NUMBER="34"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/mobilenet_v1_design_analysis_routed.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/mobilenet_v1_failfast_routed.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/mobilenet_v1_power_routed.rpt"/>
+  <ReportFile TYPE="status" PATH="verilog/report/mobilenet_v1_status_routed.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/mobilenet_v1_timing_routed.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/mobilenet_v1_timing_paths_routed.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/mobilenet_v1_utilization_routed.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/mobilenet_v1_utilization_hierarchical_routed.rpt"/>
+</VivadoReportFiles>
+</profile>

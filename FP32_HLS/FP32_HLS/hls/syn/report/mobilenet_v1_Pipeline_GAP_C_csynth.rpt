@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vitis HLS Report for 'mobilenet_v1_Pipeline_GAP_C'
+================================================================
+* Date:           Sat Jun 27 09:58:21 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        FP32_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.329 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |      283|      283|  2.830 us|  2.830 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- GAP_C   |      281|      281|        27|          1|          1|   256|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      21|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       0|      36|    -|
+|Register         |        -|    -|     568|      96|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|     568|     153|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+----+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+----+---+----+------------+------------+
+    |add_ln7_fu_143_p2   |         +|   0|  0|   9|           9|           1|
+    |icmp_ln7_fu_137_p2  |      icmp|   0|  0|  10|           9|          10|
+    |ap_enable_pp0       |       xor|   0|  0|   2|           1|           2|
+    +--------------------+----------+----+---+----+------------+------------+
+    |Total               |          |   0|  0|  21|          19|          13|
+    +--------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_c_1     |   9|          2|    9|         18|
+    |c_fu_40                  |   9|          2|    9|         18|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   20|         40|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter15           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter16           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter17           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter18           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter19           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter20           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter21           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter22           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter23           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter24           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter25           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter26           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9            |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter10_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter11_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter12_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter13_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter14_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter15_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter16_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter17_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter18_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter19_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter20_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter21_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter22_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter23_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter24_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter25_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter7_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter8_reg   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter9_reg   |   1|   0|    1|          0|
+    |c_1_reg_192                        |   9|   0|    9|          0|
+    |c_fu_40                            |   9|   0|    9|          0|
+    |div_i_reg_272                      |  32|   0|   32|          0|
+    |ifmap_gap_2_load_1_reg_262         |  32|   0|   32|          0|
+    |ifmap_gap_2_load_reg_227           |  32|   0|   32|          0|
+    |ifmap_gap_load_1_reg_247           |  32|   0|   32|          0|
+    |ifmap_gap_load_reg_212             |  32|   0|   32|          0|
+    |sum_1_reg_242                      |  32|   0|   32|          0|
+    |sum_2_reg_257                      |  32|   0|   32|          0|
+    |sum_3_reg_267                      |  32|   0|   32|          0|
+    |sum_reg_222                        |  32|   0|   32|          0|
+    |zext_ln11_1_reg_232                |   8|   0|   64|         56|
+    |zext_ln11_reg_202                  |   9|   0|   64|         55|
+    |c_1_reg_192                        |  64|  32|    9|          0|
+    |zext_ln11_1_reg_232                |  64|  32|   64|         56|
+    |zext_ln11_reg_202                  |  64|  32|   64|         55|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 568|  96|  624|        222|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++----------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2467_p_din0    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2467_p_din1    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2467_p_opcode  |  out|    2|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2467_p_dout0   |   in|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2467_p_ce      |  out|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2471_p_din0    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2471_p_din1    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2471_p_opcode  |  out|    2|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2471_p_dout0   |   in|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2471_p_ce      |  out|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2475_p_din0    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2475_p_din1    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2475_p_opcode  |  out|    2|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2475_p_dout0   |   in|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2475_p_ce      |  out|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2479_p_din0    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2479_p_din1    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2479_p_opcode  |  out|    2|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2479_p_dout0   |   in|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2479_p_ce      |  out|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2523_p_din0    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2523_p_din1    |  out|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2523_p_dout0   |   in|   32|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|grp_fu_2523_p_ce      |  out|    1|  ap_ctrl_hs|  mobilenet_v1_Pipeline_GAP_C|  return value|
+|ifmap_gap_address0    |  out|    9|   ap_memory|                    ifmap_gap|         array|
+|ifmap_gap_ce0         |  out|    1|   ap_memory|                    ifmap_gap|         array|
+|ifmap_gap_q0          |   in|   32|   ap_memory|                    ifmap_gap|         array|
+|ifmap_gap_address1    |  out|    9|   ap_memory|                    ifmap_gap|         array|
+|ifmap_gap_ce1         |  out|    1|   ap_memory|                    ifmap_gap|         array|
+|ifmap_gap_q1          |   in|   32|   ap_memory|                    ifmap_gap|         array|
+|ifmap_gap_2_address0  |  out|    9|   ap_memory|                  ifmap_gap_2|         array|
+|ifmap_gap_2_ce0       |  out|    1|   ap_memory|                  ifmap_gap_2|         array|
+|ifmap_gap_2_q0        |   in|   32|   ap_memory|                  ifmap_gap_2|         array|
+|ifmap_gap_2_address1  |  out|    9|   ap_memory|                  ifmap_gap_2|         array|
+|ifmap_gap_2_ce1       |  out|    1|   ap_memory|                  ifmap_gap_2|         array|
+|ifmap_gap_2_q1        |   in|   32|   ap_memory|                  ifmap_gap_2|         array|
+|ofmap_gap_address0    |  out|    8|   ap_memory|                    ofmap_gap|         array|
+|ofmap_gap_ce0         |  out|    1|   ap_memory|                    ofmap_gap|         array|
+|ofmap_gap_we0         |  out|    1|   ap_memory|                    ofmap_gap|         array|
+|ofmap_gap_d0          |  out|   32|   ap_memory|                    ofmap_gap|         array|
++----------------------+-----+-----+------------+-----------------------------+--------------+
+

@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'mobilenet_v1_qat_Pipeline_GAP_C'
+================================================================
+* Date:           Sat Jun 27 11:08:37 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        QAT_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.080 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |      259|      259|  2.590 us|  2.590 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- GAP_C   |      257|      257|         3|          1|          1|   256|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      55|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       0|      36|    -|
+|Register         |        -|    -|      39|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|      39|      91|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln17_1_fu_192_p2  |         +|   0|  0|   8|           8|           2|
+    |add_ln17_2_fu_202_p2  |         +|   0|  0|   9|           9|           9|
+    |add_ln17_3_fu_208_p2  |         +|   0|  0|   9|           9|           9|
+    |add_ln17_fu_182_p2    |         +|   0|  0|   8|           8|           8|
+    |add_ln7_fu_125_p2     |         +|   0|  0|   9|           9|           1|
+    |icmp_ln7_fu_119_p2    |      icmp|   0|  0|  10|           9|          10|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  55|          53|          41|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_c_1     |   9|          2|    9|         18|
+    |c_fu_44                  |   9|          2|    9|         18|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   20|         40|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                         |  1|   0|    1|          0|
+    |ap_done_reg                       |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |  1|   0|    1|          0|
+    |c_1_reg_235                       |  9|   0|    9|          0|
+    |c_1_reg_235_pp0_iter1_reg         |  9|   0|    9|          0|
+    |c_fu_44                           |  9|   0|    9|          0|
+    |trunc_ln_reg_264                  |  7|   0|    7|          0|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             | 39|   0|   39|          0|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+---------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |          Source Object          |    C Type    |
++--------------------+-----+-----+------------+---------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  mobilenet_v1_qat_Pipeline_GAP_C|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  mobilenet_v1_qat_Pipeline_GAP_C|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  mobilenet_v1_qat_Pipeline_GAP_C|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  mobilenet_v1_qat_Pipeline_GAP_C|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  mobilenet_v1_qat_Pipeline_GAP_C|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  mobilenet_v1_qat_Pipeline_GAP_C|  return value|
+|pw3_out_address0    |  out|    9|   ap_memory|                          pw3_out|         array|
+|pw3_out_ce0         |  out|    1|   ap_memory|                          pw3_out|         array|
+|pw3_out_q0          |   in|    7|   ap_memory|                          pw3_out|         array|
+|pw3_out_address1    |  out|    9|   ap_memory|                          pw3_out|         array|
+|pw3_out_ce1         |  out|    1|   ap_memory|                          pw3_out|         array|
+|pw3_out_q1          |   in|    7|   ap_memory|                          pw3_out|         array|
+|pw3_out_1_address0  |  out|    9|   ap_memory|                        pw3_out_1|         array|
+|pw3_out_1_ce0       |  out|    1|   ap_memory|                        pw3_out_1|         array|
+|pw3_out_1_q0        |   in|    7|   ap_memory|                        pw3_out_1|         array|
+|pw3_out_1_address1  |  out|    9|   ap_memory|                        pw3_out_1|         array|
+|pw3_out_1_ce1       |  out|    1|   ap_memory|                        pw3_out_1|         array|
+|pw3_out_1_q1        |   in|    7|   ap_memory|                        pw3_out_1|         array|
+|gap_out_address0    |  out|    8|   ap_memory|                          gap_out|         array|
+|gap_out_ce0         |  out|    1|   ap_memory|                          gap_out|         array|
+|gap_out_we0         |  out|    1|   ap_memory|                          gap_out|         array|
+|gap_out_d0          |  out|    7|   ap_memory|                          gap_out|         array|
++--------------------+-----+-----+------------+---------------------------------+--------------+
+

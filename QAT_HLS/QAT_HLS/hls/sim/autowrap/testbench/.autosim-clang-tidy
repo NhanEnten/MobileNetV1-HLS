@@ -1,0 +1,1 @@
+ {CheckOptions: [ {key: xilinx-tb-process.TopFunctionName, value: 'mobilenet_v1_qat'}, {key: xilinx-tb-process.KeepTopName, value: 1}, {key: xilinx-tb-process.BCSim, value: '0'} ] } 

@@ -1,0 +1,246 @@
+{
+  "0": {
+    "basicblocks": 117,
+    "calls": "12 8 4 3 1 7 6 9 5 2 10 11",
+    "control_depth": 4,
+    "def_use_depth": 7,
+    "file": "mobilenet_v1.cpp",
+    "fileloc": 4,
+    "instructions": 2376,
+    "loads": {
+      "L": 34
+    },
+    "memory_accesses": 142,
+    "name": "mobilenet_v1",
+    "stores": {
+      "L": 91
+    },
+    "total_instructions": 9240
+  },
+  "1": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 6,
+    "file": "batchnorm.cpp",
+    "fileloc": 45,
+    "instructions": 316,
+    "loads": {
+      "L": 16
+    },
+    "memory_accesses": 65,
+    "name": "batchnorm_pw0",
+    "stores": {
+      "L": 48
+    },
+    "total_instructions": 316
+  },
+  "10": {
+    "basicblocks": 10,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 131,
+    "file": "pointwise.cpp",
+    "fileloc": 78,
+    "instructions": 1180,
+    "loads": {
+      "G": 128,
+      "L": 256
+    },
+    "memory_accesses": 1,
+    "name": "pw3",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 1180
+  },
+  "11": {
+    "basicblocks": 20,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "fc.cpp",
+    "fileloc": 3,
+    "instructions": 117,
+    "loads": {
+      "G": 11,
+      "L": 1
+    },
+    "memory_accesses": 14,
+    "name": "fc",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 117
+  },
+  "12": {
+    "basicblocks": 59,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 42,
+    "file": "conv.cpp",
+    "fileloc": 3,
+    "instructions": 967,
+    "loads": {
+      "G": 27,
+      "L": 243
+    },
+    "memory_accesses": 300,
+    "name": "conv0",
+    "stores": {
+      "L": 32
+    },
+    "total_instructions": 967
+  },
+  "2": {
+    "basicblocks": 22,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 19,
+    "file": "depthwise.cpp",
+    "fileloc": 90,
+    "instructions": 164,
+    "loads": {
+      "G": 9,
+      "L": 21
+    },
+    "memory_accesses": 16,
+    "name": "dw3",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 164
+  },
+  "3": {
+    "basicblocks": 27,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 19,
+    "file": "pointwise.cpp",
+    "fileloc": 3,
+    "instructions": 221,
+    "loads": {
+      "G": 16,
+      "L": 16
+    },
+    "memory_accesses": 33,
+    "name": "pw0",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 221
+  },
+  "4": {
+    "basicblocks": 22,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 19,
+    "file": "depthwise.cpp",
+    "fileloc": 3,
+    "instructions": 809,
+    "loads": {
+      "G": 9,
+      "L": 378
+    },
+    "memory_accesses": 385,
+    "name": "dw0",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 809
+  },
+  "5": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 67,
+    "file": "pointwise.cpp",
+    "fileloc": 53,
+    "instructions": 885,
+    "loads": {
+      "G": 64,
+      "L": 256
+    },
+    "memory_accesses": 5,
+    "name": "pw2",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 885
+  },
+  "6": {
+    "basicblocks": 19,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 35,
+    "file": "pointwise.cpp",
+    "fileloc": 27,
+    "instructions": 749,
+    "loads": {
+      "G": 32,
+      "L": 256
+    },
+    "memory_accesses": 9,
+    "name": "pw1",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 749
+  },
+  "7": {
+    "basicblocks": 31,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 19,
+    "file": "depthwise.cpp",
+    "fileloc": 32,
+    "instructions": 522,
+    "loads": {
+      "G": 9,
+      "L": 186
+    },
+    "memory_accesses": 129,
+    "name": "dw1",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 522
+  },
+  "8": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 6,
+    "file": "batchnorm.cpp",
+    "fileloc": 7,
+    "instructions": 604,
+    "loads": {
+      "L": 32
+    },
+    "memory_accesses": 129,
+    "name": "batchnorm_conv0",
+    "stores": {
+      "L": 96
+    },
+    "total_instructions": 604
+  },
+  "9": {
+    "basicblocks": 27,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 19,
+    "file": "depthwise.cpp",
+    "fileloc": 61,
+    "instructions": 330,
+    "loads": {
+      "G": 9,
+      "L": 90
+    },
+    "memory_accesses": 65,
+    "name": "dw2",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 330
+  }
+}

@@ -1,0 +1,80 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                       | Instructions | Description                                                                            |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                            |  1,587       | After all functions are compiled and linked into a single design                       |
+|               |                            |              |                                                                                        |
+| Unroll/Inline |                            |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                 |  4,247       | user unroll pragmas are applied                                                        |
+|               | (2) simplification         |  3,667       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                 |  3,239       | user inline pragmas are applied                                                        |
+|               | (4) simplification         |  3,245       | simplification of applied user inline pragmas                                          |
+|               |                            |              |                                                                                        |
+| Array/Struct  |                            |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition        |  5,602       | user array partition pragmas are applied                                               |
+|               | (2) simplification         |  3,315       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate |  3,315       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape          |  3,315       | apply array reshape pragmas                                                            |
+|               | (5) access patterns        |  3,341       | array access pattern optmizations                                                      |
+|               |                            |              |                                                                                        |
+| Performance   |                            |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification    |  3,339       | loop and instruction simplification                                                    |
+|               | (2) parallelization        |  3,314       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition        | 16,988       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification         |  9,214       | simplification of design after performance transformations                             |
+|               |                            |              |                                                                                        |
+| HW Transforms |                            |              | After hardware transfomations                                                          |
+|               | (1) lowering               |  9,220       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations          |  9,240       | high level synthesis optimizations                                                     |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++--------------------+--------------------+--------------+---------------+--------------+-------------+---------------+
+| Function           | Location           | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++--------------------+--------------------+--------------+---------------+--------------+-------------+---------------+
+| + mobilenet_v1     | mobilenet_v1.cpp:4 | 1,587        | 3,245         | 3,341        | 9,214       | 9,240         |
+|    load_input      | transfer.cpp:4     |   42         |               |              |             |               |
+|    conv0           | conv.cpp:3         |  103         |  264          |  216         |  957        |  967          |
+|  + batchnorm_conv0 | batchnorm.cpp:7    |   59         |  271          |  269         |  597        |  604          |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    dw0             | depthwise.cpp:3    |   89         |  112          |  112         |  889        |  809          |
+|  + batchnorm_dw0   | batchnorm.cpp:26   |   59         |               |              |             |               |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    pw0             | pointwise.cpp:3    |   63         |  114          |  114         |  211        |  221          |
+|  + batchnorm_pw0   | batchnorm.cpp:45   |   59         |  143          |  141         |  309        |  316          |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    dw1             | depthwise.cpp:32   |   89         |  112          |  112         |  554        |  522          |
+|  + batchnorm_dw1   | batchnorm.cpp:65   |   59         |               |              |             |               |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    pw1             | pointwise.cpp:27   |   63         |  210          |  210         |  739        |  749          |
+|  + batchnorm_pw1   | batchnorm.cpp:85   |   59         |               |              |             |               |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    dw2             | depthwise.cpp:61   |   89         |  112          |  112         |  338        |  330          |
+|  + batchnorm_dw2   | batchnorm.cpp:105  |   59         |               |              |             |               |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    pw2             | pointwise.cpp:53   |   63         |  402          |  402         |  875        |  885          |
+|  + batchnorm_pw2   | batchnorm.cpp:125  |   59         |               |              |             |               |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    dw3             | depthwise.cpp:90   |   89         |  112          |  112         |  163        |  164          |
+|  + batchnorm_dw3   | batchnorm.cpp:145  |   59         |               |              |             |               |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    pw3             | pointwise.cpp:78   |   63         |  786          |  786         | 1,170       | 1,180         |
+|  + batchnorm_pw3   | batchnorm.cpp:165  |   59         |               |              |             |               |
+|     relu           | batchnorm.cpp:3    |    6         |               |              |             |               |
+|    global_avg_pool | gap.cpp:3          |   42         |               |              |             |               |
+|    fc              | fc.cpp:3           |   70         |  108          |  125         |  105        |  117          |
+|    store_output    | transfer.cpp:19    |   16         |               |              |             |               |
++--------------------+--------------------+--------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

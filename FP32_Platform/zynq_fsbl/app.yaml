@@ -1,0 +1,4 @@
+domain_path: /home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_Platform/zynq_fsbl/zynq_fsbl_bsp
+app_src_dir: /home/nhanenten/2025.2/Vitis/data/embeddedsw/lib/sw_apps/zynq_fsbl
+template: zynq_fsbl
+lang: c

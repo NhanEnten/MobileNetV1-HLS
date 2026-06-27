@@ -1,0 +1,482 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H'" level="0">
+<item name = "Date">Sat Jun 27 09:58:18 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">FP32_HLS</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.260 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">527, 527, 5.270 us, 5.270 us, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- BN_PW1_C_BN_PW1_H">525, 525, 15, 1, 1, 512, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 599, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 0, 68, 603, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 63, -</column>
+<column name="Register">-, -, 1575, 96, -</column>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mul_4ns_6ns_9_1_1_U939">mul_4ns_6ns_9_1_1, 0, 0, 0, 26, 0</column>
+<column name="sparsemux_129_6_32_1_1_U940">sparsemux_129_6_32_1_1, 0, 0, 0, 273, 0</column>
+<column name="sparsemux_129_6_32_1_1_U941">sparsemux_129_6_32_1_1, 0, 0, 0, 273, 0</column>
+<column name="urem_4ns_3ns_2_8_1_U938">urem_4ns_3ns_2_8_1, 0, 0, 68, 31, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln95_1_fu_1076_p2">+, 0, 0, 10, 10, 1</column>
+<column name="add_ln95_fu_1124_p2">+, 0, 0, 7, 7, 1</column>
+<column name="add_ln96_fu_1105_p2">+, 0, 0, 6, 4, 1</column>
+<column name="add_ln99_1_fu_1212_p2">+, 0, 0, 8, 8, 8</column>
+<column name="add_ln99_fu_1174_p2">+, 0, 0, 9, 9, 9</column>
+<column name="sub_ln95_fu_1165_p2">-, 0, 0, 8, 8, 8</column>
+<column name="and_ln4_10_fu_2092_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln4_11_fu_2140_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln4_5_fu_1852_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln4_6_fu_1900_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln4_7_fu_1948_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln4_8_fu_1996_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln4_9_fu_2044_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln4_fu_1804_p2">and, 0, 0, 1, 1, 1</column>
+<column name="icmp_ln4_11_fu_1792_p2">icmp, 0, 0, 23, 23, 1</column>
+<column name="icmp_ln4_12_fu_1834_p2">icmp, 0, 0, 8, 8, 2</column>
+<column name="icmp_ln4_13_fu_1840_p2">icmp, 0, 0, 23, 23, 1</column>
+<column name="icmp_ln4_14_fu_1882_p2">icmp, 0, 0, 8, 8, 2</column>
+<column name="icmp_ln4_15_fu_1888_p2">icmp, 0, 0, 23, 23, 1</column>
+<column name="icmp_ln4_16_fu_1930_p2">icmp, 0, 0, 8, 8, 2</column>
+<column name="icmp_ln4_17_fu_1936_p2">icmp, 0, 0, 23, 23, 1</column>
+<column name="icmp_ln4_18_fu_1978_p2">icmp, 0, 0, 8, 8, 2</column>
+<column name="icmp_ln4_19_fu_1984_p2">icmp, 0, 0, 23, 23, 1</column>
+<column name="icmp_ln4_20_fu_2026_p2">icmp, 0, 0, 8, 8, 2</column>
+<column name="icmp_ln4_21_fu_2032_p2">icmp, 0, 0, 23, 23, 1</column>
+<column name="icmp_ln4_22_fu_2074_p2">icmp, 0, 0, 8, 8, 2</column>
+<column name="icmp_ln4_23_fu_2080_p2">icmp, 0, 0, 23, 23, 1</column>
+<column name="icmp_ln4_24_fu_2122_p2">icmp, 0, 0, 8, 8, 2</column>
+<column name="icmp_ln4_25_fu_2128_p2">icmp, 0, 0, 23, 23, 1</column>
+<column name="icmp_ln4_fu_1786_p2">icmp, 0, 0, 8, 8, 2</column>
+<column name="icmp_ln95_fu_1070_p2">icmp, 0, 0, 11, 10, 11</column>
+<column name="icmp_ln96_fu_1085_p2">icmp, 0, 0, 7, 4, 5</column>
+<column name="or_ln4_10_fu_2086_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_ln4_11_fu_2134_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_ln4_5_fu_1846_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_ln4_6_fu_1894_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_ln4_7_fu_1942_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_ln4_8_fu_1990_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_ln4_9_fu_2038_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_ln4_fu_1798_p2">or, 0, 0, 1, 1, 1</column>
+<column name="select_ln4_10_fu_2098_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln4_11_fu_2146_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln4_5_fu_1858_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln4_6_fu_1906_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln4_7_fu_1954_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln4_8_fu_2002_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln4_9_fu_2050_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln4_fu_1810_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln95_1_fu_1130_p3">select, 0, 0, 7, 1, 7</column>
+<column name="select_ln95_fu_1091_p3">select, 0, 0, 4, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_h_load">9, 2, 4, 8</column>
+<column name="ap_sig_allocacmp_indvar_flatten46_load">9, 2, 10, 20</column>
+<column name="c_fu_524">9, 2, 7, 14</column>
+<column name="h_fu_520">9, 2, 4, 8</column>
+<column name="indvar_flatten46_fu_528">9, 2, 10, 20</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln99_1_reg_2262">8, 0, 8, 0</column>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter10">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter11">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter12">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter13">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter14">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter10_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter11_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter12_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter13_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter6_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter7_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter8_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
+<column name="c_fu_524">7, 0, 7, 0</column>
+<column name="h_fu_520">4, 0, 4, 0</column>
+<column name="icmp_ln96_reg_2205">1, 0, 1, 0</column>
+<column name="indvar_flatten46_fu_528">10, 0, 10, 0</column>
+<column name="mul_1_i1_reg_2336">32, 0, 32, 0</column>
+<column name="mul_2_i1_reg_2341">32, 0, 32, 0</column>
+<column name="mul_3_i1_reg_2346">32, 0, 32, 0</column>
+<column name="mul_4_i1_reg_2351">32, 0, 32, 0</column>
+<column name="mul_5_i1_reg_2356">32, 0, 32, 0</column>
+<column name="mul_6_i1_reg_2361">32, 0, 32, 0</column>
+<column name="mul_7_i1_reg_2366">32, 0, 32, 0</column>
+<column name="mul_i2_reg_2331">32, 0, 32, 0</column>
+<column name="ofmap_pw1_1_load_reg_2272">32, 0, 32, 0</column>
+<column name="ofmap_pw1_2_load_reg_2277">32, 0, 32, 0</column>
+<column name="ofmap_pw1_3_load_reg_2282">32, 0, 32, 0</column>
+<column name="ofmap_pw1_4_load_reg_2287">32, 0, 32, 0</column>
+<column name="ofmap_pw1_5_load_reg_2292">32, 0, 32, 0</column>
+<column name="ofmap_pw1_6_load_reg_2297">32, 0, 32, 0</column>
+<column name="ofmap_pw1_7_load_reg_2302">32, 0, 32, 0</column>
+<column name="ofmap_pw1_load_reg_2267">32, 0, 32, 0</column>
+<column name="select_ln4_10_reg_2473">32, 0, 32, 0</column>
+<column name="select_ln4_11_reg_2480">32, 0, 32, 0</column>
+<column name="select_ln4_5_reg_2438">32, 0, 32, 0</column>
+<column name="select_ln4_6_reg_2445">32, 0, 32, 0</column>
+<column name="select_ln4_7_reg_2452">32, 0, 32, 0</column>
+<column name="select_ln4_8_reg_2459">32, 0, 32, 0</column>
+<column name="select_ln4_9_reg_2466">32, 0, 32, 0</column>
+<column name="select_ln4_reg_2431">32, 0, 32, 0</column>
+<column name="select_ln95_reg_2210">4, 0, 4, 0</column>
+<column name="tmp_96_reg_2319">32, 0, 32, 0</column>
+<column name="trunc_ln95_reg_2216">6, 0, 6, 0</column>
+<column name="trunc_ln96_reg_2371">2, 0, 2, 0</column>
+<column name="x_assign_10_reg_2417">32, 0, 32, 0</column>
+<column name="x_assign_10_reg_2417_pp0_iter12_reg">32, 0, 32, 0</column>
+<column name="x_assign_11_reg_2424">32, 0, 32, 0</column>
+<column name="x_assign_11_reg_2424_pp0_iter12_reg">32, 0, 32, 0</column>
+<column name="x_assign_5_reg_2389">32, 0, 32, 0</column>
+<column name="x_assign_5_reg_2389_pp0_iter12_reg">32, 0, 32, 0</column>
+<column name="x_assign_6_reg_2396">32, 0, 32, 0</column>
+<column name="x_assign_6_reg_2396_pp0_iter12_reg">32, 0, 32, 0</column>
+<column name="x_assign_7_reg_2403">32, 0, 32, 0</column>
+<column name="x_assign_7_reg_2403_pp0_iter12_reg">32, 0, 32, 0</column>
+<column name="x_assign_8_reg_2410">32, 0, 32, 0</column>
+<column name="x_assign_8_reg_2410_pp0_iter12_reg">32, 0, 32, 0</column>
+<column name="x_assign_9_reg_2375">32, 0, 32, 0</column>
+<column name="x_assign_9_reg_2375_pp0_iter12_reg">32, 0, 32, 0</column>
+<column name="x_assign_s_reg_2382">32, 0, 32, 0</column>
+<column name="x_assign_s_reg_2382_pp0_iter12_reg">32, 0, 32, 0</column>
+<column name="add_ln99_1_reg_2262">64, 32, 8, 0</column>
+<column name="trunc_ln95_reg_2216">64, 32, 6, 0</column>
+<column name="trunc_ln96_reg_2371">64, 32, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2523_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2523_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2523_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2523_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2527_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2527_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2527_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2527_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2531_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2531_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2531_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2531_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2599_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2599_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2599_p_opcode">out, 5, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2599_p_dout0">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2599_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2603_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2603_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2603_p_opcode">out, 5, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2603_p_dout0">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2603_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2607_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2607_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2607_p_opcode">out, 5, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2607_p_dout0">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2607_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2611_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2611_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2611_p_opcode">out, 5, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2611_p_dout0">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2611_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2615_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2615_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2615_p_opcode">out, 5, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2615_p_dout0">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2615_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2619_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2619_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2619_p_opcode">out, 5, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2619_p_dout0">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2619_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2623_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2623_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2623_p_opcode">out, 5, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2623_p_dout0">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2623_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2627_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2627_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2627_p_opcode">out, 5, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2627_p_dout0">in, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2627_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2467_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2467_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2467_p_opcode">out, 2, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2467_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2467_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2471_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2471_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2471_p_opcode">out, 2, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2471_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2471_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2475_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2475_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2475_p_opcode">out, 2, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2475_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2475_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2479_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2479_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2479_p_opcode">out, 2, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2479_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2479_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2483_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2483_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2483_p_opcode">out, 2, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2483_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2483_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2487_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2487_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2487_p_opcode">out, 2, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2487_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2487_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2491_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2491_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2491_p_opcode">out, 2, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2491_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2491_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2495_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2495_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2495_p_opcode">out, 2, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2495_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2495_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2535_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2535_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2535_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2535_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2539_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2539_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2539_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2539_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2543_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2543_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2543_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2543_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2547_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2547_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2547_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2547_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2551_p_din0">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2551_p_din1">out, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2551_p_dout0">in, 32, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="grp_fu_2551_p_ce">out, 1, ap_ctrl_hs, mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, return value</column>
+<column name="ofmap_pw1_address0">out, 9, ap_memory, ofmap_pw1, array</column>
+<column name="ofmap_pw1_ce0">out, 1, ap_memory, ofmap_pw1, array</column>
+<column name="ofmap_pw1_q0">in, 32, ap_memory, ofmap_pw1, array</column>
+<column name="ofmap_pw1_1_address0">out, 9, ap_memory, ofmap_pw1_1, array</column>
+<column name="ofmap_pw1_1_ce0">out, 1, ap_memory, ofmap_pw1_1, array</column>
+<column name="ofmap_pw1_1_q0">in, 32, ap_memory, ofmap_pw1_1, array</column>
+<column name="ofmap_pw1_2_address0">out, 9, ap_memory, ofmap_pw1_2, array</column>
+<column name="ofmap_pw1_2_ce0">out, 1, ap_memory, ofmap_pw1_2, array</column>
+<column name="ofmap_pw1_2_q0">in, 32, ap_memory, ofmap_pw1_2, array</column>
+<column name="ofmap_pw1_3_address0">out, 9, ap_memory, ofmap_pw1_3, array</column>
+<column name="ofmap_pw1_3_ce0">out, 1, ap_memory, ofmap_pw1_3, array</column>
+<column name="ofmap_pw1_3_q0">in, 32, ap_memory, ofmap_pw1_3, array</column>
+<column name="ofmap_pw1_4_address0">out, 9, ap_memory, ofmap_pw1_4, array</column>
+<column name="ofmap_pw1_4_ce0">out, 1, ap_memory, ofmap_pw1_4, array</column>
+<column name="ofmap_pw1_4_q0">in, 32, ap_memory, ofmap_pw1_4, array</column>
+<column name="ofmap_pw1_5_address0">out, 9, ap_memory, ofmap_pw1_5, array</column>
+<column name="ofmap_pw1_5_ce0">out, 1, ap_memory, ofmap_pw1_5, array</column>
+<column name="ofmap_pw1_5_q0">in, 32, ap_memory, ofmap_pw1_5, array</column>
+<column name="ofmap_pw1_6_address0">out, 9, ap_memory, ofmap_pw1_6, array</column>
+<column name="ofmap_pw1_6_ce0">out, 1, ap_memory, ofmap_pw1_6, array</column>
+<column name="ofmap_pw1_6_q0">in, 32, ap_memory, ofmap_pw1_6, array</column>
+<column name="ofmap_pw1_7_address0">out, 9, ap_memory, ofmap_pw1_7, array</column>
+<column name="ofmap_pw1_7_ce0">out, 1, ap_memory, ofmap_pw1_7, array</column>
+<column name="ofmap_pw1_7_q0">in, 32, ap_memory, ofmap_pw1_7, array</column>
+<column name="ifmap_dw2_address0">out, 8, ap_memory, ifmap_dw2, array</column>
+<column name="ifmap_dw2_ce0">out, 1, ap_memory, ifmap_dw2, array</column>
+<column name="ifmap_dw2_we0">out, 1, ap_memory, ifmap_dw2, array</column>
+<column name="ifmap_dw2_d0">out, 32, ap_memory, ifmap_dw2, array</column>
+<column name="ifmap_dw2_1_address0">out, 8, ap_memory, ifmap_dw2_1, array</column>
+<column name="ifmap_dw2_1_ce0">out, 1, ap_memory, ifmap_dw2_1, array</column>
+<column name="ifmap_dw2_1_we0">out, 1, ap_memory, ifmap_dw2_1, array</column>
+<column name="ifmap_dw2_1_d0">out, 32, ap_memory, ifmap_dw2_1, array</column>
+<column name="ifmap_dw2_2_address0">out, 8, ap_memory, ifmap_dw2_2, array</column>
+<column name="ifmap_dw2_2_ce0">out, 1, ap_memory, ifmap_dw2_2, array</column>
+<column name="ifmap_dw2_2_we0">out, 1, ap_memory, ifmap_dw2_2, array</column>
+<column name="ifmap_dw2_2_d0">out, 32, ap_memory, ifmap_dw2_2, array</column>
+<column name="ifmap_dw2_3_address0">out, 8, ap_memory, ifmap_dw2_3, array</column>
+<column name="ifmap_dw2_3_ce0">out, 1, ap_memory, ifmap_dw2_3, array</column>
+<column name="ifmap_dw2_3_we0">out, 1, ap_memory, ifmap_dw2_3, array</column>
+<column name="ifmap_dw2_3_d0">out, 32, ap_memory, ifmap_dw2_3, array</column>
+<column name="ifmap_dw2_4_address0">out, 8, ap_memory, ifmap_dw2_4, array</column>
+<column name="ifmap_dw2_4_ce0">out, 1, ap_memory, ifmap_dw2_4, array</column>
+<column name="ifmap_dw2_4_we0">out, 1, ap_memory, ifmap_dw2_4, array</column>
+<column name="ifmap_dw2_4_d0">out, 32, ap_memory, ifmap_dw2_4, array</column>
+<column name="ifmap_dw2_5_address0">out, 8, ap_memory, ifmap_dw2_5, array</column>
+<column name="ifmap_dw2_5_ce0">out, 1, ap_memory, ifmap_dw2_5, array</column>
+<column name="ifmap_dw2_5_we0">out, 1, ap_memory, ifmap_dw2_5, array</column>
+<column name="ifmap_dw2_5_d0">out, 32, ap_memory, ifmap_dw2_5, array</column>
+<column name="ifmap_dw2_6_address0">out, 8, ap_memory, ifmap_dw2_6, array</column>
+<column name="ifmap_dw2_6_ce0">out, 1, ap_memory, ifmap_dw2_6, array</column>
+<column name="ifmap_dw2_6_we0">out, 1, ap_memory, ifmap_dw2_6, array</column>
+<column name="ifmap_dw2_6_d0">out, 32, ap_memory, ifmap_dw2_6, array</column>
+<column name="ifmap_dw2_7_address0">out, 8, ap_memory, ifmap_dw2_7, array</column>
+<column name="ifmap_dw2_7_ce0">out, 1, ap_memory, ifmap_dw2_7, array</column>
+<column name="ifmap_dw2_7_we0">out, 1, ap_memory, ifmap_dw2_7, array</column>
+<column name="ifmap_dw2_7_d0">out, 32, ap_memory, ifmap_dw2_7, array</column>
+<column name="ifmap_dw2_8_address0">out, 8, ap_memory, ifmap_dw2_8, array</column>
+<column name="ifmap_dw2_8_ce0">out, 1, ap_memory, ifmap_dw2_8, array</column>
+<column name="ifmap_dw2_8_we0">out, 1, ap_memory, ifmap_dw2_8, array</column>
+<column name="ifmap_dw2_8_d0">out, 32, ap_memory, ifmap_dw2_8, array</column>
+<column name="ifmap_dw2_9_address0">out, 8, ap_memory, ifmap_dw2_9, array</column>
+<column name="ifmap_dw2_9_ce0">out, 1, ap_memory, ifmap_dw2_9, array</column>
+<column name="ifmap_dw2_9_we0">out, 1, ap_memory, ifmap_dw2_9, array</column>
+<column name="ifmap_dw2_9_d0">out, 32, ap_memory, ifmap_dw2_9, array</column>
+<column name="ifmap_dw2_10_address0">out, 8, ap_memory, ifmap_dw2_10, array</column>
+<column name="ifmap_dw2_10_ce0">out, 1, ap_memory, ifmap_dw2_10, array</column>
+<column name="ifmap_dw2_10_we0">out, 1, ap_memory, ifmap_dw2_10, array</column>
+<column name="ifmap_dw2_10_d0">out, 32, ap_memory, ifmap_dw2_10, array</column>
+<column name="ifmap_dw2_11_address0">out, 8, ap_memory, ifmap_dw2_11, array</column>
+<column name="ifmap_dw2_11_ce0">out, 1, ap_memory, ifmap_dw2_11, array</column>
+<column name="ifmap_dw2_11_we0">out, 1, ap_memory, ifmap_dw2_11, array</column>
+<column name="ifmap_dw2_11_d0">out, 32, ap_memory, ifmap_dw2_11, array</column>
+<column name="ifmap_dw2_12_address0">out, 8, ap_memory, ifmap_dw2_12, array</column>
+<column name="ifmap_dw2_12_ce0">out, 1, ap_memory, ifmap_dw2_12, array</column>
+<column name="ifmap_dw2_12_we0">out, 1, ap_memory, ifmap_dw2_12, array</column>
+<column name="ifmap_dw2_12_d0">out, 32, ap_memory, ifmap_dw2_12, array</column>
+<column name="ifmap_dw2_13_address0">out, 8, ap_memory, ifmap_dw2_13, array</column>
+<column name="ifmap_dw2_13_ce0">out, 1, ap_memory, ifmap_dw2_13, array</column>
+<column name="ifmap_dw2_13_we0">out, 1, ap_memory, ifmap_dw2_13, array</column>
+<column name="ifmap_dw2_13_d0">out, 32, ap_memory, ifmap_dw2_13, array</column>
+<column name="ifmap_dw2_14_address0">out, 8, ap_memory, ifmap_dw2_14, array</column>
+<column name="ifmap_dw2_14_ce0">out, 1, ap_memory, ifmap_dw2_14, array</column>
+<column name="ifmap_dw2_14_we0">out, 1, ap_memory, ifmap_dw2_14, array</column>
+<column name="ifmap_dw2_14_d0">out, 32, ap_memory, ifmap_dw2_14, array</column>
+<column name="ifmap_dw2_15_address0">out, 8, ap_memory, ifmap_dw2_15, array</column>
+<column name="ifmap_dw2_15_ce0">out, 1, ap_memory, ifmap_dw2_15, array</column>
+<column name="ifmap_dw2_15_we0">out, 1, ap_memory, ifmap_dw2_15, array</column>
+<column name="ifmap_dw2_15_d0">out, 32, ap_memory, ifmap_dw2_15, array</column>
+<column name="ifmap_dw2_16_address0">out, 8, ap_memory, ifmap_dw2_16, array</column>
+<column name="ifmap_dw2_16_ce0">out, 1, ap_memory, ifmap_dw2_16, array</column>
+<column name="ifmap_dw2_16_we0">out, 1, ap_memory, ifmap_dw2_16, array</column>
+<column name="ifmap_dw2_16_d0">out, 32, ap_memory, ifmap_dw2_16, array</column>
+<column name="ifmap_dw2_17_address0">out, 8, ap_memory, ifmap_dw2_17, array</column>
+<column name="ifmap_dw2_17_ce0">out, 1, ap_memory, ifmap_dw2_17, array</column>
+<column name="ifmap_dw2_17_we0">out, 1, ap_memory, ifmap_dw2_17, array</column>
+<column name="ifmap_dw2_17_d0">out, 32, ap_memory, ifmap_dw2_17, array</column>
+<column name="ifmap_dw2_18_address0">out, 8, ap_memory, ifmap_dw2_18, array</column>
+<column name="ifmap_dw2_18_ce0">out, 1, ap_memory, ifmap_dw2_18, array</column>
+<column name="ifmap_dw2_18_we0">out, 1, ap_memory, ifmap_dw2_18, array</column>
+<column name="ifmap_dw2_18_d0">out, 32, ap_memory, ifmap_dw2_18, array</column>
+<column name="ifmap_dw2_19_address0">out, 8, ap_memory, ifmap_dw2_19, array</column>
+<column name="ifmap_dw2_19_ce0">out, 1, ap_memory, ifmap_dw2_19, array</column>
+<column name="ifmap_dw2_19_we0">out, 1, ap_memory, ifmap_dw2_19, array</column>
+<column name="ifmap_dw2_19_d0">out, 32, ap_memory, ifmap_dw2_19, array</column>
+<column name="ifmap_dw2_20_address0">out, 8, ap_memory, ifmap_dw2_20, array</column>
+<column name="ifmap_dw2_20_ce0">out, 1, ap_memory, ifmap_dw2_20, array</column>
+<column name="ifmap_dw2_20_we0">out, 1, ap_memory, ifmap_dw2_20, array</column>
+<column name="ifmap_dw2_20_d0">out, 32, ap_memory, ifmap_dw2_20, array</column>
+<column name="ifmap_dw2_21_address0">out, 8, ap_memory, ifmap_dw2_21, array</column>
+<column name="ifmap_dw2_21_ce0">out, 1, ap_memory, ifmap_dw2_21, array</column>
+<column name="ifmap_dw2_21_we0">out, 1, ap_memory, ifmap_dw2_21, array</column>
+<column name="ifmap_dw2_21_d0">out, 32, ap_memory, ifmap_dw2_21, array</column>
+<column name="ifmap_dw2_22_address0">out, 8, ap_memory, ifmap_dw2_22, array</column>
+<column name="ifmap_dw2_22_ce0">out, 1, ap_memory, ifmap_dw2_22, array</column>
+<column name="ifmap_dw2_22_we0">out, 1, ap_memory, ifmap_dw2_22, array</column>
+<column name="ifmap_dw2_22_d0">out, 32, ap_memory, ifmap_dw2_22, array</column>
+<column name="ifmap_dw2_23_address0">out, 8, ap_memory, ifmap_dw2_23, array</column>
+<column name="ifmap_dw2_23_ce0">out, 1, ap_memory, ifmap_dw2_23, array</column>
+<column name="ifmap_dw2_23_we0">out, 1, ap_memory, ifmap_dw2_23, array</column>
+<column name="ifmap_dw2_23_d0">out, 32, ap_memory, ifmap_dw2_23, array</column>
+</table>
+</item>
+</section>
+</profile>

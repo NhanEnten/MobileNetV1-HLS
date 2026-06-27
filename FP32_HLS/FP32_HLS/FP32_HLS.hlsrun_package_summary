@@ -1,0 +1,165 @@
+<ENTRY>
+{
+ "thisFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/FP32_HLS.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jun 27 10:13:16 2026",
+ "timestampMillis": "1782529996420",
+ "buildStep": {
+  "cmdId": "b262bcd5-19b0-410d-9a5b-0423cb005844",
+  "name": "vitis-run",
+  "logFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/logs/FP32_HLS.steps.log",
+  "commandLine": "/home/nhanenten/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --package --config /home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/hls_config.cfg --work_dir FP32_HLS ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/hls_config.cfg",
+   "--work_dir",
+   "FP32_HLS"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 10:13:16 2026",
+ "timestampMillis": "1782529996420",
+ "status": {
+  "cmdId": "b262bcd5-19b0-410d-9a5b-0423cb005844",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jun 27 10:13:18 2026",
+ "timestampMillis": "1782529998615",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "mobilenet_v1",
+     "file": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/mobilenet_v1.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/depthwise.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/conv.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/pointwise.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/fc.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/batchnorm.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/mobilenet_v1.hpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/mobilenet_v1.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/transfer.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/params.hpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/gap.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun 27 10:13:18 2026",
+ "timestampMillis": "1782529998616",
+ "buildStep": {
+  "cmdId": "85fd2a40-3ef9-45e5-b51b-3078a21494d5",
+  "name": "",
+  "logFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 10:13:18 2026",
+ "timestampMillis": "1782529998617",
+ "status": {
+  "cmdId": "85fd2a40-3ef9-45e5-b51b-3078a21494d5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 10:13:32 2026",
+ "timestampMillis": "1782530012514",
+ "status": {
+  "cmdId": "85fd2a40-3ef9-45e5-b51b-3078a21494d5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 10:13:32 2026",
+ "timestampMillis": "1782530012611",
+ "status": {
+  "cmdId": "b262bcd5-19b0-410d-9a5b-0423cb005844",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:13:32 2026",
+ "timestampMillis": "1782530012611",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:13:32 2026",
+ "timestampMillis": "1782530012612",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

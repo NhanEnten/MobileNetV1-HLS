@@ -1,0 +1,497 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Sat Jun 27 10:54:04 2026
+| Host         : NhanEnten running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_timing -max_paths 10 -file ./report/mobilenet_v1_timing_paths_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z045-ffg900
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[1])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[2])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__50/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[1])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[2])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__2/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__51/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[1])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[2])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__3/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__52/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[1])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[2])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__4/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__53/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[1])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+Slack (MET) :             4.596ns  (required time - arrival time)
+  Source:                 bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        1.385ns  (logic 0.382ns (27.572%)  route 1.003ns (72.428%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.537     0.537    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         FDRE                                         r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.259     0.796 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=18, unplaced)        0.584     1.380    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         LUT6 (Prop_lut6_I0_O)        0.123     1.503 r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=2, unplaced)         0.419     1.922    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=60951, unset)        0.510    10.510    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         DSP48E1                                      r  bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+                         DSP48E1 (Setup_dsp48e1_CLK_INMODE[2])
+                                                     -3.956     6.519    bd_0_wrapper/bd_0/bd_0_hls_inst_0/bd_0_hls_inst_0_mobilenet_v1/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1__xdcDup__5/bd_0_hls_inst_0_mobilenet_v1_fadd_32ns_32ns_32_5_full_dsp_1_ip__54/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         required time                          6.519    
+                         arrival time                          -1.922    
+  -------------------------------------------------------------------
+                         slack                                  4.596    
+
+
+
+

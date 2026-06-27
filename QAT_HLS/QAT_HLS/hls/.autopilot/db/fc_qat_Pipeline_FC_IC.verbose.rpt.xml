@@ -1,0 +1,199 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'fc_qat_Pipeline_FC_IC'" level="0">
+<item name = "Date">Sat Jun 27 11:08:37 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">QAT_HLS</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z045-ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 4.818 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">261, 261, 2.610 us, 2.610 us, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- FC_IC">259, 259, 5, 1, 1, 256, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, 10, -, -, -</column>
+<column name="Expression">-, -, 0, 21, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">10, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, 0, 216, -</column>
+<column name="Register">-, -, 313, 32, -</column>
+<specialColumn name="Available">1090, 900, 437200, 218600, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 1, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U794">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U795">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U796">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U797">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U798">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U799">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U800">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U801">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U802">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+<column name="mac_muladd_8s_7ns_23s_23_4_1_U803">mac_muladd_8s_7ns_23s_23_4_1, i0 * i1 + i2</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="p_ZL9fc_w_fold_0_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_0_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_1_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_1_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_2_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_2_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_3_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_3_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_4_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_4_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_5_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_5_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_6_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_6_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_7_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_7_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_8_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_8_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+<column name="p_ZL9fc_w_fold_9_U">fc_qat_Pipeline_FC_IC_p_ZL9fc_w_fold_9_ROM_2P_BRAM_1R, 1, 0, 0, 0, 256, 8, 1, 2048</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln19_fu_421_p2">+, 0, 0, 9, 9, 1</column>
+<column name="icmp_ln19_fu_415_p2">icmp, 0, 0, 10, 9, 10</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_ic_1">9, 2, 9, 18</column>
+<column name="ap_sig_allocacmp_p_load">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load11">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load13">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load15">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load17">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load19">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load21">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load23">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load25">9, 2, 23, 46</column>
+<column name="ap_sig_allocacmp_p_load27">9, 2, 23, 46</column>
+<column name="empty_40_fu_104">9, 2, 23, 46</column>
+<column name="empty_41_fu_108">9, 2, 23, 46</column>
+<column name="empty_42_fu_112">9, 2, 23, 46</column>
+<column name="empty_43_fu_116">9, 2, 23, 46</column>
+<column name="empty_44_fu_120">9, 2, 23, 46</column>
+<column name="empty_45_fu_124">9, 2, 23, 46</column>
+<column name="empty_46_fu_128">9, 2, 23, 46</column>
+<column name="empty_47_fu_132">9, 2, 23, 46</column>
+<column name="empty_48_fu_136">9, 2, 23, 46</column>
+<column name="empty_fu_100">9, 2, 23, 46</column>
+<column name="ic_fu_140">9, 2, 9, 18</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
+<column name="empty_40_fu_104">23, 0, 23, 0</column>
+<column name="empty_41_fu_108">23, 0, 23, 0</column>
+<column name="empty_42_fu_112">23, 0, 23, 0</column>
+<column name="empty_43_fu_116">23, 0, 23, 0</column>
+<column name="empty_44_fu_120">23, 0, 23, 0</column>
+<column name="empty_45_fu_124">23, 0, 23, 0</column>
+<column name="empty_46_fu_128">23, 0, 23, 0</column>
+<column name="empty_47_fu_132">23, 0, 23, 0</column>
+<column name="empty_48_fu_136">23, 0, 23, 0</column>
+<column name="empty_fu_100">23, 0, 23, 0</column>
+<column name="ic_fu_140">9, 0, 9, 0</column>
+<column name="icmp_ln19_reg_778">1, 0, 1, 0</column>
+<column name="icmp_ln19_reg_778">64, 32, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, fc_qat_Pipeline_FC_IC, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, fc_qat_Pipeline_FC_IC, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, fc_qat_Pipeline_FC_IC, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, fc_qat_Pipeline_FC_IC, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, fc_qat_Pipeline_FC_IC, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, fc_qat_Pipeline_FC_IC, return value</column>
+<column name="ifmap_address0">out, 8, ap_memory, ifmap, array</column>
+<column name="ifmap_ce0">out, 1, ap_memory, ifmap, array</column>
+<column name="ifmap_q0">in, 7, ap_memory, ifmap, array</column>
+<column name="p_out">out, 23, ap_vld, p_out, pointer</column>
+<column name="p_out_ap_vld">out, 1, ap_vld, p_out, pointer</column>
+<column name="p_out1">out, 23, ap_vld, p_out1, pointer</column>
+<column name="p_out1_ap_vld">out, 1, ap_vld, p_out1, pointer</column>
+<column name="p_out2">out, 23, ap_vld, p_out2, pointer</column>
+<column name="p_out2_ap_vld">out, 1, ap_vld, p_out2, pointer</column>
+<column name="p_out3">out, 23, ap_vld, p_out3, pointer</column>
+<column name="p_out3_ap_vld">out, 1, ap_vld, p_out3, pointer</column>
+<column name="p_out4">out, 23, ap_vld, p_out4, pointer</column>
+<column name="p_out4_ap_vld">out, 1, ap_vld, p_out4, pointer</column>
+<column name="p_out5">out, 23, ap_vld, p_out5, pointer</column>
+<column name="p_out5_ap_vld">out, 1, ap_vld, p_out5, pointer</column>
+<column name="p_out6">out, 23, ap_vld, p_out6, pointer</column>
+<column name="p_out6_ap_vld">out, 1, ap_vld, p_out6, pointer</column>
+<column name="p_out7">out, 23, ap_vld, p_out7, pointer</column>
+<column name="p_out7_ap_vld">out, 1, ap_vld, p_out7, pointer</column>
+<column name="p_out8">out, 23, ap_vld, p_out8, pointer</column>
+<column name="p_out8_ap_vld">out, 1, ap_vld, p_out8, pointer</column>
+<column name="p_out9">out, 23, ap_vld, p_out9, pointer</column>
+<column name="p_out9_ap_vld">out, 1, ap_vld, p_out9, pointer</column>
+</table>
+</item>
+</section>
+</profile>

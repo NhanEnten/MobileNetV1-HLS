@@ -1,0 +1,277 @@
+<ENTRY>
+{
+ "thisFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/FP32_HLS.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jun 27 10:45:36 2026",
+ "timestampMillis": "1782531936311",
+ "buildStep": {
+  "cmdId": "8c587a4a-4b6d-4854-b9de-95dcb82fb224",
+  "name": "vitis-run",
+  "logFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/logs/FP32_HLS.steps.log",
+  "commandLine": "/home/nhanenten/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/hls_config.cfg --work_dir FP32_HLS ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/hls_config.cfg",
+   "--work_dir",
+   "FP32_HLS"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 10:45:36 2026",
+ "timestampMillis": "1782531936312",
+ "status": {
+  "cmdId": "8c587a4a-4b6d-4854-b9de-95dcb82fb224",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938694",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "mobilenet_v1",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/depthwise.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/conv.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/pointwise.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/fc.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/batchnorm.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/mobilenet_v1.hpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/mobilenet_v1.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/transfer.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/params.hpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/gap.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938694",
+ "buildStep": {
+  "cmdId": "6614851e-d574-4025-a360-e51b08499509",
+  "name": "",
+  "logFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938695",
+ "status": {
+  "cmdId": "6614851e-d574-4025-a360-e51b08499509",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938695",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938695",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938696",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938696",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938696",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:45:38 2026",
+ "timestampMillis": "1782531938696",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:02:31 2026",
+ "timestampMillis": "1782532951847",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:02:31 2026",
+ "timestampMillis": "1782532951852",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 11:02:31 2026",
+ "timestampMillis": "1782532951852",
+ "status": {
+  "cmdId": "6614851e-d574-4025-a360-e51b08499509",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 11:02:32 2026",
+ "timestampMillis": "1782532952000",
+ "status": {
+  "cmdId": "8c587a4a-4b6d-4854-b9de-95dcb82fb224",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:02:32 2026",
+ "timestampMillis": "1782532952003",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 11:02:32 2026",
+ "timestampMillis": "1782532952003",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

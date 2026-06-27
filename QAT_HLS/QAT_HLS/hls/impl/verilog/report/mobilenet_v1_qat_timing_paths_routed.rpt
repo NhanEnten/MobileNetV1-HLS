@@ -1,0 +1,517 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Sat Jun 27 11:20:25 2026
+| Host         : NhanEnten running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_timing -max_paths 10 -file ./report/mobilenet_v1_qat_timing_paths_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z045-ffg900
+| Speed File   : -2  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.250ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[22]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.524ns  (logic 4.537ns (53.226%)  route 3.987ns (46.774%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[4])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOBDO[4]
+                         net (fo=5, routed)           0.924     3.261    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/DOBDO[4]
+    DSP48_X0Y51          DSP48E1 (Prop_dsp48e1_A[4]_P[14])
+                                                      2.737     5.998 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/tmp_product/P[14]
+                         net (fo=952, routed)         3.063     9.061    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_1[14]
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[22]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X2Y31          DSP48E1 (Setup_dsp48e1_CLK_C[22])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -9.061    
+  -------------------------------------------------------------------
+                         slack                                  1.250    
+
+Slack (MET) :             1.250ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[40]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.524ns  (logic 4.537ns (53.226%)  route 3.987ns (46.774%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[4])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOBDO[4]
+                         net (fo=5, routed)           0.924     3.261    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/DOBDO[4]
+    DSP48_X0Y51          DSP48E1 (Prop_dsp48e1_A[4]_P[14])
+                                                      2.737     5.998 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/tmp_product/P[14]
+                         net (fo=952, routed)         3.063     9.061    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_1[14]
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[40]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X2Y31          DSP48E1 (Setup_dsp48e1_CLK_C[40])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -9.061    
+  -------------------------------------------------------------------
+                         slack                                  1.250    
+
+Slack (MET) :             1.263ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[43]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.511ns  (logic 4.537ns (53.306%)  route 3.974ns (46.694%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[4])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOBDO[4]
+                         net (fo=5, routed)           0.924     3.261    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/DOBDO[4]
+    DSP48_X0Y51          DSP48E1 (Prop_dsp48e1_A[4]_P[14])
+                                                      2.737     5.998 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/tmp_product/P[14]
+                         net (fo=952, routed)         3.050     9.048    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_1[14]
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[43]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X2Y31          DSP48E1 (Setup_dsp48e1_CLK_C[43])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -9.048    
+  -------------------------------------------------------------------
+                         slack                                  1.263    
+
+Slack (MET) :             1.264ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[23]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.510ns  (logic 4.537ns (53.312%)  route 3.973ns (46.688%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[4])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOBDO[4]
+                         net (fo=5, routed)           0.924     3.261    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/DOBDO[4]
+    DSP48_X0Y51          DSP48E1 (Prop_dsp48e1_A[4]_P[14])
+                                                      2.737     5.998 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/tmp_product/P[14]
+                         net (fo=952, routed)         3.049     9.047    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_1[14]
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[23]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X2Y31          DSP48E1 (Setup_dsp48e1_CLK_C[23])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -9.047    
+  -------------------------------------------------------------------
+                         slack                                  1.264    
+
+Slack (MET) :             1.341ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[41]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.433ns  (logic 4.537ns (53.804%)  route 3.896ns (46.196%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[4])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOBDO[4]
+                         net (fo=5, routed)           0.924     3.261    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/DOBDO[4]
+    DSP48_X0Y51          DSP48E1 (Prop_dsp48e1_A[4]_P[14])
+                                                      2.737     5.998 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U658/tmp_product/P[14]
+                         net (fo=952, routed)         2.971     8.970    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_1[14]
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[41]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X2Y31          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X2Y31          DSP48E1 (Setup_dsp48e1_CLK_C[41])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U758/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -8.970    
+  -------------------------------------------------------------------
+                         slack                                  1.341    
+
+Slack (MET) :             1.379ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[21]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.395ns  (logic 4.537ns (54.043%)  route 3.858ns (45.957%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOADO[1]
+                         net (fo=2, routed)           0.819     3.156    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product_2[1]
+    DSP48_X0Y52          DSP48E1 (Prop_dsp48e1_A[1]_P[14])
+                                                      2.737     5.893 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product/P[14]
+                         net (fo=1054, routed)        3.040     8.932    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_2[14]
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[21]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X3Y34          DSP48E1 (Setup_dsp48e1_CLK_C[21])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -8.932    
+  -------------------------------------------------------------------
+                         slack                                  1.379    
+
+Slack (MET) :             1.379ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[23]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.395ns  (logic 4.537ns (54.043%)  route 3.858ns (45.957%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOADO[1]
+                         net (fo=2, routed)           0.819     3.156    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product_2[1]
+    DSP48_X0Y52          DSP48E1 (Prop_dsp48e1_A[1]_P[14])
+                                                      2.737     5.893 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product/P[14]
+                         net (fo=1054, routed)        3.040     8.932    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_2[14]
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[23]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X3Y34          DSP48E1 (Setup_dsp48e1_CLK_C[23])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -8.932    
+  -------------------------------------------------------------------
+                         slack                                  1.379    
+
+Slack (MET) :             1.390ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[15]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.384ns  (logic 4.537ns (54.117%)  route 3.847ns (45.883%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOADO[1]
+                         net (fo=2, routed)           0.819     3.156    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product_2[1]
+    DSP48_X0Y52          DSP48E1 (Prop_dsp48e1_A[1]_P[14])
+                                                      2.737     5.893 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product/P[14]
+                         net (fo=1054, routed)        3.028     8.921    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_2[14]
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X3Y34          DSP48E1 (Setup_dsp48e1_CLK_C[15])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -8.921    
+  -------------------------------------------------------------------
+                         slack                                  1.390    
+
+Slack (MET) :             1.390ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[35]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.384ns  (logic 4.537ns (54.117%)  route 3.847ns (45.883%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOADO[1]
+                         net (fo=2, routed)           0.819     3.156    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product_2[1]
+    DSP48_X0Y52          DSP48E1 (Prop_dsp48e1_A[1]_P[14])
+                                                      2.737     5.893 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product/P[14]
+                         net (fo=1054, routed)        3.028     8.921    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_2[14]
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[35]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X3Y34          DSP48E1 (Setup_dsp48e1_CLK_C[35])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -8.921    
+  -------------------------------------------------------------------
+                         slack                                  1.390    
+
+Slack (MET) :             1.392ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[34]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.382ns  (logic 4.537ns (54.131%)  route 3.845ns (45.869%))
+  Logic Levels:           1  (DSP48E1=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.537     0.537    bd_0_i/hls_inst/inst/dw3_out_1_U/ap_clk
+    RAMB18_X1Y54         RAMB18E1                                     r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X1Y54         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      1.800     2.337 r  bd_0_i/hls_inst/inst/dw3_out_1_U/ram_reg/DOADO[1]
+                         net (fo=2, routed)           0.819     3.156    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product_2[1]
+    DSP48_X0Y52          DSP48E1 (Prop_dsp48e1_A[1]_P[14])
+                                                      2.737     5.893 r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mul_7ns_8s_15_1_1_U654/tmp_product/P[14]
+                         net (fo=1054, routed)        3.026     8.919    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg_2[14]
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/C[34]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=9988, unset)         0.510    10.510    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/ap_clk
+    DSP48_X3Y34          DSP48E1                                      r  bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.035    10.475    
+    DSP48_X3Y34          DSP48E1 (Setup_dsp48e1_CLK_C[34])
+                                                     -0.164    10.311    bd_0_i/hls_inst/inst/grp_pw3_qat_fu_996/mac_muladd_8s_7ns_15s_16_4_1_U765/mobilenet_v1_qat_mac_muladd_8s_7ns_15s_16_4_1_DSP48_0_U/p_reg_reg
+  -------------------------------------------------------------------
+                         required time                         10.311    
+                         arrival time                          -8.919    
+  -------------------------------------------------------------------
+                         slack                                  1.392    
+
+
+
+

@@ -1,0 +1,45 @@
+/ {
+	amba_pl: amba_pl {
+		ranges;
+		compatible = "simple-bus";
+		#address-cells = <1>;
+		#size-cells = <1>;
+		firmware-name = "QAT_SoC_wrapper.bit.bin";
+		clocking0: clocking0 {
+			compatible = "xlnx,fclk";
+			assigned-clocks = <&clkc 15>;
+			assigned-clock-rates = <50000000>;
+			#clock-cells = <0>;
+			clock-output-names = "fabric_clk";
+			clocks = <&clkc 15>;
+		};
+		afi0: afi0@f8008000 {
+			status = "okay";
+			compatible = "xlnx,afi-fpga";
+			#address-cells = <1>;
+			reg = <0xF8008000 0x1000>;
+			#size-cells = <0>;
+			xlnx,afi-width = <0>;
+		};
+		mobilenet_v1_qat_0: mobilenet_v1_qat@40000000 {
+			interrupts = < 0 29 4 >;
+			compatible = "xlnx,mobilenet-v1-qat-1.0";
+			xlnx,ii = <158966>;
+			xlnx,machine = <64>;
+			interrupt-parent = <&intc>;
+			xlnx,ip-name = "mobilenet_v1_qat";
+			reg = <0x40000000 0x10000>;
+			xlnx,s-axi-ctrl-bus-addr-width = <6>;
+			clocks = <&clkc 15>;
+			xlnx,clk-period = <10>;
+			xlnx,edk-iptype = "PERIPHERAL";
+			status = "okay";
+			clock-names = "ap_clk";
+			xlnx,s-axi-ctrl-bus-data-width = <32>;
+			interrupt-names = "interrupt";
+			xlnx,combinational = <0>;
+			xlnx,latency = <158965>;
+			xlnx,name = "mobilenet_v1_qat_0";
+		};
+	};
+};

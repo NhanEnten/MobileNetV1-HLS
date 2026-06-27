@@ -1,0 +1,422 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 18 10 8 7 3 16 20 11 9 13 22 5 14 19 12 21 6 23 4 15 17",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "mobilenet_v1.cpp",
+    "fileloc": 4,
+    "instructions": 175,
+    "memory_accesses": 0,
+    "name": "mobilenet_v1",
+    "total_instructions": 1587
+  },
+  "1": {
+    "basicblocks": 19,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "transfer.cpp",
+    "fileloc": 4,
+    "instructions": 42,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "load_input",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 42
+  },
+  "10": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 7,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_conv0",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "11": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 65,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_dw1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "12": {
+    "basicblocks": 36,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "depthwise.cpp",
+    "fileloc": 90,
+    "instructions": 89,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "dw3",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 89
+  },
+  "13": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 85,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_pw1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "14": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "pointwise.cpp",
+    "fileloc": 53,
+    "instructions": 63,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "pw2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 63
+  },
+  "15": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 4,
+    "file": "fc.cpp",
+    "fileloc": 3,
+    "instructions": 70,
+    "loads": {
+      "L": 5
+    },
+    "memory_accesses": 8,
+    "name": "fc",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 70
+  },
+  "16": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 45,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_pw0",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "17": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "transfer.cpp",
+    "fileloc": 19,
+    "instructions": 16,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "store_output",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 16
+  },
+  "18": {
+    "basicblocks": 42,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "conv.cpp",
+    "fileloc": 3,
+    "instructions": 103,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "conv0",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 103
+  },
+  "19": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 125,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_pw2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "2": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "batchnorm.cpp",
+    "fileloc": 3,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "relu",
+    "total_instructions": 6
+  },
+  "20": {
+    "basicblocks": 36,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "depthwise.cpp",
+    "fileloc": 32,
+    "instructions": 89,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "dw1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 89
+  },
+  "21": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 145,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_dw3",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "22": {
+    "basicblocks": 36,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "depthwise.cpp",
+    "fileloc": 61,
+    "instructions": 89,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "dw2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 89
+  },
+  "23": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 165,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_pw3",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "3": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "pointwise.cpp",
+    "fileloc": 3,
+    "instructions": 63,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "pw0",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 63
+  },
+  "4": {
+    "basicblocks": 19,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "gap.cpp",
+    "fileloc": 3,
+    "instructions": 42,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 1,
+    "name": "global_avg_pool",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 42
+  },
+  "5": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 105,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_dw2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "6": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "pointwise.cpp",
+    "fileloc": 78,
+    "instructions": 63,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "pw3",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 63
+  },
+  "7": {
+    "basicblocks": 19,
+    "calls": "2",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "batchnorm.cpp",
+    "fileloc": 26,
+    "instructions": 53,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 5,
+    "name": "batchnorm_dw0",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 59
+  },
+  "8": {
+    "basicblocks": 36,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "depthwise.cpp",
+    "fileloc": 3,
+    "instructions": 89,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "dw0",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 89
+  },
+  "9": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "pointwise.cpp",
+    "fileloc": 27,
+    "instructions": 63,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "pw1",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 63
+  }
+}

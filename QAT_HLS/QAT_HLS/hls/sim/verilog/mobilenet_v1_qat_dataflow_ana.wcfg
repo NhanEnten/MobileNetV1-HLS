@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mobilenet_v1_qat.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_mobilenet_v1_qat_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat//AESL_inst_mobilenet_v1_qat_activity">
+         <obj_property name="label">AESL_inst_mobilenet_v1_qat_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_mobilenet_v1_qat_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_mobilenet_v1_qat_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat//AESL_inst_mobilenet_v1_qat_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat//AESL_inst_mobilenet_v1_qat_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat//AESL_inst_mobilenet_v1_qat_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity">
+            <obj_property name="label">grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_conv0_qat_fu_683/grp_conv0_qat_fu_683_activity">
+            <obj_property name="label">grp_conv0_qat_fu_683_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_conv0_qat_fu_683_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_conv0_qat_fu_683_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_conv0_qat_fu_683/grp_conv0_qat_fu_683_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_conv0_qat_fu_683/grp_conv0_qat_fu_683_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_conv0_qat_fu_683/grp_conv0_qat_fu_683_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw0_qat_fu_779/grp_dw0_qat_fu_779_activity">
+            <obj_property name="label">grp_dw0_qat_fu_779_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_dw0_qat_fu_779_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dw0_qat_fu_779_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw0_qat_fu_779/grp_dw0_qat_fu_779_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw0_qat_fu_779/grp_dw0_qat_fu_779_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw0_qat_fu_779/grp_dw0_qat_fu_779_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw0_qat_fu_814/grp_pw0_qat_fu_814_activity">
+            <obj_property name="label">grp_pw0_qat_fu_814_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_pw0_qat_fu_814_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pw0_qat_fu_814_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw0_qat_fu_814/grp_pw0_qat_fu_814_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw0_qat_fu_814/grp_pw0_qat_fu_814_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw0_qat_fu_814/grp_pw0_qat_fu_814_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw1_qat_fu_835/grp_dw1_qat_fu_835_activity">
+            <obj_property name="label">grp_dw1_qat_fu_835_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_dw1_qat_fu_835_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dw1_qat_fu_835_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw1_qat_fu_835/grp_dw1_qat_fu_835_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw1_qat_fu_835/grp_dw1_qat_fu_835_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw1_qat_fu_835/grp_dw1_qat_fu_835_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw1_qat_fu_870/grp_pw1_qat_fu_870_activity">
+            <obj_property name="label">grp_pw1_qat_fu_870_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_pw1_qat_fu_870_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pw1_qat_fu_870_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw1_qat_fu_870/grp_pw1_qat_fu_870_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw1_qat_fu_870/grp_pw1_qat_fu_870_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw1_qat_fu_870/grp_pw1_qat_fu_870_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw2_qat_fu_891/grp_dw2_qat_fu_891_activity">
+            <obj_property name="label">grp_dw2_qat_fu_891_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_dw2_qat_fu_891_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dw2_qat_fu_891_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw2_qat_fu_891/grp_dw2_qat_fu_891_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw2_qat_fu_891/grp_dw2_qat_fu_891_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw2_qat_fu_891/grp_dw2_qat_fu_891_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw2_qat_fu_926/grp_pw2_qat_fu_926_activity">
+            <obj_property name="label">grp_pw2_qat_fu_926_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_pw2_qat_fu_926_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pw2_qat_fu_926_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw2_qat_fu_926/grp_pw2_qat_fu_926_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw2_qat_fu_926/grp_pw2_qat_fu_926_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw2_qat_fu_926/grp_pw2_qat_fu_926_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw3_qat_fu_954/grp_dw3_qat_fu_954_activity">
+            <obj_property name="label">grp_dw3_qat_fu_954_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_dw3_qat_fu_954_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_dw3_qat_fu_954_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw3_qat_fu_954/grp_dw3_qat_fu_954_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw3_qat_fu_954/grp_dw3_qat_fu_954_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw3_qat_fu_954/grp_dw3_qat_fu_954_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw3_qat_fu_996/grp_pw3_qat_fu_996_activity">
+            <obj_property name="label">grp_pw3_qat_fu_996_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_pw3_qat_fu_996_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pw3_qat_fu_996_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw3_qat_fu_996/grp_pw3_qat_fu_996_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw3_qat_fu_996/grp_pw3_qat_fu_996_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw3_qat_fu_996/grp_pw3_qat_fu_996_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity">
+            <obj_property name="label">grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_fu_1017_activity">
+            <obj_property name="label">grp_fc_qat_fu_1017_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_fc_qat_fu_1017_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_fc_qat_fu_1017_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_fu_1017_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_fu_1017_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_fu_1017_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_Pipeline_FC_IC_fu_197/grp_fc_qat_Pipeline_FC_IC_fu_197_activity">
+               <obj_property name="label">grp_fc_qat_Pipeline_FC_IC_fu_197_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_fc_qat_Pipeline_FC_IC_fu_197_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_fc_qat_Pipeline_FC_IC_fu_197_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_Pipeline_FC_IC_fu_197/grp_fc_qat_Pipeline_FC_IC_fu_197_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_Pipeline_FC_IC_fu_197/grp_fc_qat_Pipeline_FC_IC_fu_197_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_Pipeline_FC_IC_fu_197/grp_fc_qat_Pipeline_FC_IC_fu_197_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity">
+            <obj_property name="label">grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat//AESL_inst_mobilenet_v1_qat_activity">
+      <obj_property name="ElementShortName">AESL_inst_mobilenet_v1_qat_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_mobilenet_v1_qat_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_mobilenet_v1_qat_group">
+      <obj_property name="label">AESL_inst_mobilenet_v1_qat</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_conv0_qat_fu_683/grp_conv0_qat_fu_683_activity">
+         <obj_property name="ElementShortName">grp_conv0_qat_fu_683_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_conv0_qat_fu_683_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw0_qat_fu_779/grp_dw0_qat_fu_779_activity">
+         <obj_property name="ElementShortName">grp_dw0_qat_fu_779_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_dw0_qat_fu_779_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw0_qat_fu_814/grp_pw0_qat_fu_814_activity">
+         <obj_property name="ElementShortName">grp_pw0_qat_fu_814_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_pw0_qat_fu_814_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw1_qat_fu_835/grp_dw1_qat_fu_835_activity">
+         <obj_property name="ElementShortName">grp_dw1_qat_fu_835_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_dw1_qat_fu_835_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw1_qat_fu_870/grp_pw1_qat_fu_870_activity">
+         <obj_property name="ElementShortName">grp_pw1_qat_fu_870_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_pw1_qat_fu_870_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw2_qat_fu_891/grp_dw2_qat_fu_891_activity">
+         <obj_property name="ElementShortName">grp_dw2_qat_fu_891_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_dw2_qat_fu_891_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw2_qat_fu_926/grp_pw2_qat_fu_926_activity">
+         <obj_property name="ElementShortName">grp_pw2_qat_fu_926_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_pw2_qat_fu_926_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw3_qat_fu_954/grp_dw3_qat_fu_954_activity">
+         <obj_property name="ElementShortName">grp_dw3_qat_fu_954_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_dw3_qat_fu_954_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw3_qat_fu_996/grp_pw3_qat_fu_996_activity">
+         <obj_property name="ElementShortName">grp_pw3_qat_fu_996_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_pw3_qat_fu_996_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_fu_1017_activity">
+         <obj_property name="ElementShortName">grp_fc_qat_fu_1017_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_fc_qat_fu_1017_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity">
+         <obj_property name="ElementShortName">grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_mobilenet_v1_qat_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_group">
+         <obj_property name="label">grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_LOAD_IC_LOAD_IH_LOAD_IW_fu_645/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_conv0_qat_fu_683_group">
+         <obj_property name="label">grp_conv0_qat_fu_683</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_conv0_qat_fu_683_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_conv0_qat_fu_683/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_conv0_qat_fu_683/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_conv0_qat_fu_683/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_dw0_qat_fu_779_group">
+         <obj_property name="label">grp_dw0_qat_fu_779</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dw0_qat_fu_779_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw0_qat_fu_779/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw0_qat_fu_779/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw0_qat_fu_779/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_pw0_qat_fu_814_group">
+         <obj_property name="label">grp_pw0_qat_fu_814</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_pw0_qat_fu_814_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw0_qat_fu_814/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw0_qat_fu_814/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw0_qat_fu_814/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_dw1_qat_fu_835_group">
+         <obj_property name="label">grp_dw1_qat_fu_835</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dw1_qat_fu_835_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw1_qat_fu_835/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw1_qat_fu_835/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw1_qat_fu_835/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_pw1_qat_fu_870_group">
+         <obj_property name="label">grp_pw1_qat_fu_870</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_pw1_qat_fu_870_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw1_qat_fu_870/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw1_qat_fu_870/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw1_qat_fu_870/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_dw2_qat_fu_891_group">
+         <obj_property name="label">grp_dw2_qat_fu_891</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dw2_qat_fu_891_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw2_qat_fu_891/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw2_qat_fu_891/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw2_qat_fu_891/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_pw2_qat_fu_926_group">
+         <obj_property name="label">grp_pw2_qat_fu_926</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_pw2_qat_fu_926_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw2_qat_fu_926/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw2_qat_fu_926/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw2_qat_fu_926/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_dw3_qat_fu_954_group">
+         <obj_property name="label">grp_dw3_qat_fu_954</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_dw3_qat_fu_954_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw3_qat_fu_954/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw3_qat_fu_954/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_dw3_qat_fu_954/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_pw3_qat_fu_996_group">
+         <obj_property name="label">grp_pw3_qat_fu_996</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_pw3_qat_fu_996_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw3_qat_fu_996/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw3_qat_fu_996/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_pw3_qat_fu_996/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_group">
+         <obj_property name="label">grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_GAP_C_fu_1010/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_fc_qat_fu_1017_group">
+         <obj_property name="label">grp_fc_qat_fu_1017</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_Pipeline_FC_IC_fu_197/grp_fc_qat_Pipeline_FC_IC_fu_197_activity">
+            <obj_property name="ElementShortName">grp_fc_qat_Pipeline_FC_IC_fu_197_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_fc_qat_Pipeline_FC_IC_fu_197_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_fc_qat_fu_1017_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_fc_qat_Pipeline_FC_IC_fu_197_group">
+            <obj_property name="label">grp_fc_qat_Pipeline_FC_IC_fu_197</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_fc_qat_Pipeline_FC_IC_fu_197_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_Pipeline_FC_IC_fu_197/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_Pipeline_FC_IC_fu_197/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_fc_qat_fu_1017/grp_fc_qat_Pipeline_FC_IC_fu_197/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_group">
+         <obj_property name="label">grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_mobilenet_v1_qat_top/AESL_inst_mobilenet_v1_qat/grp_mobilenet_v1_qat_Pipeline_STORE_O_fu_1043/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

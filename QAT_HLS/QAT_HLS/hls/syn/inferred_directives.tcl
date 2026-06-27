@@ -1,0 +1,27 @@
+# Inferred from performance & pipeline pragmas/directives
+set_directive_array_partition mobilenet_v1_qat/in_buf_0 -dim=1 -type=cyclic -factor=3 in_buf_0
+set_directive_loop_flatten conv0_qat/CONV0_OH
+set_directive_loop_flatten conv0_qat/CONV0_OC
+set_directive_array_partition mobilenet_v1_qat/conv0_out -dim=3 -type=cyclic -factor=3 conv0_out
+set_directive_loop_flatten dw0_qat/DW0_OH
+set_directive_loop_flatten dw0_qat/DW0_C
+set_directive_array_partition mobilenet_v1_qat/pw0_out -dim=3 -type=cyclic -factor=3 pw0_out
+set_directive_loop_flatten dw1_qat/DW1_OH
+set_directive_loop_flatten dw1_qat/DW1_C
+set_directive_array_partition mobilenet_v1_qat/pw1_out -dim=3 -type=cyclic -factor=3 pw1_out
+set_directive_loop_flatten dw2_qat/DW2_OH
+set_directive_loop_flatten dw2_qat/DW2_C
+set_directive_array_partition mobilenet_v1_qat/pw2_out -dim=3 -type=complete pw2_out
+set_directive_loop_flatten dw3_qat/DW3_OH
+set_directive_loop_flatten dw3_qat/DW3_C
+set_directive_array_partition mobilenet_v1_qat/pw3_out -dim=3 -type=complete pw3_out
+set_directive_loop_flatten pw0_qat/PW0_OH
+set_directive_loop_flatten pw0_qat/PW0_OC
+set_directive_loop_flatten pw1_qat/PW1_OH
+set_directive_loop_flatten pw1_qat/PW1_OC
+set_directive_loop_flatten pw2_qat/PW2_OH
+set_directive_loop_flatten pw2_qat/PW2_OC
+set_directive_loop_flatten pw3_qat/PW3_OH
+set_directive_loop_flatten pw3_qat/PW3_OC
+set_directive_loop_flatten mobilenet_v1_qat/LOAD_IH
+set_directive_loop_flatten mobilenet_v1_qat/LOAD_IC

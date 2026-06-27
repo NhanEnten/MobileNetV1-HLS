@@ -1,0 +1,92 @@
+<pragmas>
+<pragma file="../FP32-Model/conv.cpp" line="16" pragmaType="pipeline" parentfunction="conv0" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/conv.cpp" line="18" pragmaType="unroll" parentfunction="conv0" factor="2" skip_exit_check="0"/>
+<pragma file="../FP32-Model/conv.cpp" line="20" pragmaType="unroll" parentfunction="conv0" factor="2" skip_exit_check="0"/>
+<pragma file="../FP32-Model/conv.cpp" line="22" pragmaType="unroll" parentfunction="conv0" factor="2" skip_exit_check="0"/>
+<pragma file="../FP32-Model/conv.cpp" line="8" pragmaType="bind_storage" parentfunction="conv0" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/conv.cpp" line="9" pragmaType="bind_storage" parentfunction="conv0" op="666" impl="18" latency="-1" variable="ifmap"/>
+<pragma file="../FP32-Model/conv.cpp" line="10" pragmaType="array_partition" parentfunction="conv0" dim="2" factor="2" mode="cyclic" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/conv.cpp" line="11" pragmaType="array_partition" parentfunction="conv0" dim="1" factor="2" mode="cyclic" dynamic="0" variable="ifmap"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="18" pragmaType="pipeline" parentfunction="batchnorm_conv0" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="13" pragmaType="array_partition" parentfunction="batchnorm_conv0" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="14" pragmaType="array_partition" parentfunction="batchnorm_conv0" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="13" pragmaType="pipeline" parentfunction="dw0" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/depthwise.cpp" line="16" pragmaType="unroll" parentfunction="dw0" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="18" pragmaType="unroll" parentfunction="dw0" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="8" pragmaType="bind_storage" parentfunction="dw0" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="9" pragmaType="array_partition" parentfunction="dw0" dim="2" factor="0" mode="complete" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/transfer.cpp" line="12" pragmaType="pipeline" parentfunction="load_input" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/transfer.cpp" line="24" pragmaType="pipeline" parentfunction="store_output" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/mobilenet_v1.cpp" line="8" pragmaType="interface" parentfunction="mobilenet_v1" mode="s_axilite" port="" bundle="CTRL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../FP32-Model/mobilenet_v1.cpp" line="9" pragmaType="interface" parentfunction="mobilenet_v1" mode="s_axilite" port="output" bundle="CTRL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../FP32-Model/mobilenet_v1.cpp" line="10" pragmaType="interface" parentfunction="mobilenet_v1" mode="s_axilite" port="input" bundle="CTRL_BUS" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="../FP32-Model/mobilenet_v1.cpp" line="12" pragmaType="interface" parentfunction="mobilenet_v1" mode="m_axi" port="input" bundle="" offset="slave" name="" depth="3072" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="32" channel=""/>
+<pragma file="../FP32-Model/mobilenet_v1.cpp" line="13" pragmaType="interface" parentfunction="mobilenet_v1" mode="m_axi" port="output" bundle="" offset="slave" name="" depth="10" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="32" channel=""/>
+<pragma file="../FP32-Model/pointwise.cpp" line="92" pragmaType="pipeline" parentfunction="pw3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/pointwise.cpp" line="95" pragmaType="unroll" parentfunction="pw3" factor="2" skip_exit_check="0"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="84" pragmaType="bind_storage" parentfunction="pw3" op="666" impl="22" latency="-1" variable="ifmap"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="85" pragmaType="bind_storage" parentfunction="pw3" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="86" pragmaType="array_partition" parentfunction="pw3" dim="2" factor="2" mode="cyclic" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="87" pragmaType="array_partition" parentfunction="pw3" dim="1" factor="2" mode="cyclic" dynamic="0" variable="ifmap"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="177" pragmaType="pipeline" parentfunction="batchnorm_pw3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="172" pragmaType="array_partition" parentfunction="batchnorm_pw3" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="173" pragmaType="array_partition" parentfunction="batchnorm_pw3" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+<pragma file="../FP32-Model/fc.cpp" line="18" pragmaType="pipeline" parentfunction="fc" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/fc.cpp" line="20" pragmaType="unroll" parentfunction="fc" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/fc.cpp" line="10" pragmaType="array_partition" parentfunction="fc" dim="1" factor="0" mode="complete" dynamic="0" variable="acc"/>
+<pragma file="../FP32-Model/fc.cpp" line="11" pragmaType="array_partition" parentfunction="fc" dim="2" factor="0" mode="complete" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="66" pragmaType="pipeline" parentfunction="pw2" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/pointwise.cpp" line="69" pragmaType="unroll" parentfunction="pw2" factor="2" skip_exit_check="0"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="58" pragmaType="bind_storage" parentfunction="pw2" op="666" impl="22" latency="-1" variable="ifmap"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="59" pragmaType="bind_storage" parentfunction="pw2" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="60" pragmaType="array_partition" parentfunction="pw2" dim="2" factor="2" mode="cyclic" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="61" pragmaType="array_partition" parentfunction="pw2" dim="1" factor="2" mode="cyclic" dynamic="0" variable="ifmap"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="100" pragmaType="pipeline" parentfunction="dw3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/depthwise.cpp" line="103" pragmaType="unroll" parentfunction="dw3" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="105" pragmaType="unroll" parentfunction="dw3" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="95" pragmaType="bind_storage" parentfunction="dw3" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="96" pragmaType="array_partition" parentfunction="dw3" dim="2" factor="0" mode="complete" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="157" pragmaType="pipeline" parentfunction="batchnorm_dw3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="152" pragmaType="array_partition" parentfunction="batchnorm_dw3" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="153" pragmaType="array_partition" parentfunction="batchnorm_dw3" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="97" pragmaType="pipeline" parentfunction="batchnorm_pw1" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="92" pragmaType="array_partition" parentfunction="batchnorm_pw1" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="93" pragmaType="array_partition" parentfunction="batchnorm_pw1" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="71" pragmaType="pipeline" parentfunction="dw2" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/depthwise.cpp" line="74" pragmaType="unroll" parentfunction="dw2" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="76" pragmaType="unroll" parentfunction="dw2" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="66" pragmaType="bind_storage" parentfunction="dw2" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="67" pragmaType="array_partition" parentfunction="dw2" dim="2" factor="0" mode="complete" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="117" pragmaType="pipeline" parentfunction="batchnorm_dw2" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="112" pragmaType="array_partition" parentfunction="batchnorm_dw2" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="113" pragmaType="array_partition" parentfunction="batchnorm_dw2" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="42" pragmaType="pipeline" parentfunction="dw1" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/depthwise.cpp" line="45" pragmaType="unroll" parentfunction="dw1" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="47" pragmaType="unroll" parentfunction="dw1" factor="-1" skip_exit_check="0"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="37" pragmaType="bind_storage" parentfunction="dw1" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/depthwise.cpp" line="38" pragmaType="array_partition" parentfunction="dw1" dim="2" factor="0" mode="complete" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="77" pragmaType="pipeline" parentfunction="batchnorm_dw1" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="72" pragmaType="array_partition" parentfunction="batchnorm_dw1" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="73" pragmaType="array_partition" parentfunction="batchnorm_dw1" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="41" pragmaType="pipeline" parentfunction="pw1" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/pointwise.cpp" line="44" pragmaType="unroll" parentfunction="pw1" factor="2" skip_exit_check="0"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="33" pragmaType="bind_storage" parentfunction="pw1" op="666" impl="22" latency="-1" variable="ifmap"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="34" pragmaType="bind_storage" parentfunction="pw1" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="35" pragmaType="array_partition" parentfunction="pw1" dim="2" factor="2" mode="cyclic" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="36" pragmaType="array_partition" parentfunction="pw1" dim="1" factor="2" mode="cyclic" dynamic="0" variable="ifmap"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="38" pragmaType="pipeline" parentfunction="batchnorm_dw0" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="33" pragmaType="array_partition" parentfunction="batchnorm_dw0" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="34" pragmaType="array_partition" parentfunction="batchnorm_dw0" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="15" pragmaType="pipeline" parentfunction="pw0" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/pointwise.cpp" line="18" pragmaType="unroll" parentfunction="pw0" factor="2" skip_exit_check="0"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="8" pragmaType="bind_storage" parentfunction="pw0" op="666" impl="22" latency="-1" variable="ifmap"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="9" pragmaType="bind_storage" parentfunction="pw0" op="666" impl="36" latency="-1" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="10" pragmaType="array_partition" parentfunction="pw0" dim="2" factor="2" mode="cyclic" dynamic="0" variable="weights"/>
+<pragma file="../FP32-Model/pointwise.cpp" line="11" pragmaType="array_partition" parentfunction="pw0" dim="1" factor="2" mode="cyclic" dynamic="0" variable="ifmap"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="137" pragmaType="pipeline" parentfunction="batchnorm_pw2" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="132" pragmaType="array_partition" parentfunction="batchnorm_pw2" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="133" pragmaType="array_partition" parentfunction="batchnorm_pw2" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="57" pragmaType="pipeline" parentfunction="batchnorm_pw0" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="52" pragmaType="array_partition" parentfunction="batchnorm_pw0" dim="1" factor="0" mode="complete" dynamic="0" variable="scale"/>
+<pragma file="../FP32-Model/batchnorm.cpp" line="53" pragmaType="array_partition" parentfunction="batchnorm_pw0" dim="1" factor="0" mode="complete" dynamic="0" variable="shift"/>
+</pragmas>

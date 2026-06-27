@@ -1,0 +1,78 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Sat Jun 27 10:54:05 2026
+| Host         : NhanEnten running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_design_analysis -file ./report/mobilenet_v1_design_analysis_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z045
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Design Analysis
+
+Table of Contents
+-----------------
+1. Setup Path Characteristics 1-1
+2. Logic Level Distribution
+3. Placer Final Level Congestion Reporting
+
+1. Setup Path Characteristics 1-1
+---------------------------------
+
++---------------------------+------------------------------------------+
+|      Characteristics      |                  Path #1                 |
++---------------------------+------------------------------------------+
+| Requirement               | 10.000                                   |
+| Path Delay                | 1.385                                    |
+| Logic Delay               | 0.382(28%)                               |
+| Net Delay                 | 1.003(72%)                               |
+| Clock Skew                | -0.027                                   |
+| Slack                     | 4.596                                    |
+| Clock Uncertainty         | 0.035                                    |
+| Clock Pair Classification | Timed                                    |
+| Clock Delay Group         | Same Clock                               |
+| Logic Levels              | 1                                        |
+| Routes                    | NA                                       |
+| Logical Path              | FDRE/C-(18)-LUT6-(2)-DSP48E1/INMODE[1]   |
+| Start Point Clock         | ap_clk                                   |
+| End Point Clock           | ap_clk                                   |
+| DSP Block                 | Seq                                      |
+| RAM Registers             | None-None                                |
+| IO Crossings              | 0                                        |
+| Config Crossings          | 0                                        |
+| SLR Crossings             | 0                                        |
+| PBlocks                   | 0                                        |
+| High Fanout               | 18                                       |
+| ASYNC REG                 | 0                                        |
+| Dont Touch                | 0                                        |
+| Mark Debug                | 0                                        |
+| Start Point Pin Primitive | FDRE/C                                   |
+| End Point Pin Primitive   | DSP48E1/INMODE[1]                        |
+| Start Point Pin           | opt_has_pipe.first_q_reg[5]/C            |
+| End Point Pin             | i_no_versal_es1_workaround.DSP/INMODE[1] |
++---------------------------+------------------------------------------+
+* Bounding box calculated as % of dimensions for the target device (444, 699)
+
+
+2. Logic Level Distribution
+---------------------------
+
++-----------------+-------------+-----+---+
+| End Point Clock | Requirement |  1  | 4 |
++-----------------+-------------+-----+---+
+| ap_clk          | 10.000ns    | 995 | 5 |
++-----------------+-------------+-----+---+
+* Columns represent the logic levels per end point clock
+** Distribution is for top worst 1000 paths
+
+
+3. Placer Final Level Congestion Reporting
+------------------------------------------
+
++-----------+------+-------+------------+--------+---------------+----------------+-----+--------+------+------+------+-----+-------+-----+------------+
+| Direction | Type | Level | Congestion | Window | Combined LUTs | Avg LUT Inputs | LUT | LUTRAM | Flop | MUXF | RAMB | DSP | CARRY | SRL | Cell Names |
++-----------+------+-------+------------+--------+---------------+----------------+-----+--------+------+------+------+-----+-------+-----+------------+
+* The design has not been placed, hence congestion data is not available. The command report_design_analysis -congestion should be run only after place_design has completed.
+
+

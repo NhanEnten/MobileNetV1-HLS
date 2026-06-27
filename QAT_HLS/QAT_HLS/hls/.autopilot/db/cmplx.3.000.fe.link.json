@@ -1,0 +1,522 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "18 19 4 3 26 9 27 7 28 29 14 25 32",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "mobilenet_v1_qat.cpp",
+    "fileloc": 4,
+    "instructions": 103,
+    "memory_accesses": 0,
+    "name": "mobilenet_v1_qat",
+    "total_instructions": 6070
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "2",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "lib_floatconversion.cpp",
+    "fileloc": 51,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "__hls_fptosi_float_i32",
+    "total_instructions": 2130
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "x_hls_utils.h",
+    "fileloc": 298,
+    "instructions": 40,
+    "memory_accesses": 0,
+    "name": "fp_struct",
+    "total_instructions": 288
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "x_hls_utils.h",
+    "fileloc": 340,
+    "instructions": 24,
+    "memory_accesses": 0,
+    "name": "mantissa",
+    "total_instructions": 178
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "23 23 30",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "hls_copysign.h",
+    "fileloc": 10,
+    "instructions": 18,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "generic_copysign<float>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 957
+  },
+  "13": {
+    "basicblocks": 6,
+    "calls": "20 22 23 8 10 30 12",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_round.h",
+    "fileloc": 159,
+    "instructions": 98,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "generic_round<float>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 2616
+  },
+  "14": {
+    "basicblocks": 23,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "gap.cpp",
+    "fileloc": 3,
+    "instructions": 53,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 1,
+    "name": "global_avg_pool_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 53
+  },
+  "15": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "mobilenet_v1_qat.hpp",
+    "fileloc": 75,
+    "instructions": 28,
+    "memory_accesses": 0,
+    "name": "requantize",
+    "total_instructions": 28
+  },
+  "16": {
+    "basicblocks": 16,
+    "calls": "23 11 21 21 24 24",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 12,
+    "instructions": 133,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "generic_cast_IEEE754<int, AP_TRN_ZERO, float>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2126
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "13",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "roundfloat.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "round",
+    "total_instructions": 2618
+  },
+  "18": {
+    "basicblocks": 23,
+    "calls": "17 1",
+    "control_depth": 2,
+    "def_use_depth": 7,
+    "file": "transfer.cpp",
+    "fileloc": 6,
+    "instructions": 54,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 4,
+    "name": "load_input_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4802
+  },
+  "19": {
+    "basicblocks": 42,
+    "calls": "15",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "conv.cpp",
+    "fileloc": 12,
+    "instructions": 108,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "conv0_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 136
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "16",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hls_case_IEEE754.h",
+    "fileloc": 116,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "generic_cast_IEEE754<int, float>",
+    "total_instructions": 2128
+  },
+  "20": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "hls_round.h",
+    "fileloc": 20,
+    "instructions": 18,
+    "memory_accesses": 1,
+    "name": "init_mask_table<float>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 18
+  },
+  "21": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 316,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "expv",
+    "total_instructions": 109
+  },
+  "22": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "hls_round.h",
+    "fileloc": 32,
+    "instructions": 18,
+    "memory_accesses": 1,
+    "name": "init_one_half_table<float>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 18
+  },
+  "23": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 283,
+    "instructions": 55,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "fp_struct",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 318
+  },
+  "24": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 349,
+    "instructions": 4,
+    "memory_accesses": 0,
+    "name": "__signbit",
+    "total_instructions": 9
+  },
+  "25": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 4,
+    "file": "fc.cpp",
+    "fileloc": 3,
+    "instructions": 76,
+    "loads": {
+      "G": 2,
+      "L": 3
+    },
+    "memory_accesses": 8,
+    "name": "fc_qat",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 76
+  },
+  "26": {
+    "basicblocks": 36,
+    "calls": "5",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "depthwise.cpp",
+    "fileloc": 37,
+    "instructions": 96,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "dw1_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 124
+  },
+  "27": {
+    "basicblocks": 36,
+    "calls": "5",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "depthwise.cpp",
+    "fileloc": 70,
+    "instructions": 96,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "dw2_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 124
+  },
+  "28": {
+    "basicblocks": 36,
+    "calls": "5",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "depthwise.cpp",
+    "fileloc": 103,
+    "instructions": 96,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "dw3_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 124
+  },
+  "29": {
+    "basicblocks": 25,
+    "calls": "31",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "pointwise.cpp",
+    "fileloc": 83,
+    "instructions": 69,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "pw3_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 97
+  },
+  "3": {
+    "basicblocks": 25,
+    "calls": "31",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "pointwise.cpp",
+    "fileloc": 4,
+    "instructions": 69,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "pw0_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 97
+  },
+  "30": {
+    "basicblocks": 1,
+    "calls": "6",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "to_ieee",
+    "total_instructions": 303
+  },
+  "31": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "mobilenet_v1_qat.hpp",
+    "fileloc": 75,
+    "instructions": 28,
+    "memory_accesses": 0,
+    "name": "requantize",
+    "total_instructions": 28
+  },
+  "32": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "transfer.cpp",
+    "fileloc": 25,
+    "instructions": 16,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "store_output_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 16
+  },
+  "4": {
+    "basicblocks": 36,
+    "calls": "5",
+    "control_depth": 5,
+    "def_use_depth": 6,
+    "file": "depthwise.cpp",
+    "fileloc": 4,
+    "instructions": 96,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "dw0_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 124
+  },
+  "5": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "mobilenet_v1_qat.hpp",
+    "fileloc": 75,
+    "instructions": 28,
+    "memory_accesses": 0,
+    "name": "requantize",
+    "total_instructions": 28
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "8",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 322,
+    "instructions": 18,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "to_float",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 301
+  },
+  "7": {
+    "basicblocks": 25,
+    "calls": "31",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "pointwise.cpp",
+    "fileloc": 57,
+    "instructions": 69,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "pw2_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 97
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 309,
+    "instructions": 32,
+    "memory_accesses": 0,
+    "name": "data",
+    "total_instructions": 279
+  },
+  "9": {
+    "basicblocks": 25,
+    "calls": "31",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "pointwise.cpp",
+    "fileloc": 31,
+    "instructions": 69,
+    "loads": {
+      "G": 2,
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "pw1_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 97
+  }
+}

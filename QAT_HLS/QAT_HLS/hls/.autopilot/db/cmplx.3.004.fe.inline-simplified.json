@@ -1,0 +1,227 @@
+{
+  "0": {
+    "basicblocks": 11,
+    "calls": "8 9 7 5 6 4 10 1 11 3 2",
+    "control_depth": 0,
+    "def_use_depth": 18,
+    "file": "mobilenet_v1_qat.cpp",
+    "fileloc": 4,
+    "instructions": 143,
+    "loads": {
+      "L": 5,
+      "T": 1
+    },
+    "memory_accesses": 9,
+    "name": "mobilenet_v1_qat",
+    "stores": {
+      "L": 2,
+      "T": 1
+    },
+    "total_instructions": 3270
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 76,
+    "file": "pointwise.cpp",
+    "fileloc": 57,
+    "instructions": 544,
+    "loads": {
+      "G": 65,
+      "L": 64
+    },
+    "memory_accesses": 65,
+    "name": "pw2_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 544
+  },
+  "10": {
+    "basicblocks": 19,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 29,
+    "file": "depthwise.cpp",
+    "fileloc": 70,
+    "instructions": 145,
+    "loads": {
+      "G": 10,
+      "L": 9
+    },
+    "memory_accesses": 16,
+    "name": "dw2_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 145
+  },
+  "11": {
+    "basicblocks": 19,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 29,
+    "file": "depthwise.cpp",
+    "fileloc": 103,
+    "instructions": 145,
+    "loads": {
+      "G": 10,
+      "L": 9
+    },
+    "memory_accesses": 16,
+    "name": "dw3_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 145
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "fc.cpp",
+    "fileloc": 3,
+    "instructions": 133,
+    "loads": {
+      "G": 10,
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "fc_qat",
+    "stores": {
+      "L": 20
+    },
+    "total_instructions": 133
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 140,
+    "file": "pointwise.cpp",
+    "fileloc": 83,
+    "instructions": 1056,
+    "loads": {
+      "G": 129,
+      "L": 128
+    },
+    "memory_accesses": 129,
+    "name": "pw3_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 1056
+  },
+  "4": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 44,
+    "file": "pointwise.cpp",
+    "fileloc": 31,
+    "instructions": 288,
+    "loads": {
+      "G": 33,
+      "L": 32
+    },
+    "memory_accesses": 33,
+    "name": "pw1_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 288
+  },
+  "5": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 28,
+    "file": "pointwise.cpp",
+    "fileloc": 4,
+    "instructions": 160,
+    "loads": {
+      "G": 17,
+      "L": 16
+    },
+    "memory_accesses": 17,
+    "name": "pw0_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 160
+  },
+  "6": {
+    "basicblocks": 19,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 29,
+    "file": "depthwise.cpp",
+    "fileloc": 37,
+    "instructions": 145,
+    "loads": {
+      "G": 10,
+      "L": 9
+    },
+    "memory_accesses": 16,
+    "name": "dw1_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 145
+  },
+  "7": {
+    "basicblocks": 19,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 29,
+    "file": "depthwise.cpp",
+    "fileloc": 4,
+    "instructions": 145,
+    "loads": {
+      "G": 10,
+      "L": 9
+    },
+    "memory_accesses": 16,
+    "name": "dw0_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 145
+  },
+  "8": {
+    "basicblocks": 5,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "hls_round.h",
+    "fileloc": 159,
+    "instructions": 38,
+    "loads": {
+      "G": 2
+    },
+    "memory_accesses": 0,
+    "name": "generic_round<float>",
+    "total_instructions": 38
+  },
+  "9": {
+    "basicblocks": 55,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 60,
+    "file": "conv.cpp",
+    "fileloc": 12,
+    "instructions": 328,
+    "loads": {
+      "G": 28,
+      "L": 27
+    },
+    "memory_accesses": 52,
+    "name": "conv0_qat",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 328
+  }
+}

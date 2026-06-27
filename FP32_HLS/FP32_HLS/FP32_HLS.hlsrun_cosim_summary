@@ -1,0 +1,235 @@
+<ENTRY>
+{
+ "thisFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/FP32_HLS.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jun 27 09:59:10 2026",
+ "timestampMillis": "1782529150359",
+ "buildStep": {
+  "cmdId": "03d69b6a-a960-4754-9e35-5fb27d478387",
+  "name": "vitis-run",
+  "logFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/logs/FP32_HLS.steps.log",
+  "commandLine": "/home/nhanenten/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/hls_config.cfg --work_dir FP32_HLS ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/hls_config.cfg",
+   "--work_dir",
+   "FP32_HLS"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 09:59:10 2026",
+ "timestampMillis": "1782529150359",
+ "status": {
+  "cmdId": "03d69b6a-a960-4754-9e35-5fb27d478387",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jun 27 09:59:12 2026",
+ "timestampMillis": "1782529152311",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "mobilenet_v1",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/depthwise.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/conv.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/pointwise.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/fc.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/batchnorm.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/mobilenet_v1.hpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/mobilenet_v1.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/transfer.cpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/params.hpp",
+     "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32-Model/gap.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun 27 09:59:12 2026",
+ "timestampMillis": "1782529152311",
+ "buildStep": {
+  "cmdId": "09ce597f-69d7-40d2-82ad-566bd7394e50",
+  "name": "",
+  "logFile": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 09:59:12 2026",
+ "timestampMillis": "1782529152311",
+ "status": {
+  "cmdId": "09ce597f-69d7-40d2-82ad-566bd7394e50",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 09:59:12 2026",
+ "timestampMillis": "1782529152311",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/sim/report/mobilenet_v1_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 09:59:12 2026",
+ "timestampMillis": "1782529152312",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 09:59:12 2026",
+ "timestampMillis": "1782529152312",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 09:59:12 2026",
+ "timestampMillis": "1782529152312",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 09:59:12 2026",
+ "timestampMillis": "1782529152312",
+ "report": {
+  "path": "/home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 10:12:41 2026",
+ "timestampMillis": "1782529961202",
+ "status": {
+  "cmdId": "09ce597f-69d7-40d2-82ad-566bd7394e50",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 27 10:12:41 2026",
+ "timestampMillis": "1782529961320",
+ "status": {
+  "cmdId": "03d69b6a-a960-4754-9e35-5fb27d478387",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:12:41 2026",
+ "timestampMillis": "1782529961321",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 27 10:12:41 2026",
+ "timestampMillis": "1782529961321",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

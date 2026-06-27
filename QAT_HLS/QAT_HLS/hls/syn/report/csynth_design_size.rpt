@@ -1,0 +1,87 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                       | Instructions | Description                                                                            |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                            | 6,070        | After all functions are compiled and linked into a single design                       |
+|               |                            |              |                                                                                        |
+| Unroll/Inline |                            |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                 | 4,152        | user unroll pragmas are applied                                                        |
+|               | (2) simplification         | 3,660        | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                 | 3,385        | user inline pragmas are applied                                                        |
+|               | (4) simplification         | 3,270        | simplification of applied user inline pragmas                                          |
+|               |                            |              |                                                                                        |
+| Array/Struct  |                            |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition        | 4,368        | user array partition pragmas are applied                                               |
+|               | (2) simplification         | 3,402        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate | 3,402        | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape          | 3,402        | apply array reshape pragmas                                                            |
+|               | (5) access patterns        | 3,416        | array access pattern optmizations                                                      |
+|               |                            |              |                                                                                        |
+| Performance   |                            |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification    | 3,414        | loop and instruction simplification                                                    |
+|               | (2) parallelization        | 3,404        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition        | 6,567        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification         | 5,568        | simplification of design after performance transformations                             |
+|               |                            |              |                                                                                        |
+| HW Transforms |                            |              | After hardware transfomations                                                          |
+|               | (1) lowering               | 5,573        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations          | 5,669        | high level synthesis optimizations                                                     |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++----------------------------------+-------------------------+----------------+---------------+--------------+-------------+---------------+
+| Function                         | Location                | Compile/Link   | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++----------------------------------+-------------------------+----------------+---------------+--------------+-------------+---------------+
+| + mobilenet_v1_qat               | mobilenet_v1_qat.cpp:4  | 6,070          | 3,270         | 3,416        | 5,568       | 5,669         |
+|  + load_input_qat                | transfer.cpp:6          | 4,802          |               |              |             |               |
+|   + round                        | roundfloat.cpp:6        | 2,618          |               |              |             |               |
+|    + generic_round<float>        | hls_round.h:159         | 2,616          |               |              |             |               |
+|       init_mask_table<float>     | hls_round.h:20          |   18           |               |              |             |               |
+|       init_one_half_table<float> | hls_round.h:32          |   18           |               |              |             |               |
+|       fp_struct                  | x_hls_utils.h:283       |  318           |               |              |             |               |
+|       data                       | x_hls_utils.h:309       |  279           |               |              |             |               |
+|       fp_struct                  | x_hls_utils.h:298       |  288           |               |              |             |               |
+|     + to_ieee                    | x_hls_utils.h:346       |  303           |               |              |             |               |
+|      + to_float                  | x_hls_utils.h:322       |  301           |               |              |             |               |
+|         data                     | x_hls_utils.h:309       |  279           |               |              |             |               |
+|     + generic_copysign<float>    | hls_copysign.h:10       |  957           |               |              |             |               |
+|        fp_struct                 | x_hls_utils.h:283       |  636 (2 calls) |               |              |             |               |
+|      + to_ieee                   | x_hls_utils.h:346       |  303           |               |              |             |               |
+|       + to_float                 | x_hls_utils.h:322       |  301           |               |              |             |               |
+|          data                    | x_hls_utils.h:309       |  279           |               |              |             |               |
+|  + conv0_qat                     | conv.cpp:12             |  136           |  328          |  284         |  974        |  984          |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|  + dw0_qat                       | depthwise.cpp:4         |  124           |  145          |  176         |  364        |  374          |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|  + pw0_qat                       | pointwise.cpp:4         |   97           |  160          |  164         |  235        |  245          |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|  + dw1_qat                       | depthwise.cpp:37        |  124           |  145          |  176         |  364        |  374          |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|  + pw1_qat                       | pointwise.cpp:31        |   97           |  288          |  292         |  363        |  373          |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|  + dw2_qat                       | depthwise.cpp:70        |  124           |  145          |  176         |  364        |  374          |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|  + pw2_qat                       | pointwise.cpp:57        |   97           |  544          |  548         |  661        |  671          |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|  + dw3_qat                       | depthwise.cpp:103       |  124           |  145          |  176         |  227        |  230          |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|  + pw3_qat                       | pointwise.cpp:83        |   97           | 1,056         | 1,060        | 1,074       | 1,082         |
+|     requantize                   | mobilenet_v1_qat.hpp:75 |   28           |               |              |             |               |
+|    global_avg_pool_qat           | gap.cpp:3               |   53           |               |              |             |               |
+|    fc_qat                        | fc.cpp:3                |   76           |  133          |  139         |  129        |  133          |
+|    store_output_qat              | transfer.cpp:25         |   16           |               |              |             |               |
+|    generic_round<float>          | hls_round.h:159         |                |   38          |   38         |   38        |   38          |
++----------------------------------+-------------------------+----------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

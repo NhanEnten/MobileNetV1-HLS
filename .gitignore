@@ -1,0 +1,95 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+*.so.*
+
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build directories
+build/
+Build/
+build-*/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# vcpkg
+vcpkg_installed/
+
+# debug information files
+*.dwo
+
+# test output & cache
+Testing/
+.cache/
+
+# Vivado / Vitis HLS generated folders
+.cache/
+.gen/
+.runs/
+.sim/
+.Xil/
+*.jou
+*.log
+*.str
+*.hw/
+*.xpe
+project.cache/
+project.gen/
+
+# Large test data files
+*.bin
+
+
+*.cache/
+*.gen/
+*.runs/
+*.sim/
+*_sim_netlist.vhdl
+*_sim_netlist.v
+

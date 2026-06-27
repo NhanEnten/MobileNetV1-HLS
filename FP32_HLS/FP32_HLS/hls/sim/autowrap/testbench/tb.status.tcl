@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/nhanenten/Desktop/HK6/Project-1/MobileNet-V1/FP32_HLS/FP32_HLS/hls/./sim/autowrap/testbench/mobilenet_v1.cpp_pre.cpp.tb.cpp

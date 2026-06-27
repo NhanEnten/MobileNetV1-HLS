@@ -1,0 +1,1006 @@
+
+
+================================================================
+== Vitis HLS Report for 'mobilenet_v1'
+================================================================
+* Date:           Sat Jun 27 09:58:14 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        FP32_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   185650|   185650|  1.857 ms|  1.857 ms|  185651|  185651|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 58
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 59 [1/1] (1.00ns)   --->   "%output_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %output_r"   --->   Operation 59 'read' 'output_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 60 [1/1] (1.00ns)   --->   "%input_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %input_r"   --->   Operation 60 'read' 'input_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%in_buf = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 61 'alloca' 'in_buf' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%in_buf_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 62 'alloca' 'in_buf_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%in_buf_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 63 'alloca' 'in_buf_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%in_buf_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 64 'alloca' 'in_buf_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%in_buf_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 65 'alloca' 'in_buf_4' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%in_buf_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 66 'alloca' 'in_buf_5' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%in_buf_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 67 'alloca' 'in_buf_6' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%in_buf_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 68 'alloca' 'in_buf_7' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%in_buf_8 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 69 'alloca' 'in_buf_8' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%in_buf_9 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 70 'alloca' 'in_buf_9' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%in_buf_10 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 71 'alloca' 'in_buf_10' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%in_buf_11 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 72 'alloca' 'in_buf_11' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%in_buf_12 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 73 'alloca' 'in_buf_12' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%in_buf_13 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 74 'alloca' 'in_buf_13' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%in_buf_14 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 75 'alloca' 'in_buf_14' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%in_buf_15 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 76 'alloca' 'in_buf_15' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%in_buf_16 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 77 'alloca' 'in_buf_16' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%in_buf_17 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:15]   --->   Operation 78 'alloca' 'in_buf_17' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_1P_BRAM">   --->   Core 87 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 242> <RAM>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%ofmap_conv0 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 79 'alloca' 'ofmap_conv0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%ofmap_conv0_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 80 'alloca' 'ofmap_conv0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%ofmap_conv0_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 81 'alloca' 'ofmap_conv0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%ofmap_conv0_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 82 'alloca' 'ofmap_conv0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%ofmap_conv0_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 83 'alloca' 'ofmap_conv0_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%ofmap_conv0_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 84 'alloca' 'ofmap_conv0_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%ofmap_conv0_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 85 'alloca' 'ofmap_conv0_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%ofmap_conv0_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 86 'alloca' 'ofmap_conv0_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%ofmap_conv0_8 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 87 'alloca' 'ofmap_conv0_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%ofmap_conv0_9 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 88 'alloca' 'ofmap_conv0_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%ofmap_conv0_10 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 89 'alloca' 'ofmap_conv0_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%ofmap_conv0_11 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 90 'alloca' 'ofmap_conv0_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%ofmap_conv0_12 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 91 'alloca' 'ofmap_conv0_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%ofmap_conv0_13 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 92 'alloca' 'ofmap_conv0_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%ofmap_conv0_14 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 93 'alloca' 'ofmap_conv0_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%ofmap_conv0_15 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 94 'alloca' 'ofmap_conv0_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%ofmap_conv0_16 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 95 'alloca' 'ofmap_conv0_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%ofmap_conv0_17 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 96 'alloca' 'ofmap_conv0_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%ofmap_conv0_18 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 97 'alloca' 'ofmap_conv0_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%ofmap_conv0_19 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 98 'alloca' 'ofmap_conv0_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%ofmap_conv0_20 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 99 'alloca' 'ofmap_conv0_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%ofmap_conv0_21 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 100 'alloca' 'ofmap_conv0_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%ofmap_conv0_22 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 101 'alloca' 'ofmap_conv0_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%ofmap_conv0_23 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 102 'alloca' 'ofmap_conv0_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%ofmap_conv0_24 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 103 'alloca' 'ofmap_conv0_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%ofmap_conv0_25 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 104 'alloca' 'ofmap_conv0_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%ofmap_conv0_26 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 105 'alloca' 'ofmap_conv0_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%ofmap_conv0_27 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 106 'alloca' 'ofmap_conv0_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%ofmap_conv0_28 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 107 'alloca' 'ofmap_conv0_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%ofmap_conv0_29 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 108 'alloca' 'ofmap_conv0_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%ofmap_conv0_30 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 109 'alloca' 'ofmap_conv0_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%ofmap_conv0_31 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:16]   --->   Operation 110 'alloca' 'ofmap_conv0_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%ifmap_dw0 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 111 'alloca' 'ifmap_dw0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%ifmap_dw0_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 112 'alloca' 'ifmap_dw0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%ifmap_dw0_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 113 'alloca' 'ifmap_dw0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%ifmap_dw0_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 114 'alloca' 'ifmap_dw0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%ifmap_dw0_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 115 'alloca' 'ifmap_dw0_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%ifmap_dw0_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 116 'alloca' 'ifmap_dw0_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%ifmap_dw0_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 117 'alloca' 'ifmap_dw0_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%ifmap_dw0_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 118 'alloca' 'ifmap_dw0_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%ifmap_dw0_8 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 119 'alloca' 'ifmap_dw0_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%ifmap_dw0_9 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 120 'alloca' 'ifmap_dw0_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%ifmap_dw0_10 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 121 'alloca' 'ifmap_dw0_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%ifmap_dw0_11 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 122 'alloca' 'ifmap_dw0_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%ifmap_dw0_12 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 123 'alloca' 'ifmap_dw0_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%ifmap_dw0_13 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 124 'alloca' 'ifmap_dw0_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%ifmap_dw0_14 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 125 'alloca' 'ifmap_dw0_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%ifmap_dw0_15 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 126 'alloca' 'ifmap_dw0_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%ifmap_dw0_16 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 127 'alloca' 'ifmap_dw0_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%ifmap_dw0_17 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 128 'alloca' 'ifmap_dw0_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%ifmap_dw0_18 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 129 'alloca' 'ifmap_dw0_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%ifmap_dw0_19 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 130 'alloca' 'ifmap_dw0_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%ifmap_dw0_20 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 131 'alloca' 'ifmap_dw0_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%ifmap_dw0_21 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 132 'alloca' 'ifmap_dw0_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%ifmap_dw0_22 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 133 'alloca' 'ifmap_dw0_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%ifmap_dw0_23 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 134 'alloca' 'ifmap_dw0_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%ifmap_dw0_24 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 135 'alloca' 'ifmap_dw0_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%ifmap_dw0_25 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 136 'alloca' 'ifmap_dw0_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%ifmap_dw0_26 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 137 'alloca' 'ifmap_dw0_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%ifmap_dw0_27 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 138 'alloca' 'ifmap_dw0_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%ifmap_dw0_28 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 139 'alloca' 'ifmap_dw0_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%ifmap_dw0_29 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 140 'alloca' 'ifmap_dw0_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%ifmap_dw0_30 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 141 'alloca' 'ifmap_dw0_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%ifmap_dw0_31 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 142 'alloca' 'ifmap_dw0_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%ifmap_dw0_32 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 143 'alloca' 'ifmap_dw0_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%ifmap_dw0_33 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 144 'alloca' 'ifmap_dw0_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%ifmap_dw0_34 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 145 'alloca' 'ifmap_dw0_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%ifmap_dw0_35 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 146 'alloca' 'ifmap_dw0_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%ifmap_dw0_36 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 147 'alloca' 'ifmap_dw0_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%ifmap_dw0_37 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 148 'alloca' 'ifmap_dw0_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%ifmap_dw0_38 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 149 'alloca' 'ifmap_dw0_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%ifmap_dw0_39 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 150 'alloca' 'ifmap_dw0_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%ifmap_dw0_40 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 151 'alloca' 'ifmap_dw0_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%ifmap_dw0_41 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 152 'alloca' 'ifmap_dw0_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%ifmap_dw0_42 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 153 'alloca' 'ifmap_dw0_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%ifmap_dw0_43 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 154 'alloca' 'ifmap_dw0_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%ifmap_dw0_44 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 155 'alloca' 'ifmap_dw0_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%ifmap_dw0_45 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 156 'alloca' 'ifmap_dw0_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%ifmap_dw0_46 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 157 'alloca' 'ifmap_dw0_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%ifmap_dw0_47 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 158 'alloca' 'ifmap_dw0_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%ifmap_dw0_48 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 159 'alloca' 'ifmap_dw0_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%ifmap_dw0_49 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 160 'alloca' 'ifmap_dw0_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%ifmap_dw0_50 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 161 'alloca' 'ifmap_dw0_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%ifmap_dw0_51 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 162 'alloca' 'ifmap_dw0_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%ifmap_dw0_52 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 163 'alloca' 'ifmap_dw0_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%ifmap_dw0_53 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 164 'alloca' 'ifmap_dw0_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%ifmap_dw0_54 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 165 'alloca' 'ifmap_dw0_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%ifmap_dw0_55 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 166 'alloca' 'ifmap_dw0_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%ifmap_dw0_56 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 167 'alloca' 'ifmap_dw0_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%ifmap_dw0_57 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 168 'alloca' 'ifmap_dw0_57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%ifmap_dw0_58 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 169 'alloca' 'ifmap_dw0_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%ifmap_dw0_59 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 170 'alloca' 'ifmap_dw0_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%ifmap_dw0_60 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 171 'alloca' 'ifmap_dw0_60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%ifmap_dw0_61 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 172 'alloca' 'ifmap_dw0_61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%ifmap_dw0_62 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 173 'alloca' 'ifmap_dw0_62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%ifmap_dw0_63 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 174 'alloca' 'ifmap_dw0_63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%ifmap_dw0_64 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 175 'alloca' 'ifmap_dw0_64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%ifmap_dw0_65 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 176 'alloca' 'ifmap_dw0_65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%ifmap_dw0_66 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 177 'alloca' 'ifmap_dw0_66' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%ifmap_dw0_67 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 178 'alloca' 'ifmap_dw0_67' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%ifmap_dw0_68 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 179 'alloca' 'ifmap_dw0_68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%ifmap_dw0_69 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 180 'alloca' 'ifmap_dw0_69' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%ifmap_dw0_70 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 181 'alloca' 'ifmap_dw0_70' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%ifmap_dw0_71 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 182 'alloca' 'ifmap_dw0_71' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%ifmap_dw0_72 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 183 'alloca' 'ifmap_dw0_72' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%ifmap_dw0_73 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 184 'alloca' 'ifmap_dw0_73' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%ifmap_dw0_74 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 185 'alloca' 'ifmap_dw0_74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%ifmap_dw0_75 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 186 'alloca' 'ifmap_dw0_75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%ifmap_dw0_76 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 187 'alloca' 'ifmap_dw0_76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%ifmap_dw0_77 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 188 'alloca' 'ifmap_dw0_77' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%ifmap_dw0_78 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 189 'alloca' 'ifmap_dw0_78' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%ifmap_dw0_79 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 190 'alloca' 'ifmap_dw0_79' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%ifmap_dw0_80 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 191 'alloca' 'ifmap_dw0_80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%ifmap_dw0_81 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 192 'alloca' 'ifmap_dw0_81' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%ifmap_dw0_82 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 193 'alloca' 'ifmap_dw0_82' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%ifmap_dw0_83 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 194 'alloca' 'ifmap_dw0_83' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%ifmap_dw0_84 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 195 'alloca' 'ifmap_dw0_84' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%ifmap_dw0_85 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 196 'alloca' 'ifmap_dw0_85' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%ifmap_dw0_86 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 197 'alloca' 'ifmap_dw0_86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%ifmap_dw0_87 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 198 'alloca' 'ifmap_dw0_87' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%ifmap_dw0_88 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 199 'alloca' 'ifmap_dw0_88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%ifmap_dw0_89 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 200 'alloca' 'ifmap_dw0_89' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%ifmap_dw0_90 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 201 'alloca' 'ifmap_dw0_90' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%ifmap_dw0_91 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 202 'alloca' 'ifmap_dw0_91' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%ifmap_dw0_92 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 203 'alloca' 'ifmap_dw0_92' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%ifmap_dw0_93 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 204 'alloca' 'ifmap_dw0_93' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%ifmap_dw0_94 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 205 'alloca' 'ifmap_dw0_94' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%ifmap_dw0_95 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:17]   --->   Operation 206 'alloca' 'ifmap_dw0_95' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%ofmap_dw0 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:19]   --->   Operation 207 'alloca' 'ofmap_dw0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%ifmap_pw0 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:20]   --->   Operation 208 'alloca' 'ifmap_pw0' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%ifmap_pw0_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:20]   --->   Operation 209 'alloca' 'ifmap_pw0_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2048> <RAM>
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "%ofmap_pw0 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 210 'alloca' 'ofmap_pw0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%ofmap_pw0_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 211 'alloca' 'ofmap_pw0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%ofmap_pw0_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 212 'alloca' 'ofmap_pw0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%ofmap_pw0_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 213 'alloca' 'ofmap_pw0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%ofmap_pw0_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 214 'alloca' 'ofmap_pw0_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%ofmap_pw0_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 215 'alloca' 'ofmap_pw0_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "%ofmap_pw0_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 216 'alloca' 'ofmap_pw0_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%ofmap_pw0_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 217 'alloca' 'ofmap_pw0_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "%ofmap_pw0_8 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 218 'alloca' 'ofmap_pw0_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%ofmap_pw0_9 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 219 'alloca' 'ofmap_pw0_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%ofmap_pw0_10 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 220 'alloca' 'ofmap_pw0_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%ofmap_pw0_11 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 221 'alloca' 'ofmap_pw0_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "%ofmap_pw0_12 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 222 'alloca' 'ofmap_pw0_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%ofmap_pw0_13 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 223 'alloca' 'ofmap_pw0_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%ofmap_pw0_14 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 224 'alloca' 'ofmap_pw0_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 225 [1/1] (0.00ns)   --->   "%ofmap_pw0_15 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:22]   --->   Operation 225 'alloca' 'ofmap_pw0_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 226 [1/1] (0.00ns)   --->   "%ifmap_dw1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 226 'alloca' 'ifmap_dw1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 227 [1/1] (0.00ns)   --->   "%ifmap_dw1_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 227 'alloca' 'ifmap_dw1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "%ifmap_dw1_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 228 'alloca' 'ifmap_dw1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 229 [1/1] (0.00ns)   --->   "%ifmap_dw1_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 229 'alloca' 'ifmap_dw1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "%ifmap_dw1_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 230 'alloca' 'ifmap_dw1_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%ifmap_dw1_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 231 'alloca' 'ifmap_dw1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 232 [1/1] (0.00ns)   --->   "%ifmap_dw1_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 232 'alloca' 'ifmap_dw1_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%ifmap_dw1_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 233 'alloca' 'ifmap_dw1_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 234 [1/1] (0.00ns)   --->   "%ifmap_dw1_8 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 234 'alloca' 'ifmap_dw1_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%ifmap_dw1_9 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 235 'alloca' 'ifmap_dw1_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 236 [1/1] (0.00ns)   --->   "%ifmap_dw1_10 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 236 'alloca' 'ifmap_dw1_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 237 [1/1] (0.00ns)   --->   "%ifmap_dw1_11 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 237 'alloca' 'ifmap_dw1_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 238 [1/1] (0.00ns)   --->   "%ifmap_dw1_12 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 238 'alloca' 'ifmap_dw1_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 239 [1/1] (0.00ns)   --->   "%ifmap_dw1_13 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 239 'alloca' 'ifmap_dw1_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 240 [1/1] (0.00ns)   --->   "%ifmap_dw1_14 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 240 'alloca' 'ifmap_dw1_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 241 [1/1] (0.00ns)   --->   "%ifmap_dw1_15 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 241 'alloca' 'ifmap_dw1_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 242 [1/1] (0.00ns)   --->   "%ifmap_dw1_16 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 242 'alloca' 'ifmap_dw1_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 243 [1/1] (0.00ns)   --->   "%ifmap_dw1_17 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 243 'alloca' 'ifmap_dw1_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 244 [1/1] (0.00ns)   --->   "%ifmap_dw1_18 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 244 'alloca' 'ifmap_dw1_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 245 [1/1] (0.00ns)   --->   "%ifmap_dw1_19 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 245 'alloca' 'ifmap_dw1_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 246 [1/1] (0.00ns)   --->   "%ifmap_dw1_20 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 246 'alloca' 'ifmap_dw1_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 247 [1/1] (0.00ns)   --->   "%ifmap_dw1_21 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 247 'alloca' 'ifmap_dw1_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 248 [1/1] (0.00ns)   --->   "%ifmap_dw1_22 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 248 'alloca' 'ifmap_dw1_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 249 [1/1] (0.00ns)   --->   "%ifmap_dw1_23 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 249 'alloca' 'ifmap_dw1_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 250 [1/1] (0.00ns)   --->   "%ifmap_dw1_24 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 250 'alloca' 'ifmap_dw1_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 251 [1/1] (0.00ns)   --->   "%ifmap_dw1_25 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 251 'alloca' 'ifmap_dw1_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 252 [1/1] (0.00ns)   --->   "%ifmap_dw1_26 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 252 'alloca' 'ifmap_dw1_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 253 [1/1] (0.00ns)   --->   "%ifmap_dw1_27 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 253 'alloca' 'ifmap_dw1_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 254 [1/1] (0.00ns)   --->   "%ifmap_dw1_28 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 254 'alloca' 'ifmap_dw1_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 255 [1/1] (0.00ns)   --->   "%ifmap_dw1_29 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 255 'alloca' 'ifmap_dw1_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 256 [1/1] (0.00ns)   --->   "%ifmap_dw1_30 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 256 'alloca' 'ifmap_dw1_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 257 [1/1] (0.00ns)   --->   "%ifmap_dw1_31 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 257 'alloca' 'ifmap_dw1_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 258 [1/1] (0.00ns)   --->   "%ifmap_dw1_32 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 258 'alloca' 'ifmap_dw1_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 259 [1/1] (0.00ns)   --->   "%ifmap_dw1_33 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 259 'alloca' 'ifmap_dw1_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 260 [1/1] (0.00ns)   --->   "%ifmap_dw1_34 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 260 'alloca' 'ifmap_dw1_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 261 [1/1] (0.00ns)   --->   "%ifmap_dw1_35 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 261 'alloca' 'ifmap_dw1_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 262 [1/1] (0.00ns)   --->   "%ifmap_dw1_36 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 262 'alloca' 'ifmap_dw1_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 263 [1/1] (0.00ns)   --->   "%ifmap_dw1_37 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 263 'alloca' 'ifmap_dw1_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 264 [1/1] (0.00ns)   --->   "%ifmap_dw1_38 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 264 'alloca' 'ifmap_dw1_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 265 [1/1] (0.00ns)   --->   "%ifmap_dw1_39 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 265 'alloca' 'ifmap_dw1_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 266 [1/1] (0.00ns)   --->   "%ifmap_dw1_40 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 266 'alloca' 'ifmap_dw1_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 267 [1/1] (0.00ns)   --->   "%ifmap_dw1_41 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 267 'alloca' 'ifmap_dw1_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 268 [1/1] (0.00ns)   --->   "%ifmap_dw1_42 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 268 'alloca' 'ifmap_dw1_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 269 [1/1] (0.00ns)   --->   "%ifmap_dw1_43 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 269 'alloca' 'ifmap_dw1_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 270 [1/1] (0.00ns)   --->   "%ifmap_dw1_44 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 270 'alloca' 'ifmap_dw1_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 271 [1/1] (0.00ns)   --->   "%ifmap_dw1_45 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 271 'alloca' 'ifmap_dw1_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 272 [1/1] (0.00ns)   --->   "%ifmap_dw1_46 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 272 'alloca' 'ifmap_dw1_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 273 [1/1] (0.00ns)   --->   "%ifmap_dw1_47 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:23]   --->   Operation 273 'alloca' 'ifmap_dw1_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 274 [1/1] (0.00ns)   --->   "%ofmap_dw1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:25]   --->   Operation 274 'alloca' 'ofmap_dw1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 275 [1/1] (0.00ns)   --->   "%ofmap_dw1_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:25]   --->   Operation 275 'alloca' 'ofmap_dw1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 276 [1/1] (0.00ns)   --->   "%ofmap_dw1_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:25]   --->   Operation 276 'alloca' 'ofmap_dw1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 277 [1/1] (0.00ns)   --->   "%ofmap_dw1_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:25]   --->   Operation 277 'alloca' 'ofmap_dw1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 278 [1/1] (0.00ns)   --->   "%ofmap_dw1_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:25]   --->   Operation 278 'alloca' 'ofmap_dw1_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 279 [1/1] (0.00ns)   --->   "%ofmap_dw1_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:25]   --->   Operation 279 'alloca' 'ofmap_dw1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 280 [1/1] (0.00ns)   --->   "%ofmap_dw1_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:25]   --->   Operation 280 'alloca' 'ofmap_dw1_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 281 [1/1] (0.00ns)   --->   "%ofmap_dw1_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:25]   --->   Operation 281 'alloca' 'ofmap_dw1_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 282 [1/1] (0.00ns)   --->   "%ifmap_pw1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 282 'alloca' 'ifmap_pw1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 283 [1/1] (0.00ns)   --->   "%ifmap_pw1_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 283 'alloca' 'ifmap_pw1_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 284 [1/1] (0.00ns)   --->   "%ifmap_pw1_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 284 'alloca' 'ifmap_pw1_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 285 [1/1] (0.00ns)   --->   "%ifmap_pw1_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 285 'alloca' 'ifmap_pw1_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 286 [1/1] (0.00ns)   --->   "%ifmap_pw1_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 286 'alloca' 'ifmap_pw1_4' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 287 [1/1] (0.00ns)   --->   "%ifmap_pw1_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 287 'alloca' 'ifmap_pw1_5' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 288 [1/1] (0.00ns)   --->   "%ifmap_pw1_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 288 'alloca' 'ifmap_pw1_6' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 289 [1/1] (0.00ns)   --->   "%ifmap_pw1_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 289 'alloca' 'ifmap_pw1_7' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 290 [1/1] (0.00ns)   --->   "%ifmap_pw1_8 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 290 'alloca' 'ifmap_pw1_8' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 291 [1/1] (0.00ns)   --->   "%ifmap_pw1_9 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 291 'alloca' 'ifmap_pw1_9' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 292 [1/1] (0.00ns)   --->   "%ifmap_pw1_10 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 292 'alloca' 'ifmap_pw1_10' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 293 [1/1] (0.00ns)   --->   "%ifmap_pw1_11 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 293 'alloca' 'ifmap_pw1_11' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 294 [1/1] (0.00ns)   --->   "%ifmap_pw1_12 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 294 'alloca' 'ifmap_pw1_12' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 295 [1/1] (0.00ns)   --->   "%ifmap_pw1_13 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 295 'alloca' 'ifmap_pw1_13' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 296 [1/1] (0.00ns)   --->   "%ifmap_pw1_14 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 296 'alloca' 'ifmap_pw1_14' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 297 [1/1] (0.00ns)   --->   "%ifmap_pw1_15 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:26]   --->   Operation 297 'alloca' 'ifmap_pw1_15' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 298 [1/1] (0.00ns)   --->   "%ofmap_pw1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:28]   --->   Operation 298 'alloca' 'ofmap_pw1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 299 [1/1] (0.00ns)   --->   "%ofmap_pw1_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:28]   --->   Operation 299 'alloca' 'ofmap_pw1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 300 [1/1] (0.00ns)   --->   "%ofmap_pw1_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:28]   --->   Operation 300 'alloca' 'ofmap_pw1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 301 [1/1] (0.00ns)   --->   "%ofmap_pw1_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:28]   --->   Operation 301 'alloca' 'ofmap_pw1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 302 [1/1] (0.00ns)   --->   "%ofmap_pw1_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:28]   --->   Operation 302 'alloca' 'ofmap_pw1_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 303 [1/1] (0.00ns)   --->   "%ofmap_pw1_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:28]   --->   Operation 303 'alloca' 'ofmap_pw1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 304 [1/1] (0.00ns)   --->   "%ofmap_pw1_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:28]   --->   Operation 304 'alloca' 'ofmap_pw1_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 305 [1/1] (0.00ns)   --->   "%ofmap_pw1_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:28]   --->   Operation 305 'alloca' 'ofmap_pw1_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 306 [1/1] (0.00ns)   --->   "%ifmap_dw2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 306 'alloca' 'ifmap_dw2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 307 [1/1] (0.00ns)   --->   "%ifmap_dw2_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 307 'alloca' 'ifmap_dw2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 308 [1/1] (0.00ns)   --->   "%ifmap_dw2_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 308 'alloca' 'ifmap_dw2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 309 [1/1] (0.00ns)   --->   "%ifmap_dw2_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 309 'alloca' 'ifmap_dw2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 310 [1/1] (0.00ns)   --->   "%ifmap_dw2_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 310 'alloca' 'ifmap_dw2_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 311 [1/1] (0.00ns)   --->   "%ifmap_dw2_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 311 'alloca' 'ifmap_dw2_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 312 [1/1] (0.00ns)   --->   "%ifmap_dw2_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 312 'alloca' 'ifmap_dw2_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 313 [1/1] (0.00ns)   --->   "%ifmap_dw2_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 313 'alloca' 'ifmap_dw2_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 314 [1/1] (0.00ns)   --->   "%ifmap_dw2_8 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 314 'alloca' 'ifmap_dw2_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 315 [1/1] (0.00ns)   --->   "%ifmap_dw2_9 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 315 'alloca' 'ifmap_dw2_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 316 [1/1] (0.00ns)   --->   "%ifmap_dw2_10 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 316 'alloca' 'ifmap_dw2_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 317 [1/1] (0.00ns)   --->   "%ifmap_dw2_11 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 317 'alloca' 'ifmap_dw2_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 318 [1/1] (0.00ns)   --->   "%ifmap_dw2_12 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 318 'alloca' 'ifmap_dw2_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 319 [1/1] (0.00ns)   --->   "%ifmap_dw2_13 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 319 'alloca' 'ifmap_dw2_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 320 [1/1] (0.00ns)   --->   "%ifmap_dw2_14 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 320 'alloca' 'ifmap_dw2_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 321 [1/1] (0.00ns)   --->   "%ifmap_dw2_15 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 321 'alloca' 'ifmap_dw2_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 322 [1/1] (0.00ns)   --->   "%ifmap_dw2_16 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 322 'alloca' 'ifmap_dw2_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 323 [1/1] (0.00ns)   --->   "%ifmap_dw2_17 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 323 'alloca' 'ifmap_dw2_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 324 [1/1] (0.00ns)   --->   "%ifmap_dw2_18 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 324 'alloca' 'ifmap_dw2_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 325 [1/1] (0.00ns)   --->   "%ifmap_dw2_19 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 325 'alloca' 'ifmap_dw2_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 326 [1/1] (0.00ns)   --->   "%ifmap_dw2_20 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 326 'alloca' 'ifmap_dw2_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 327 [1/1] (0.00ns)   --->   "%ifmap_dw2_21 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 327 'alloca' 'ifmap_dw2_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 328 [1/1] (0.00ns)   --->   "%ifmap_dw2_22 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 328 'alloca' 'ifmap_dw2_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 329 [1/1] (0.00ns)   --->   "%ifmap_dw2_23 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:29]   --->   Operation 329 'alloca' 'ifmap_dw2_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 330 [1/1] (0.00ns)   --->   "%ofmap_dw2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:31]   --->   Operation 330 'alloca' 'ofmap_dw2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 331 [1/1] (0.00ns)   --->   "%ofmap_dw2_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:31]   --->   Operation 331 'alloca' 'ofmap_dw2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 332 [1/1] (0.00ns)   --->   "%ofmap_dw2_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:31]   --->   Operation 332 'alloca' 'ofmap_dw2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 333 [1/1] (0.00ns)   --->   "%ofmap_dw2_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:31]   --->   Operation 333 'alloca' 'ofmap_dw2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 334 [1/1] (0.00ns)   --->   "%ifmap_pw2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:32]   --->   Operation 334 'alloca' 'ifmap_pw2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 335 [1/1] (0.00ns)   --->   "%ifmap_pw2_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:32]   --->   Operation 335 'alloca' 'ifmap_pw2_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 336 [1/1] (0.00ns)   --->   "%ifmap_pw2_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:32]   --->   Operation 336 'alloca' 'ifmap_pw2_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 337 [1/1] (0.00ns)   --->   "%ifmap_pw2_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:32]   --->   Operation 337 'alloca' 'ifmap_pw2_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 338 [1/1] (0.00ns)   --->   "%ifmap_pw2_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:32]   --->   Operation 338 'alloca' 'ifmap_pw2_4' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 339 [1/1] (0.00ns)   --->   "%ifmap_pw2_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:32]   --->   Operation 339 'alloca' 'ifmap_pw2_5' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 340 [1/1] (0.00ns)   --->   "%ifmap_pw2_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:32]   --->   Operation 340 'alloca' 'ifmap_pw2_6' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 341 [1/1] (0.00ns)   --->   "%ifmap_pw2_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:32]   --->   Operation 341 'alloca' 'ifmap_pw2_7' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 342 [1/1] (0.00ns)   --->   "%ofmap_pw2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:34]   --->   Operation 342 'alloca' 'ofmap_pw2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 343 [1/1] (0.00ns)   --->   "%ofmap_pw2_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:34]   --->   Operation 343 'alloca' 'ofmap_pw2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 344 [1/1] (0.00ns)   --->   "%ofmap_pw2_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:34]   --->   Operation 344 'alloca' 'ofmap_pw2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 345 [1/1] (0.00ns)   --->   "%ofmap_pw2_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:34]   --->   Operation 345 'alloca' 'ofmap_pw2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 346 [1/1] (0.00ns)   --->   "%ifmap_dw3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 346 'alloca' 'ifmap_dw3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 347 [1/1] (0.00ns)   --->   "%ifmap_dw3_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 347 'alloca' 'ifmap_dw3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 348 [1/1] (0.00ns)   --->   "%ifmap_dw3_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 348 'alloca' 'ifmap_dw3_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 349 [1/1] (0.00ns)   --->   "%ifmap_dw3_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 349 'alloca' 'ifmap_dw3_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 350 [1/1] (0.00ns)   --->   "%ifmap_dw3_4 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 350 'alloca' 'ifmap_dw3_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 351 [1/1] (0.00ns)   --->   "%ifmap_dw3_5 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 351 'alloca' 'ifmap_dw3_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 352 [1/1] (0.00ns)   --->   "%ifmap_dw3_6 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 352 'alloca' 'ifmap_dw3_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 353 [1/1] (0.00ns)   --->   "%ifmap_dw3_7 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 353 'alloca' 'ifmap_dw3_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 354 [1/1] (0.00ns)   --->   "%ifmap_dw3_8 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 354 'alloca' 'ifmap_dw3_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 355 [1/1] (0.00ns)   --->   "%ifmap_dw3_9 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 355 'alloca' 'ifmap_dw3_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 356 [1/1] (0.00ns)   --->   "%ifmap_dw3_10 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 356 'alloca' 'ifmap_dw3_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 357 [1/1] (0.00ns)   --->   "%ifmap_dw3_11 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 357 'alloca' 'ifmap_dw3_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 358 [1/1] (0.00ns)   --->   "%ifmap_dw3_12 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 358 'alloca' 'ifmap_dw3_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 359 [1/1] (0.00ns)   --->   "%ifmap_dw3_13 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 359 'alloca' 'ifmap_dw3_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 360 [1/1] (0.00ns)   --->   "%ifmap_dw3_14 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 360 'alloca' 'ifmap_dw3_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 361 [1/1] (0.00ns)   --->   "%ifmap_dw3_15 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:35]   --->   Operation 361 'alloca' 'ifmap_dw3_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 362 [1/1] (0.00ns)   --->   "%ofmap_dw3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:37]   --->   Operation 362 'alloca' 'ofmap_dw3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 363 [1/1] (0.00ns)   --->   "%ifmap_pw3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:38]   --->   Operation 363 'alloca' 'ifmap_pw3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 364 [1/1] (0.00ns)   --->   "%ifmap_pw3_1 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:38]   --->   Operation 364 'alloca' 'ifmap_pw3_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 365 [1/1] (0.00ns)   --->   "%ifmap_pw3_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:38]   --->   Operation 365 'alloca' 'ifmap_pw3_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 366 [1/1] (0.00ns)   --->   "%ifmap_pw3_3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:38]   --->   Operation 366 'alloca' 'ifmap_pw3_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM_2P_BRAM">   --->   Core 90 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 367 [1/1] (0.00ns)   --->   "%ofmap_pw3 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:40]   --->   Operation 367 'alloca' 'ofmap_pw3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 368 [1/1] (0.00ns)   --->   "%ifmap_gap = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:41]   --->   Operation 368 'alloca' 'ifmap_gap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 369 [1/1] (0.00ns)   --->   "%ifmap_gap_2 = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:41]   --->   Operation 369 'alloca' 'ifmap_gap_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 370 [1/1] (0.00ns)   --->   "%ofmap_gap = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:43]   --->   Operation 370 'alloca' 'ofmap_gap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 371 [1/1] (0.00ns)   --->   "%out_buf = alloca i64 1" [../FP32-Model/mobilenet_v1.cpp:44]   --->   Operation 371 'alloca' 'out_buf' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 372 [1/1] (0.00ns)   --->   "%trunc_ln9 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %input_r_read, i32 2, i32 63" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 372 'partselect' 'trunc_ln9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 373 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %output_r_read, i32 2, i32 63" [../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77]   --->   Operation 373 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 374 [1/1] (0.00ns)   --->   "%sext_ln9 = sext i62 %trunc_ln9" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 374 'sext' 'sext_ln9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 375 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln9" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 375 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 376 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i64 3072" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 376 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 377 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i64 3072" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 377 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 378 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i64 3072" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 378 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 379 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i64 3072" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 379 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 380 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i64 3072" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 380 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 381 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i64 3072" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 381 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 382 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i64 3072" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 382 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 383 [1/8] ( I:7.30ns O:7.30ns )   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr, i64 3072" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 383 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 384 [2/2] (0.00ns)   --->   "%call_ln9 = call void @mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW, i32 %gmem, i62 %trunc_ln9, i32 %in_buf, i32 %in_buf_1, i32 %in_buf_2, i32 %in_buf_3, i32 %in_buf_4, i32 %in_buf_5, i32 %in_buf_6, i32 %in_buf_7, i32 %in_buf_8, i32 %in_buf_9, i32 %in_buf_10, i32 %in_buf_11, i32 %in_buf_12, i32 %in_buf_13, i32 %in_buf_14, i32 %in_buf_15, i32 %in_buf_16, i32 %in_buf_17" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 384 'call' 'call_ln9' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 385 [1/2] (0.00ns)   --->   "%call_ln9 = call void @mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW, i32 %gmem, i62 %trunc_ln9, i32 %in_buf, i32 %in_buf_1, i32 %in_buf_2, i32 %in_buf_3, i32 %in_buf_4, i32 %in_buf_5, i32 %in_buf_6, i32 %in_buf_7, i32 %in_buf_8, i32 %in_buf_9, i32 %in_buf_10, i32 %in_buf_11, i32 %in_buf_12, i32 %in_buf_13, i32 %in_buf_14, i32 %in_buf_15, i32 %in_buf_16, i32 %in_buf_17" [../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46]   --->   Operation 385 'call' 'call_ln9' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 386 [2/2] (0.00ns)   --->   "%call_ln48 = call void @conv0, i32 %in_buf, i32 %in_buf_1, i32 %in_buf_2, i32 %in_buf_3, i32 %in_buf_4, i32 %in_buf_5, i32 %in_buf_6, i32 %in_buf_7, i32 %in_buf_8, i32 %in_buf_9, i32 %in_buf_10, i32 %in_buf_11, i32 %in_buf_12, i32 %in_buf_13, i32 %in_buf_14, i32 %in_buf_15, i32 %in_buf_16, i32 %in_buf_17, i32 %ofmap_conv0, i32 %ofmap_conv0_1, i32 %ofmap_conv0_2, i32 %ofmap_conv0_3, i32 %ofmap_conv0_4, i32 %ofmap_conv0_5, i32 %ofmap_conv0_6, i32 %ofmap_conv0_7, i32 %ofmap_conv0_8, i32 %ofmap_conv0_9, i32 %ofmap_conv0_10, i32 %ofmap_conv0_11, i32 %ofmap_conv0_12, i32 %ofmap_conv0_13, i32 %ofmap_conv0_14, i32 %ofmap_conv0_15, i32 %ofmap_conv0_16, i32 %ofmap_conv0_17, i32 %ofmap_conv0_18, i32 %ofmap_conv0_19, i32 %ofmap_conv0_20, i32 %ofmap_conv0_21, i32 %ofmap_conv0_22, i32 %ofmap_conv0_23, i32 %ofmap_conv0_24, i32 %ofmap_conv0_25, i32 %ofmap_conv0_26, i32 %ofmap_conv0_27, i32 %ofmap_conv0_28, i32 %ofmap_conv0_29, i32 %ofmap_conv0_30, i32 %ofmap_conv0_31, i32 %p_ZL13conv_0_weight_0_1_1, i32 %p_ZL13conv_0_weight_1_1_1, i32 %p_ZL13conv_0_weight_0_2_2, i32 %p_ZL13conv_0_weight_1_2_2, i32 %p_ZL13conv_0_weight_0_2_1, i32 %p_ZL13conv_0_weight_1_2_1, i32 %p_ZL13conv_0_weight_0_2_0, i32 %p_ZL13conv_0_weight_1_2_0, i32 %p_ZL13conv_0_weight_0_1_2, i32 %p_ZL13conv_0_weight_1_1_2, i32 %p_ZL13conv_0_weight_0_1_0, i32 %p_ZL13conv_0_weight_1_1_0, i32 %p_ZL13conv_0_weight_0_0_2, i32 %p_ZL13conv_0_weight_1_0_2, i32 %p_ZL13conv_0_weight_0_0_1, i32 %p_ZL13conv_0_weight_1_0_1, i32 %p_ZL13conv_0_weight_0_0_0, i32 %p_ZL13conv_0_weight_1_0_0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 386 'call' 'call_ln48' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 387 [1/2] (0.00ns)   --->   "%call_ln48 = call void @conv0, i32 %in_buf, i32 %in_buf_1, i32 %in_buf_2, i32 %in_buf_3, i32 %in_buf_4, i32 %in_buf_5, i32 %in_buf_6, i32 %in_buf_7, i32 %in_buf_8, i32 %in_buf_9, i32 %in_buf_10, i32 %in_buf_11, i32 %in_buf_12, i32 %in_buf_13, i32 %in_buf_14, i32 %in_buf_15, i32 %in_buf_16, i32 %in_buf_17, i32 %ofmap_conv0, i32 %ofmap_conv0_1, i32 %ofmap_conv0_2, i32 %ofmap_conv0_3, i32 %ofmap_conv0_4, i32 %ofmap_conv0_5, i32 %ofmap_conv0_6, i32 %ofmap_conv0_7, i32 %ofmap_conv0_8, i32 %ofmap_conv0_9, i32 %ofmap_conv0_10, i32 %ofmap_conv0_11, i32 %ofmap_conv0_12, i32 %ofmap_conv0_13, i32 %ofmap_conv0_14, i32 %ofmap_conv0_15, i32 %ofmap_conv0_16, i32 %ofmap_conv0_17, i32 %ofmap_conv0_18, i32 %ofmap_conv0_19, i32 %ofmap_conv0_20, i32 %ofmap_conv0_21, i32 %ofmap_conv0_22, i32 %ofmap_conv0_23, i32 %ofmap_conv0_24, i32 %ofmap_conv0_25, i32 %ofmap_conv0_26, i32 %ofmap_conv0_27, i32 %ofmap_conv0_28, i32 %ofmap_conv0_29, i32 %ofmap_conv0_30, i32 %ofmap_conv0_31, i32 %p_ZL13conv_0_weight_0_1_1, i32 %p_ZL13conv_0_weight_1_1_1, i32 %p_ZL13conv_0_weight_0_2_2, i32 %p_ZL13conv_0_weight_1_2_2, i32 %p_ZL13conv_0_weight_0_2_1, i32 %p_ZL13conv_0_weight_1_2_1, i32 %p_ZL13conv_0_weight_0_2_0, i32 %p_ZL13conv_0_weight_1_2_0, i32 %p_ZL13conv_0_weight_0_1_2, i32 %p_ZL13conv_0_weight_1_1_2, i32 %p_ZL13conv_0_weight_0_1_0, i32 %p_ZL13conv_0_weight_1_1_0, i32 %p_ZL13conv_0_weight_0_0_2, i32 %p_ZL13conv_0_weight_1_0_2, i32 %p_ZL13conv_0_weight_0_0_1, i32 %p_ZL13conv_0_weight_1_0_1, i32 %p_ZL13conv_0_weight_0_0_0, i32 %p_ZL13conv_0_weight_1_0_0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 387 'call' 'call_ln48' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 388 [2/2] (0.00ns)   --->   "%call_ln49 = call void @batchnorm_conv0, i32 %ofmap_conv0, i32 %ofmap_conv0_1, i32 %ofmap_conv0_2, i32 %ofmap_conv0_3, i32 %ofmap_conv0_4, i32 %ofmap_conv0_5, i32 %ofmap_conv0_6, i32 %ofmap_conv0_7, i32 %ofmap_conv0_8, i32 %ofmap_conv0_9, i32 %ofmap_conv0_10, i32 %ofmap_conv0_11, i32 %ofmap_conv0_12, i32 %ofmap_conv0_13, i32 %ofmap_conv0_14, i32 %ofmap_conv0_15, i32 %ofmap_conv0_16, i32 %ofmap_conv0_17, i32 %ofmap_conv0_18, i32 %ofmap_conv0_19, i32 %ofmap_conv0_20, i32 %ofmap_conv0_21, i32 %ofmap_conv0_22, i32 %ofmap_conv0_23, i32 %ofmap_conv0_24, i32 %ofmap_conv0_25, i32 %ofmap_conv0_26, i32 %ofmap_conv0_27, i32 %ofmap_conv0_28, i32 %ofmap_conv0_29, i32 %ofmap_conv0_30, i32 %ofmap_conv0_31, i32 %ifmap_dw0, i32 %ifmap_dw0_1, i32 %ifmap_dw0_2, i32 %ifmap_dw0_3, i32 %ifmap_dw0_4, i32 %ifmap_dw0_5, i32 %ifmap_dw0_6, i32 %ifmap_dw0_7, i32 %ifmap_dw0_8, i32 %ifmap_dw0_9, i32 %ifmap_dw0_10, i32 %ifmap_dw0_11, i32 %ifmap_dw0_12, i32 %ifmap_dw0_13, i32 %ifmap_dw0_14, i32 %ifmap_dw0_15, i32 %ifmap_dw0_16, i32 %ifmap_dw0_17, i32 %ifmap_dw0_18, i32 %ifmap_dw0_19, i32 %ifmap_dw0_20, i32 %ifmap_dw0_21, i32 %ifmap_dw0_22, i32 %ifmap_dw0_23, i32 %ifmap_dw0_24, i32 %ifmap_dw0_25, i32 %ifmap_dw0_26, i32 %ifmap_dw0_27, i32 %ifmap_dw0_28, i32 %ifmap_dw0_29, i32 %ifmap_dw0_30, i32 %ifmap_dw0_31, i32 %ifmap_dw0_32, i32 %ifmap_dw0_33, i32 %ifmap_dw0_34, i32 %ifmap_dw0_35, i32 %ifmap_dw0_36, i32 %ifmap_dw0_37, i32 %ifmap_dw0_38, i32 %ifmap_dw0_39, i32 %ifmap_dw0_40, i32 %ifmap_dw0_41, i32 %ifmap_dw0_42, i32 %ifmap_dw0_43, i32 %ifmap_dw0_44, i32 %ifmap_dw0_45, i32 %ifmap_dw0_46, i32 %ifmap_dw0_47, i32 %ifmap_dw0_48, i32 %ifmap_dw0_49, i32 %ifmap_dw0_50, i32 %ifmap_dw0_51, i32 %ifmap_dw0_52, i32 %ifmap_dw0_53, i32 %ifmap_dw0_54, i32 %ifmap_dw0_55, i32 %ifmap_dw0_56, i32 %ifmap_dw0_57, i32 %ifmap_dw0_58, i32 %ifmap_dw0_59, i32 %ifmap_dw0_60, i32 %ifmap_dw0_61, i32 %ifmap_dw0_62, i32 %ifmap_dw0_63, i32 %ifmap_dw0_64, i32 %ifmap_dw0_65, i32 %ifmap_dw0_66, i32 %ifmap_dw0_67, i32 %ifmap_dw0_68, i32 %ifmap_dw0_69, i32 %ifmap_dw0_70, i32 %ifmap_dw0_71, i32 %ifmap_dw0_72, i32 %ifmap_dw0_73, i32 %ifmap_dw0_74, i32 %ifmap_dw0_75, i32 %ifmap_dw0_76, i32 %ifmap_dw0_77, i32 %ifmap_dw0_78, i32 %ifmap_dw0_79, i32 %ifmap_dw0_80, i32 %ifmap_dw0_81, i32 %ifmap_dw0_82, i32 %ifmap_dw0_83, i32 %ifmap_dw0_84, i32 %ifmap_dw0_85, i32 %ifmap_dw0_86, i32 %ifmap_dw0_87, i32 %ifmap_dw0_88, i32 %ifmap_dw0_89, i32 %ifmap_dw0_90, i32 %ifmap_dw0_91, i32 %ifmap_dw0_92, i32 %ifmap_dw0_93, i32 %ifmap_dw0_94, i32 %ifmap_dw0_95" [../FP32-Model/mobilenet_v1.cpp:49]   --->   Operation 388 'call' 'call_ln49' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 389 [1/2] (0.00ns)   --->   "%call_ln49 = call void @batchnorm_conv0, i32 %ofmap_conv0, i32 %ofmap_conv0_1, i32 %ofmap_conv0_2, i32 %ofmap_conv0_3, i32 %ofmap_conv0_4, i32 %ofmap_conv0_5, i32 %ofmap_conv0_6, i32 %ofmap_conv0_7, i32 %ofmap_conv0_8, i32 %ofmap_conv0_9, i32 %ofmap_conv0_10, i32 %ofmap_conv0_11, i32 %ofmap_conv0_12, i32 %ofmap_conv0_13, i32 %ofmap_conv0_14, i32 %ofmap_conv0_15, i32 %ofmap_conv0_16, i32 %ofmap_conv0_17, i32 %ofmap_conv0_18, i32 %ofmap_conv0_19, i32 %ofmap_conv0_20, i32 %ofmap_conv0_21, i32 %ofmap_conv0_22, i32 %ofmap_conv0_23, i32 %ofmap_conv0_24, i32 %ofmap_conv0_25, i32 %ofmap_conv0_26, i32 %ofmap_conv0_27, i32 %ofmap_conv0_28, i32 %ofmap_conv0_29, i32 %ofmap_conv0_30, i32 %ofmap_conv0_31, i32 %ifmap_dw0, i32 %ifmap_dw0_1, i32 %ifmap_dw0_2, i32 %ifmap_dw0_3, i32 %ifmap_dw0_4, i32 %ifmap_dw0_5, i32 %ifmap_dw0_6, i32 %ifmap_dw0_7, i32 %ifmap_dw0_8, i32 %ifmap_dw0_9, i32 %ifmap_dw0_10, i32 %ifmap_dw0_11, i32 %ifmap_dw0_12, i32 %ifmap_dw0_13, i32 %ifmap_dw0_14, i32 %ifmap_dw0_15, i32 %ifmap_dw0_16, i32 %ifmap_dw0_17, i32 %ifmap_dw0_18, i32 %ifmap_dw0_19, i32 %ifmap_dw0_20, i32 %ifmap_dw0_21, i32 %ifmap_dw0_22, i32 %ifmap_dw0_23, i32 %ifmap_dw0_24, i32 %ifmap_dw0_25, i32 %ifmap_dw0_26, i32 %ifmap_dw0_27, i32 %ifmap_dw0_28, i32 %ifmap_dw0_29, i32 %ifmap_dw0_30, i32 %ifmap_dw0_31, i32 %ifmap_dw0_32, i32 %ifmap_dw0_33, i32 %ifmap_dw0_34, i32 %ifmap_dw0_35, i32 %ifmap_dw0_36, i32 %ifmap_dw0_37, i32 %ifmap_dw0_38, i32 %ifmap_dw0_39, i32 %ifmap_dw0_40, i32 %ifmap_dw0_41, i32 %ifmap_dw0_42, i32 %ifmap_dw0_43, i32 %ifmap_dw0_44, i32 %ifmap_dw0_45, i32 %ifmap_dw0_46, i32 %ifmap_dw0_47, i32 %ifmap_dw0_48, i32 %ifmap_dw0_49, i32 %ifmap_dw0_50, i32 %ifmap_dw0_51, i32 %ifmap_dw0_52, i32 %ifmap_dw0_53, i32 %ifmap_dw0_54, i32 %ifmap_dw0_55, i32 %ifmap_dw0_56, i32 %ifmap_dw0_57, i32 %ifmap_dw0_58, i32 %ifmap_dw0_59, i32 %ifmap_dw0_60, i32 %ifmap_dw0_61, i32 %ifmap_dw0_62, i32 %ifmap_dw0_63, i32 %ifmap_dw0_64, i32 %ifmap_dw0_65, i32 %ifmap_dw0_66, i32 %ifmap_dw0_67, i32 %ifmap_dw0_68, i32 %ifmap_dw0_69, i32 %ifmap_dw0_70, i32 %ifmap_dw0_71, i32 %ifmap_dw0_72, i32 %ifmap_dw0_73, i32 %ifmap_dw0_74, i32 %ifmap_dw0_75, i32 %ifmap_dw0_76, i32 %ifmap_dw0_77, i32 %ifmap_dw0_78, i32 %ifmap_dw0_79, i32 %ifmap_dw0_80, i32 %ifmap_dw0_81, i32 %ifmap_dw0_82, i32 %ifmap_dw0_83, i32 %ifmap_dw0_84, i32 %ifmap_dw0_85, i32 %ifmap_dw0_86, i32 %ifmap_dw0_87, i32 %ifmap_dw0_88, i32 %ifmap_dw0_89, i32 %ifmap_dw0_90, i32 %ifmap_dw0_91, i32 %ifmap_dw0_92, i32 %ifmap_dw0_93, i32 %ifmap_dw0_94, i32 %ifmap_dw0_95" [../FP32-Model/mobilenet_v1.cpp:49]   --->   Operation 389 'call' 'call_ln49' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 16 <SV = 15> <Delay = 0.00>
+ST_16 : Operation 390 [2/2] (0.00ns)   --->   "%call_ln51 = call void @dw0, i32 %ifmap_dw0, i32 %ifmap_dw0_1, i32 %ifmap_dw0_2, i32 %ifmap_dw0_3, i32 %ifmap_dw0_4, i32 %ifmap_dw0_5, i32 %ifmap_dw0_6, i32 %ifmap_dw0_7, i32 %ifmap_dw0_8, i32 %ifmap_dw0_9, i32 %ifmap_dw0_10, i32 %ifmap_dw0_11, i32 %ifmap_dw0_12, i32 %ifmap_dw0_13, i32 %ifmap_dw0_14, i32 %ifmap_dw0_15, i32 %ifmap_dw0_16, i32 %ifmap_dw0_17, i32 %ifmap_dw0_18, i32 %ifmap_dw0_19, i32 %ifmap_dw0_20, i32 %ifmap_dw0_21, i32 %ifmap_dw0_22, i32 %ifmap_dw0_23, i32 %ifmap_dw0_24, i32 %ifmap_dw0_25, i32 %ifmap_dw0_26, i32 %ifmap_dw0_27, i32 %ifmap_dw0_28, i32 %ifmap_dw0_29, i32 %ifmap_dw0_30, i32 %ifmap_dw0_31, i32 %ifmap_dw0_32, i32 %ifmap_dw0_33, i32 %ifmap_dw0_34, i32 %ifmap_dw0_35, i32 %ifmap_dw0_36, i32 %ifmap_dw0_37, i32 %ifmap_dw0_38, i32 %ifmap_dw0_39, i32 %ifmap_dw0_40, i32 %ifmap_dw0_41, i32 %ifmap_dw0_42, i32 %ifmap_dw0_43, i32 %ifmap_dw0_44, i32 %ifmap_dw0_45, i32 %ifmap_dw0_46, i32 %ifmap_dw0_47, i32 %ifmap_dw0_48, i32 %ifmap_dw0_49, i32 %ifmap_dw0_50, i32 %ifmap_dw0_51, i32 %ifmap_dw0_52, i32 %ifmap_dw0_53, i32 %ifmap_dw0_54, i32 %ifmap_dw0_55, i32 %ifmap_dw0_56, i32 %ifmap_dw0_57, i32 %ifmap_dw0_58, i32 %ifmap_dw0_59, i32 %ifmap_dw0_60, i32 %ifmap_dw0_61, i32 %ifmap_dw0_62, i32 %ifmap_dw0_63, i32 %ifmap_dw0_64, i32 %ifmap_dw0_65, i32 %ifmap_dw0_66, i32 %ifmap_dw0_67, i32 %ifmap_dw0_68, i32 %ifmap_dw0_69, i32 %ifmap_dw0_70, i32 %ifmap_dw0_71, i32 %ifmap_dw0_72, i32 %ifmap_dw0_73, i32 %ifmap_dw0_74, i32 %ifmap_dw0_75, i32 %ifmap_dw0_76, i32 %ifmap_dw0_77, i32 %ifmap_dw0_78, i32 %ifmap_dw0_79, i32 %ifmap_dw0_80, i32 %ifmap_dw0_81, i32 %ifmap_dw0_82, i32 %ifmap_dw0_83, i32 %ifmap_dw0_84, i32 %ifmap_dw0_85, i32 %ifmap_dw0_86, i32 %ifmap_dw0_87, i32 %ifmap_dw0_88, i32 %ifmap_dw0_89, i32 %ifmap_dw0_90, i32 %ifmap_dw0_91, i32 %ifmap_dw0_92, i32 %ifmap_dw0_93, i32 %ifmap_dw0_94, i32 %ifmap_dw0_95, i32 %ofmap_dw0, i32 %p_ZL26features_0_deepwise_weight_1_1, i32 %p_ZL26features_0_deepwise_weight_1_2, i32 %p_ZL26features_0_deepwise_weight_2_1, i32 %p_ZL26features_0_deepwise_weight_0_0, i32 %p_ZL26features_0_deepwise_weight_0_1, i32 %p_ZL26features_0_deepwise_weight_0_2, i32 %p_ZL26features_0_deepwise_weight_1_0, i32 %p_ZL26features_0_deepwise_weight_2_0, i32 %p_ZL26features_0_deepwise_weight_2_2" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 390 'call' 'call_ln51' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 17 <SV = 16> <Delay = 0.00>
+ST_17 : Operation 391 [1/2] (0.00ns)   --->   "%call_ln51 = call void @dw0, i32 %ifmap_dw0, i32 %ifmap_dw0_1, i32 %ifmap_dw0_2, i32 %ifmap_dw0_3, i32 %ifmap_dw0_4, i32 %ifmap_dw0_5, i32 %ifmap_dw0_6, i32 %ifmap_dw0_7, i32 %ifmap_dw0_8, i32 %ifmap_dw0_9, i32 %ifmap_dw0_10, i32 %ifmap_dw0_11, i32 %ifmap_dw0_12, i32 %ifmap_dw0_13, i32 %ifmap_dw0_14, i32 %ifmap_dw0_15, i32 %ifmap_dw0_16, i32 %ifmap_dw0_17, i32 %ifmap_dw0_18, i32 %ifmap_dw0_19, i32 %ifmap_dw0_20, i32 %ifmap_dw0_21, i32 %ifmap_dw0_22, i32 %ifmap_dw0_23, i32 %ifmap_dw0_24, i32 %ifmap_dw0_25, i32 %ifmap_dw0_26, i32 %ifmap_dw0_27, i32 %ifmap_dw0_28, i32 %ifmap_dw0_29, i32 %ifmap_dw0_30, i32 %ifmap_dw0_31, i32 %ifmap_dw0_32, i32 %ifmap_dw0_33, i32 %ifmap_dw0_34, i32 %ifmap_dw0_35, i32 %ifmap_dw0_36, i32 %ifmap_dw0_37, i32 %ifmap_dw0_38, i32 %ifmap_dw0_39, i32 %ifmap_dw0_40, i32 %ifmap_dw0_41, i32 %ifmap_dw0_42, i32 %ifmap_dw0_43, i32 %ifmap_dw0_44, i32 %ifmap_dw0_45, i32 %ifmap_dw0_46, i32 %ifmap_dw0_47, i32 %ifmap_dw0_48, i32 %ifmap_dw0_49, i32 %ifmap_dw0_50, i32 %ifmap_dw0_51, i32 %ifmap_dw0_52, i32 %ifmap_dw0_53, i32 %ifmap_dw0_54, i32 %ifmap_dw0_55, i32 %ifmap_dw0_56, i32 %ifmap_dw0_57, i32 %ifmap_dw0_58, i32 %ifmap_dw0_59, i32 %ifmap_dw0_60, i32 %ifmap_dw0_61, i32 %ifmap_dw0_62, i32 %ifmap_dw0_63, i32 %ifmap_dw0_64, i32 %ifmap_dw0_65, i32 %ifmap_dw0_66, i32 %ifmap_dw0_67, i32 %ifmap_dw0_68, i32 %ifmap_dw0_69, i32 %ifmap_dw0_70, i32 %ifmap_dw0_71, i32 %ifmap_dw0_72, i32 %ifmap_dw0_73, i32 %ifmap_dw0_74, i32 %ifmap_dw0_75, i32 %ifmap_dw0_76, i32 %ifmap_dw0_77, i32 %ifmap_dw0_78, i32 %ifmap_dw0_79, i32 %ifmap_dw0_80, i32 %ifmap_dw0_81, i32 %ifmap_dw0_82, i32 %ifmap_dw0_83, i32 %ifmap_dw0_84, i32 %ifmap_dw0_85, i32 %ifmap_dw0_86, i32 %ifmap_dw0_87, i32 %ifmap_dw0_88, i32 %ifmap_dw0_89, i32 %ifmap_dw0_90, i32 %ifmap_dw0_91, i32 %ifmap_dw0_92, i32 %ifmap_dw0_93, i32 %ifmap_dw0_94, i32 %ifmap_dw0_95, i32 %ofmap_dw0, i32 %p_ZL26features_0_deepwise_weight_1_1, i32 %p_ZL26features_0_deepwise_weight_1_2, i32 %p_ZL26features_0_deepwise_weight_2_1, i32 %p_ZL26features_0_deepwise_weight_0_0, i32 %p_ZL26features_0_deepwise_weight_0_1, i32 %p_ZL26features_0_deepwise_weight_0_2, i32 %p_ZL26features_0_deepwise_weight_1_0, i32 %p_ZL26features_0_deepwise_weight_2_0, i32 %p_ZL26features_0_deepwise_weight_2_2" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 391 'call' 'call_ln51' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 18 <SV = 17> <Delay = 0.00>
+ST_18 : Operation 392 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W, i32 %ofmap_dw0, i32 %ifmap_pw0, i32 %ifmap_pw0_1"   --->   Operation 392 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 393 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W, i32 %ofmap_dw0, i32 %ifmap_pw0, i32 %ifmap_pw0_1"   --->   Operation 393 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 394 [2/2] (0.00ns)   --->   "%call_ln54 = call void @pw0, i32 %ifmap_pw0, i32 %ifmap_pw0_1, i32 %ofmap_pw0, i32 %ofmap_pw0_1, i32 %ofmap_pw0_2, i32 %ofmap_pw0_3, i32 %ofmap_pw0_4, i32 %ofmap_pw0_5, i32 %ofmap_pw0_6, i32 %ofmap_pw0_7, i32 %ofmap_pw0_8, i32 %ofmap_pw0_9, i32 %ofmap_pw0_10, i32 %ofmap_pw0_11, i32 %ofmap_pw0_12, i32 %ofmap_pw0_13, i32 %ofmap_pw0_14, i32 %ofmap_pw0_15, i32 %p_ZL27features_0_pointwise_weight_0, i32 %p_ZL27features_0_pointwise_weight_1" [../FP32-Model/mobilenet_v1.cpp:54]   --->   Operation 394 'call' 'call_ln54' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 21 <SV = 20> <Delay = 0.00>
+ST_21 : Operation 395 [1/2] (0.00ns)   --->   "%call_ln54 = call void @pw0, i32 %ifmap_pw0, i32 %ifmap_pw0_1, i32 %ofmap_pw0, i32 %ofmap_pw0_1, i32 %ofmap_pw0_2, i32 %ofmap_pw0_3, i32 %ofmap_pw0_4, i32 %ofmap_pw0_5, i32 %ofmap_pw0_6, i32 %ofmap_pw0_7, i32 %ofmap_pw0_8, i32 %ofmap_pw0_9, i32 %ofmap_pw0_10, i32 %ofmap_pw0_11, i32 %ofmap_pw0_12, i32 %ofmap_pw0_13, i32 %ofmap_pw0_14, i32 %ofmap_pw0_15, i32 %p_ZL27features_0_pointwise_weight_0, i32 %p_ZL27features_0_pointwise_weight_1" [../FP32-Model/mobilenet_v1.cpp:54]   --->   Operation 395 'call' 'call_ln54' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 22 <SV = 21> <Delay = 0.00>
+ST_22 : Operation 396 [2/2] (0.00ns)   --->   "%call_ln55 = call void @batchnorm_pw0, i32 %ofmap_pw0, i32 %ofmap_pw0_1, i32 %ofmap_pw0_2, i32 %ofmap_pw0_3, i32 %ofmap_pw0_4, i32 %ofmap_pw0_5, i32 %ofmap_pw0_6, i32 %ofmap_pw0_7, i32 %ofmap_pw0_8, i32 %ofmap_pw0_9, i32 %ofmap_pw0_10, i32 %ofmap_pw0_11, i32 %ofmap_pw0_12, i32 %ofmap_pw0_13, i32 %ofmap_pw0_14, i32 %ofmap_pw0_15, i32 %ifmap_dw1, i32 %ifmap_dw1_1, i32 %ifmap_dw1_2, i32 %ifmap_dw1_3, i32 %ifmap_dw1_4, i32 %ifmap_dw1_5, i32 %ifmap_dw1_6, i32 %ifmap_dw1_7, i32 %ifmap_dw1_8, i32 %ifmap_dw1_9, i32 %ifmap_dw1_10, i32 %ifmap_dw1_11, i32 %ifmap_dw1_12, i32 %ifmap_dw1_13, i32 %ifmap_dw1_14, i32 %ifmap_dw1_15, i32 %ifmap_dw1_16, i32 %ifmap_dw1_17, i32 %ifmap_dw1_18, i32 %ifmap_dw1_19, i32 %ifmap_dw1_20, i32 %ifmap_dw1_21, i32 %ifmap_dw1_22, i32 %ifmap_dw1_23, i32 %ifmap_dw1_24, i32 %ifmap_dw1_25, i32 %ifmap_dw1_26, i32 %ifmap_dw1_27, i32 %ifmap_dw1_28, i32 %ifmap_dw1_29, i32 %ifmap_dw1_30, i32 %ifmap_dw1_31, i32 %ifmap_dw1_32, i32 %ifmap_dw1_33, i32 %ifmap_dw1_34, i32 %ifmap_dw1_35, i32 %ifmap_dw1_36, i32 %ifmap_dw1_37, i32 %ifmap_dw1_38, i32 %ifmap_dw1_39, i32 %ifmap_dw1_40, i32 %ifmap_dw1_41, i32 %ifmap_dw1_42, i32 %ifmap_dw1_43, i32 %ifmap_dw1_44, i32 %ifmap_dw1_45, i32 %ifmap_dw1_46, i32 %ifmap_dw1_47" [../FP32-Model/mobilenet_v1.cpp:55]   --->   Operation 396 'call' 'call_ln55' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 23 <SV = 22> <Delay = 0.00>
+ST_23 : Operation 397 [1/2] (0.00ns)   --->   "%call_ln55 = call void @batchnorm_pw0, i32 %ofmap_pw0, i32 %ofmap_pw0_1, i32 %ofmap_pw0_2, i32 %ofmap_pw0_3, i32 %ofmap_pw0_4, i32 %ofmap_pw0_5, i32 %ofmap_pw0_6, i32 %ofmap_pw0_7, i32 %ofmap_pw0_8, i32 %ofmap_pw0_9, i32 %ofmap_pw0_10, i32 %ofmap_pw0_11, i32 %ofmap_pw0_12, i32 %ofmap_pw0_13, i32 %ofmap_pw0_14, i32 %ofmap_pw0_15, i32 %ifmap_dw1, i32 %ifmap_dw1_1, i32 %ifmap_dw1_2, i32 %ifmap_dw1_3, i32 %ifmap_dw1_4, i32 %ifmap_dw1_5, i32 %ifmap_dw1_6, i32 %ifmap_dw1_7, i32 %ifmap_dw1_8, i32 %ifmap_dw1_9, i32 %ifmap_dw1_10, i32 %ifmap_dw1_11, i32 %ifmap_dw1_12, i32 %ifmap_dw1_13, i32 %ifmap_dw1_14, i32 %ifmap_dw1_15, i32 %ifmap_dw1_16, i32 %ifmap_dw1_17, i32 %ifmap_dw1_18, i32 %ifmap_dw1_19, i32 %ifmap_dw1_20, i32 %ifmap_dw1_21, i32 %ifmap_dw1_22, i32 %ifmap_dw1_23, i32 %ifmap_dw1_24, i32 %ifmap_dw1_25, i32 %ifmap_dw1_26, i32 %ifmap_dw1_27, i32 %ifmap_dw1_28, i32 %ifmap_dw1_29, i32 %ifmap_dw1_30, i32 %ifmap_dw1_31, i32 %ifmap_dw1_32, i32 %ifmap_dw1_33, i32 %ifmap_dw1_34, i32 %ifmap_dw1_35, i32 %ifmap_dw1_36, i32 %ifmap_dw1_37, i32 %ifmap_dw1_38, i32 %ifmap_dw1_39, i32 %ifmap_dw1_40, i32 %ifmap_dw1_41, i32 %ifmap_dw1_42, i32 %ifmap_dw1_43, i32 %ifmap_dw1_44, i32 %ifmap_dw1_45, i32 %ifmap_dw1_46, i32 %ifmap_dw1_47" [../FP32-Model/mobilenet_v1.cpp:55]   --->   Operation 397 'call' 'call_ln55' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 24 <SV = 23> <Delay = 0.00>
+ST_24 : Operation 398 [2/2] (0.00ns)   --->   "%call_ln57 = call void @dw1, i32 %ifmap_dw1, i32 %ifmap_dw1_1, i32 %ifmap_dw1_2, i32 %ifmap_dw1_3, i32 %ifmap_dw1_4, i32 %ifmap_dw1_5, i32 %ifmap_dw1_6, i32 %ifmap_dw1_7, i32 %ifmap_dw1_8, i32 %ifmap_dw1_9, i32 %ifmap_dw1_10, i32 %ifmap_dw1_11, i32 %ifmap_dw1_12, i32 %ifmap_dw1_13, i32 %ifmap_dw1_14, i32 %ifmap_dw1_15, i32 %ifmap_dw1_16, i32 %ifmap_dw1_17, i32 %ifmap_dw1_18, i32 %ifmap_dw1_19, i32 %ifmap_dw1_20, i32 %ifmap_dw1_21, i32 %ifmap_dw1_22, i32 %ifmap_dw1_23, i32 %ifmap_dw1_24, i32 %ifmap_dw1_25, i32 %ifmap_dw1_26, i32 %ifmap_dw1_27, i32 %ifmap_dw1_28, i32 %ifmap_dw1_29, i32 %ifmap_dw1_30, i32 %ifmap_dw1_31, i32 %ifmap_dw1_32, i32 %ifmap_dw1_33, i32 %ifmap_dw1_34, i32 %ifmap_dw1_35, i32 %ifmap_dw1_36, i32 %ifmap_dw1_37, i32 %ifmap_dw1_38, i32 %ifmap_dw1_39, i32 %ifmap_dw1_40, i32 %ifmap_dw1_41, i32 %ifmap_dw1_42, i32 %ifmap_dw1_43, i32 %ifmap_dw1_44, i32 %ifmap_dw1_45, i32 %ifmap_dw1_46, i32 %ifmap_dw1_47, i32 %ofmap_dw1, i32 %ofmap_dw1_1, i32 %ofmap_dw1_2, i32 %ofmap_dw1_3, i32 %ofmap_dw1_4, i32 %ofmap_dw1_5, i32 %ofmap_dw1_6, i32 %ofmap_dw1_7, i32 %p_ZL26features_1_deepwise_weight_1_1, i32 %p_ZL26features_1_deepwise_weight_1_2, i32 %p_ZL26features_1_deepwise_weight_2_1, i32 %p_ZL26features_1_deepwise_weight_0_0, i32 %p_ZL26features_1_deepwise_weight_0_1, i32 %p_ZL26features_1_deepwise_weight_0_2, i32 %p_ZL26features_1_deepwise_weight_1_0, i32 %p_ZL26features_1_deepwise_weight_2_0, i32 %p_ZL26features_1_deepwise_weight_2_2" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 398 'call' 'call_ln57' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 25 <SV = 24> <Delay = 0.00>
+ST_25 : Operation 399 [1/2] (0.00ns)   --->   "%call_ln57 = call void @dw1, i32 %ifmap_dw1, i32 %ifmap_dw1_1, i32 %ifmap_dw1_2, i32 %ifmap_dw1_3, i32 %ifmap_dw1_4, i32 %ifmap_dw1_5, i32 %ifmap_dw1_6, i32 %ifmap_dw1_7, i32 %ifmap_dw1_8, i32 %ifmap_dw1_9, i32 %ifmap_dw1_10, i32 %ifmap_dw1_11, i32 %ifmap_dw1_12, i32 %ifmap_dw1_13, i32 %ifmap_dw1_14, i32 %ifmap_dw1_15, i32 %ifmap_dw1_16, i32 %ifmap_dw1_17, i32 %ifmap_dw1_18, i32 %ifmap_dw1_19, i32 %ifmap_dw1_20, i32 %ifmap_dw1_21, i32 %ifmap_dw1_22, i32 %ifmap_dw1_23, i32 %ifmap_dw1_24, i32 %ifmap_dw1_25, i32 %ifmap_dw1_26, i32 %ifmap_dw1_27, i32 %ifmap_dw1_28, i32 %ifmap_dw1_29, i32 %ifmap_dw1_30, i32 %ifmap_dw1_31, i32 %ifmap_dw1_32, i32 %ifmap_dw1_33, i32 %ifmap_dw1_34, i32 %ifmap_dw1_35, i32 %ifmap_dw1_36, i32 %ifmap_dw1_37, i32 %ifmap_dw1_38, i32 %ifmap_dw1_39, i32 %ifmap_dw1_40, i32 %ifmap_dw1_41, i32 %ifmap_dw1_42, i32 %ifmap_dw1_43, i32 %ifmap_dw1_44, i32 %ifmap_dw1_45, i32 %ifmap_dw1_46, i32 %ifmap_dw1_47, i32 %ofmap_dw1, i32 %ofmap_dw1_1, i32 %ofmap_dw1_2, i32 %ofmap_dw1_3, i32 %ofmap_dw1_4, i32 %ofmap_dw1_5, i32 %ofmap_dw1_6, i32 %ofmap_dw1_7, i32 %p_ZL26features_1_deepwise_weight_1_1, i32 %p_ZL26features_1_deepwise_weight_1_2, i32 %p_ZL26features_1_deepwise_weight_2_1, i32 %p_ZL26features_1_deepwise_weight_0_0, i32 %p_ZL26features_1_deepwise_weight_0_1, i32 %p_ZL26features_1_deepwise_weight_0_2, i32 %p_ZL26features_1_deepwise_weight_1_0, i32 %p_ZL26features_1_deepwise_weight_2_0, i32 %p_ZL26features_1_deepwise_weight_2_2" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 399 'call' 'call_ln57' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 26 <SV = 25> <Delay = 0.00>
+ST_26 : Operation 400 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H, i32 %ofmap_dw1, i32 %ofmap_dw1_1, i32 %ofmap_dw1_2, i32 %ofmap_dw1_3, i32 %ofmap_dw1_4, i32 %ofmap_dw1_5, i32 %ofmap_dw1_6, i32 %ofmap_dw1_7, i32 %ifmap_pw1, i32 %ifmap_pw1_1, i32 %ifmap_pw1_2, i32 %ifmap_pw1_3, i32 %ifmap_pw1_4, i32 %ifmap_pw1_5, i32 %ifmap_pw1_6, i32 %ifmap_pw1_7, i32 %ifmap_pw1_8, i32 %ifmap_pw1_9, i32 %ifmap_pw1_10, i32 %ifmap_pw1_11, i32 %ifmap_pw1_12, i32 %ifmap_pw1_13, i32 %ifmap_pw1_14, i32 %ifmap_pw1_15"   --->   Operation 400 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 27 <SV = 26> <Delay = 0.00>
+ST_27 : Operation 401 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H, i32 %ofmap_dw1, i32 %ofmap_dw1_1, i32 %ofmap_dw1_2, i32 %ofmap_dw1_3, i32 %ofmap_dw1_4, i32 %ofmap_dw1_5, i32 %ofmap_dw1_6, i32 %ofmap_dw1_7, i32 %ifmap_pw1, i32 %ifmap_pw1_1, i32 %ifmap_pw1_2, i32 %ifmap_pw1_3, i32 %ifmap_pw1_4, i32 %ifmap_pw1_5, i32 %ifmap_pw1_6, i32 %ifmap_pw1_7, i32 %ifmap_pw1_8, i32 %ifmap_pw1_9, i32 %ifmap_pw1_10, i32 %ifmap_pw1_11, i32 %ifmap_pw1_12, i32 %ifmap_pw1_13, i32 %ifmap_pw1_14, i32 %ifmap_pw1_15"   --->   Operation 401 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 28 <SV = 27> <Delay = 0.00>
+ST_28 : Operation 402 [2/2] (0.00ns)   --->   "%call_ln60 = call void @pw1, i32 %ifmap_pw1, i32 %ifmap_pw1_1, i32 %ifmap_pw1_2, i32 %ifmap_pw1_3, i32 %ifmap_pw1_4, i32 %ifmap_pw1_5, i32 %ifmap_pw1_6, i32 %ifmap_pw1_7, i32 %ifmap_pw1_8, i32 %ifmap_pw1_9, i32 %ifmap_pw1_10, i32 %ifmap_pw1_11, i32 %ifmap_pw1_12, i32 %ifmap_pw1_13, i32 %ifmap_pw1_14, i32 %ifmap_pw1_15, i32 %ofmap_pw1, i32 %ofmap_pw1_1, i32 %ofmap_pw1_2, i32 %ofmap_pw1_3, i32 %ofmap_pw1_4, i32 %ofmap_pw1_5, i32 %ofmap_pw1_6, i32 %ofmap_pw1_7, i32 %p_ZL27features_1_pointwise_weight_0, i32 %p_ZL27features_1_pointwise_weight_1" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 402 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 29 <SV = 28> <Delay = 0.00>
+ST_29 : Operation 403 [1/2] (0.00ns)   --->   "%call_ln60 = call void @pw1, i32 %ifmap_pw1, i32 %ifmap_pw1_1, i32 %ifmap_pw1_2, i32 %ifmap_pw1_3, i32 %ifmap_pw1_4, i32 %ifmap_pw1_5, i32 %ifmap_pw1_6, i32 %ifmap_pw1_7, i32 %ifmap_pw1_8, i32 %ifmap_pw1_9, i32 %ifmap_pw1_10, i32 %ifmap_pw1_11, i32 %ifmap_pw1_12, i32 %ifmap_pw1_13, i32 %ifmap_pw1_14, i32 %ifmap_pw1_15, i32 %ofmap_pw1, i32 %ofmap_pw1_1, i32 %ofmap_pw1_2, i32 %ofmap_pw1_3, i32 %ofmap_pw1_4, i32 %ofmap_pw1_5, i32 %ofmap_pw1_6, i32 %ofmap_pw1_7, i32 %p_ZL27features_1_pointwise_weight_0, i32 %p_ZL27features_1_pointwise_weight_1" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 403 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 30 <SV = 29> <Delay = 0.00>
+ST_30 : Operation 404 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, i32 %ofmap_pw1, i32 %ofmap_pw1_1, i32 %ofmap_pw1_2, i32 %ofmap_pw1_3, i32 %ofmap_pw1_4, i32 %ofmap_pw1_5, i32 %ofmap_pw1_6, i32 %ofmap_pw1_7, i32 %ifmap_dw2, i32 %ifmap_dw2_1, i32 %ifmap_dw2_2, i32 %ifmap_dw2_3, i32 %ifmap_dw2_4, i32 %ifmap_dw2_5, i32 %ifmap_dw2_6, i32 %ifmap_dw2_7, i32 %ifmap_dw2_8, i32 %ifmap_dw2_9, i32 %ifmap_dw2_10, i32 %ifmap_dw2_11, i32 %ifmap_dw2_12, i32 %ifmap_dw2_13, i32 %ifmap_dw2_14, i32 %ifmap_dw2_15, i32 %ifmap_dw2_16, i32 %ifmap_dw2_17, i32 %ifmap_dw2_18, i32 %ifmap_dw2_19, i32 %ifmap_dw2_20, i32 %ifmap_dw2_21, i32 %ifmap_dw2_22, i32 %ifmap_dw2_23"   --->   Operation 404 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 31 <SV = 30> <Delay = 0.00>
+ST_31 : Operation 405 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H, i32 %ofmap_pw1, i32 %ofmap_pw1_1, i32 %ofmap_pw1_2, i32 %ofmap_pw1_3, i32 %ofmap_pw1_4, i32 %ofmap_pw1_5, i32 %ofmap_pw1_6, i32 %ofmap_pw1_7, i32 %ifmap_dw2, i32 %ifmap_dw2_1, i32 %ifmap_dw2_2, i32 %ifmap_dw2_3, i32 %ifmap_dw2_4, i32 %ifmap_dw2_5, i32 %ifmap_dw2_6, i32 %ifmap_dw2_7, i32 %ifmap_dw2_8, i32 %ifmap_dw2_9, i32 %ifmap_dw2_10, i32 %ifmap_dw2_11, i32 %ifmap_dw2_12, i32 %ifmap_dw2_13, i32 %ifmap_dw2_14, i32 %ifmap_dw2_15, i32 %ifmap_dw2_16, i32 %ifmap_dw2_17, i32 %ifmap_dw2_18, i32 %ifmap_dw2_19, i32 %ifmap_dw2_20, i32 %ifmap_dw2_21, i32 %ifmap_dw2_22, i32 %ifmap_dw2_23"   --->   Operation 405 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 32 <SV = 31> <Delay = 0.00>
+ST_32 : Operation 406 [2/2] (0.00ns)   --->   "%call_ln63 = call void @dw2, i32 %ifmap_dw2, i32 %ifmap_dw2_1, i32 %ifmap_dw2_2, i32 %ifmap_dw2_3, i32 %ifmap_dw2_4, i32 %ifmap_dw2_5, i32 %ifmap_dw2_6, i32 %ifmap_dw2_7, i32 %ifmap_dw2_8, i32 %ifmap_dw2_9, i32 %ifmap_dw2_10, i32 %ifmap_dw2_11, i32 %ifmap_dw2_12, i32 %ifmap_dw2_13, i32 %ifmap_dw2_14, i32 %ifmap_dw2_15, i32 %ifmap_dw2_16, i32 %ifmap_dw2_17, i32 %ifmap_dw2_18, i32 %ifmap_dw2_19, i32 %ifmap_dw2_20, i32 %ifmap_dw2_21, i32 %ifmap_dw2_22, i32 %ifmap_dw2_23, i32 %ofmap_dw2, i32 %ofmap_dw2_1, i32 %ofmap_dw2_2, i32 %ofmap_dw2_3, i32 %p_ZL26features_2_deepwise_weight_1_1, i32 %p_ZL26features_2_deepwise_weight_1_2, i32 %p_ZL26features_2_deepwise_weight_2_1, i32 %p_ZL26features_2_deepwise_weight_0_0, i32 %p_ZL26features_2_deepwise_weight_0_1, i32 %p_ZL26features_2_deepwise_weight_0_2, i32 %p_ZL26features_2_deepwise_weight_1_0, i32 %p_ZL26features_2_deepwise_weight_2_0, i32 %p_ZL26features_2_deepwise_weight_2_2" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 406 'call' 'call_ln63' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 33 <SV = 32> <Delay = 0.00>
+ST_33 : Operation 407 [1/2] (0.00ns)   --->   "%call_ln63 = call void @dw2, i32 %ifmap_dw2, i32 %ifmap_dw2_1, i32 %ifmap_dw2_2, i32 %ifmap_dw2_3, i32 %ifmap_dw2_4, i32 %ifmap_dw2_5, i32 %ifmap_dw2_6, i32 %ifmap_dw2_7, i32 %ifmap_dw2_8, i32 %ifmap_dw2_9, i32 %ifmap_dw2_10, i32 %ifmap_dw2_11, i32 %ifmap_dw2_12, i32 %ifmap_dw2_13, i32 %ifmap_dw2_14, i32 %ifmap_dw2_15, i32 %ifmap_dw2_16, i32 %ifmap_dw2_17, i32 %ifmap_dw2_18, i32 %ifmap_dw2_19, i32 %ifmap_dw2_20, i32 %ifmap_dw2_21, i32 %ifmap_dw2_22, i32 %ifmap_dw2_23, i32 %ofmap_dw2, i32 %ofmap_dw2_1, i32 %ofmap_dw2_2, i32 %ofmap_dw2_3, i32 %p_ZL26features_2_deepwise_weight_1_1, i32 %p_ZL26features_2_deepwise_weight_1_2, i32 %p_ZL26features_2_deepwise_weight_2_1, i32 %p_ZL26features_2_deepwise_weight_0_0, i32 %p_ZL26features_2_deepwise_weight_0_1, i32 %p_ZL26features_2_deepwise_weight_0_2, i32 %p_ZL26features_2_deepwise_weight_1_0, i32 %p_ZL26features_2_deepwise_weight_2_0, i32 %p_ZL26features_2_deepwise_weight_2_2" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 407 'call' 'call_ln63' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 34 <SV = 33> <Delay = 0.00>
+ST_34 : Operation 408 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H, i32 %ofmap_dw2, i32 %ofmap_dw2_1, i32 %ofmap_dw2_2, i32 %ofmap_dw2_3, i32 %ifmap_pw2, i32 %ifmap_pw2_1, i32 %ifmap_pw2_2, i32 %ifmap_pw2_3, i32 %ifmap_pw2_4, i32 %ifmap_pw2_5, i32 %ifmap_pw2_6, i32 %ifmap_pw2_7"   --->   Operation 408 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 35 <SV = 34> <Delay = 0.00>
+ST_35 : Operation 409 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H, i32 %ofmap_dw2, i32 %ofmap_dw2_1, i32 %ofmap_dw2_2, i32 %ofmap_dw2_3, i32 %ifmap_pw2, i32 %ifmap_pw2_1, i32 %ifmap_pw2_2, i32 %ifmap_pw2_3, i32 %ifmap_pw2_4, i32 %ifmap_pw2_5, i32 %ifmap_pw2_6, i32 %ifmap_pw2_7"   --->   Operation 409 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 36 <SV = 35> <Delay = 0.00>
+ST_36 : Operation 410 [2/2] (0.00ns)   --->   "%call_ln66 = call void @pw2, i32 %ifmap_pw2, i32 %ifmap_pw2_1, i32 %ifmap_pw2_2, i32 %ifmap_pw2_3, i32 %ifmap_pw2_4, i32 %ifmap_pw2_5, i32 %ifmap_pw2_6, i32 %ifmap_pw2_7, i32 %ofmap_pw2, i32 %ofmap_pw2_1, i32 %ofmap_pw2_2, i32 %ofmap_pw2_3, i32 %p_ZL27features_2_pointwise_weight_0, i32 %p_ZL27features_2_pointwise_weight_1" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 410 'call' 'call_ln66' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 37 <SV = 36> <Delay = 0.00>
+ST_37 : Operation 411 [1/2] (0.00ns)   --->   "%call_ln66 = call void @pw2, i32 %ifmap_pw2, i32 %ifmap_pw2_1, i32 %ifmap_pw2_2, i32 %ifmap_pw2_3, i32 %ifmap_pw2_4, i32 %ifmap_pw2_5, i32 %ifmap_pw2_6, i32 %ifmap_pw2_7, i32 %ofmap_pw2, i32 %ofmap_pw2_1, i32 %ofmap_pw2_2, i32 %ofmap_pw2_3, i32 %p_ZL27features_2_pointwise_weight_0, i32 %p_ZL27features_2_pointwise_weight_1" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 411 'call' 'call_ln66' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 38 <SV = 37> <Delay = 0.00>
+ST_38 : Operation 412 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H, i32 %ifmap_dw3, i32 %ifmap_dw3_4, i32 %ifmap_dw3_8, i32 %ifmap_dw3_12, i32 %ifmap_dw3_1, i32 %ifmap_dw3_5, i32 %ifmap_dw3_9, i32 %ifmap_dw3_13, i32 %ifmap_dw3_2, i32 %ifmap_dw3_6, i32 %ifmap_dw3_10, i32 %ifmap_dw3_14, i32 %ifmap_dw3_3, i32 %ifmap_dw3_7, i32 %ifmap_dw3_11, i32 %ifmap_dw3_15, i32 %ofmap_pw2, i32 %ofmap_pw2_1, i32 %ofmap_pw2_2, i32 %ofmap_pw2_3"   --->   Operation 412 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 39 <SV = 38> <Delay = 0.00>
+ST_39 : Operation 413 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H, i32 %ifmap_dw3, i32 %ifmap_dw3_4, i32 %ifmap_dw3_8, i32 %ifmap_dw3_12, i32 %ifmap_dw3_1, i32 %ifmap_dw3_5, i32 %ifmap_dw3_9, i32 %ifmap_dw3_13, i32 %ifmap_dw3_2, i32 %ifmap_dw3_6, i32 %ifmap_dw3_10, i32 %ifmap_dw3_14, i32 %ifmap_dw3_3, i32 %ifmap_dw3_7, i32 %ifmap_dw3_11, i32 %ifmap_dw3_15, i32 %ofmap_pw2, i32 %ofmap_pw2_1, i32 %ofmap_pw2_2, i32 %ofmap_pw2_3"   --->   Operation 413 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 40 <SV = 39> <Delay = 0.00>
+ST_40 : Operation 414 [2/2] (0.00ns)   --->   "%call_ln69 = call void @dw3, i32 %ifmap_dw3, i32 %ifmap_dw3_1, i32 %ifmap_dw3_2, i32 %ifmap_dw3_3, i32 %ifmap_dw3_4, i32 %ifmap_dw3_5, i32 %ifmap_dw3_6, i32 %ifmap_dw3_7, i32 %ifmap_dw3_8, i32 %ifmap_dw3_9, i32 %ifmap_dw3_10, i32 %ifmap_dw3_11, i32 %ifmap_dw3_12, i32 %ifmap_dw3_13, i32 %ifmap_dw3_14, i32 %ifmap_dw3_15, i32 %ofmap_dw3, i32 %p_ZL26features_3_deepwise_weight_1_1, i32 %p_ZL26features_3_deepwise_weight_1_2, i32 %p_ZL26features_3_deepwise_weight_2_1, i32 %p_ZL26features_3_deepwise_weight_0_0, i32 %p_ZL26features_3_deepwise_weight_0_1, i32 %p_ZL26features_3_deepwise_weight_0_2, i32 %p_ZL26features_3_deepwise_weight_1_0, i32 %p_ZL26features_3_deepwise_weight_2_0, i32 %p_ZL26features_3_deepwise_weight_2_2" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 414 'call' 'call_ln69' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 41 <SV = 40> <Delay = 0.00>
+ST_41 : Operation 415 [1/2] (0.00ns)   --->   "%call_ln69 = call void @dw3, i32 %ifmap_dw3, i32 %ifmap_dw3_1, i32 %ifmap_dw3_2, i32 %ifmap_dw3_3, i32 %ifmap_dw3_4, i32 %ifmap_dw3_5, i32 %ifmap_dw3_6, i32 %ifmap_dw3_7, i32 %ifmap_dw3_8, i32 %ifmap_dw3_9, i32 %ifmap_dw3_10, i32 %ifmap_dw3_11, i32 %ifmap_dw3_12, i32 %ifmap_dw3_13, i32 %ifmap_dw3_14, i32 %ifmap_dw3_15, i32 %ofmap_dw3, i32 %p_ZL26features_3_deepwise_weight_1_1, i32 %p_ZL26features_3_deepwise_weight_1_2, i32 %p_ZL26features_3_deepwise_weight_2_1, i32 %p_ZL26features_3_deepwise_weight_0_0, i32 %p_ZL26features_3_deepwise_weight_0_1, i32 %p_ZL26features_3_deepwise_weight_0_2, i32 %p_ZL26features_3_deepwise_weight_1_0, i32 %p_ZL26features_3_deepwise_weight_2_0, i32 %p_ZL26features_3_deepwise_weight_2_2" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 415 'call' 'call_ln69' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 42 <SV = 41> <Delay = 0.00>
+ST_42 : Operation 416 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H, i32 %ofmap_dw3, i32 %ifmap_pw3, i32 %ifmap_pw3_1, i32 %ifmap_pw3_2, i32 %ifmap_pw3_3"   --->   Operation 416 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 43 <SV = 42> <Delay = 0.00>
+ST_43 : Operation 417 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H, i32 %ofmap_dw3, i32 %ifmap_pw3, i32 %ifmap_pw3_1, i32 %ifmap_pw3_2, i32 %ifmap_pw3_3"   --->   Operation 417 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 44 <SV = 43> <Delay = 0.00>
+ST_44 : Operation 418 [2/2] (0.00ns)   --->   "%call_ln72 = call void @pw3, i32 %ifmap_pw3, i32 %ifmap_pw3_1, i32 %ifmap_pw3_2, i32 %ifmap_pw3_3, i32 %ofmap_pw3, i32 %p_ZL27features_3_pointwise_weight_0, i32 %p_ZL27features_3_pointwise_weight_1" [../FP32-Model/mobilenet_v1.cpp:72]   --->   Operation 418 'call' 'call_ln72' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 45 <SV = 44> <Delay = 0.00>
+ST_45 : Operation 419 [1/2] (0.00ns)   --->   "%call_ln72 = call void @pw3, i32 %ifmap_pw3, i32 %ifmap_pw3_1, i32 %ifmap_pw3_2, i32 %ifmap_pw3_3, i32 %ofmap_pw3, i32 %p_ZL27features_3_pointwise_weight_0, i32 %p_ZL27features_3_pointwise_weight_1" [../FP32-Model/mobilenet_v1.cpp:72]   --->   Operation 419 'call' 'call_ln72' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 46 <SV = 45> <Delay = 0.00>
+ST_46 : Operation 420 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H, i32 %ofmap_pw3, i32 %ifmap_gap, i32 %ifmap_gap_2"   --->   Operation 420 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 47 <SV = 46> <Delay = 0.00>
+ST_47 : Operation 421 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H, i32 %ofmap_pw3, i32 %ifmap_gap, i32 %ifmap_gap_2"   --->   Operation 421 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 48 <SV = 47> <Delay = 0.00>
+ST_48 : Operation 422 [2/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_GAP_C, i32 %ifmap_gap, i32 %ifmap_gap_2, i32 %ofmap_gap"   --->   Operation 422 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 49 <SV = 48> <Delay = 0.00>
+ST_49 : Operation 423 [1/2] (0.00ns)   --->   "%call_ln0 = call void @mobilenet_v1_Pipeline_GAP_C, i32 %ifmap_gap, i32 %ifmap_gap_2, i32 %ofmap_gap"   --->   Operation 423 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 50 <SV = 49> <Delay = 0.00>
+ST_50 : Operation 424 [2/2] (0.00ns)   --->   "%call_ln76 = call void @fc, i32 %ofmap_gap, i32 %out_buf, i32 %fc_bias, i32 %p_ZL9fc_weight_0, i32 %p_ZL9fc_weight_1, i32 %p_ZL9fc_weight_2, i32 %p_ZL9fc_weight_3, i32 %p_ZL9fc_weight_4, i32 %p_ZL9fc_weight_5, i32 %p_ZL9fc_weight_6, i32 %p_ZL9fc_weight_7, i32 %p_ZL9fc_weight_8, i32 %p_ZL9fc_weight_9" [../FP32-Model/mobilenet_v1.cpp:76]   --->   Operation 424 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 51 <SV = 50> <Delay = 7.30>
+ST_51 : Operation 425 [1/2] (0.00ns)   --->   "%call_ln76 = call void @fc, i32 %ofmap_gap, i32 %out_buf, i32 %fc_bias, i32 %p_ZL9fc_weight_0, i32 %p_ZL9fc_weight_1, i32 %p_ZL9fc_weight_2, i32 %p_ZL9fc_weight_3, i32 %p_ZL9fc_weight_4, i32 %p_ZL9fc_weight_5, i32 %p_ZL9fc_weight_6, i32 %p_ZL9fc_weight_7, i32 %p_ZL9fc_weight_8, i32 %p_ZL9fc_weight_9" [../FP32-Model/mobilenet_v1.cpp:76]   --->   Operation 425 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_51 : Operation 426 [1/1] (0.00ns)   --->   "%sext_ln23 = sext i62 %trunc_ln" [../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77]   --->   Operation 426 'sext' 'sext_ln23' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 427 [1/1] (0.00ns)   --->   "%gmem_addr_1 = getelementptr i32 %gmem, i64 %sext_ln23" [../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77]   --->   Operation 427 'getelementptr' 'gmem_addr_1' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 428 [1/1] ( I:7.30ns O:7.30ns )   --->   "%empty_38 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem_addr_1, i64 10" [../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77]   --->   Operation 428 'writereq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 9> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 52 <SV = 51> <Delay = 0.00>
+ST_52 : Operation 429 [2/2] (0.00ns)   --->   "%call_ln23 = call void @mobilenet_v1_Pipeline_VITIS_LOOP_23_1, i32 %gmem, i62 %trunc_ln, i32 %out_buf" [../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77]   --->   Operation 429 'call' 'call_ln23' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 53 <SV = 52> <Delay = 0.00>
+ST_53 : Operation 430 [1/2] (0.00ns)   --->   "%call_ln23 = call void @mobilenet_v1_Pipeline_VITIS_LOOP_23_1, i32 %gmem, i62 %trunc_ln, i32 %out_buf" [../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77]   --->   Operation 430 'call' 'call_ln23' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 54 <SV = 53> <Delay = 0.00>
+ST_54 : Operation 431 [5/5] (7.30ns)   --->   "%empty_39 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_1" [../FP32-Model/mobilenet_v1.cpp:79]   --->   Operation 431 'writeresp' 'empty_39' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 55 <SV = 54> <Delay = 0.00>
+ST_55 : Operation 432 [4/5] (7.30ns)   --->   "%empty_39 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_1" [../FP32-Model/mobilenet_v1.cpp:79]   --->   Operation 432 'writeresp' 'empty_39' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 56 <SV = 55> <Delay = 0.00>
+ST_56 : Operation 433 [3/5] (7.30ns)   --->   "%empty_39 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_1" [../FP32-Model/mobilenet_v1.cpp:79]   --->   Operation 433 'writeresp' 'empty_39' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 57 <SV = 56> <Delay = 0.00>
+ST_57 : Operation 434 [2/5] (7.30ns)   --->   "%empty_39 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_1" [../FP32-Model/mobilenet_v1.cpp:79]   --->   Operation 434 'writeresp' 'empty_39' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 57> <Delay = 7.30>
+ST_58 : Operation 435 [1/1] (0.00ns)   --->   "%spectopmodule_ln4 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_10" [../FP32-Model/mobilenet_v1.cpp:4]   --->   Operation 435 'spectopmodule' 'spectopmodule_ln4' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 436 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_5, i32 0, i32 0, void @empty, i32 0, i32 3072, void @empty_0, void @empty_6, void @empty, i32 16, i32 16, i32 16, i32 16, void @empty, void @empty, i32 4294967295, i32 0, i32 0, i32 4"   --->   Operation 436 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 437 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem"   --->   Operation 437 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 438 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_r, void @empty_14, i32 4294967295, i32 4294967295, void @empty, i32 0, i32 0, void @empty_13, void @empty_7, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty_2, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 438 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 439 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_r, void @empty_11, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty_2, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 439 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 440 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r, void @empty_14, i32 4294967295, i32 4294967295, void @empty, i32 0, i32 0, void @empty_13, void @empty_9, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty_2, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 440 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 441 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r, void @empty_11, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty_2, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 441 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 442 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_14, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty_13, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0"   --->   Operation 442 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 443 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_17, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 443 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 444 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_16, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 444 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 445 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_15, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 445 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 446 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_14, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 446 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 447 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_13, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 447 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 448 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_12, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 448 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 449 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_11, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 449 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 450 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_10, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 450 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 451 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_9, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 451 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 452 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_8, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 452 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 453 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_7, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 453 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 454 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_6, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 454 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 455 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_5, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 455 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 456 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_4, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 456 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 457 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_3, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 457 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 458 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_2, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 458 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 459 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf_1, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 459 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 460 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %in_buf, i64 666, i64 18, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 460 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 461 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_2_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 461 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 462 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_2_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 462 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 463 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_2_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 463 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 464 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_1_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 464 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 465 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_1_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 465 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 466 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_1_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 466 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 467 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_0_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 467 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 468 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_0_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 468 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 469 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_1_0_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 469 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 470 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_2_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 470 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 471 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_2_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 471 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 472 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_2_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 472 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 473 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_1_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 473 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 474 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_1_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 474 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 475 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_1_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 475 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 476 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_0_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 476 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 477 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_0_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 477 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 478 [1/1] (0.00ns)   --->   "%specmemcore_ln48 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL13conv_0_weight_0_0_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:48]   --->   Operation 478 'specmemcore' 'specmemcore_ln48' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 479 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_2_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 479 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 480 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_2_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 480 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 481 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_2_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 481 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 482 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_1_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 482 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 483 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_1_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 483 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 484 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_1_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 484 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 485 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_0_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 485 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 486 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_0_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 486 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 487 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_0_deepwise_weight_0_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:51]   --->   Operation 487 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 488 [1/1] (0.00ns)   --->   "%specmemcore_ln54 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw0_1, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:54]   --->   Operation 488 'specmemcore' 'specmemcore_ln54' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 489 [1/1] (0.00ns)   --->   "%specmemcore_ln54 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw0, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:54]   --->   Operation 489 'specmemcore' 'specmemcore_ln54' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 490 [1/1] (0.00ns)   --->   "%specmemcore_ln54 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL27features_0_pointwise_weight_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:54]   --->   Operation 490 'specmemcore' 'specmemcore_ln54' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 491 [1/1] (0.00ns)   --->   "%specmemcore_ln54 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL27features_0_pointwise_weight_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:54]   --->   Operation 491 'specmemcore' 'specmemcore_ln54' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 492 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_2_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 492 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 493 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_2_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 493 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 494 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_2_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 494 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 495 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_1_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 495 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 496 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_1_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 496 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 497 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_1_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 497 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 498 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_0_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 498 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 499 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_0_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 499 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 500 [1/1] (0.00ns)   --->   "%specmemcore_ln57 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_1_deepwise_weight_0_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:57]   --->   Operation 500 'specmemcore' 'specmemcore_ln57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 501 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_15, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 501 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 502 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_14, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 502 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 503 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_13, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 503 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 504 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_12, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 504 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 505 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_11, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 505 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 506 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_10, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 506 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 507 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_9, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 507 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 508 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_8, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 508 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 509 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_7, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 509 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 510 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_6, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 510 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 511 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_5, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 511 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 512 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_4, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 512 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 513 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_3, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 513 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 514 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_2, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 514 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 515 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1_1, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 515 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 516 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw1, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 516 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 517 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL27features_1_pointwise_weight_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 517 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 518 [1/1] (0.00ns)   --->   "%specmemcore_ln60 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL27features_1_pointwise_weight_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:60]   --->   Operation 518 'specmemcore' 'specmemcore_ln60' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 519 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_2_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 519 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 520 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_2_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 520 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 521 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_2_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 521 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 522 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_1_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 522 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 523 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_1_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 523 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 524 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_1_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 524 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 525 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_0_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 525 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 526 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_0_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 526 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 527 [1/1] (0.00ns)   --->   "%specmemcore_ln63 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_2_deepwise_weight_0_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:63]   --->   Operation 527 'specmemcore' 'specmemcore_ln63' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 528 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw2_7, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 528 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 529 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw2_6, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 529 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 530 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw2_5, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 530 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 531 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw2_4, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 531 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 532 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw2_3, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 532 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 533 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw2_2, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 533 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 534 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw2_1, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 534 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 535 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw2, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 535 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 536 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL27features_2_pointwise_weight_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 536 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 537 [1/1] (0.00ns)   --->   "%specmemcore_ln66 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL27features_2_pointwise_weight_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:66]   --->   Operation 537 'specmemcore' 'specmemcore_ln66' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 538 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_2_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 538 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 539 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_2_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 539 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 540 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_2_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 540 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 541 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_1_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 541 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 542 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_1_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 542 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 543 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_1_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 543 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 544 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_0_2, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 544 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 545 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_0_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 545 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 546 [1/1] (0.00ns)   --->   "%specmemcore_ln69 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL26features_3_deepwise_weight_0_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:69]   --->   Operation 546 'specmemcore' 'specmemcore_ln69' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 547 [1/1] (0.00ns)   --->   "%specmemcore_ln72 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw3_3, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:72]   --->   Operation 547 'specmemcore' 'specmemcore_ln72' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 548 [1/1] (0.00ns)   --->   "%specmemcore_ln72 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw3_2, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:72]   --->   Operation 548 'specmemcore' 'specmemcore_ln72' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 549 [1/1] (0.00ns)   --->   "%specmemcore_ln72 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw3_1, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:72]   --->   Operation 549 'specmemcore' 'specmemcore_ln72' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 550 [1/1] (0.00ns)   --->   "%specmemcore_ln72 = specmemcore void @_ssdm_op_SpecMemCore, i32 %ifmap_pw3, i64 666, i64 22, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:72]   --->   Operation 550 'specmemcore' 'specmemcore_ln72' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 551 [1/1] (0.00ns)   --->   "%specmemcore_ln72 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL27features_3_pointwise_weight_1, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:72]   --->   Operation 551 'specmemcore' 'specmemcore_ln72' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 552 [1/1] (0.00ns)   --->   "%specmemcore_ln72 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_ZL27features_3_pointwise_weight_0, i64 666, i64 36, i64 18446744073709551615, i1 0" [../FP32-Model/mobilenet_v1.cpp:72]   --->   Operation 552 'specmemcore' 'specmemcore_ln72' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 553 [1/5] ( I:7.30ns O:7.30ns )   --->   "%empty_39 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr_1" [../FP32-Model/mobilenet_v1.cpp:79]   --->   Operation 553 'writeresp' 'empty_39' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_58 : Operation 554 [1/1] (0.00ns)   --->   "%ret_ln79 = ret" [../FP32-Model/mobilenet_v1.cpp:79]   --->   Operation 554 'ret' 'ret_ln79' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.000ns
+The critical path consists of the following:
+	s_axi read operation ('output_r_read') on port 'output_r' [85]  (1.000 ns)
+
+ <State 2>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem_addr', ../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46) [400]  (0.000 ns)
+	bus request operation ('empty', ../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46) on port 'gmem' (../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46) [401]  (0.000 ns)
+	blocking operation 7.3 ns on control path)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 0.000ns
+The critical path consists of the following:
+
+ <State 8>: 0.000ns
+The critical path consists of the following:
+
+ <State 9>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', ../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46) on port 'gmem' (../FP32-Model/transfer.cpp:9->../FP32-Model/mobilenet_v1.cpp:46) [401]  (7.300 ns)
+
+ <State 10>: 0.000ns
+The critical path consists of the following:
+
+ <State 11>: 0.000ns
+The critical path consists of the following:
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+ <State 13>: 0.000ns
+The critical path consists of the following:
+
+ <State 14>: 0.000ns
+The critical path consists of the following:
+
+ <State 15>: 0.000ns
+The critical path consists of the following:
+
+ <State 16>: 0.000ns
+The critical path consists of the following:
+
+ <State 17>: 0.000ns
+The critical path consists of the following:
+
+ <State 18>: 0.000ns
+The critical path consists of the following:
+
+ <State 19>: 0.000ns
+The critical path consists of the following:
+
+ <State 20>: 0.000ns
+The critical path consists of the following:
+
+ <State 21>: 0.000ns
+The critical path consists of the following:
+
+ <State 22>: 0.000ns
+The critical path consists of the following:
+
+ <State 23>: 0.000ns
+The critical path consists of the following:
+
+ <State 24>: 0.000ns
+The critical path consists of the following:
+
+ <State 25>: 0.000ns
+The critical path consists of the following:
+
+ <State 26>: 0.000ns
+The critical path consists of the following:
+
+ <State 27>: 0.000ns
+The critical path consists of the following:
+
+ <State 28>: 0.000ns
+The critical path consists of the following:
+
+ <State 29>: 0.000ns
+The critical path consists of the following:
+
+ <State 30>: 0.000ns
+The critical path consists of the following:
+
+ <State 31>: 0.000ns
+The critical path consists of the following:
+
+ <State 32>: 0.000ns
+The critical path consists of the following:
+
+ <State 33>: 0.000ns
+The critical path consists of the following:
+
+ <State 34>: 0.000ns
+The critical path consists of the following:
+
+ <State 35>: 0.000ns
+The critical path consists of the following:
+
+ <State 36>: 0.000ns
+The critical path consists of the following:
+
+ <State 37>: 0.000ns
+The critical path consists of the following:
+
+ <State 38>: 0.000ns
+The critical path consists of the following:
+
+ <State 39>: 0.000ns
+The critical path consists of the following:
+
+ <State 40>: 0.000ns
+The critical path consists of the following:
+
+ <State 41>: 0.000ns
+The critical path consists of the following:
+
+ <State 42>: 0.000ns
+The critical path consists of the following:
+
+ <State 43>: 0.000ns
+The critical path consists of the following:
+
+ <State 44>: 0.000ns
+The critical path consists of the following:
+
+ <State 45>: 0.000ns
+The critical path consists of the following:
+
+ <State 46>: 0.000ns
+The critical path consists of the following:
+
+ <State 47>: 0.000ns
+The critical path consists of the following:
+
+ <State 48>: 0.000ns
+The critical path consists of the following:
+
+ <State 49>: 0.000ns
+The critical path consists of the following:
+
+ <State 50>: 0.000ns
+The critical path consists of the following:
+
+ <State 51>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem_addr_1', ../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77) [535]  (0.000 ns)
+	bus request operation ('empty_38', ../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77) on port 'gmem' (../FP32-Model/transfer.cpp:23->../FP32-Model/mobilenet_v1.cpp:77) [536]  (7.300 ns)
+
+ <State 52>: 0.000ns
+The critical path consists of the following:
+
+ <State 53>: 0.000ns
+The critical path consists of the following:
+
+ <State 54>: 0.000ns
+The critical path consists of the following:
+
+ <State 55>: 0.000ns
+The critical path consists of the following:
+
+ <State 56>: 0.000ns
+The critical path consists of the following:
+
+ <State 57>: 0.000ns
+The critical path consists of the following:
+
+ <State 58>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_39', ../FP32-Model/mobilenet_v1.cpp:79) on port 'gmem' (../FP32-Model/mobilenet_v1.cpp:79) [538]  (7.300 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,770 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Sat Jun 27 11:02:31 +07 2026
+    * Version:         2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:         FP32_HLS
+    * Solution:        hls (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z045-ffg900-2
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       auto
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              44654
+FF:               49933
+DSP:              194
+BRAM:             546
+URAM:             0
+SRL:              5941
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 5.404       |
+| Post-Route     | 8.840       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++--------------------------------------------------------------------+-----+----+-----+------+------+------+--------+------+---------+----------+--------+
+| Name                                                               | LUT | FF | DSP | BRAM | URAM | SRL  | Pragma | Impl | Latency | Variable | Source |
++--------------------------------------------------------------------+-----+----+-----+------+------+------+--------+------+---------+----------+--------+
+| inst                                                               |     |    |     |      |      | 5941 |        |      |         |          |        |
+|   (inst)                                                           |     |    |     |      |      | 1    |        |      |         |          |        |
+|   CTRL_BUS_s_axi_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1307                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1307)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1308                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1308)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1309                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1309)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1310                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1310)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1311                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1311)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1312                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1312)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1313                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1313)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1314                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1314)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1315                             |     |    |     |      |      |      |        |      |         |          |        |
+|     (fadd_32ns_32ns_32_5_full_dsp_1_U1315)                         |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1316                             |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1317                             |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1318                             |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1319                             |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1320                             |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1336                             |     |    |     |      |      |      |        |      |         |          |        |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U1337                             |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1340                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1341                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1342                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1343                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1344                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1345                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1346                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1347                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1348                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1349                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1350                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1351                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1352                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1353                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1354                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U1355                                |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1321                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1321)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1322                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1322)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1323                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1323)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1324                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1324)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1325                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1325)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1326                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1326)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1327                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1327)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1328                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1328)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1329                              |     |    |     |      |      |      |        |      |         |          |        |
+|     (fmul_32ns_32ns_32_4_max_dsp_1_U1329)                          |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1330                              |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1331                              |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1332                              |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1333                              |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1334                              |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1338                              |     |    |     |      |      |      |        |      |         |          |        |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U1339                              |     |    |     |      |      |      |        |      |         |          |        |
+|   gmem_m_axi_U                                                     |     |    |     |      |      | 142  |        |      |         |          |        |
+|   grp_batchnorm_conv0_fu_1658                                      |     |    |     |      |      | 18   |        |      |         |          |        |
+|     (grp_batchnorm_conv0_fu_1658)                                  |     |    |     |      |      | 12   |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U194                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U195                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U196                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U197                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U198                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U199                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U200                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U201                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U202                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U203                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U204                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U205                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U206                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U207                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U208                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U209                            |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U258                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U259                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U260                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U261                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U262                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U263                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U264                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U265                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U266                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U267                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U268                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U269                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U270                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U271                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U272                               |     |    |     |      |      |      |        |      |         |          |        |
+|     fcmp_32ns_32ns_1_2_no_dsp_1_U273                               |     |    |     |      |      |      |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U226                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U227                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U228                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U229                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U230                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U231                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U232                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U233                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U234                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U235                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U236                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U237                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U238                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U239                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U240                             |     |    |     |      |      |      |        |      |         |          |        |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U241                             |     |    |     |      |      |      |        |      |         |          |        |
+|     mac_muladd_5ns_4ns_5ns_8_4_1_U278                              |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_6ns_3ns_2_10_1_U275                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_batchnorm_pw0_fu_1942                                        |     |    |     |      |      | 15   |        |      |         |          |        |
+|     (grp_batchnorm_pw0_fu_1942)                                    |     |    |     |      |      | 12   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_5ns_7ns_11_1_1_U645                                        |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_5ns_3ns_2_9_1_U644                                        |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_conv0_fu_1568                                                |     |    |     |      |      | 1324 |        |      |         |          |        |
+|     (grp_conv0_fu_1568)                                            |     |    |     |      |      | 1312 |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_5ns_5ns_8_1_1_U90                                          |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_5ns_5ns_8_1_1_U92                                          |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_64ns_66ns_129_5_1_U58                                      |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_6ns_8ns_13_1_1_U89                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_6ns_8ns_13_1_1_U91                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_6ns_8ns_13_1_1_U93                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_6ns_8ns_13_1_1_U94                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_8s_5ns_8_1_1_U88                                           |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_0_0_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_0_1_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_0_2_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_1_0_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_1_1_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_1_2_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_2_0_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_2_1_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_0_2_2_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_0_0_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_0_1_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_0_2_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_1_0_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_1_1_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_1_2_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_2_0_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_2_1_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL13conv_0_weight_1_2_2_U                                    |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_6ns_3ns_2_10_1_U86                                        |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_6ns_3ns_2_10_1_U87                                        |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_dw0_fu_1790                                                  |     |    |     |      |      | 111  |        |      |         |          |        |
+|     (grp_dw0_fu_1790)                                              |     |    |     |      |      | 108  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_5ns_5ns_8_1_1_U440                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_5ns_7ns_11_1_1_U439                                        |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_5ns_7ns_11_1_1_U441                                        |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_0_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_0_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_0_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_1_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_1_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_1_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_2_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_2_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_0_deepwise_weight_2_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_5ns_3ns_2_9_1_U438                                        |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_dw1_fu_2010                                                  |     |    |     |      |      | 317  |        |      |         |          |        |
+|     (grp_dw1_fu_2010)                                              |     |    |     |      |      | 314  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_4ns_6ns_9_1_1_U742                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_4ns_6ns_9_1_1_U743                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_0_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_0_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_0_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_1_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_1_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_1_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_2_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_2_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_1_deepwise_weight_2_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_4ns_3ns_2_8_1_U741                                        |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_dw2_fu_2184                                                  |     |    |     |      |      | 154  |        |      |         |          |        |
+|     (grp_dw2_fu_2184)                                              |     |    |     |      |      | 152  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_0_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_0_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_0_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_1_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_1_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_1_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_2_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_2_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_2_deepwise_weight_2_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_3ns_3ns_2_7_1_U1003                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_dw3_fu_2294                                                  |     |    |     |      |      | 291  |        |      |         |          |        |
+|     (grp_dw3_fu_2294)                                              |     |    |     |      |      | 291  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_0_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_0_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_0_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_1_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_1_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_1_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_2_0_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_2_1_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL26features_3_deepwise_weight_2_2_U                         |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_fc_fu_2369                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|     grp_fc_Pipeline_FC_BIAS_fu_114                                 |     |    |     |      |      |      |        |      |         |          |        |
+|       (grp_fc_Pipeline_FC_BIAS_fu_114)                             |     |    |     |      |      |      |        |      |         |          |        |
+|       fc_bias_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                     |     |    |     |      |      |      |        |      |         |          |        |
+|     grp_fc_Pipeline_FC_IC_fu_130                                   |     |    |     |      |      |      |        |      |         |          |        |
+|       (grp_fc_Pipeline_FC_IC_fu_130)                               |     |    |     |      |      |      |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                     |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_0_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_1_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_2_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_3_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_4_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_5_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_6_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_7_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_8_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|       p_ZL9fc_weight_9_U                                           |     |    |     |      |      |      |        |      |         |          |        |
+|     grp_fc_Pipeline_FC_OUTPUT_fu_176                               |     |    |     |      |      |      |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                     |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909     |     |    |     |      |      | 15   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_BN_DW0_C_BN_DW0_H_BN_DW0_W_fu_1909) |     |    |     |      |      | 15   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088              |     |    |     |      |      | 11   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_BN_DW1_C_BN_DW1_H_fu_2088)          |     |    |     |      |      | 11   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234              |     |    |     |      |      | 11   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_BN_DW2_C_BN_DW2_H_fu_2234)          |     |    |     |      |      | 11   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333              |     |    |     |      |      | 12   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_BN_DW3_C_BN_DW3_H_fu_2333)          |     |    |     |      |      | 12   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148              |     |    |     |      |      | 14   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_BN_PW1_C_BN_PW1_H_fu_2148)          |     |    |     |      |      | 12   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_4ns_6ns_9_1_1_U939                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_4ns_3ns_2_8_1_U938                                        |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270              |     |    |     |      |      | 12   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_BN_PW2_C_BN_PW2_H_fu_2270)          |     |    |     |      |      | 12   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355              |     |    |     |      |      | 11   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_BN_PW3_C_BN_PW3_H_fu_2355)          |     |    |     |      |      | 11   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_GAP_C_fu_2362                          |     |    |     |      |      | 22   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_GAP_C_fu_2362)                      |     |    |     |      |      | 22   |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543     |     |    |     |      |      | 20   |        |      |         |          |        |
+|     (grp_mobilenet_v1_Pipeline_LOAD_INC_LOAD_INH_LOAD_INW_fu_1543) |     |    |     |      |      | 8    |        |      |         |          |        |
+|     ama_addmuladd_4ns_5ns_4ns_5ns_8_4_1_U5                         |     |    |     |      |      |      |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     mul_6ns_8ns_13_1_1_U1                                          |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_6ns_3ns_2_10_1_U2                                         |     |    |     |      |      |      |        |      |         |          |        |
+|     urem_6ns_3ns_2_10_1_U4                                         |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_mobilenet_v1_Pipeline_VITIS_LOOP_23_1_fu_2397                |     |    |     |      |      |      |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_pw0_fu_1916                                                  |     |    |     |      |      | 238  |        |      |         |          |        |
+|     (grp_pw0_fu_1916)                                              |     |    |     |      |      | 238  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL27features_0_pointwise_weight_0_U                          |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL27features_0_pointwise_weight_1_U                          |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_pw1_fu_2116                                                  |     |    |     |      |      | 461  |        |      |         |          |        |
+|     (grp_pw1_fu_2116)                                              |     |    |     |      |      | 461  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL27features_1_pointwise_weight_0_U                          |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL27features_1_pointwise_weight_1_U                          |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_pw2_fu_2250                                                  |     |    |     |      |      | 924  |        |      |         |          |        |
+|     (grp_pw2_fu_2250)                                              |     |    |     |      |      | 924  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL27features_2_pointwise_weight_0_U                          |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL27features_2_pointwise_weight_1_U                          |     |    |     |      |      |      |        |      |         |          |        |
+|   grp_pw3_fu_2342                                                  |     |    |     |      |      | 1819 |        |      |         |          |        |
+|     (grp_pw3_fu_2342)                                              |     |    |     |      |      | 1819 |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                       |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL27features_3_pointwise_weight_0_U                          |     |    |     |      |      |      |        |      |         |          |        |
+|     p_ZL27features_3_pointwise_weight_1_U                          |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_10_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_11_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_12_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_13_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_14_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_15_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_16_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_17_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_18_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_19_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_20_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_21_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_22_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_23_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_24_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_25_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_26_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_27_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_28_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_29_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_30_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_31_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_32_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_33_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_34_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_35_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_36_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_37_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_38_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_39_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_40_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_41_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_42_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_43_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_44_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_45_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_46_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_47_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_48_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_49_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_50_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_51_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_52_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_53_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_54_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_55_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_56_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_57_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_58_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_59_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_60_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_61_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_62_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_63_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_64_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_65_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_66_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_67_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_68_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_69_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_70_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_71_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_72_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_73_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_74_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_75_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_76_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_77_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_78_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_79_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_80_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_81_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_82_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_83_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_84_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_85_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_86_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_87_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_88_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_89_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_8_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_90_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_91_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_92_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_93_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_94_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_95_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_9_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw0_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_10_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_11_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_12_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_13_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_14_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_15_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_16_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_17_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_18_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_19_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_20_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_21_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_22_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_23_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_24_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_25_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_26_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_27_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_28_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_29_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_30_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_31_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_32_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_33_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_34_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_35_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_36_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_37_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_38_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_39_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_40_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_41_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_42_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_43_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_44_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_45_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_46_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_47_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_8_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_9_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw1_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_10_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_11_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_12_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_13_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_14_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_15_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_16_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_17_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_18_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_19_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_20_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_21_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_22_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_23_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_8_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_9_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw2_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_10_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_11_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_12_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_13_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_14_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_15_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_8_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_9_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_dw3_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_gap_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_gap_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw0_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw0_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_10_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_11_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_12_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_13_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_14_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_15_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_8_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_9_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw1_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw2_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw2_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw2_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw2_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw2_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw2_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw2_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw2_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw3_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw3_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw3_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ifmap_pw3_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_10_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_11_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_12_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_13_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_14_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_15_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_16_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_17_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_1_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_2_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_3_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_4_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_5_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_6_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_7_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_8_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_9_U                                                       |     |    |     |      |      |      |        |      |         |          |        |
+|   in_buf_U                                                         |     |    |     |      |      |      |        |      |         |          |        |
+|   mul_64ns_66ns_129_5_1_U1335                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_10_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_11_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_12_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_13_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_14_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_15_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_16_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_17_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_18_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_19_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_1_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_20_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_21_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_22_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_23_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_24_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_25_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_26_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_27_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_28_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_29_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_2_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_30_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_31_U                                                 |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_3_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_4_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_5_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_6_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_7_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_8_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_9_U                                                  |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_conv0_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw0_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw1_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw1_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw1_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw1_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw1_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw1_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw1_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw1_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw2_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw2_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw2_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw2_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_dw3_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_gap_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_10_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_11_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_12_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_13_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_14_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_15_U                                                   |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_8_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_9_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw0_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw1_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw1_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw1_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw1_4_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw1_5_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw1_6_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw1_7_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw1_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw2_1_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw2_2_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw2_3_U                                                    |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw2_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   ofmap_pw3_U                                                      |     |    |     |      |      |      |        |      |         |          |        |
+|   out_buf_U                                                        |     |    |     |      |      |      |        |      |         |          |        |
++--------------------------------------------------------------------+-----+----+-----+------+------+------+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 20.43% | OK     |
+| FD                                                        | 50%       | 11.42% | OK     |
+| LUTRAM+SRL                                                | 25%       | 8.48%  | OK     |
+| MUXF7                                                     | 15%       | 1.06%  | OK     |
+| DSP                                                       | 80%       | 21.56% | OK     |
+| RAMB/FIFO                                                 | 80%       | 50.09% | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 35.83% | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 4      | REVIEW |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 4099      | 572    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.73   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 2.73   | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.500ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.350ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+---------------------+------------------------------------------------+-------------------------------------------+--------------+------------+---------------------+---------------------+---------------------+
+| Path  |               SLACK | STARTPOINT PIN                                 | ENDPOINT PIN                              | LOGIC LEVELS | MAX FANOUT |      DATAPATH DELAY |      DATAPATH LOGIC |        DATAPATH NET |
+|       |                     |                                                |                                           |              |            |                     |               DELAY |               DELAY |
++-------+---------------------+------------------------------------------------+-------------------------------------------+--------------+------------+---------------------+---------------------+---------------------+
+| Path1 | 1.15996098518371582 | grp_conv0_fu_1568/acc_327_reg_7167_reg[30]/C   | ofmap_conv0_27_U/ram_reg/DIBDI[12]        |            0 |         32 | 8.59583377838134766 | 0.22300000488758087 | 8.37283325195312500 |
+| Path2 | 1.39037406444549561 | fmul_32ns_32ns_32_4_max_dsp_1_U1322/ce_r_reg/C | grp_pw1_fu_2116/mul_21_reg_5978_reg[20]/D |            1 |        115 | 8.52542018890380859 | 0.26600000262260437 | 8.25942039489746094 |
+| Path3 | 1.48401296138763428 | fmul_32ns_32ns_32_4_max_dsp_1_U1322/ce_r_reg/C | grp_pw1_fu_2116/mul_17_reg_5953_reg[20]/D |            1 |        115 | 8.43478202819824219 | 0.26600000262260437 | 8.16878223419189453 |
+| Path4 | 1.55293560028076172 | grp_conv0_fu_1568/ap_CS_fsm_reg[0]/C           | grp_conv0_fu_1568/mul_reg_6890_reg[11]/CE |            1 |       3435 | 8.11385917663574219 | 0.27200001478195190 | 7.84185886383056641 |
+| Path5 | 1.55691015720367432 | grp_conv0_fu_1568/acc_327_reg_7167_reg[30]/C   | ofmap_conv0_16_U/ram_reg/DIBDI[12]        |            0 |         32 | 8.19888401031494141 | 0.22300000488758087 | 7.97588396072387695 |
++-------+---------------------+------------------------------------------------+-------------------------------------------+--------------+------------+---------------------+---------------------+---------------------+
+
+    +--------------------------------------------+----------------------+
+    | Path1 Cells                                | Primitive Type       |
+    +--------------------------------------------+----------------------+
+    | grp_conv0_fu_1568/acc_327_reg_7167_reg[30] | FLOP_LATCH.flop.FDRE |
+    | ofmap_conv0_27_U/ram_reg                   | BMEM.bram.RAMB18E1   |
+    +--------------------------------------------+----------------------+
+
+    +--------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                  | Primitive Type       |
+    +--------------------------------------------------------------+----------------------+
+    | fmul_32ns_32ns_32_4_max_dsp_1_U1322/ce_r_reg                 | FLOP_LATCH.flop.FDRE |
+    | fmul_32ns_32ns_32_4_max_dsp_1_U1322/mul42_s_reg_6895[20]_i_1 | LUT.others.LUT3      |
+    | grp_pw1_fu_2116/mul_21_reg_5978_reg[20]                      | FLOP_LATCH.flop.FDRE |
+    +--------------------------------------------------------------+----------------------+
+
+    +--------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                  | Primitive Type       |
+    +--------------------------------------------------------------+----------------------+
+    | fmul_32ns_32ns_32_4_max_dsp_1_U1322/ce_r_reg                 | FLOP_LATCH.flop.FDRE |
+    | fmul_32ns_32ns_32_4_max_dsp_1_U1322/mul42_s_reg_6895[20]_i_1 | LUT.others.LUT3      |
+    | grp_pw1_fu_2116/mul_17_reg_5953_reg[20]                      | FLOP_LATCH.flop.FDRE |
+    +--------------------------------------------------------------+----------------------+
+
+    +----------------------------------------+----------------------+
+    | Path4 Cells                            | Primitive Type       |
+    +----------------------------------------+----------------------+
+    | grp_conv0_fu_1568/ap_CS_fsm_reg[0]     | FLOP_LATCH.flop.FDSE |
+    | grp_conv0_fu_1568/mul_reg_6890[31]_i_1 | LUT.others.LUT2      |
+    | grp_conv0_fu_1568/mul_reg_6890_reg[11] | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------+----------------------+
+
+    +--------------------------------------------+----------------------+
+    | Path5 Cells                                | Primitive Type       |
+    +--------------------------------------------+----------------------+
+    | grp_conv0_fu_1568/acc_327_reg_7167_reg[30] | FLOP_LATCH.flop.FDRE |
+    | ofmap_conv0_16_U/ram_reg                   | BMEM.bram.RAMB18E1   |
+    +--------------------------------------------+----------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+----------------------------------------------------------------------+
+| Report Type              | Report Location                                                      |
++--------------------------+----------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/mobilenet_v1_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/mobilenet_v1_failfast_routed.rpt                 |
+| power                    | impl/verilog/report/mobilenet_v1_power_routed.rpt                    |
+| status                   | impl/verilog/report/mobilenet_v1_status_routed.rpt                   |
+| timing                   | impl/verilog/report/mobilenet_v1_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/mobilenet_v1_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/mobilenet_v1_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/mobilenet_v1_utilization_hierarchical_routed.rpt |
++--------------------------+----------------------------------------------------------------------+
+
+

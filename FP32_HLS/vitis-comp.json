@@ -1,0 +1,14 @@
+{
+  "name": "FP32_HLS",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "FP32_HLS"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component",
+  "templateFlow": "VITIS"
+}

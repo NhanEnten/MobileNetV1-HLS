@@ -1,0 +1,4140 @@
+--- !Passed
+Pass:            reflow-check-pragma-conflict
+Name:            LoopPragmaConflictWarn
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 97, Column: 25 }
+Function:        _Z7pw3_qatPA2_A2_KaPA2_A2_a
+Args:            
+  - String:          'In loop '''
+  - LoopName:        PW3_IC
+  - String:          ' ('
+  - LoopLoc:         '../QAT-Model/pointwise.cpp:97:25'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 97, Column: 25 }
+  - String:          ')'
+  - String:          ''', '
+  - String:          'partially UNROLL ('
+  - PragmaLoc:       '../QAT-Model/pointwise.cpp:98:1'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 98, Column: 1 }
+  - String:          ') is converted into complete unroll due to PIPELINE pragma above ('
+  - PragmaLoc:       '../QAT-Model/pointwise.cpp:95:1'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 95, Column: 1 }
+  - String:          ') as a pipelined region cannot contain loops that are not fully unrolled'
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict
+Name:            LoopPragmaConflictWarn
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 71, Column: 25 }
+Function:        _Z7pw2_qatPA4_A4_KaPA4_A4_a
+Args:            
+  - String:          'In loop '''
+  - LoopName:        PW2_IC
+  - String:          ' ('
+  - LoopLoc:         '../QAT-Model/pointwise.cpp:71:25'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 71, Column: 25 }
+  - String:          ')'
+  - String:          ''', '
+  - String:          'partially UNROLL ('
+  - PragmaLoc:       '../QAT-Model/pointwise.cpp:72:1'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 72, Column: 1 }
+  - String:          ') is converted into complete unroll due to PIPELINE pragma above ('
+  - PragmaLoc:       '../QAT-Model/pointwise.cpp:69:1'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 69, Column: 1 }
+  - String:          ') as a pipelined region cannot contain loops that are not fully unrolled'
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict
+Name:            LoopPragmaConflictWarn
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 45, Column: 25 }
+Function:        _Z7pw1_qatPA8_A8_KaPA8_A8_a
+Args:            
+  - String:          'In loop '''
+  - LoopName:        PW1_IC
+  - String:          ' ('
+  - LoopLoc:         '../QAT-Model/pointwise.cpp:45:25'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 45, Column: 25 }
+  - String:          ')'
+  - String:          ''', '
+  - String:          'partially UNROLL ('
+  - PragmaLoc:       '../QAT-Model/pointwise.cpp:46:1'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 46, Column: 1 }
+  - String:          ') is converted into complete unroll due to PIPELINE pragma above ('
+  - PragmaLoc:       '../QAT-Model/pointwise.cpp:43:1'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 43, Column: 1 }
+  - String:          ') as a pipelined region cannot contain loops that are not fully unrolled'
+...
+--- !Passed
+Pass:            reflow-check-pragma-conflict
+Name:            LoopPragmaConflictWarn
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 18, Column: 25 }
+Function:        _Z7pw0_qatPA16_A16_KaPA16_A16_a
+Args:            
+  - String:          'In loop '''
+  - LoopName:        PW0_IC
+  - String:          ' ('
+  - LoopLoc:         '../QAT-Model/pointwise.cpp:18:25'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 18, Column: 25 }
+  - String:          ')'
+  - String:          ''', '
+  - String:          'partially UNROLL ('
+  - PragmaLoc:       '../QAT-Model/pointwise.cpp:19:1'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 19, Column: 1 }
+  - String:          ') is converted into complete unroll due to PIPELINE pragma above ('
+  - PragmaLoc:       '../QAT-Model/pointwise.cpp:16:1'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 16, Column: 1 }
+  - String:          ') as a pipelined region cannot contain loops that are not fully unrolled'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 326, Column: 17 }
+Function:        _ZNK9fp_structIfE8to_floatEv
+Args:            
+  - Callee:          'fp_struct<float>::data() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<float>::to_float() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 347, Column: 16 }
+Function:        _ZNK9fp_structIfE7to_ieeeEv
+Args:            
+  - Callee:          'fp_struct<float>::to_float() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 12, Column: 16 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 14, Column: 13 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 162, Column: 3 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'void init_mask_table<float>(fp_struct<float>::inttype*)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 20, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 164, Column: 3 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'void init_one_half_table<float>(fp_struct<float>::inttype*)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 32, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 165, Column: 16 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 185, Column: 15 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 169, Column: 12 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 182, Column: 10 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(ap_uint<32>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 298, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 182, Column: 46 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'fp_struct<float>::data() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c++/roundfloat.cpp', 
+                   Line: 7, Column: 12 }
+Function:        _ZN3hls5roundEf
+Args:            
+  - Callee:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::round(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c++/roundfloat.cpp', 
+                       Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 13, Column: 17 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 15, Column: 57 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - Callee:          'fp_struct<float>::mantissa() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 340, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 59, Column: 8 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - Callee:          'fp_struct<float>::__signbit() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 349, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 18, Column: 79 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - Callee:          'fp_struct<float>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 316, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 117, Column: 10 }
+Function:        _Z20generic_cast_IEEE754IifET_T0_b
+Args:            
+  - Callee:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                   Line: 51, Column: 54 }
+Function:        __hls_fptosi_float_i32
+Args:            
+  - Callee:          'int generic_cast_IEEE754<int, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          __hls_fptosi_float_i32
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 16, Column: 38 }
+Function:        _Z14load_input_qatPfPA32_A32_a
+Args:            
+  - Callee:          'hls::round(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c++/roundfloat.cpp', 
+                       Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 16, Column: 38 }
+Function:        _Z14load_input_qatPfPA32_A32_a
+Args:            
+  - Callee:          __hls_fptosi_float_i32
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 41, Column: 37 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv0_qat(signed char const (*) [32][32], signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 30, Column: 36 }
+Function:        _Z7dw0_qatPA32_A32_KaPA16_A16_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool) (.1)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dw0_qat(signed char const (*) [32][32], signed char (*) [16][16])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 23, Column: 37 }
+Function:        _Z7pw0_qatPA16_A16_KaPA16_A16_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool) (.4)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pw0_qat(signed char const (*) [16][16], signed char (*) [16][16])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 63, Column: 36 }
+Function:        _Z7dw1_qatPA16_A16_KaPA8_A8_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool) (.1)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dw1_qat(signed char const (*) [16][16], signed char (*) [8][8])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 40, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 50, Column: 37 }
+Function:        _Z7pw1_qatPA8_A8_KaPA8_A8_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool) (.4)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pw1_qat(signed char const (*) [8][8], signed char (*) [8][8])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 34, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 96, Column: 36 }
+Function:        _Z7dw2_qatPA8_A8_KaPA4_A4_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool) (.1)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dw2_qat(signed char const (*) [8][8], signed char (*) [4][4])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 73, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 76, Column: 37 }
+Function:        _Z7pw2_qatPA4_A4_KaPA4_A4_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool) (.4)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pw2_qat(signed char const (*) [4][4], signed char (*) [4][4])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 60, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 129, Column: 36 }
+Function:        _Z7dw3_qatPA4_A4_KaPA2_A2_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool) (.1)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dw3_qat(signed char const (*) [4][4], signed char (*) [2][2])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 106, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 102, Column: 37 }
+Function:        _Z7pw3_qatPA2_A2_KaPA2_A2_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'requantize(int, int, int, bool) (.4)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.hpp, Line: 76, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'pw3_qat(signed char const (*) [2][2], signed char (*) [2][2])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 86, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 28, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 30, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'conv0_qat(signed char const (*) [32][32], signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 32, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw0_qat(signed char const (*) [32][32], signed char (*) [16][16])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 33, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw0_qat(signed char const (*) [16][16], signed char (*) [16][16])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 35, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw1_qat(signed char const (*) [16][16], signed char (*) [8][8])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 36, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw1_qat(signed char const (*) [8][8], signed char (*) [8][8])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 34, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 38, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw2_qat(signed char const (*) [8][8], signed char (*) [4][4])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 73, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 39, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw2_qat(signed char const (*) [4][4], signed char (*) [4][4])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 41, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw3_qat(signed char const (*) [4][4], signed char (*) [2][2])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 106, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 42, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw3_qat(signed char const (*) [2][2], signed char (*) [2][2])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 44, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'global_avg_pool_qat(signed char const (*) [2][2], signed char*)'
+    DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 46, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'fc_qat(signed char const*, float*)'
+    DebugLoc:        { File: ../QAT-Model/fc.cpp, Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 48, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'store_output_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 28, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/fc.cpp, Line: 21, Column: 16 }
+Function:        _Z6fc_qatPKaPf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        FC_OC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 10, Column: 16 }
+Function:        _Z19global_avg_pool_qatPA2_A2_KaPa
+Args:            
+  - String:          'Loop '''
+  - LoopName:        GAP_H
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 12, Column: 20 }
+Function:        _Z19global_avg_pool_qatPA2_A2_KaPa
+Args:            
+  - String:          'Loop '''
+  - LoopName:        GAP_W
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 97, Column: 25 }
+Function:        _Z7pw3_qatPA2_A2_KaPA2_A2_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        PW3_IC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 116, Column: 25 }
+Function:        _Z7dw3_qatPA4_A4_KaPA2_A2_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW3_KH
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 118, Column: 29 }
+Function:        _Z7dw3_qatPA4_A4_KaPA2_A2_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW3_KW
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 71, Column: 25 }
+Function:        _Z7pw2_qatPA4_A4_KaPA4_A4_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        PW2_IC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 83, Column: 25 }
+Function:        _Z7dw2_qatPA8_A8_KaPA4_A4_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW2_KH
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 85, Column: 29 }
+Function:        _Z7dw2_qatPA8_A8_KaPA4_A4_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW2_KW
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 45, Column: 25 }
+Function:        _Z7pw1_qatPA8_A8_KaPA8_A8_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        PW1_IC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 50, Column: 25 }
+Function:        _Z7dw1_qatPA16_A16_KaPA8_A8_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW1_KH
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 52, Column: 29 }
+Function:        _Z7dw1_qatPA16_A16_KaPA8_A8_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW1_KW
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 18, Column: 25 }
+Function:        _Z7pw0_qatPA16_A16_KaPA16_A16_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        PW0_IC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 17, Column: 25 }
+Function:        _Z7dw0_qatPA32_A32_KaPA16_A16_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW0_KH
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 19, Column: 29 }
+Function:        _Z7dw0_qatPA32_A32_KaPA16_A16_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        DW0_KW
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 25, Column: 27 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        CONV0_KH
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 27, Column: 31 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        CONV0_KW
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 29, Column: 35 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/fc.cpp, Line: 6, Column: 0 }
+Function:        _Z6fc_qatPKaPf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        FC_DEQUANT
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/fc.cpp:27:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fc_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/fc.cpp, Line: 6, Column: 0 }
+Function:        _Z6fc_qatPKaPf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        FC_OC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/fc.cpp:21:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fc_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/fc.cpp, Line: 6, Column: 0 }
+Function:        _Z6fc_qatPKaPf
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        FC_BIAS
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/fc.cpp:14:14'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fc_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '10'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 6, Column: 0 }
+Function:        _Z19global_avg_pool_qatPA2_A2_KaPa
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        GAP_H
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/gap.cpp:10:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          global_avg_pool_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 6, Column: 0 }
+Function:        _Z19global_avg_pool_qatPA2_A2_KaPa
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        GAP_W
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/gap.cpp:12:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          global_avg_pool_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 6, Column: 0 }
+Function:        _Z19global_avg_pool_qatPA2_A2_KaPa
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        GAP_W
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/gap.cpp:12:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          global_avg_pool_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 86, Column: 0 }
+Function:        _Z7pw3_qatPA2_A2_KaPA2_A2_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        PW3_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/pointwise.cpp:97:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pw3_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '128'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 106, Column: 0 }
+Function:        _Z7dw3_qatPA4_A4_KaPA2_A2_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW3_KH
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:116:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw3_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 106, Column: 0 }
+Function:        _Z7dw3_qatPA4_A4_KaPA2_A2_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW3_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:118:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw3_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 106, Column: 0 }
+Function:        _Z7dw3_qatPA4_A4_KaPA2_A2_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW3_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:118:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw3_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 106, Column: 0 }
+Function:        _Z7dw3_qatPA4_A4_KaPA2_A2_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW3_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:118:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw3_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 60, Column: 0 }
+Function:        _Z7pw2_qatPA4_A4_KaPA4_A4_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        PW2_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/pointwise.cpp:71:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pw2_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 73, Column: 0 }
+Function:        _Z7dw2_qatPA8_A8_KaPA4_A4_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW2_KH
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:83:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw2_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 73, Column: 0 }
+Function:        _Z7dw2_qatPA8_A8_KaPA4_A4_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW2_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:85:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw2_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 73, Column: 0 }
+Function:        _Z7dw2_qatPA8_A8_KaPA4_A4_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW2_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:85:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw2_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 73, Column: 0 }
+Function:        _Z7dw2_qatPA8_A8_KaPA4_A4_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW2_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:85:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw2_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 34, Column: 0 }
+Function:        _Z7pw1_qatPA8_A8_KaPA8_A8_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        PW1_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/pointwise.cpp:45:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pw1_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 40, Column: 0 }
+Function:        _Z7dw1_qatPA16_A16_KaPA8_A8_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW1_KH
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:50:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw1_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 40, Column: 0 }
+Function:        _Z7dw1_qatPA16_A16_KaPA8_A8_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW1_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:52:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw1_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 40, Column: 0 }
+Function:        _Z7dw1_qatPA16_A16_KaPA8_A8_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW1_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:52:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw1_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 40, Column: 0 }
+Function:        _Z7dw1_qatPA16_A16_KaPA8_A8_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW1_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:52:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw1_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 7, Column: 0 }
+Function:        _Z7pw0_qatPA16_A16_KaPA16_A16_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        PW0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/pointwise.cpp:18:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pw0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 7, Column: 0 }
+Function:        _Z7dw0_qatPA32_A32_KaPA16_A16_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW0_KH
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:17:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 7, Column: 0 }
+Function:        _Z7dw0_qatPA32_A32_KaPA16_A16_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW0_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:19:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 7, Column: 0 }
+Function:        _Z7dw0_qatPA32_A32_KaPA16_A16_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW0_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:19:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 7, Column: 0 }
+Function:        _Z7dw0_qatPA32_A32_KaPA16_A16_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        DW0_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/depthwise.cpp:19:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          dw0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_KH
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:25:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:27:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:27:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_KW
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:27:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        CONV0_IC
+  - String:          ''' ('
+  - LoopLoc:         '../QAT-Model/conv.cpp:29:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv0_qat
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 326, Column: 17 }
+Function:        _ZNK9fp_structIfE8to_floatEv.25.35.44.55
+Args:            
+  - Callee:          'fp_struct<float>::data() const (.7.28.38.47.58)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<float>::to_float() const (.25.35.44.55)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 347, Column: 16 }
+Function:        _ZNK9fp_structIfE7to_ieeeEv
+Args:            
+  - Callee:          'fp_struct<float>::to_float() const (.25.35.44.55)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 12, Column: 16 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 14, Column: 13 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 165, Column: 16 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 169, Column: 12 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 182, Column: 46 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'fp_struct<float>::data() const (.7.28.38.47.58)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 182, Column: 10 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(ap_uint<32>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 298, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 185, Column: 15 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c++/roundfloat.cpp', 
+                   Line: 7, Column: 12 }
+Function:        _ZN3hls5roundEf
+Args:            
+  - Callee:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::round(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c++/roundfloat.cpp', 
+                       Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 13, Column: 17 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 15, Column: 57 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - Callee:          'fp_struct<float>::mantissa() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 340, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 18, Column: 79 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - Callee:          'fp_struct<float>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 316, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 59, Column: 8 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - Callee:          'fp_struct<float>::__signbit() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 349, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 117, Column: 10 }
+Function:        _Z20generic_cast_IEEE754IifET_T0_b
+Args:            
+  - Callee:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_cast_IEEE754<int, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                   Line: 51, Column: 54 }
+Function:        __hls_fptosi_float_i32
+Args:            
+  - Callee:          'int generic_cast_IEEE754<int, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          __hls_fptosi_float_i32
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 16, Column: 38 }
+Function:        _Z14load_input_qatPfPA32_A32_a
+Args:            
+  - Callee:          'hls::round(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c++/roundfloat.cpp', 
+                       Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 16, Column: 38 }
+Function:        _Z14load_input_qatPfPA32_A32_a
+Args:            
+  - Callee:          __hls_fptosi_float_i32
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 28, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 30, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'conv0_qat(signed char const (*) [32][32], signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 32, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw0_qat(signed char const (*) [32][32], signed char (*) [16][16])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 33, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw0_qat(signed char const (*) [16][16], signed char (*) [16][16])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 35, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw1_qat(signed char const (*) [16][16], signed char (*) [8][8])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 36, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw1_qat(signed char const (*) [8][8], signed char (*) [8][8])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 34, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 38, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw2_qat(signed char const (*) [8][8], signed char (*) [4][4])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 73, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 39, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw2_qat(signed char const (*) [4][4], signed char (*) [4][4])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 41, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw3_qat(signed char const (*) [4][4], signed char (*) [2][2])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 106, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 42, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw3_qat(signed char const (*) [2][2], signed char (*) [2][2])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 44, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'global_avg_pool_qat(signed char const (*) [2][2], signed char*)'
+    DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 46, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'fc_qat(signed char const*, float*)'
+    DebugLoc:        { File: ../QAT-Model/fc.cpp, Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 48, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'store_output_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 28, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_mobilenet_v1_qat_ir
+Args:            
+  - Callee:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_mobilenet_v1_qat_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 322, Column: 0 }
+Function:        _ZNK9fp_structIfE8to_floatEv.25.35.44.55
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::data() const (.7.28.38.47.58)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<float>::to_float() const (.25.35.44.55)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 346, Column: 0 }
+Function:        _ZNK9fp_structIfE7to_ieeeEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::to_float() const (.25.35.44.55)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 10, Column: 0 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 10, Column: 0 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 160, Column: 0 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 160, Column: 0 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 160, Column: 0 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::data() const (.7.28.38.47.58)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 160, Column: 0 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(ap_uint<32>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 298, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                   Line: 160, Column: 0 }
+Function:        _Z13generic_roundIfET_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::mantissa() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 340, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 316, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EfET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::__signbit() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 349, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 116, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IifET_T0_b
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                   Line: 51, Column: 0 }
+Function:        __hls_fptosi_float_i32
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_cast_IEEE754<int, float>(float, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          __hls_fptosi_float_i32
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+Function:        _Z14load_input_qatPfPA32_A32_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::round(float)'
+    DebugLoc:        { File: '/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c++/roundfloat.cpp', 
+                       Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+Function:        _Z14load_input_qatPfPA32_A32_a
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          __hls_fptosi_float_i32
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, Column: 0 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'load_input_qat(float*, signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, Column: 0 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'global_avg_pool_qat(signed char const (*) [2][2], signed char*)'
+    DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, Column: 0 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'store_output_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 28, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 44, Column: 0 }
+Function:        _Z6fc_qatPKaPf
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL9fc_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 39, Column: 0 }
+Function:        _Z7pw3_qatPA2_A2_KaPA2_A2_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL20features_3_pw_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 35, Column: 0 }
+Function:        _Z7dw3_qatPA4_A4_KaPA2_A2_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL20features_3_dw_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 31, Column: 0 }
+Function:        _Z7pw2_qatPA4_A4_KaPA4_A4_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL20features_2_pw_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 27, Column: 0 }
+Function:        _Z7dw2_qatPA8_A8_KaPA4_A4_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL20features_2_dw_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 23, Column: 0 }
+Function:        _Z7pw1_qatPA8_A8_KaPA8_A8_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL20features_1_pw_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 19, Column: 0 }
+Function:        _Z7dw1_qatPA16_A16_KaPA8_A8_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL20features_1_dw_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 15, Column: 0 }
+Function:        _Z7pw0_qatPA16_A16_KaPA16_A16_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL20features_0_pw_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 11, Column: 0 }
+Function:        _Z7dw0_qatPA32_A32_KaPA16_A16_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL20features_0_dw_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/params_qat.hpp, Line: 7, Column: 0 }
+Function:        _Z9conv0_qatPA32_A32_KaPA32_A32_a
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL13conv_0_w_fold
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          in_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 16, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          dw0_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 18, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          dw1_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 20, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          dw2_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 22, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          dw3_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '2'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 11, Column: 14 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3072'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input3seq
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        LOAD_IC
+  - String:          ' '
+  - LoopLoc:         '../QAT-Model/transfer.cpp:11:14'
+  - String:          ' '
+  - Function:        'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 15, Column: 29 }
+  - OrigDirection:   read
+  - OrigID:          for.body8.i.load.10
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 29, Column: 14 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        output4seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        STORE_O
+  - String:          ' '
+  - LoopLoc:         '../QAT-Model/transfer.cpp:29:14'
+  - String:          ' '
+  - Function:        'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 31, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i.store.6
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 29, Column: 14 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '32'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 29, Column: 14 }
+  - OrigDirection:   write
+  - OrigID:          output4seq
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        STORE_O
+  - String:          ' '
+  - LoopLoc:         '../QAT-Model/transfer.cpp:29:14'
+  - String:          ' '
+  - Function:        'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 11, Column: 14 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '32'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 11, Column: 14 }
+  - OrigDirection:   read
+  - OrigID:          input3seq
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        LOAD_IW
+  - String:          ' '
+  - LoopLoc:         '../QAT-Model/transfer.cpp:13:22'
+  - String:          ' '
+  - Function:        'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=complete  variable=_ZL13conv_0_w_fold_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         _ZL13conv_0_w_fold_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            _ZL13conv_0_w_fold_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL13conv_0_w_fold_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         _ZL13conv_0_w_fold_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            _ZL13conv_0_w_fold_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=complete  variable=_ZL13conv_0_w_fold_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         _ZL13conv_0_w_fold_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            _ZL13conv_0_w_fold_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL13conv_0_w_fold_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         _ZL13conv_0_w_fold_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            _ZL13conv_0_w_fold_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=complete  variable=_ZL13conv_0_w_fold_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         _ZL13conv_0_w_fold_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            _ZL13conv_0_w_fold_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=_ZL13conv_0_w_fold_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         _ZL13conv_0_w_fold_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            _ZL13conv_0_w_fold_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=in_buf_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:14:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         in_buf_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            in_buf_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=3 variable=in_buf_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:14:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         in_buf_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            in_buf_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=in_buf_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:14:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         in_buf_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            in_buf_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=3 variable=in_buf_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:14:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         in_buf_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            in_buf_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=3 variable=in_buf_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:14:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         in_buf_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            in_buf_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=3 variable=in_buf_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:14:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/conv.cpp:23:1'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+  - VarName:         in_buf_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 23, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            in_buf_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 15, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=cyclic factor=3 variable=conv0_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:15:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/depthwise.cpp:15:1'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 15, Column: 1 }
+  - VarName:         conv0_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 15, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            conv0_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 15, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=3 variable=conv0_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:15:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/depthwise.cpp:15:1'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 15, Column: 1 }
+  - VarName:         conv0_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 15, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            conv0_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 17, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=cyclic factor=3 variable=pw0_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:17:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/depthwise.cpp:48:1'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 48, Column: 1 }
+  - VarName:         pw0_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 48, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            pw0_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 17, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=3 variable=pw0_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:17:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/depthwise.cpp:48:1'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 48, Column: 1 }
+  - VarName:         pw0_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 48, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            pw0_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 19, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=cyclic factor=3 variable=pw1_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:19:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/depthwise.cpp:81:1'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 81, Column: 1 }
+  - VarName:         pw1_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 81, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            pw1_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 19, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=3 variable=pw1_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:19:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/depthwise.cpp:81:1'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 81, Column: 1 }
+  - VarName:         pw1_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 81, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '3'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            pw1_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 21, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=complete  variable=pw2_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:21:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/depthwise.cpp:114:1'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 114, Column: 1 }
+  - VarName:         pw2_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 114, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            pw2_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 21, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=pw2_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:21:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/depthwise.cpp:114:1'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 114, Column: 1 }
+  - VarName:         pw2_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 114, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            pw2_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 23, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=complete  variable=pw3_out'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  mobilenet_v1_qat
+  - String:          ' '
+  - VarLoc:          '../QAT-Model/mobilenet_v1_qat.cpp:23:12'
+  - String:          ' '
+  - PragmaSrcLoc:    '../QAT-Model/gap.cpp:8:1'
+    DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 8, Column: 1 }
+  - VarName:         pw3_out
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ../QAT-Model/gap.cpp, Line: 8, Column: 1 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            pw3_out
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL13conv_0_w_fold_2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL13conv_0_w_fold_1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL13conv_0_w_fold_0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          in_buf_0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          in_buf_1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 14, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          in_buf_2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 15, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          conv0_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 17, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pw0_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 19, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pw1_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '3'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 21, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pw2_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 23, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pw3_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 11, Column: 14 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3072'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        LOAD_IC
+  - String:          ' '
+  - LoopLoc:         '../QAT-Model/transfer.cpp:11:14'
+  - String:          ' '
+  - Function:        'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 11, Column: 14 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3072'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        LOAD_IC
+  - String:          '''('
+  - LoopLoc:         '../QAT-Model/transfer.cpp:11:14'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 29, Column: 14 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        STORE_O
+  - String:          ' '
+  - LoopLoc:         '../QAT-Model/transfer.cpp:29:14'
+  - String:          ' '
+  - Function:        'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../QAT-Model/transfer.cpp, Line: 29, Column: 14 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        STORE_O
+  - String:          '''('
+  - LoopLoc:         '../QAT-Model/transfer.cpp:29:14'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c++/roundfloat.cpp', 
+                   Line: 7, Column: 12 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'float generic_round<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_round.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 30, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'conv0_qat(signed char const (*) [32][32], signed char (*) [32][32])'
+    DebugLoc:        { File: ../QAT-Model/conv.cpp, Line: 15, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 32, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw0_qat(signed char const (*) [32][32], signed char (*) [16][16])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 33, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw0_qat(signed char const (*) [16][16], signed char (*) [16][16])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 35, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw1_qat(signed char const (*) [16][16], signed char (*) [8][8])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 36, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw1_qat(signed char const (*) [8][8], signed char (*) [8][8])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 34, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 38, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw2_qat(signed char const (*) [8][8], signed char (*) [4][4])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 73, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 39, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw2_qat(signed char const (*) [4][4], signed char (*) [4][4])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 60, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 41, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'dw3_qat(signed char const (*) [4][4], signed char (*) [2][2])'
+    DebugLoc:        { File: ../QAT-Model/depthwise.cpp, Line: 106, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 42, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'pw3_qat(signed char const (*) [2][2], signed char (*) [2][2])'
+    DebugLoc:        { File: ../QAT-Model/pointwise.cpp, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 46, Column: 5 }
+Function:        _Z16mobilenet_v1_qatPfS_
+Args:            
+  - Callee:          'fc_qat(signed char const*, float*)'
+    DebugLoc:        { File: ../QAT-Model/fc.cpp, Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mobilenet_v1_qat(float*, float*)'
+    DebugLoc:        { File: ../QAT-Model/mobilenet_v1_qat.cpp, Line: 7, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
